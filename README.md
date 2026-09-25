@@ -1,5 +1,7 @@
 # Geography Ladder
 
+<img src="logo.svg" width="96" alt="">
+
 Geography lessons and practice worksheets, topic by topic, for senior high school and the first years of university: from maps and the solid Earth to the atmosphere, water, population, regions and global issues. Every lesson is illustrated with maps and diagrams drawn from the data, and every worksheet is generated fresh when it opens, with worked solutions, an answer key and print-ready pages. English and Bahasa Indonesia.
 
 A companion to [Math Ladder](https://github.com/rendyhn/math-ladder) and [Physics Ladder](https://github.com/rendyhn/physics-ladder): each topic lists what it builds on, including topics on those sites, and links straight to them.

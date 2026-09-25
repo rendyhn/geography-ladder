@@ -104,6 +104,7 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; max-width: 1180px; margin: 0 auto 48px; }
 .hero h1 { font-size: clamp(2.1rem, 1.3rem + 3vw, 3.5rem); font-weight: 800; letter-spacing: -0.025em; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.hero-logo svg { width: 72px; height: 72px; display: block; margin-bottom: 18px; filter: drop-shadow(0 6px 14px rgba(20, 27, 43, 0.22)); }   /* the subject logo above the title */
 .sample { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px; box-shadow: var(--shadow); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 22px 22px; min-height: 200px; }
 .sample-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
 .sample-label { font: 500 0.72rem var(--f-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
