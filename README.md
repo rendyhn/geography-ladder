@@ -6,7 +6,7 @@ A companion to [Math Ladder](https://github.com/rendyhn/math-ladder) and [Physic
 
 ## Contents
 
-The topics are laid out in ten tracks. Tracks that are still being written already appear in the menus and the prerequisite map, marked *coming soon*.
+The 53 topics are laid out in ten tracks: 48 for senior high school (A–I) and 5 for the first years of university (J).
 
 | Track | Topics |
 |---|---|
@@ -24,7 +24,7 @@ The topics are laid out in ten tracks. Tracks that are still being written alrea
 ## Answers
 
 - Fill-in answers within about 1% are accepted, unless the question asks for an exact count.
-- Units may be typed after the number (`25 km`, `150 people/km²`, `12 °C`).
+- Units may be typed after the number (`25 km`, `12 °C`, `35 ‰`).
 - In Bahasa Indonesia, both `2,5` (decimal comma) and `50.000` (thousands point) are understood.
 
 ## Languages
