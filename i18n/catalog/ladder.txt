@@ -269,3 +269,33 @@ Countries at different levels of development trade and cooperate.
 Globalisation is spatial interaction at the scale of the world.
 @1b0g7yk8my5
 Cooperation between countries rests on agreed borders and rules.
+@1ae1r9spdjp
+Buffers and overlays are GIS operations.
+@e8vkgpm549
+Settlement patterns can be measured as point patterns.
+@pqwyxdwz39
+The nearest-neighbour index compares an observed mean with an expected one.
+@2a0xkkadtab
+Slope is read from the spacing of contour lines.
+@1g8krtbge2o
+Geomorphometry measures the landforms described in physical geography.
+@1kcrlh18qar
+The slope angle is the inverse tangent of rise over run.
+@2cip05ipqd5
+Stream order and drainage density describe a drainage basin.
+@24feg9sleub
+Areal rainfall is estimated from rain-gauge records.
+@myiudf2m48
+Basin shape and relief control how floods build up.
+@2a754m2rq46
+Scale decides how much a map must be generalised.
+@1xwbl3ynvcl
+Thematic maps are drawn on a chosen projection.
+@eg9lxw5a3u
+Data are grouped into classes before they are mapped.
+@e9vnoov4nq
+Research starts from geography's questions and approaches.
+@21qw93xfxsc
+Samples are used to draw conclusions about a whole population.
+@jm6hxj8ib4
+Census and survey data are the raw material of much research.

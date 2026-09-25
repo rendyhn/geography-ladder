@@ -183,3 +183,20 @@ link('math:percent', 'development-levels', () => T`Shares of workers by sector a
 link('development-levels', 'cooperation', () => T`Countries at different levels of development trade and cooperate.`);
 link('spatial-interaction', 'cooperation', () => T`Globalisation is spatial interaction at the scale of the world.`);
 link('geopolitics', 'cooperation', () => T`Cooperation between countries rests on agreed borders and rules.`);
+
+/* ---------- J. University geography ---------- */
+link('gis', 'spatial-analysis', () => T`Buffers and overlays are GIS operations.`);
+link('rural-urban', 'spatial-analysis', () => T`Settlement patterns can be measured as point patterns.`);
+link('math:statistics-sh', 'spatial-analysis', () => T`The nearest-neighbour index compares an observed mean with an expected one.`);
+link('contours', 'geomorphometry', () => T`Slope is read from the spacing of contour lines.`);
+link('landforms', 'geomorphometry', () => T`Geomorphometry measures the landforms described in physical geography.`);
+link('math:trig-basics', 'geomorphometry', () => T`The slope angle is the inverse tangent of rise over run.`);
+link('rivers', 'hydrology', () => T`Stream order and drainage density describe a drainage basin.`);
+link('precipitation', 'hydrology', () => T`Areal rainfall is estimated from rain-gauge records.`);
+link('geomorphometry', 'hydrology', () => T`Basin shape and relief control how floods build up.`);
+link('map-scale', 'cartography', () => T`Scale decides how much a map must be generalised.`);
+link('projections', 'cartography', () => T`Thematic maps are drawn on a chosen projection.`);
+link('math:statistics-sh', 'cartography', () => T`Data are grouped into classes before they are mapped.`);
+link('geo-concepts', 'research-methods', () => T`Research starts from geography's questions and approaches.`);
+link('math:inference', 'research-methods', () => T`Samples are used to draw conclusions about a whole population.`);
+link('population-growth', 'research-methods', () => T`Census and survey data are the raw material of much research.`);
