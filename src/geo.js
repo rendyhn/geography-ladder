@@ -431,3 +431,157 @@ function rasterVectorSvg({ label, raster = 'Raster', vector = 'Vector' } = {}) {
   [[400, 70], [420, 170], [330, 170]].forEach(([x, y]) => { s += circ(x, y, 5, 'g-hot', ' stroke="var(--paper)" stroke-width="1.5"'); });
   return s + lbl(360, 216, vector) + '</svg>';
 }
+
+/* ==========================================================================
+   Lithosphere diagrams
+   ========================================================================== */
+/* a cutaway of the Earth: crust, mantle, outer and inner core with depths */
+function earthLayersSvg({ label, names = ['Crust', 'Mantle', 'Outer core', 'Inner core'] } = {}) {
+  const W = 480, H = 270, cx = 150, cy = 250, R = 225, k = R / 6371;
+  const arc = (r, cls) => path(`M${cx - r} ${cy} A${r} ${r} 0 0 1 ${cx + r} ${cy}Z`, cls);
+  let s = svgOpen(W, H, label) + arc(R, 'g-rock-2') + arc(R - 12, 'g-mantle') + arc(k * 3480, 'g-magma') + arc(k * 1220, 'g-core');
+  s += path(`M${cx - R} ${cy} A${R} ${R} 0 0 1 ${cx + R} ${cy}`, 'fig-line');
+  const tag = (r, y, t, d) => ln(cx + r * 0.6, cy - Math.sqrt(r * r - (r * 0.6) ** 2), 372, y, 'g-thin') + lbl(378, y + 4, t, 'start') + note(378, y + 19, d, 'start');
+  s += tag(R - 4, 36, names[0], '0–35 km') + tag(R - 70, 96, names[1], '35–2 900 km') + tag(k * 2400, 156, names[2], '2 900–5 150 km') + tag(k * 700, 216, names[3], '5 150–6 371 km');
+  return s + ln(10, cy, W - 10, cy, 'fig-line') + '</svg>';
+}
+
+/* plate boundary cross-sections: 'divergent', 'subduction', 'collision', 'transform' */
+function plateBoundarySvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 240; let s = svgOpen(W, H, label) + rect(0, 0, W, 70, 'g-sky');
+  if (kind === 'divergent') {
+    s += rect(0, 70, W, 40, 'g-water') + path('M0 110 L200 110 L230 92 L250 92 L280 110 L480 110 L480 160 L0 160Z', 'g-rock-2 g-edge') + rect(0, 160, W, 80, 'g-mantle');
+    s += path('M240 240 C236 200 244 170 240 96', 'g-line g-l2', ' style="stroke-width:6;opacity:0.8"') + path('M225 94 L240 80 L255 94', 'fig-line');
+    s += arrow(200, 135, 110, 135, 'a', 3) + arrow(280, 135, 370, 135, 'a', 3) + arcArrow(170, 220, 50, 20, 150, 'c') + arcArrow(310, 220, 50, 160, 30, 'c');
+    s += lbl(240, 60, names.ridge || 'Mid-ocean ridge') + note(40, 100, names.plate || 'Oceanic plate', 'start') + lbl(240, 232, names.magma || 'Rising magma', 'middle');
+  } else if (kind === 'subduction') {
+    s += rect(0, 70, 250, 40, 'g-water') + path('M0 110 L220 110 L250 128 L480 150 L480 240 L0 240Z', 'g-mantle');
+    s += path('M0 110 L220 110 L250 126 L420 240 L360 240 L230 150 L0 150Z', 'g-rock-2 g-edge');   // oceanic plate going down
+    s += path('M250 126 L270 70 L300 76 L330 40 L350 76 L400 62 L480 70 L480 160 L380 170 L300 150Z', 'g-land-2 g-edge');   // continental plate
+    s += path('M340 150 C340 120 334 90 330 44', 'g-line g-l2', ' style="stroke-width:4;opacity:0.8"') + circ(330, 40, 6, 'g-magma');
+    s += arrow(80, 130, 180, 130, 'a', 3) + arrow(440, 115, 390, 115, 'a', 3) + arrow(300, 190, 340, 218, 'c', 2);
+    s += lbl(248, 146, names.trench || 'Trench', 'end') + lbl(330, 26, names.volcano || 'Volcanic arc') + note(80, 100, names.ocean || 'Oceanic plate', 'start') + note(460, 100, names.cont || 'Continental plate', 'end') + note(300, 232, names.sub || 'Subduction zone', 'middle');
+  } else if (kind === 'collision') {
+    s += path('M0 120 L150 118 L200 90 L240 30 L280 86 L330 116 L480 120 L480 240 L0 240Z', 'g-mantle') + path('M0 120 L150 118 L200 90 L240 30 L280 86 L330 116 L480 120 L480 170 L300 190 L240 210 L180 190 L0 170Z', 'g-land-2 g-edge');
+    s += path('M150 150 Q240 100 330 150', 'fig-line') + path('M170 172 Q240 128 310 172', 'fig-line');
+    s += arrow(40, 145, 130, 145, 'a', 3) + arrow(440, 145, 350, 145, 'a', 3) + lbl(240, 20, names.mountains || 'Fold mountains') + note(60, 110, names.cont || 'Continental plate', 'start') + note(420, 110, names.cont || 'Continental plate', 'end');
+  } else {   // transform: seen from above
+    s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land') + rect(0, 0, W, 118, 'g-land-2', 0, ' fill-opacity="0.6"') + ln(0, 118, W, 118, 'g-line g-l2', ' stroke-dasharray="10 6"');
+    s += pline([[150, 30], [150, 118]], 'g-river') + pline([[260, 118], [260, 210]], 'g-river') + ln(150, 118, 260, 118, 'g-thin');
+    s += arrow(320, 70, 200, 70, 'a', 3) + arrow(160, 170, 280, 170, 'a', 3) + lbl(W - 10, 110, names.fault || 'Transform fault', 'end') + note(150, 24, names.offset || 'offset river', 'middle');
+  }
+  return s + '</svg>';
+}
+
+/* the plates around Indonesia: trenches, spreading of volcanoes, plate names */
+const VOLCANOES = [[98.4, 3.2], [100.5, -0.4], [101.3, -1.7], [104.5, -5.0], [105.4, -6.1], [107.6, -6.8], [108.2, -7.3], [110.4, -7.5], [111.1, -7.6], [112.9, -8.1], [114.2, -8.1], [115.5, -8.3], [116.5, -8.4], [118.0, -8.25], [121.7, -8.6], [123.5, -8.3], [124.5, 1.3], [125.4, 2.8], [127.3, 1.5], [127.9, 1.7], [129.9, -4.5], [126.6, -7.1], [122.5, 0.9]];
+function platesIndonesiaSvg({ label, names = {} } = {}) {
+  return indonesiaSvg({ label, extra: (X, Y) => {
+    let s = path(smooth([[93, 5], [95.5, 1], [99, -4], [103, -7.6], [108, -9.8], [114, -10.5], [119, -11], [124, -11.2], [128.5, -10], [131, -8], [132.5, -6]].map(([a, b]) => [X(a), Y(b)])), 'g-line g-l2', ' stroke-dasharray="3 0"');
+    s += path(smooth([[131, 1.8], [135, 0.2], [139, -1.3], [142, -2.4]].map(([a, b]) => [X(a), Y(b)])), 'g-line g-l2');
+    s += path(smooth([[126.5, 8], [127.2, 4], [126.6, 1.5]].map(([a, b]) => [X(a), Y(b)])), 'g-line g-l2');
+    VOLCANOES.forEach(([a, b]) => { s += polyg([[X(a), Y(b) - 6], [X(a) - 5, Y(b) + 3], [X(a) + 5, Y(b) + 3]], 'g-magma', ' stroke="var(--paper)" stroke-width="1"'); });
+    s += lbl(X(103), Y(7) + 4, names.eu || 'Eurasian Plate') + lbl(X(105), Y(-10.8), names.ia || 'Indo-Australian Plate') + lbl(X(137), Y(6), names.pa || 'Pacific Plate') + note(X(108.5), Y(-9.1), names.trench || 'Java Trench');
+    return s;
+  } });
+}
+
+/* a volcano in cross-section; shape: 'strato' | 'shield' | 'cinder' | 'caldera' */
+function volcanoSvg(shape = 'strato', { label, names = {} } = {}) {
+  const W = 480, H = 280, base = 220;
+  const prof = { strato: [[40, base], [150, 170], [205, 110], [228, 64], [252, 64], [275, 110], [330, 170], [440, base]], shield: [[20, base], [130, 186], [220, 158], [260, 158], [350, 186], [460, base]], cinder: [[150, base], [210, 120], [228, 110], [252, 110], [270, 120], [330, base]], caldera: [[40, base], [150, 160], [185, 118], [205, 150], [275, 150], [295, 118], [330, 160], [440, base]] }[shape];
+  let s = svgOpen(W, H, label) + rect(0, 0, W, base, 'g-sky') + rect(0, base, W, H - base, 'g-rock');
+  if (shape === 'strato') {   // alternating layers of lava and ash, each parallel to the slopes, clipped to the cone
+    const id = 'vc' + (++clipN);
+    s += `<defs><clipPath id="${id}"><polygon points="${P(prof)}"/></clipPath></defs><g clip-path="url(#${id})">` + polyg(prof, 'g-rock');
+    for (let k = 1; k < 9; k++) s += polyg(prof.map(([x, y]) => [x, y + k * 20]), k % 2 ? 'g-rock-2' : 'g-rock');
+    s += '</g>' + polyg(prof, 'g-edge', ' fill="none"');
+  } else s += polyg(prof, 'g-rock-2 g-edge');
+  s += `<ellipse class="g-magma" cx="240" cy="258" rx="70" ry="20"/>` + path(`M236 240 L236 ${prof[3][1] + 2} L244 ${prof[3][1] + 2} L244 240Z`, 'g-magma');
+  if (shape !== 'shield') { s += circ(230, 40, 16, 'g-cloud g-edge') + circ(250, 30, 20, 'g-cloud g-edge') + circ(272, 42, 15, 'g-cloud g-edge'); }
+  s += ln(310, 258, 330, 246, 'g-thin') + lbl(334, 246, names.chamber || 'Magma chamber', 'start') + ln(244, 180, 330, 200, 'g-thin') + lbl(334, 204, names.vent || 'Vent', 'start');
+  if (shape === 'strato') s += ln(252, 66, 330, 90, 'g-thin') + lbl(334, 94, names.crater || 'Crater', 'start') + ln(140, 180, 90, 140, 'g-thin') + lbl(12, 132, names.layers || 'Layers of lava and ash', 'start');
+  return s + '</svg>';
+}
+
+/* a seismogram: quiet line, P arrival, S arrival sp seconds later, then surface waves */
+function seismogramSvg(sp, { label, names = {} } = {}) {
+  const W = 480, H = 170, x0 = 50, tP = 40, span = Math.max(sp * 2.2 + 30, 140), X = t => x0 + (t / span) * (W - x0 - 20), y0 = 90;
+  const pts = []; for (let i = 0; i <= 900; i++) { const t = span * i / 900; let a = 0.6 * Math.sin(i * 1.7);
+    if (t > tP) a += 10 * Math.exp(-(t - tP) / 18) * Math.sin(i * 1.3); if (t > tP + sp) a += 26 * Math.exp(-(t - tP - sp) / 22) * Math.sin(i * 0.9); pts.push([X(t), y0 - a]); }
+  let s = svgOpen(W, H, label) + ln(x0, y0, W - 20, y0, 'fig-grid') + pline(pts, 'g-line g-l1', ' style="stroke-width:1.2"');
+  s += ln(X(tP), 24, X(tP), 140, 'fig-dash') + ln(X(tP + sp), 24, X(tP + sp), 140, 'fig-dash') + lbl(X(tP), 18, names.p || 'P') + lbl(X(tP + sp), 18, names.s || 'S');
+  s += arrow(X(tP), 150, X(tP + sp), 150, 'b', 1.6) + arrow(X(tP + sp), 150, X(tP), 150, 'b', 1.6) + note((X(tP) + X(tP + sp)) / 2, 166, `${F(sp)} s`);
+  return s + '</svg>';
+}
+/* locating an epicentre: three stations and their distance circles */
+function triangulationSvg({ label, names = {} } = {}) {
+  const W = 420, H = 280, E = [220, 150], st = [[90, 80], [340, 90], [200, 262]];
+  let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land');
+  st.forEach(([x, y], i) => { const r = Math.hypot(x - E[0], y - E[1]); s += circ(x, y, r, 'fig-line', ' fill="none" stroke-dasharray="6 4"') + rect(x - 6, y - 6, 12, 12, 'g-s1') + lbl(x + 10, y - 8, names.st ? `${names.st} ${'ABC'[i]}` : 'ABC'[i], 'start'); });
+  return s + circ(E[0], E[1], 7, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + lbl(E[0] + 10, E[1] + 20, names.epi || 'Epicentre', 'start') + '</svg>';
+}
+
+/* folds and faults in cross-section: 'folds' | 'normal' | 'reverse' | 'horst' */
+function structureSvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 220; let s = svgOpen(W, H, label);
+  const layers = ['g-sand', 'g-rock', 'g-soil', 'g-rock-2'];
+  if (kind === 'folds') {
+    layers.forEach((c, i) => { const y = 60 + i * 30; s += path(`M0 ${y + 40} C60 ${y + 40} 80 ${y - 30} 140 ${y - 30} C200 ${y - 30} 220 ${y + 60} 300 ${y + 60} C380 ${y + 60} 400 ${y - 30} 480 ${y - 30} L480 ${y} C400 ${y} 380 ${y + 90} 300 ${y + 90} C220 ${y + 90} 200 ${y} 140 ${y} C80 ${y} 60 ${y + 70} 0 ${y + 70}Z`, c + ' g-edge'); });
+    s += lbl(140, 18, names.anticline || 'Anticline') + lbl(300, 18, names.syncline || 'Syncline') + arrow(20, 200, 90, 200, 'a', 3) + arrow(460, 200, 390, 200, 'a', 3);
+  } else {
+    const blocks = kind === 'horst' ? [[0, 150, 0], [150, 320, -40], [320, 480, 0]].map(([a, b, d]) => [a, b, kind === 'horst' ? -d - 0 : d]) : [[0, 240, 0], [240, 480, kind === 'normal' ? 40 : -40]];
+    const hb = kind === 'horst' ? [[0, 150, 40], [150, 320, 0], [320, 480, 40]] : blocks;
+    hb.forEach(([a, b, d]) => layers.forEach((c, i) => { const y = 70 + i * 32 + d, sl = 22; s += polyg([[a === 0 ? a : a + sl * 0, y], [b, y], [b, y + 32], [a, y + 32]], c + ' g-edge'); }));
+    hb.slice(1).forEach(([a]) => { s += ln(a, 40, a, 210, 'g-line g-l2', ' style="stroke-width:3"'); });
+    if (kind === 'normal') s += arrow(300, 60, 300, 100, 'b', 2.4) + arrow(40, 40, 110, 40, 'a', 2) + arrow(440, 40, 370, 40, 'a', 2) + lbl(240, 30, names.normal || 'Normal fault (tension)');
+    if (kind === 'reverse') s += arrow(300, 60, 300, 24, 'b', 2.4) + arrow(110, 30, 40, 30, 'a', 2) + arrow(370, 30, 440, 30, 'a', 2) + lbl(240, 22, names.reverse || 'Reverse fault (compression)');
+    if (kind === 'horst') s += lbl(75, 30, names.horst || 'Horst') + lbl(235, 60, names.graben || 'Graben') + lbl(400, 30, names.horst || 'Horst');
+  }
+  return s + '</svg>';
+}
+
+/* a river from source to mouth: long profile with its three courses */
+function riverProfileSvg({ label, names = {} } = {}) {
+  const W = 480, H = 250, pts = [...Array(61)].map((_, i) => { const x = i / 60; return [30 + x * 420, 180 - 150 * Math.pow(1 - x, 2.2)]; });
+  let s = svgOpen(W, H, label) + path(`M30 190 ${pts.map(([x, y]) => `L${f1(x)} ${f1(y)}`).join(' ')} L450 190Z`, 'g-land-2 g-edge') + pline(pts, 'g-river', ' style="stroke-width:3"');
+  [[0.18, names.upper || 'Upper course', names.upperNote || 'steep, V-valley, waterfalls'], [0.5, names.middle || 'Middle course', names.middleNote || 'meanders, floodplain'], [0.84, names.lower || 'Lower course', names.lowerNote || 'gentle, delta, estuary']].forEach(([t, a, b], i) => { const x = 30 + t * 420, dy = i === 1 ? 26 : 0; s += lbl(x, 206 + dy, a) + ln(x, 190, x, 196 + dy, 'g-thin') + note(x, 219 + dy, b); });   // the middle label sits lower so the notes do not collide
+  return s + lbl(40, 26, names.source || 'Source', 'start') + lbl(450, 170, names.mouth || 'Mouth', 'end') + '</svg>';
+}
+
+/* a soil profile with its horizons */
+function soilProfileSvg({ label, names = [['O', 'Organic matter'], ['A', 'Topsoil'], ['E', 'Leached layer'], ['B', 'Subsoil'], ['C', 'Weathered rock'], ['R', 'Bedrock']] } = {}) {
+  const W = 420, H = 300, cls = ['g-veg', 'g-soil', 'g-sand', 'g-rock-2', 'g-rock', 'g-rock-2'], hs = [22, 56, 34, 62, 58, 52];
+  let s = svgOpen(W, H, label), y = 12;
+  for (let k = 0; k < 9; k++) s += path(`M${50 + k * 18} 14 l-4 -10 M${50 + k * 18} 14 l4 -10`, 'g-line g-l3', ' style="stroke-width:1.6"');
+  names.forEach(([h, t], i) => {
+    s += rect(40, y, 180, hs[i], cls[i] + ' g-edge', 0, i === 5 ? ' fill-opacity="1"' : ' fill-opacity="0.85"');
+    if (i === 4) for (let k = 0; k < 9; k++) s += `<ellipse class="g-rock-2" cx="${60 + k * 19}" cy="${y + 18 + (k % 3) * 12}" rx="7" ry="5"/>`;
+    s += lbl(130, y + hs[i] / 2 + 5, h, 'middle', 'g-title') + ln(222, y + hs[i] / 2, 240, y + hs[i] / 2, 'g-thin') + lbl(246, y + hs[i] / 2 + 4, t, 'start');
+    y += hs[i];
+  });
+  return s + '</svg>';
+}
+
+/* the USDA soil texture classes as polygons of (sand %, clay %), and the class of a sample */
+const TEXTURE = [
+  ['clay', [[0, 100], [45, 55], [45, 40], [20, 40], [0, 60]], 'g-soil'], ['silty clay', [[0, 60], [20, 40], [0, 40]], 'g-rock-2'], ['sandy clay', [[45, 55], [65, 35], [45, 35]], 'g-rock-2'],
+  ['clay loam', [[20, 40], [45, 40], [45, 27], [20, 27]], 'g-rock'], ['silty clay loam', [[0, 40], [20, 40], [20, 27], [0, 27]], 'g-land-2'], ['sandy clay loam', [[45, 35], [65, 35], [80, 20], [52, 20], [45, 27]], 'g-sand'],
+  ['loam', [[23, 27], [45, 27], [52, 20], [52, 7], [43, 7]], 'g-veg'], ['silt loam', [[0, 27], [23, 27], [50, 0], [20, 0], [8, 12], [0, 12]], 'g-land'], ['silt', [[0, 12], [8, 12], [20, 0], [0, 0]], 'g-water'],
+  ['sandy loam', [[52, 20], [80, 20], [85, 15], [70, 0], [50, 0], [43, 7], [52, 7]], 'g-sand'], ['loamy sand', [[85, 15], [90, 10], [85, 0], [70, 0]], 'g-rock'], ['sand', [[90, 10], [100, 0], [85, 0]], 'g-core']];
+function textureClass(sand, clay) {
+  const inside = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+  const t = TEXTURE.find(([, poly]) => inside(sand, clay, poly)); return t ? t[0] : null;
+}
+function textureTriangleSvg(sand, clay, { label, names = {} } = {}) {
+  const W = 440, H = 340, A = [40, 300], B = [400, 300], C = [220, 300 - 360 * Math.sqrt(3) / 2];
+  const pt = (sa, cl) => { const si = 100 - sa - cl; return [A[0] * sa / 100 + B[0] * si / 100 + C[0] * cl / 100, A[1] * sa / 100 + B[1] * si / 100 + C[1] * cl / 100]; };
+  let s = svgOpen(W, H, label);
+  TEXTURE.forEach(([, poly, c]) => { s += polyg(poly.map(([a, b]) => pt(a, b)), c, ' fill-opacity="0.7" stroke="var(--paper)" stroke-width="1.4"'); });
+  TEXTURE.forEach(([t, poly]) => { const q = poly.map(([a, b]) => pt(a, b)), cx = q.reduce((a, p) => a + p[0], 0) / q.length, cy = q.reduce((a, p) => a + p[1], 0) / q.length; s += `<text class="g-note" style="font-size:10px" x="${f1(cx)}" y="${f1(cy + 3)}" text-anchor="middle">${names[t] || t}</text>`; });
+  s += polyg([A, B, C], 'fig-line', ' fill="none"');
+  for (let k = 20; k < 100; k += 20) { const [x1, y1] = pt(100 - k, k), [x2] = pt(k, 0), [x3, y3] = pt(0, 100 - k); s += txt(x1 - 8, y1 + 4, k, 'fig-small', 'end') + txt(x2, 316, k, 'fig-small') + txt(x3 + 8, y3 + 4, k, 'fig-small', 'start'); }
+  s += txt(92, 140, names.clayAxis || 'clay %', 'fig-small', 'end') + txt(348, 140, names.siltAxis || 'silt %', 'fig-small', 'start') + txt(220, 334, names.sandAxis || '← sand %', 'fig-small');
+  const [x, y] = pt(sand, clay);
+  return s + circ(x, y, 6, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + '</svg>';
+}

@@ -238,6 +238,7 @@ function cleanInput(raw) {
   s = s.replace(/(\d(?:\.\d+)?)e([+-]?\d+)$/, '$1*10^($2)');    // 3e8, 1.6e-19
   s = s.replace(/\s*(°\s*c|°|degrees?|deg|%|‰|percent|per ?mil+e?)\s*$/, '');
   s = s.replace(/\s*(km\/h|m\/s\^?2?|cm\^?[23]?|mm\^?[23]?|km\^?2?|m\^?[23]?|kg|mg|g|ml|l|seconds?|secs?|s|minutes?|mins?|hours?|hrs?|h|units?|dollars?|days?|years?|j)\s*$/, '');
+  s = s.replace(/\s*(million|juta)(\s+(years?|tahun))?\s*$/, '');          // answers asked for in millions (of years)
   s = s.replace(/\s+(?!pi\b|e\b)[^\s\d()+\-*/^.,]+(\^[23])?$/u, '');       // a trailing unit word in any language
   s = s.replace(/(\d)[^\x00-\x7F\s\d()+\-*/^.,]+(\^[23])?$/u, '$1');      // …or a non-Latin unit written without a space (3500м, 12سم)
   return s.trim();

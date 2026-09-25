@@ -1,0 +1,21 @@
+/* Bahasa Indonesia — 19-ladder-b */
+addT('id', {
+  '11uwi5mq7ey': R`Litosfer adalah salah satu lapisan yang menyusun geosfer.`,
+  '1cyp007rrg7': R`Lapisan-lapisan Bumi diketahui dari cara gelombang seismik menjadi lebih cepat, lebih lambat, dan membelok.`,
+  '1pl92uiqam4': R`Gradien geotermal menggambarkan kenaikan suhu seiring bertambahnya kedalaman.`,
+  'd7h8n5q9o8': R`Lempeng adalah bagian-bagian litosfer yang kaku yang bergerak di atas astenosfer yang lunak.`,
+  'manvmdf6vk': R`Batas lempeng dan gunung api ditentukan letaknya di peta dengan koordinat.`,
+  'z5snqb252t': R`Batuan beku terbentuk di tempat lempeng meleleh, dan batuan metamorf di tempat lempeng bertumbukan.`,
+  '1b0q43s1zt': R`Sebagian besar gunung api terletak di sepanjang zona subduksi dan batas divergen.`,
+  '1ij58cx1415': R`Gunung api mengeluarkan magma yang membeku menjadi batuan beku seperti andesit dan basal.`,
+  '1su1vvzgmny': R`Sebagian besar gempa bumi terjadi di tempat lempeng saling bergesekan atau menunjam.`,
+  '1hw8x2ca3tp': R`Energi gempa merambat sebagai gelombang P, S, dan gelombang permukaan.`,
+  '88lxadhdzm': R`Skala magnitudo bersifat logaritmik: kenaikan satu tingkat berarti amplitudo sepuluh kali lipat.`,
+  '2d92ewqc628': R`Pelapukan menghancurkan batuan dan merupakan langkah pertama siklus batuan menuju endapan.`,
+  'trufug7tgm': R`Sungai, laut, angin, dan es membentuk bentang alam melalui erosi dan pengendapan.`,
+  '28mij7b8ggk': R`Lipatan dan patahan terbentuk oleh gaya dari lempeng yang bergerak.`,
+  '1arh9ouhqbc': R`Bentuk lahan dibaca dari pola konturnya pada peta topografi.`,
+  '1mjycbbrekn': R`Tanah terbentuk dari batuan lapuk yang bercampur dengan bahan organik.`,
+  '1x7g4bq4ulr': R`Abu vulkanik lapuk menjadi andosol Indonesia yang subur.`,
+  '7sllx2z0uo': R`Tekstur tanah dinyatakan sebagai persentase pasir, debu, dan liat.`,
+});

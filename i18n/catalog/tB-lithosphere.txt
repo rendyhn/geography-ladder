@@ -1,0 +1,1320 @@
+##### earth-structure
+@zzzcxsjjyo  ; 0=FigW(earthLayersSvg({ names: [T`Crust`,  | 1=Tbl([T`Layer`, T`Depth`, T`State and mak | 2=Key(T`<p>For plate tectonics what matter | 3=Tip(T`<p>Do not confuse the lithosphere 
+
+<p>Nobody has drilled deeper than about $12\,\mathrm{km}$, yet we know the inside of the Earth well. Earthquake waves speed up, slow down and bend as they pass through layers of different density, and <b>S waves cannot pass through liquids</b>, which shows that the outer core is molten.</p>
+⟦0⟧
+⟦1⟧
+<p>The boundaries between layers are called <b>discontinuities</b>: the <b>Mohorovičić</b> (Moho) between crust and mantle, the <b>Gutenberg</b> between mantle and core, and the <b>Lehmann</b> between outer and inner core.</p>
+⟦2⟧
+<p>Temperature rises with depth. In the crust the <b>geothermal gradient</b> is typically about $25$–$30\,^\circ\mathrm{C}$ per kilometre, which is why deep mines are hot and why geothermal energy can be tapped.</p>
+⟦3⟧
+@1gdxarqvuzu
+Crust
+@2es7sswmry5
+Mantle
+@jpxr03gkgo
+Outer core
+@1epk9ixmwqc
+Inner core
+@10jcjr6rec9
+A cutaway of the Earth showing the crust, mantle, outer core and inner core with their depths
+@1m8vhyoilpv
+The Earth's layers. The radius is about 6 371 km.
+@1lfi0rwme0i
+Layer
+@186uk0gjjtn
+Depth
+@1apvl9i9q6b
+State and make-up
+@14pnwifxzko
+0 to 5–70 km
+@1l0z0oq10le
+solid rock; thin oceanic crust (basalt, "SIMA") and thicker continental crust (granite, "SIAL")
+@rj043p8am
+to 2 900 km
+@16rlqz0sqml
+hot silicate rock; solid, but it flows slowly over millions of years
+@29hcohldpc1
+2 900–5 150 km
+@1bg4upebcu7
+liquid iron and nickel; its currents make the Earth's magnetic field
+@27l5fg2h95j
+5 150–6 371 km
+@zermrlmhrv
+solid iron and nickel, about 5 000 °C, solid because of the huge pressure
+@1yuo2iexczj
+<p>For plate tectonics what matters is stiffness, not composition. The <b>lithosphere</b> (the crust plus the rigid top of the mantle, about 100 km thick) is broken into plates that ride on the <b>asthenosphere</b>, a hot, weak layer of the upper mantle that can flow.</p>
+@9lzv4a9duy
+<p>Do not confuse the lithosphere (rigid, includes the crust) with the crust itself: the crust is only the top part of the lithosphere.</p>
+@1qtth5rm2sc  ; 0=Q(t0, '°C') | 1=Q(g, '°C') | 2=Q(d, 'km')
+The rock temperature at the surface is ⟦0⟧ and the geothermal gradient is ⟦1⟧ per km. What is the temperature at the bottom of a mine ⟦2⟧ deep?
+@11b20z3lk8z  ; 0=Q(T1, '°C') | 1=Q(t0, '°C') | 2=Q(g, '°C')
+Water must reach ⟦0⟧ for a geothermal power plant. With a surface temperature of ⟦1⟧ and a gradient of ⟦2⟧ per km, how deep must the well go?
+@1s8pzyprxk1
+How do we know that the outer core is liquid?
+@12v45x6zvas
+S waves from earthquakes do not pass through it
+@1kukv8bks9m
+Drill cores have reached it
+@lh4xowzo4y
+Volcanoes erupt liquid iron
+@nrbzjusbht
+P waves travel faster in it
+@255muk7srfi
+S waves (shear waves) cannot travel through liquids. They are missing on the far side of the Earth from an earthquake, so the outer core must be liquid.
+@1cryumldj3c
+What is the name of the boundary between the crust and the mantle?
+@1r1h77q2s26
+Mohorovičić discontinuity (Moho)
+@eyc0vnv1dc
+Gutenberg discontinuity
+@qtp3k2rwki
+Lehmann discontinuity
+@too2svmhht
+The asthenosphere
+@1qxrtya8bcm
+The Moho is where seismic waves suddenly speed up at the top of the mantle.
+@2aq684t3mwb
+What is the lithosphere?
+@2tw6tva6rc
+The crust together with the rigid uppermost mantle
+@211g83zteom
+The crust only
+@4fbe0c8aa5
+The liquid outer core
+@1cfpi6fis0g
+The weak layer the plates move on
+@2d5nj243am8
+The lithosphere is the rigid outer shell, about 100 km thick, broken into plates. The weak layer beneath is the asthenosphere.
+@1fyyw68ecxq
+Which layer of the Earth is solid even though it is the hottest?
+@1uq3l8kvc6r
+The inner core
+@nidzk7chzc
+The outer core
+@187anab8qoa
+The crust
+@4fxal0zgth
+The inner core is about 5 000 °C, but the enormous pressure keeps the iron solid.
+@16xwyl6uzla
+Which kind of crust is thinner and made mainly of basalt?
+@1qko4xumtux
+Oceanic crust
+@14f1kiw5j5h
+Continental crust
+@1onrabnqjlp
+Both are the same
+@29fm8bzvevf
+The mantle crust
+@7ufqbqbper
+Oceanic crust is 5–10 km thick and basaltic (SIMA); continental crust is 30–70 km thick and mainly granitic (SIAL).
+@27yvdk8y4p4
+Which discontinuity separates the mantle from the core, at about 2 900 km?
+@73ax2p7pou
+Mohorovičić discontinuity
+@feh1hwmu33
+Conrad discontinuity
+@273lcpmjop7
+The Gutenberg discontinuity marks the core–mantle boundary; S waves stop there.
+@28i8cn2v8gu
+the mantle
+@21lqdnfr4ah
+the outer core
+@5efvjr5bwh
+the inner core
+@c9f9cqje4s  ; 0=layer === T`the mantle` ? T`The mantle r
+⟦0⟧ What percentage of the Earth's radius (6 371 km) is its thickness?
+@1vgm74kwvtl
+The mantle reaches from about 35 km to 2 900 km deep.
+@1eivway6qrq
+The outer core reaches from about 2 900 km to 5 150 km deep.
+@10xbobfh9fn
+The inner core reaches from about 5 150 km to the centre at 6 371 km.
+@15fp2bmypms  ; 0=M(b) | 1=M(a) | 2=M(th) | 3=M(th) | 4=M(pct)
+Thickness $= ⟦0⟧ - ⟦1⟧ = ⟦2⟧\,\mathrm{km}$, and $\frac{⟦3⟧}{6371} \times 100\% = ⟦4⟧\%$.
+
+##### plate-tectonics
+@goovibuxw9  ; 0=Key(T`<p>The lithosphere is broken into  | 1=Fig(plateBoundarySvg('divergent', { name | 2=Fig(plateBoundarySvg('subduction', { nam | 3=Fig(plateBoundarySvg('collision', { name | 4=Fig(plateBoundarySvg('transform', { name | 5=FigW(platesIndonesiaSvg({ names: { eu: T | 6=Tip(T`<p>This position makes Indonesia p
+
+<p>In 1912 <b>Alfred Wegener</b> proposed that the continents had once formed one supercontinent, <b>Pangaea</b>, and had drifted apart. His evidence: the coasts of South America and Africa fit like a jigsaw; the same fossils (such as <i>Mesosaurus</i> and <i>Glossopteris</i>) and rock types are found on continents now oceans apart; and traces of ancient glaciers appear in places that are now tropical. In the 1960s <b>sea-floor spreading</b> explained the mechanism: new crust forms at mid-ocean ridges and old crust sinks back at trenches, driven by convection in the mantle.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+<h3>Indonesia: where three plates meet</h3>
+⟦5⟧
+⟦6⟧
+@czg9dg079s
+<p>The lithosphere is broken into about a dozen large <b>plates</b> moving a few centimetres a year, about as fast as fingernails grow. Almost all earthquakes and volcanoes happen along their boundaries.</p>
+@17f7ncwp2hx
+Mid-ocean ridge
+@e505g619ah
+Oceanic plate
+@zk043uv76v
+Rising magma
+@26p48b22g3r
+A divergent boundary: plates move apart at a mid-ocean ridge where magma rises
+@16fwm5ospav
+<b>Divergent</b>: plates move apart and new crust forms, e.g. the Mid-Atlantic Ridge and the East African Rift.
+@28q396cckor
+Trench
+@16swrpjv7e
+Volcanic arc
+@omm2piw7ob
+Continental plate
+@mre2j4u382
+Subduction zone
+@2erx7g8szq9
+A convergent boundary: an oceanic plate sinks beneath a continental plate, forming a trench and a line of volcanoes
+@10v67rig1fp
+<b>Convergent (subduction)</b>: the denser oceanic plate sinks under the other, forming a deep trench, earthquakes and a chain of volcanoes, e.g. the Java Trench and the volcanoes of Sumatra and Java.
+@265t4i2576g
+Fold mountains
+@116tgj7t859
+Two continental plates collide and crumple into fold mountains
+@94azc4u0jn
+<b>Convergent (collision)</b>: two continents collide and crumple up into fold mountains, e.g. the Himalayas.
+@2e50488crnl
+Transform fault
+@bf9uiycrwz
+offset river
+@1606rqxalh3
+Seen from above, two plates slide past each other along a transform fault, offsetting a river
+@na5fgwzlaw
+<b>Transform</b>: plates slide past each other, causing earthquakes but no volcanoes, e.g. the San Andreas Fault.
+@903eflueqy
+Eurasian Plate
+@16rrj7x7lzm
+Indo-Australian Plate
+@2a91ysqt1of
+Pacific Plate
+@5p5a12jbhf
+Java Trench
+@19ff68r5xo9
+Map of Indonesia with plate boundaries and the chain of volcanoes
+@2925sfvtu1
+The Indo-Australian Plate moves north under the Eurasian Plate along the Sunda (Java) Trench, and the Pacific Plate pushes in from the east. Triangles mark some of the active volcanoes.
+@204pmstqhz4
+<p>This position makes Indonesia part of the Pacific <b>Ring of Fire</b>: it has about 127 active volcanoes and frequent earthquakes, but also fertile volcanic soils, geothermal energy and rich mineral deposits.</p>
+@gpdsa5qim0  ; 0=Q(r, 'cm') | 1=NUM(yrs)
+A plate moves at ⟦0⟧ per year. How far does it move in ⟦1⟧ years, in kilometres?
+@1tnc7eq1rbq  ; 0=r | 1=M(yrs) | 2=M(r * yrs) | 3=QT(km, 'km')
+$⟦0⟧ \times ⟦1⟧ = ⟦2⟧\,\mathrm{cm} = ⟦3⟧$ (divide by 100 000 to change cm into km).
+@1oh4jyozmbd  ; 0=Q(km, 'km') | 1=Q(r, 'cm')
+Rock on the sea floor is found ⟦0⟧ from a mid-ocean ridge. The plate moves away from the ridge at ⟦1⟧ per year. About how old is the rock, in millions of years?
+@cvt7h69cv0
+million years
+@1vzo93x66ny  ; 0=M(km) | 1=M(km * 1e5) | 2=M(km * 1e5) | 3=M(r) | 4=M(km * 1e5 / r) | 5=M(my)
+$⟦0⟧\,\mathrm{km} = ⟦1⟧\,\mathrm{cm}$; time $= \frac{⟦2⟧}{⟦3⟧} = ⟦4⟧$ years $= ⟦5⟧$ million years.
+@16wo0yuvbod
+the Himalayas
+@1bszwfc152c
+Convergent (collision)
+@18suifrcu1r
+the Mid-Atlantic Ridge
+@wchqy11p1
+Divergent
+@216xk5ymjtl
+the San Andreas Fault
+@rqnysuylrx
+Transform
+@19p46ov1gqi
+the Java Trench
+@dhx79hdhy1
+Convergent (subduction)
+@16defec375t
+the East African Rift Valley
+@274v5x8qnbw
+the volcanoes of Sumatra
+@kemvuuucyo
+the Andes and their volcanoes
+@1s7i8sbtbgz  ; 0=ex
+What type of plate boundary formed ⟦0⟧?
+@1fu5xrvjigm  ; 0=ex | 1=a
+⟦0⟧ lies on a <b>⟦1⟧</b> boundary.
+@vm6yz5ml3p  ; 0=Fig(plateBoundarySvg(k, { names: { ridge
+Which type of plate boundary is shown?⟦0⟧
+@22ji8n9vjr9
+A plate boundary
+@pws1vio86n  ; 0=a
+Moving apart is divergent; one plate sinking under another is subduction; two continents crumpling up is collision; sliding past is transform. This is <b>⟦0⟧</b>.
+@1mq7c1eankq
+Which evidence did Wegener use for continental drift?
+@qwde35ucuq
+The same fossils on continents now separated by oceans
+@2cwkxluduvh
+Satellite measurements of plate speeds
+@cptshc0831
+The magnetic stripes on the sea floor
+@1ncrefqnc91
+Deep-sea drilling
+@5ywo0q6nj
+Wegener used the jigsaw fit, matching fossils and rocks and ancient glacial traces. Magnetic stripes and satellite data came decades later.
+@1znq3y7jwef
+Which three major plates meet in the Indonesian region?
+@82r7s4tktz
+Eurasian, Indo-Australian and Pacific
+@1xfia2iozi8
+African, Eurasian and Pacific
+@dxz1kmx4dw
+Nazca, Pacific and Antarctic
+@9vpx04vx0b
+North American, Eurasian and Indo-Australian
+@sa4d74kuam
+Indonesia sits where the Eurasian, Indo-Australian and Pacific plates (with the smaller Philippine Sea Plate) converge.
+@iuczjvftp4
+Why is there a long chain of volcanoes along Sumatra, Java and Nusa Tenggara?
+@tvqxnxdwcf
+The Indo-Australian Plate sinks beneath the Eurasian Plate and melts
+@guaqf4ymoi
+The plates are moving apart there
+@pr98hn1ia7
+A hot spot lies under Java
+@1syhyismp22
+Two continents are colliding there
+@teo4swv6mo
+At the subduction zone the sinking plate releases water that melts the mantle above it; the magma rises to form a volcanic arc parallel to the trench.
+@27472zv2eqj
+What drives the movement of the plates?
+@1vx4dyr36li
+Convection currents and the pull of sinking plates in the mantle
+@5zhsvtplzi
+The Earth's rotation
+@l2k6wak87c
+Tides caused by the Moon
+@1afeza4sc9u
+Winds blowing on the continents
+@m4x5nh31f7
+Heat from the interior drives slow convection in the mantle; cold, dense plates sinking at trenches also pull the rest of the plate along.
+@122jcovabre
+At which kind of boundary is new oceanic crust made?
+@1njwt3rz3lo
+At mid-ocean ridges magma rises between the separating plates and cools into new crust.
+
+##### rocks
+@1xkrarijuro  ; 0=Tbl([T`Rock type`, T`How it forms`, T`Ex | 1=FigW(cycleSvg([T`Magma`, T`Igneous rock` | 2=Key(T`<p><b>Processes in the rock cycle. | 3=Tip(T`<p>Indonesia is rich in andesite a
+
+<p>A <b>mineral</b> is a naturally occurring solid with a definite chemical composition and crystal structure, such as quartz or feldspar. A <b>rock</b> is a mixture of one or more minerals. Minerals are identified by their colour, streak, lustre, cleavage and <b>hardness</b>, measured on Mohs' scale from 1 (talc) to 10 (diamond): a harder mineral scratches a softer one.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+@1cpmmpm9ypr
+Rock type
+@1yhdbf5ipkl
+How it forms
+@281mw74j04l
+Igneous
+@2dfbruvzhap
+magma or lava cools and crystallises; slow cooling underground gives large crystals (intrusive), fast cooling at the surface gives small crystals or glass (extrusive)
+@1ynt0yx58bz
+granite, diorite, gabbro (intrusive); basalt, andesite, obsidian, pumice (extrusive)
+@4kjgyaf1fs
+Sedimentary
+@1cflg2l60v9
+fragments, shells or dissolved minerals are deposited in layers, then compacted and cemented
+@2ct9155f7ca
+sandstone, conglomerate, shale, limestone, coal, rock salt
+@1j8dfugw9qx
+Metamorphic
+@16mai88vuvq
+an existing rock is changed by heat and pressure without melting
+@nztobxla6l
+marble (from limestone), slate (from shale), quartzite (from sandstone), gneiss (from granite)
+@e4tdf2n8km
+Magma
+@1absn8i47nz
+Igneous rock
+@1yi27e2nwpo
+Sediment
+@1dre0w4vvma
+Sedimentary rock
+@7bw3uqx9xx
+Metamorphic rock
+@su8g3kb30k
+Rock cycle
+@1dkurtzujjj
+The rock cycle: magma cools into igneous rock, which weathers into sediment, which becomes sedimentary rock, then metamorphic rock, which can melt back into magma
+@nexi8nphr0
+The rock cycle. Any rock can also be uplifted and weathered, or buried and melted, so there are many shortcuts.
+@1gz586gmyek
+<p><b>Processes in the rock cycle.</b> Cooling and crystallisation turn magma into igneous rock. Weathering, erosion and deposition turn any rock into sediment. Compaction and cementation (lithification) turn sediment into sedimentary rock. Heat and pressure make metamorphic rock. Melting turns rock back into magma.</p>
+@11cziun371l
+<p>Indonesia is rich in andesite and basalt from its volcanoes, limestone from ancient coral reefs (e.g. Gunung Kidul and the Maros karst), and coal in Kalimantan and Sumatra.</p>
+@vojj9gro76
+granite
+@qvjrsjpss
+Igneous (intrusive)
+@1kkx5z9huwb
+basalt
+@1rzsmx386rr
+Igneous (extrusive)
+@jb94yznnws
+pumice
+@1y6789oerug
+obsidian
+@2esyo8yd698
+andesite
+@14o7hwrz1v3
+gabbro
+@1zgzsi9845l
+sandstone
+@1duouijf7vt
+limestone
+@29aeurwyauq
+shale
+@13fmmge50tm
+conglomerate
+@o834uspy53
+coal
+@13gsi23ko9s
+marble
+@2ahe5g05obi
+slate
+@fjf8llm2vq
+gneiss
+@2cp358611w0
+quartzite
+@16xf38hbcna  ; 0=rock
+What type of rock is ⟦0⟧?
+@1uvoqnvq97x  ; 0=a
+It is <b>⟦0⟧</b>.
+@1jm0619x2bl  ; 0=parent
+Which metamorphic rock forms when ⟦0⟧ is changed by heat and pressure?
+@6vsmzisfon  ; 0=parent | 1=meta
+Heat and pressure turn ⟦0⟧ into <b>⟦1⟧</b>.
+@1fyaqi401n3
+talc
+@1kebyw3ukpc
+gypsum
+@bvfu26gque
+calcite
+@o04dvj2o2
+fluorite
+@1f8wcn6ei5
+apatite
+@15u1qn613es
+orthoclase feldspar
+@2fevnrpzqbn
+quartz
+@16e8lbyq6g7
+topaz
+@h1xt5q5ar4
+corundum
+@n6qnovqr0x
+diamond
+@dczjesd4v0  ; 0=A | 1=ha | 2=B | 3=hb
+On Mohs' scale ⟦0⟧ has a hardness of ⟦1⟧ and ⟦2⟧ a hardness of ⟦3⟧. Which statement is true?
+@5bvsq46t1e  ; 0=A | 1=B
+⟦0⟧ scratches ⟦1⟧
+@29q835hjyxh
+Neither can scratch the other
+@26a1ze6ouse
+Each scratches the other
+@20zsj4izloj  ; 0=ha > hb ? A : B | 1=Math.max(ha, hb) | 2=ha > hb ? B : A | 3=Math.min(ha, hb)
+A harder mineral scratches a softer one: ⟦0⟧ (⟦1⟧) is harder than ⟦2⟧ (⟦3⟧).
+@2ht9nhto3n
+magma
+@1lnxa79rbim
+igneous rock
+@y0bntbgfz4
+Cooling and crystallisation
+@2bb4opuawy3
+rock at the surface
+@22pyk4yo3h
+sediment
+@21e3a9swjoi
+Weathering and erosion
+@7v3do2fz4p
+layers of sediment
+@2fg1zw3df4c
+sedimentary rock
+@bftn9f6hh5
+Compaction and cementation
+@1jm67ggta6
+any buried rock
+@cvwavfpc62
+metamorphic rock
+@q9ssbzwnv8
+Heat and pressure
+@2353ff7ri4r
+rock deep in the crust
+@2h45y6pp0w
+Melting
+@1hrtdrmodjf  ; 0=from | 1=to
+In the rock cycle, which process turns ⟦0⟧ into ⟦1⟧?
+@1vnep4vfqix
+Why does granite have large crystals while basalt has tiny ones?
+@1pzn9qkghqp
+Granite cooled slowly deep underground; basalt cooled quickly at the surface
+@tcas8zsxjw
+Granite cooled quickly at the surface; basalt slowly underground
+@26x2rrtdjdw
+Granite is older than basalt
+@edjb75ocsy
+Basalt has been crushed by weathering
+@2aahdymu0qw
+Slow cooling gives crystals time to grow. Intrusive rocks cool slowly underground; extrusive lavas cool fast.
+@14bko1y62dd
+Why is pumice so light that it can float?
+@17c8ul9ugtj
+It is full of gas bubbles trapped as lava cooled very quickly
+@bsiljwqnjy
+It contains no minerals
+@1bgdi21610r
+It is made of wood
+@1m0lxntlzbr
+It is a sedimentary rock made of shells
+@1lbort9583f
+Pumice forms when gas-rich lava froths and cools almost instantly, leaving a glassy rock full of holes.
+@eutjseb3aa
+Which rock is most likely to contain fossils?
+@8f4snwo2f4
+Limestone
+@28mugub64d6
+Granite
+@1l8zezu0yd6
+Basalt
+@1stvw56hnol
+Obsidian
+@mz4mbq7u18
+Fossils are preserved in sedimentary rocks such as limestone and shale; the heat of igneous rocks destroys them.
+@1k9gey8cx55
+What is a mineral?
+@7bkulufeg9
+A natural solid with a definite composition and crystal structure
+@1j91df0912d
+Any mixture of rocks
+@1zpab250qra
+Anything dug out of the ground
+@2f3x477yk3g
+A rock formed from shells
+@6urlzqbdk1
+Minerals such as quartz have a fixed chemical formula and an ordered crystal structure; rocks are made of minerals.
+
+##### volcanism
+@4k11rt9sl2  ; 0=FigW(volcanoSvg('strato', { names: { cha | 1=Tbl([T`Type`, T`Shape and eruption`, T`E | 2=Key(T`<p><b>Explosive or effusive?</b> S | 3=Tip(T`<p>Indonesia's volcano alert level
+
+<p><b>Volcanism</b> covers every way that magma, molten rock from inside the Earth, moves upwards. Magma that cools underground forms <b>intrusions</b>: huge <b>batholiths</b>, lens-shaped <b>laccoliths</b>, flat <b>sills</b> between layers and vertical <b>dikes</b> cutting across them. Magma that reaches the surface erupts as <b>lava</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+<h3>Hazards and benefits</h3>
+<p>Dangers include <b>pyroclastic flows</b> (glowing avalanches of hot gas and ash, "wedhus gembel"), <b>lahars</b> (volcanic mudflows, often after heavy rain), ash fall, lava flows, toxic gases and tsunamis. Benefits include fertile soils, geothermal energy, building sand and stone, minerals and tourism.</p>
+⟦3⟧
+@2bxasx78q6n
+Magma chamber
+@1wn04dhyacx
+Vent
+@1pd5obyd4ya
+Crater
+@l6irxj1ts8
+Layers of lava and ash
+@28f8qtaw7v1
+Cross-section of a stratovolcano with its magma chamber, vent, crater and alternating layers
+@1sk6pul7xqm
+A stratovolcano, like Merapi or Semeru, is built of alternating layers of lava and ash.
+@k7wfdtk1dy
+Type
+@enl02p9ijf
+Shape and eruption
+@1i56r47suu5
+Example
+@bb9gv9plor
+Stratovolcano (composite)
+@prudeoszy7
+steep cone of lava and ash layers; sticky magma, explosive eruptions
+@pcij23cog9
+Merapi, Semeru, Fuji
+@1txml7eyvj5
+Shield volcano
+@nie5cih4uf
+broad, gentle slopes; runny basalt lava flows far
+@1wymxajqc1
+Mauna Loa (Hawaii)
+@1ie5cw36duv
+Cinder cone
+@12re0iycihi
+small, steep cone of loose fragments
+@7qc5gue3i9
+Anak Krakatau in its early years
+@d3zq0btsg
+Caldera
+@2dadsir4rcl
+a huge basin left when a volcano collapses after emptying its magma chamber
+@tmk5qxqo1j
+Toba, Tengger (Bromo)
+@14ed5xhb2ol
+<p><b>Explosive or effusive?</b> Sticky, gas-rich, silica-rich magma (andesite, rhyolite) traps gas and explodes; runny, silica-poor basalt lets gas escape and flows quietly. The <b>Volcanic Explosivity Index</b> (VEI) runs from 0 to 8, and each step means about ten times more erupted material. Tambora (1815) was VEI 7.</p>
+@29z8uf3dca2
+<p>Indonesia's volcano alert levels, from low to high: <b>Normal</b> (level I), <b>Waspada</b> (II, watch), <b>Siaga</b> (III, alert) and <b>Awas</b> (IV, warning: evacuate the danger zone).</p>
+@l0l6m3fxkh  ; 0=b | 1=a
+Each step on the Volcanic Explosivity Index means about ten times more erupted material. About how many times more material does a VEI ⟦0⟧ eruption produce than a VEI ⟦1⟧ eruption?
+@1zw71o6j03o  ; 0=b | 1=a | 2=b - a | 3=M(f)
+$10^{⟦0⟧ - ⟦1⟧} = 10^{⟦2⟧} = ⟦3⟧$ times.
+@2c2307paqvs  ; 0=Q(d, 'km') | 1=Q(v, 'm/s')
+An ash cloud is blown towards a town ⟦0⟧ away by a wind of ⟦1⟧. About how many hours will the ash take to arrive?
+@84sjde5hv3  ; 0=v | 1=M(v * 3.6) | 2=d | 3=M(v * 3.6) | 4=QT(h, 'h')
+$⟦0⟧\,\mathrm{m/s} = ⟦1⟧\,\mathrm{km/h}$, so $t = \frac{⟦2⟧}{⟦3⟧} = ⟦4⟧$.
+@26xauedyus6
+Stratovolcano
+@v0bcaz4l9t  ; 0=Fig(volcanoSvg(k, { names: { chamber: T`
+Which type of volcano is shown?⟦0⟧
+@kpf9jgy47f
+A volcano in cross-section
+@1g4spjinnsi  ; 0=a
+A steep layered cone is a stratovolcano; a broad gentle dome a shield volcano; a small steep heap a cinder cone; a wide collapsed basin a caldera. This is a <b>⟦0⟧</b>.
+@1vavfw8tfyd
+a glowing avalanche of hot gas, ash and rock that rushes down the slope
+@23h3uvdr7yi
+Pyroclastic flow
+@5hytksiq3
+a fast mudflow of volcanic ash and water, often after heavy rain
+@zybmjk6080
+Lahar
+@69zgw4ftnm
+magma that has reached the surface and flows as molten rock
+@amju4aof8t
+Lava
+@20d4s4q63qd
+fine volcanic particles that settle over a wide area
+@1vv8wnl4gpt
+Ash fall
+@u16s7oky0b
+a flat sheet of magma that cooled between rock layers
+@16b3tlowk3h
+Sill
+@6rgwsrvpwx
+a vertical sheet of magma that cut across rock layers
+@rmuy1buqcy
+Dike
+@172ss13sd1j
+a huge mass of magma that cooled deep underground
+@1u21815hqxo
+Batholith
+@13xh9o28l5h  ; 0=d
+What is the name for ⟦0⟧?
+@28r0gtau08f
+Laccolith
+@damas4hjsc  ; 0=a
+That is a <b>⟦0⟧</b>.
+@2c4cwyfhp32
+What is the highest volcano alert level in Indonesia?
+@1d1qgohq4uh
+Awas (level IV)
+@2es3gxqcz1n
+Siaga (level III)
+@amuo9ccpq6
+Waspada (level II)
+@4wsgs7826j
+Normal (level I)
+@1mg2eb3kbvi
+The levels are Normal (I), Waspada (II), Siaga (III) and Awas (IV). At Awas people are evacuated from the danger zone.
+@z1iwauqhtw
+Why do stratovolcanoes such as Merapi erupt explosively?
+@15azt1ko4t7
+Their magma is sticky and traps gas
+@2b6b9t2kal3
+Their magma is very runny
+@7u0cl9x3fl
+They are below sea level
+@21th4fzc2sz
+They have no magma chamber
+@17v3yhjuuwu
+Silica-rich magma is viscous: gas cannot escape easily, pressure builds up and is released violently.
+@18pz05skn5f
+Which is a benefit of living near a volcano?
+@lymoe3r1of
+Fertile soil from weathered volcanic ash
+@r1xtw9tcw0
+Clean air during eruptions
+@1fpuloct26l
+No earthquakes
+@17w0ssl1a93
+Protection from floods
+@xuvexmrtw2
+Volcanic ash weathers into fertile soils, which is why the slopes of Javanese volcanoes are densely farmed. Geothermal energy and tourism are other benefits.
+@oasewnoyl5
+Lake Toba in North Sumatra lies in what kind of feature?
+@2af9cxvnt8j
+A caldera from a huge eruption
+@pajmqqpet8
+A crater of an active cinder cone
+@5emtxehxdm
+A glacial valley
+@lujnocxfrc
+A rift valley between two plates
+@2933t2fb8ki
+Toba erupted about 74 000 years ago; the emptied magma chamber collapsed and the caldera filled with water.
+
+##### earthquakes
+@2buwmegev54  ; 0=Tbl([T`Wave`, T`Motion`, T`Speed in the  | 1=FigW(seismogramSvg(40, { names: { p: T`P | 2=Key(T`<p><b>Distance to the epicentre.</ | 3=Fig(triangulationSvg({ names: { st: T`St | 4=Tip(T`<p>A shallow earthquake under the 
+
+<p>An <b>earthquake</b> is a sudden shaking of the ground when stress built up in rocks is released, usually as rock slips along a <b>fault</b>. Most are <b>tectonic</b> (at plate boundaries); others are <b>volcanic</b> or caused by collapse, for example of caves or mines. The point underground where the rupture starts is the <b>focus</b> (hypocentre); the point on the surface directly above it is the <b>epicentre</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+<h3>Magnitude and intensity</h3>
+<p><b>Magnitude</b> (Richter or moment magnitude) measures the energy released and is the same everywhere. Each step up means about 10 times bigger ground motion and about 32 times more energy. <b>Intensity</b> (the Modified Mercalli scale, I–XII) describes the shaking and damage at a particular place, so it is higher near the epicentre.</p>
+⟦4⟧
+@124f6ai98q6
+Wave
+@29bqjnaehfc
+Motion
+@z1p7s1euu3
+Speed in the crust
+@1ip3aiq74se
+Travels through
+@drngoe1ym4
+P (primary)
+@v277l83bld
+push–pull, like a spring
+@wcg9shtauq
+about 6 km/s, arrives first
+@o9i8bs72wh
+solids, liquids and gases
+@2bpfa8w60i5
+S (secondary)
+@103z611icka
+side to side (shear)
+@1glpf9q4a8w
+about 3.5 km/s
+@132jvdluohw
+solids only
+@1lmfej8h5jp
+Surface waves
+@n7hk6traom
+rolling and swaying at the surface
+@uicho87odm
+slowest
+@153dg5i71tw
+the surface; they do the most damage
+@cok3bm56gz
+A seismogram showing the P wave arriving first and the S wave 40 seconds later
+@v979ymh5r5
+A seismogram. The longer the gap between the P and S arrivals, the further away the earthquake.
+@1qskahr48bh
+<p><b>Distance to the epicentre.</b> Both waves start together but P waves are faster. With $v_P = 6\,\mathrm{km/s}$ and $v_S = 3.5\,\mathrm{km/s}$:</p><p>$$d = \frac{t_S - t_P}{\frac{1}{v_S} - \frac{1}{v_P}} \approx 8.4 \times (t_S - t_P)\ \mathrm{km}$$</p><p>with the time gap in seconds. For distant earthquakes Laska's rule is used: $\Delta = \big((S - P) - 1\big) \times 1000\,\mathrm{km}$, with $S - P$ in minutes. Three stations, each with its own distance circle, pinpoint the epicentre where the circles meet.</p>
+@12g02vfrqsp
+Station
+@1hr27yizywu
+Epicentre
+@o3lckpqt8g
+Three seismic stations with circles showing their distance to the earthquake; the circles meet at the epicentre
+@1eqt0gkjtt0
+Locating the epicentre by triangulation.
+@1q19phzpowf
+<p>A shallow earthquake under the sea at a subduction zone can lift the sea floor and start a <b>tsunami</b>. In deep water it travels at $v = \sqrt{g h}$, as fast as a jet plane, and slows and grows taller as it reaches the coast. The 2004 Aceh tsunami followed a magnitude 9.1 earthquake.</p>
+@161e0jxz5z0  ; 0=dt | 1=FigW(seismogramSvg(dt, { names: { p: T`P
+A seismograph records the P wave of an earthquake and, ⟦0⟧ seconds later, the S wave. How far away is the epicentre? (Take $v_P = 6\,\mathrm{km/s}$ and $v_S = 3.5\,\mathrm{km/s}$.)⟦1⟧
+@25u18zz9ww7
+A seismogram with the P and S arrivals marked
+@1ec6k6ji1vz  ; 0=dt | 1=dt | 2=M(sig(1 / 3.5 - 1 / 6, 3)) | 3=QT(d, 'km')
+$d = \frac{⟦0⟧}{\frac{1}{3.5} - \frac{1}{6}} = \frac{⟦1⟧}{⟦2⟧} = ⟦3⟧$.
+@h6fivgk8kn  ; 0=NUM(mn)
+At a distant station the S wave arrives ⟦0⟧ minutes after the P wave. Using Laska's rule, how far away is the epicentre?
+@dxfb7mht6  ; 0=NUM(b) | 1=NUM(a) | 2=en ? T`more energy does the larger one r
+Compare an earthquake of magnitude ⟦0⟧ with one of magnitude ⟦1⟧. About how many times ⟦2⟧?
+@2e3vl4afn6w
+more energy does the larger one release
+@hminmwhw9f
+larger is its ground motion (the amplitude on the seismogram)
+@2a3vtswqeh7  ; 0=dm | 1=M(f)
+Each unit of magnitude is about 32 times more energy: $32^{⟦0⟧} \approx ⟦1⟧$.
+@294lfgpa0os  ; 0=dm | 1=M(f)
+Each unit of magnitude is 10 times the amplitude: $10^{⟦0⟧} = ⟦1⟧$.
+@1mg9u32qqre  ; 0=Q(h, 'm') | 1=Q(d, 'km')
+A tsunami crosses an ocean ⟦0⟧ deep. It travels at $v = \sqrt{g h}$ with $g = 9.8\,\mathrm{m/s^2}$. How many minutes does it take to reach a coast ⟦1⟧ away?
+@1pk1erdbk81  ; 0=M(h) | 1=M(sig(v)) | 2=M(d * 1000) | 3=M(sig(v)) | 4=M(sig(d * 1000 / v)) | 5=QT(t, 'min')
+$v = \sqrt{9.8 \times ⟦0⟧} = ⟦1⟧\,\mathrm{m/s}$, so $t = \frac{⟦2⟧}{⟦3⟧} = ⟦4⟧\,\mathrm{s} = ⟦5⟧$.
+@1xxj9v3heuc
+Which seismic waves arrive first at a seismograph station?
+@syj3hgdxez
+P waves
+@t5rm870wtp
+S waves
+@nbbxzrvl7
+They all arrive together
+@6tfo35bs9k
+P waves are the fastest (about 6 km/s in the crust), so they arrive first.
+@2ccqvbxpa5v
+What is the epicentre of an earthquake?
+@vg5lsine4e
+The point on the surface directly above the focus
+@28dvei7aq1o
+The point underground where the rock breaks
+@1jirspoqcsz
+The place with the most damage
+@2ceu210lgp8
+The seismograph station nearest to it
+@mzqo2my9rp
+The focus (hypocentre) is underground; the epicentre is the point on the surface straight above it.
+@3x5q2afncx
+Which scale describes the damage and shaking felt at a particular place?
+@pxsuh0npfd
+The Modified Mercalli intensity scale
+@1l7h79lonr7
+The Richter magnitude scale
+@12xr0g0msyi
+The Volcanic Explosivity Index
+@c91uid47hj
+Mohs' scale
+@1o4q2q39rr9
+Intensity (I–XII) describes effects at a place; magnitude measures the energy released at the source.
+@txg8qs9fzx
+Which waves usually cause the most damage to buildings?
+@kg5a0pcoqb
+Radio waves
+@1z62wvpa6cp
+Surface waves arrive last but have the largest ground motion, shaking and rolling buildings.
+@qn073qhl8c
+What is the most common cause of earthquakes in Indonesia?
+@2g3t1ynerw
+Movement of tectonic plates
+@18bmvtz7dbb
+Collapse of caves
+@1c6gcgnu4aj
+Meteorite impacts
+@7wlipuqfm5
+Changes in the weather
+@bevk9rd3qp
+Most Indonesian earthquakes are tectonic, from the subduction of the Indo-Australian Plate and from active faults on land.
+@16aeu3ktjq4
+What should you do first when an earthquake starts while you are indoors?
+@1lpix5jxtqn
+Drop, cover under a sturdy table and hold on
+@y5ftlf8i33
+Run outside straight away down the stairs
+@110sn23wjt
+Stand next to a window
+@zb786tinxl
+Use the lift to leave the building
+@sdxcetovdb
+Drop, cover and hold on protects you from falling objects. Leave only when the shaking stops, never by lift.
+
+##### weathering
+@1a5d92jqmzq  ; 0=Tbl([T`Weathering`, T`How it works`, T`E | 1=Key(T`<p>In hot, wet climates such as In | 2=Tip(T`<p>Soil loss is often given as a m
+
+<p>Forces from inside the Earth (<b>endogenic</b>) build up the land; forces at the surface (<b>exogenic</b>) wear it down. The exogenic processes are weathering, mass movement, erosion and deposition.</p>
+⟦0⟧
+⟦1⟧
+<h3>Mass movement</h3>
+<p><b>Mass movement</b> is the movement of weathered material down a slope under gravity: <b>rockfalls</b>, <b>landslides</b> (a mass sliding on a slip surface), <b>mudflows</b> and slow <b>soil creep</b> (shown by tilted trees and fences). It is most likely on steep slopes, after heavy rain, where vegetation has been cleared and where earthquakes shake the ground.</p>
+<h3>Erosion and deposition</h3>
+<p><b>Erosion</b> is the removal and transport of material by running water, wind, waves and glaciers. When the agent slows down it drops its load: <b>deposition</b>. Soil erosion by rain on bare, sloping farmland is a serious problem; it is reduced by terracing, contour ploughing, cover crops and reforestation.</p>
+⟦2⟧
+@1uexx2zh8cp
+Weathering
+@13vl8cid5at
+How it works
+@1q9wj278yrc
+Physical (mechanical)
+@2bjrlcpu4fw
+rock breaks into pieces without changing its minerals
+@pewe1mqmgh
+heating and cooling (exfoliation), frost wedging, salt crystals, release of pressure
+@1j084czsasr
+Chemical
+@12kfdq05wus
+minerals react with water, oxygen or acids and change
+@1i30toxojyd
+hydrolysis of feldspar to clay, oxidation (rust), carbonation dissolving limestone
+@136kjwc5tqv
+Biological (organic)
+@1sg7hvr7bnl
+living things break or dissolve rock
+@gfp3990uf0
+roots in cracks, burrowing animals, acids from lichens
+@17nwilzmkfn
+<p>In hot, wet climates such as Indonesia's, <b>chemical weathering</b> dominates: it is fastest where it is warm and there is plenty of water. That is why tropical soils are deep and red, and why limestone dissolves into caves and karst.</p>
+@2f3hia91045
+<p>Soil loss is often given as a mass per area, such as tonnes per hectare per year. To turn it into a depth, divide by the soil's density and the area: $\text{depth} = \frac{\text{mass}}{\rho \times A}$.</p>
+@2ah3hznkmvf  ; 0=Q(m, 't') | 1=Q(rho, 't/m^3')
+Bare farmland loses ⟦0⟧ of soil per hectare each year. The soil has a density of ⟦1⟧. How many millimetres of soil are lost per year? ($1\,\mathrm{ha} = 10\,000\,\mathrm{m^2}$.)
+@yw12xaehjg  ; 0=m | 1=M(rho) | 2=M(sig(m / rho)) | 3=M(sig(m / rho / 10000, 3)) | 4=QT(mm, 'mm')
+Volume $= \frac{⟦0⟧}{⟦1⟧} = ⟦2⟧\,\mathrm{m^3}$ spread over $10\,000\,\mathrm{m^2}$: depth $= ⟦3⟧\,\mathrm{m} = ⟦4⟧$.
+@27trxe9nfio  ; 0=Q(depth, 'cm') | 1=Q(rate, 'mm')
+A field has ⟦0⟧ of fertile topsoil and is losing ⟦1⟧ per year to erosion. About how many years until the topsoil is gone?
+@1dg7mtcy0c9
+years
+@27zp56baf71  ; 0=depth | 1=depth * 10 | 2=depth * 10 | 3=M(rate) | 4=M(yrs)
+$⟦0⟧\,\mathrm{cm} = ⟦1⟧\,\mathrm{mm}$, and $\frac{⟦2⟧}{⟦3⟧} = ⟦4⟧$ years.
+@qn2ywwq8gz
+Rock in a desert cracks as it heats by day and cools at night.
+@17b84auyoaj
+Physical weathering
+@ca2sgnpstg
+Water freezes in a crack, expands and splits the rock.
+@1cbdi782anv
+Rainwater with dissolved carbon dioxide slowly dissolves limestone.
+@20vwnqp6sog
+Chemical weathering
+@k1ipe4gtho
+Iron minerals in a rock turn reddish-brown as they react with oxygen.
+@1mubuwhdad7
+Feldspar in granite turns into clay in the warm, wet climate.
+@h04mneva8h
+Tree roots grow into cracks and push the rock apart.
+@1m25bg4nvqr
+Biological weathering
+@1kyu8ycmzjj
+Lichens on a rock produce acids that eat into its surface.
+@11q4k1btqfv  ; 0=d
+Which kind of weathering is this? <i>⟦0⟧</i>
+@216087ntzw
+Deposition
+@1pr01ged64m  ; 0=a
+This is <b>⟦0⟧</b>.
+@xtl6exvokv
+Trees, fences and poles on a slope lean downhill after many years.
+@1cmtv5yyprx
+Soil creep
+@485k0cr23b
+After days of heavy rain a large block of a hillside slides down along a curved surface.
+@1k0bz6ev3o9
+Landslide
+@15ahjpdqg6a
+Boulders break off a cliff and drop onto the road below.
+@211ptu0qugh
+Rockfall
+@1tpkdyhmlt6
+A wet mixture of soil and water flows quickly down a valley.
+@14jrgdimjyy
+Mudflow
+@12sddgahlqa  ; 0=d
+Which type of mass movement is described? <i>⟦0⟧</i>
+@26mgduley0u
+Why is chemical weathering especially fast in Indonesia?
+@2f2lms333g6
+The climate is hot and wet
+@242d6gaet5k
+The climate is cold and dry
+@218p9syjzt9
+There are many volcanoes
+@13p7q33020
+The days and nights are very different in temperature
+@esxwt3pi5j
+Chemical reactions speed up with heat and need water; a humid tropical climate provides both all year.
+@1z45ccckdh1
+Which of these helps to prevent landslides on a hillside?
+@2behxmwprm4
+Planting trees and building terraces
+@1lxrc20ik61
+Clearing the vegetation
+@1edcji1naxa
+Building heavy houses at the top of the slope
+@gic4ae7m2e
+Cutting the foot of the slope for a road
+@2bmsq9azuzf
+Roots bind the soil and terraces reduce the slope; clearing vegetation and cutting the base of a slope make landslides more likely.
+@1zqldr5rc0i
+What is the difference between weathering and erosion?
+@ojpmtd2hs3
+Weathering breaks rock where it is; erosion removes and carries it away
+@1yfeic60pn5
+Weathering carries rock away; erosion breaks it in place
+@1inprn2vx01
+They mean the same thing
+@23rfoewb6yy
+Weathering happens only underground
+@2fho2y5l2cr
+Weathering is the breakdown of rock in place; erosion moves the pieces with water, wind, waves or ice.
+@13mkh9o1dni
+Which of these is an endogenic process?
+@1hrkjh2por5
+Folding of rock layers by plate movement
+@279yyd8gzng
+Erosion by a river
+@1iyz7vqtz23
+Weathering by frost
+@20jpbdm23ld
+Deposition of a sand dune
+@1qoefsh2zk8
+Endogenic forces come from inside the Earth: tectonics (folding, faulting) and volcanism. The others are exogenic.
+
+##### landforms
+@2eqy2ole8sn  ; 0=Fig(structureSvg('folds', { names: { ant | 1=Fig(structureSvg('horst', { names: { hor | 2=FigW(riverProfileSvg({ names: { upper: T | 3=Tbl([T`Agent`, T`Landforms`], [[T`Sea (m | 4=Tip(T`<p>A river's gradient is its drop 
+
+<h3>Tectonic landforms</h3>
+<p>Compression bends rock layers into <b>folds</b>: upfolds are <b>anticlines</b> and downfolds are <b>synclines</b>. Where rock breaks and moves along a fault, <b>faulting</b> creates raised blocks (<b>horsts</b>) and sunken blocks (<b>graben</b>).</p>
+⟦0⟧
+⟦1⟧
+<h3>River landforms</h3>
+⟦2⟧
+<p>In the upper course the river cuts a <b>V-shaped valley</b>, with rapids and <b>waterfalls</b>. Further down it swings in <b>meanders</b>; a meander that is cut off becomes an <b>oxbow lake</b>. Floods build <b>levees</b> and a flat <b>floodplain</b>, and at the mouth sediment builds a <b>delta</b> (such as the Mahakam delta).</p>
+⟦3⟧
+⟦4⟧
+@26kettxfudy
+Anticline
+@gfu5ky1g22
+Syncline
+@b8xyevkbyn
+Rock layers bent into an anticline and a syncline by compression
+@1iumkhuob12
+Folding under compression.
+@27onjx1dyx3
+Horst
+@1s4nx43p9ms
+Graben
+@edmcqu4xdg
+Blocks of rock along faults: two raised horsts with a sunken graben between them
+@28c2jtbt2h5
+A graben between two horsts. Rift valleys are large graben.
+@n4prgov6h9
+Upper course
+@qmzsmg0y9k
+steep, V-valley, waterfalls
+@1mm9pkn7vsf
+Middle course
+@1cdlpzjgapb
+meanders, floodplain
+@x63afde7cg
+Lower course
+@i4hc59qsal
+gentle, delta, estuary
+@28fsiidlg9n
+Source
+@2a28toe6k5t
+Mouth
+@1thr0wjwgru
+The long profile of a river from its steep source to its gentle mouth
+@11ivv0bmtmh
+A river's long profile. It erodes downwards near its source and deposits near its mouth.
+@jhg1lj4uqo
+Agent
+@1mugbzg3kbp
+Landforms
+@1qq85nbi7lo
+Sea (marine)
+@pya7am5h93
+cliffs, wave-cut platforms, caves, arches, stacks; beaches, spits, tombolos, barrier islands
+@1j5kwzy9k4u
+Dissolving limestone (karst)
+@1aop21lnvjk
+dolines (sinkholes), uvalas, poljes, caves with stalactites and stalagmites, underground rivers, e.g. Gunung Sewu
+@jz3xoq5vgm
+Wind (aeolian)
+@bjou0i4ck
+sand dunes (e.g. Parangtritis), barchans, deflation hollows
+@1kdfoqqxal2
+Ice (glacial)
+@e2k03wnwi4
+U-shaped valleys, cirques, moraines; small glaciers survive on Puncak Jaya, Papua
+@4rh6zv8boa
+<p>A river's gradient is its drop in height divided by its length, often in metres per kilometre. Steep upper courses may drop tens of metres per kilometre; lower courses less than one.</p>
+@dxlil3944p  ; 0=Q(drop, 'm') | 1=Q(L, 'km')
+A river falls ⟦0⟧ between its source and a town ⟦1⟧ downstream. What is its average gradient, in metres per kilometre?
+@am1cs3cir0
+Folding (anticlines and synclines)
+@kr6hyr7gub
+A normal fault
+@1eex7nmh3kp
+A reverse fault
+@1l8lg8qojfz
+A horst and graben
+@gissd7phhk  ; 0=Fig(structureSvg(k, { names: { anticline
+Which structure is shown?⟦0⟧
+@hu2mhfq6z2
+A geological structure in cross-section
+@1fywyavan5q  ; 0=a
+Bent layers are folds; in a normal fault the block above the fault slides down (tension); in a reverse fault it is pushed up (compression); a block sunk between two faults is a graben between horsts. This is <b>⟦0⟧</b>.
+@hruep73713
+an oxbow lake
+@24ws8gdem3f
+A river
+@1rfm2amfvu8
+a delta
+@19q2p20gg14
+a waterfall
+@10nw913qvxj
+a sea stack
+@2co7ktizfv9
+The sea
+@dw4q2gr97t
+a spit
+@rorvzumr90
+a wave-cut platform
+@qo4bxwv136
+a doline (sinkhole)
+@12cj0tnotwa
+Dissolving limestone
+@28cdi1co1bq
+stalactites
+@whvlu5odkg
+a sand dune
+@mfaw8xbbzb
+The wind
+@19g3rdgrhcn
+a barchan
+@2abfma53etf
+a U-shaped valley
+@22i982fjog7
+A glacier
+@edk42j73w3
+a cirque
+@1kdsym18aql  ; 0=f
+Which agent forms ⟦0⟧?
+@2bpxt3bp4t9  ; 0=a
+⟦0⟧ forms it.
+@217vg5jhk67
+V-shaped valleys and waterfalls
+@c6clum0h5k
+wide meanders and a floodplain
+@oyxz13re0k
+a delta and a very gentle slope
+@28q86tk9buw
+rapids and erosion mainly downwards
+@3272xzlqmc
+oxbow lakes and levees
+@6zm5vyv5gg  ; 0=f
+In which part of a river are ⟦0⟧ typical?
+@w591wgul6
+In all parts equally
+@proni7vu56  ; 0=a
+That is the <b>⟦0⟧</b>.
+@d1y8ymct47
+How does an oxbow lake form?
+@2d7ro2mbbe4
+A meander loop is cut off from the river
+@6k0nqv5xln
+A glacier melts in a hollow
+@ngdzzlsn0q
+A volcano's crater fills with water
+@lj4egfvlzu
+The sea floods a river mouth
+@15a5c34hqrx
+Erosion on the outside of bends narrows the neck of a meander until a flood cuts through it; the abandoned loop becomes a lake.
+@1oy7yvo45lz
+What forms caves, sinkholes and underground rivers in limestone areas?
+@1umrg5yyeom
+Rainwater dissolving the limestone
+@2c6bfadya7q
+Wind erosion
+@1y7n2b7aavi
+Lava flows
+@1xk0p35vvt6
+Glaciers
+@vhsf8we4k
+Rainwater is a weak carbonic acid; it dissolves limestone (carbonation), producing karst landforms such as those of Gunung Sewu.
+@zd5irmwiw6
+What type of force creates folds?
+@1w9tzvqllew
+Compression
+@x1r00m7t8v
+Tension
+@zb6hq6m92b
+Erosion
+@1tz13c8dfzr
+Pushing rock layers together bends them into anticlines and synclines.
+@1kq30715qpk
+Where are delta landforms built?
+@h20bp7zk4b
+Where a river enters a calm sea or lake and drops its sediment
+@1a0x9qacdhn
+At the source of a river
+@11kpjszu29a
+On steep mountain slopes
+@136nuoqx564
+Where two plates move apart
+@1wtp99hvg4i
+The river slows as it enters standing water and deposits its load faster than waves and currents can remove it.
+
+##### soils
+@yozt8fx4z9  ; 0=Key(T`<p>Five factors control soil forma | 1=Fig(soilProfileSvg({ names: [['O', T`Org | 2=FigW(textureTriangleSvg(40, 20, { names: | 3=Tbl([T`Soil (Indonesia)`, T`Origin and c | 4=Tip(T`<p>To read the triangle, follow th
+
+<p><b>Soil</b> is the loose top layer of the land, a mixture of mineral particles, organic matter (humus), water and air, in which plants grow. It forms very slowly, often a centimetre in a hundred years or more, so it is easily lost and hard to replace.</p>
+⟦0⟧
+⟦1⟧
+<h3>Texture</h3>
+<p>Soil particles are grouped by size: <b>sand</b> (0.05–2 mm, gritty, drains quickly), <b>silt</b> (0.002–0.05 mm, smooth) and <b>clay</b> (below 0.002 mm, sticky, holds water and nutrients). The mix of the three gives the <b>texture</b>, read from the texture triangle. A <b>loam</b>, with a good balance, is best for most crops.</p>
+⟦2⟧
+⟦3⟧
+⟦4⟧
+@1vf26hzl12d
+<p>Five factors control soil formation: <b>climate</b>, <b>organisms</b>, <b>relief</b> (slope), <b>parent material</b> and <b>time</b>, often written $S = f(cl, o, r, p, t)$.</p>
+@2fm51o0h5jk
+Organic matter
+@1cf3mrkpo1d
+Topsoil
+@yr4ge8azyr
+Leached layer
+@1xeqjlnwk2x
+Subsoil
+@1yw65oyp427
+Weathered rock
+@rfjvitolq7
+Bedrock
+@160hmtbenqv
+A soil profile with horizons O, A, E, B, C and R
+@iue1qh060n
+A soil profile. Water washes material out of the E horizon and deposits it in the B horizon.
+@1eaz2c3d40u
+clay %
+@1abvalxb4rd
+silt %
+@1zyfyy5k7zg
+← sand %
+@6p0elrhmrn
+The soil texture triangle with a sample of 40% sand, 40% silt and 20% clay plotted in the loam class
+@xs7a3olc72
+The texture triangle. The dot is 40% sand, 40% silt and 20% clay: a loam.
+@1ihn990gefg
+Soil (Indonesia)
+@lfic7zk2xh
+Origin and character
+@7c4wfmrgt5
+Found in / used for
+@oqct1qpfpo
+Alluvial
+@1bk3xr6xpk4
+fine sediment deposited by rivers; fertile
+@1qvtnnngrqf
+river plains and deltas; rice fields
+@a9ezo90blk
+Andosol
+@2fpxr3pargd
+young volcanic ash; dark, loose, rich in minerals
+@4qqssbj68s
+volcanic highlands; vegetables, tea, coffee
+@21d4b2tfyw4
+Latosol
+@26hriaw5g6q
+deeply weathered, red to brown; moderately fertile
+@jxcmjvqr4a
+hills of Java, Sumatra, Sulawesi; plantations
+@1j5k7z7faiu
+Podzolic (red-yellow)
+@1sc6ufut68l
+leached and acidic; poor
+@25i45rtlw8p
+much of Kalimantan and Sumatra; rubber, oil palm with fertiliser
+@20s7wkmr1hl
+Organosol (peat)
+@2c7hkvxth29
+waterlogged plant remains; very acidic, stores much carbon
+@26jtuvhs4zz
+swamps of Kalimantan, Sumatra and Papua
+@8q9atyme5c
+Regosol
+@ashtj2rn8w
+young sandy volcanic or beach material; drains fast
+@1djke5k5nra
+coasts and young volcanic slopes; coconuts, tobacco
+@14n6s7bfhbj
+Grumusol (vertisol)
+@o2pt2plm98
+dark clay that swells when wet and cracks when dry
+@2c9unrkpakb
+limestone and marl areas of Java and Nusa Tenggara; teak, sugar cane
+@b8htldn3a3
+<p>To read the triangle, follow the clay line across from the left side, the sand line diagonally from the bottom, and find the class where they meet. The three percentages always add up to 100.</p>
+@1livw32q3j1
+clay
+@24xza5uzply
+silty clay
+@10g0leuzf7e
+sandy clay
+@1jkzlwjnv6c
+clay loam
+@1ni0v2912sj
+silty clay loam
+@ubcetl59ot
+sandy clay loam
+@27isdvsdwg4
+loam
+@8pfnkhqs16
+silt loam
+@ibrnxpuoqb
+silt
+@6xcjxyvf3f
+sandy loam
+@2672jjyeass
+loamy sand
+@6dcf4d01wm
+sand
+@1miuz9mox7o  ; 0=sand | 1=silt | 2=clay | 3=FigW(textureTriangleSvg(sand, clay, { na
+A soil sample contains ⟦0⟧% sand, ⟦1⟧% silt and ⟦2⟧% clay. Using the texture triangle, what is its texture class?⟦3⟧
+@c3wwujjm5h
+The soil texture triangle with the sample plotted
+@437cuszyqw  ; 0=sand | 1=clay | 2=names[cls]
+The point for ⟦0⟧% sand and ⟦1⟧% clay falls in the <b>⟦2⟧</b> class.
+@1c1ovxmfvzy  ; 0=sand | 1=clay
+A soil is ⟦0⟧% sand and ⟦1⟧% clay. What percentage is silt?
+@2d2trxc8kf9  ; 0=sand | 1=clay | 2=silt
+The three add up to 100%: $100 - ⟦0⟧ - ⟦1⟧ = ⟦2⟧\%$.
+@1kaglqi52cg
+dark, loose soil from volcanic ash on the slopes of mountains, used for vegetables and tea
+@2l5dr2858x
+fertile soil deposited by rivers on plains, used for rice fields
+@jdv7q2txms
+waterlogged soil of decayed plants in swamps, very acidic and rich in carbon
+@hdouxyz3as
+dark clay that cracks deeply in the dry season, found in limestone areas
+@o67mk0uga7
+Grumusol
+@1lv2h26l8tf
+young, sandy soil on beaches and new volcanic slopes that drains quickly
+@1rlsj01qstg
+deeply weathered red soil common on the hills of the humid tropics
+@x2l1c2fshg  ; 0=d
+Which Indonesian soil type is this? <i>⟦0⟧</i>
+@14few7ge892
+Podzolic
+@w8vzsb761u  ; 0=a
+This describes <b>⟦0⟧</b>.
+@axqitvb5i
+Which soil horizon is the topsoil, rich in humus and roots?
+@63dbvxu96t
+A horizon
+@1vhl98ghvnf
+B horizon
+@27qu8hmfd6x
+C horizon
+@1qqi81rl85t
+R horizon
+@17dtj9xmduw
+Below the thin O layer, the A horizon is the dark topsoil where most roots and humus are.
+@15dcpgna0an
+Which soil texture holds the most water and nutrients?
+@1gkv39etm5j
+Clay
+@1i6nqz95e8x
+Sand
+@1vxlxg8cp9h
+Gravel
+@1cjl4q6sh5v
+Loamy sand
+@280vs91iifx
+Clay particles are tiny with a huge surface area, so they hold water and nutrients, though they can become waterlogged.
+@pmqu3xspau
+Which of these is <b>not</b> one of the five soil-forming factors?
+@236fi7ty061
+Population density
+@2a96onhsq2v
+Climate
+@28izq0n95wv
+Parent material
+@1ellrod4539
+Time
+@1lmis77vupy
+The factors are climate, organisms, relief, parent material and time.
+@1kkj5ogzyi8
+Why is draining and burning peatland in Kalimantan a global concern?
+@25re182x601
+Peat stores huge amounts of carbon, released as CO₂ and smoke
+@2g3zaj40yha
+Peat is the most fertile soil for rice
+@2ceayufxyvl
+Peat contains volcanic ash
+@28cc481yovg
+Peat stops earthquakes
+@1tl9785q954
+Peat is partly decayed plant matter built up over thousands of years; drained peat oxidises and burns, releasing CO₂ and causing haze.
+@ckewaz95bb
+Which horizon is the unweathered bedrock?
+@1ut9zaky3s0
+E horizon
+@10nd1grarku
+R is solid rock; C above it is partly weathered rock.

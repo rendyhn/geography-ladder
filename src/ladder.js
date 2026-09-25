@@ -48,3 +48,23 @@ link('phys:em-waves', 'remote-sensing', () => T`Sensors record reflected and emi
 link('map-scale', 'remote-sensing', () => T`Aerial photographs have a scale, set by the focal length and the flying height.`);
 link('map-scale', 'gis', () => T`A GIS is built from digital map layers.`);
 link('remote-sensing', 'gis', () => T`Satellite images are one of the main sources of raster data in a GIS.`);
+
+/* ---------- B. Lithosphere ---------- */
+link('geo-concepts', 'earth-structure', () => T`The lithosphere is one of the spheres that make up the geosphere.`);
+link('phys:mech-waves', 'earth-structure', () => T`The Earth's layers are found from how seismic waves speed up, slow down and bend.`);
+link('phys:heat', 'earth-structure', () => T`The geothermal gradient describes how temperature rises with depth.`);
+link('earth-structure', 'plate-tectonics', () => T`Plates are pieces of the rigid lithosphere moving over the weak asthenosphere.`);
+link('coordinates', 'plate-tectonics', () => T`Plate boundaries and volcanoes are located on maps by their coordinates.`);
+link('plate-tectonics', 'rocks', () => T`Igneous rocks form where plates melt, and metamorphic rocks where they collide.`);
+link('plate-tectonics', 'volcanism', () => T`Most volcanoes lie along subduction zones and divergent boundaries.`);
+link('rocks', 'volcanism', () => T`Volcanoes erupt magma that cools into igneous rocks such as andesite and basalt.`);
+link('plate-tectonics', 'earthquakes', () => T`Most earthquakes happen where plates grind past or beneath each other.`);
+link('phys:mech-waves', 'earthquakes', () => T`Earthquake energy travels as P, S and surface waves.`);
+link('math:exp-log', 'earthquakes', () => T`Magnitude scales are logarithmic: one step is ten times the amplitude.`);
+link('rocks', 'weathering', () => T`Weathering breaks down rocks and is the first step of the rock cycle towards sediment.`);
+link('weathering', 'landforms', () => T`Rivers, the sea, the wind and ice shape landforms by erosion and deposition.`);
+link('plate-tectonics', 'landforms', () => T`Folds and faults are made by the forces of moving plates.`);
+link('contours', 'landforms', () => T`Landforms are read from their contour patterns on topographic maps.`);
+link('weathering', 'soils', () => T`Soil forms from weathered rock mixed with organic matter.`);
+link('volcanism', 'soils', () => T`Volcanic ash weathers into Indonesia's fertile andosols.`);
+link('math:percent', 'soils', () => T`Soil texture is given as the percentages of sand, silt and clay.`);

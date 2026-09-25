@@ -31,3 +31,39 @@ Aerial photographs have a scale, set by the focal length and the flying height.
 A GIS is built from digital map layers.
 @1bc8ifi2mp7
 Satellite images are one of the main sources of raster data in a GIS.
+@11uwi5mq7ey
+The lithosphere is one of the spheres that make up the geosphere.
+@1cyp007rrg7
+The Earth's layers are found from how seismic waves speed up, slow down and bend.
+@1pl92uiqam4
+The geothermal gradient describes how temperature rises with depth.
+@d7h8n5q9o8
+Plates are pieces of the rigid lithosphere moving over the weak asthenosphere.
+@manvmdf6vk
+Plate boundaries and volcanoes are located on maps by their coordinates.
+@z5snqb252t
+Igneous rocks form where plates melt, and metamorphic rocks where they collide.
+@1b0q43s1zt
+Most volcanoes lie along subduction zones and divergent boundaries.
+@1ij58cx1415
+Volcanoes erupt magma that cools into igneous rocks such as andesite and basalt.
+@1su1vvzgmny
+Most earthquakes happen where plates grind past or beneath each other.
+@1hw8x2ca3tp
+Earthquake energy travels as P, S and surface waves.
+@88lxadhdzm
+Magnitude scales are logarithmic: one step is ten times the amplitude.
+@2d92ewqc628
+Weathering breaks down rocks and is the first step of the rock cycle towards sediment.
+@trufug7tgm
+Rivers, the sea, the wind and ice shape landforms by erosion and deposition.
+@28mij7b8ggk
+Folds and faults are made by the forces of moving plates.
+@1arh9ouhqbc
+Landforms are read from their contour patterns on topographic maps.
+@1mjycbbrekn
+Soil forms from weathered rock mixed with organic matter.
+@1x7g4bq4ulr
+Volcanic ash weathers into Indonesia's fertile andosols.
+@7sllx2z0uo
+Soil texture is given as the percentages of sand, silt and clay.
