@@ -138,3 +138,24 @@ link('population-structure', 'demographic-transition', () => T`Each stage has it
 link('demographic-transition', 'human-development', () => T`Countries in later stages usually have longer lives and more schooling.`);
 link('population-structure', 'human-development', () => T`Education and work are part of the structure of a population.`);
 link('math:statistics-jh', 'human-development', () => T`Indices, averages and the geometric mean summarise many indicators in one number.`);
+
+/* ---------- G. Resources, regions & economy ---------- */
+link('rocks', 'resources', () => T`Minerals, coal and oil are found in particular kinds of rock.`);
+link('volcanism', 'resources', () => T`Volcanic areas hold geothermal energy and many metal ores.`);
+link('phys:renewables', 'resources', () => T`Renewable energy sources and how they are turned into electricity.`);
+link('soils', 'agriculture', () => T`Farming depends on fertile soil.`);
+link('climate-types', 'agriculture', () => T`Climate decides which crops can grow.`);
+link('math:linear-functions', 'agriculture', () => T`Von Thünen's land rent is a linear function of distance.`);
+link('resources', 'industry-location', () => T`Industries process natural resources.`);
+link('math:ratio', 'industry-location', () => T`The material index and the location quotient are ratios.`);
+link('map-scale', 'central-places', () => T`Market areas and ranges are distances on a map.`);
+link('population-growth', 'central-places', () => T`A service's threshold depends on how many people live around it.`);
+link('math:angles-shapes', 'central-places', () => T`Hexagons tile a plane without gaps.`);
+link('central-places', 'spatial-interaction', () => T`Customers travel between their homes and central places.`);
+link('math:exp-log', 'spatial-interaction', () => T`In the gravity model, interaction falls with the square of distance.`);
+link('migration', 'spatial-interaction', () => T`Migration and commuting are forms of spatial interaction.`);
+link('population-structure', 'rural-urban', () => T`Villages and cities differ in who lives there and what work they do.`);
+link('migration', 'rural-urban', () => T`Urbanisation turns villages into towns and grows cities.`);
+link('industry-location', 'regional-development', () => T`Growth centres are often built around leading industries.`);
+link('spatial-interaction', 'regional-development', () => T`Spread and backwash effects travel along the links between places.`);
+link('human-development', 'regional-development', () => T`Development is measured with income and human development indicators.`);

@@ -904,3 +904,96 @@ function pushPullSvg({ label, names = {} } = {}) {
   s += note(96, 204, names.push || '+ pull  − push  0 neutral', 'middle');
   return s + '</svg>';
 }
+
+/* ==========================================================================
+   Location theory, settlements and regions
+   ========================================================================== */
+/* von Thünen's rings around a market town, with a bid-rent graph beside them */
+function vonThunenSvg({ label, names = {}, river = false } = {}) {
+  const W = 500, H = 300, cx = 120, cy = 125;
+  const Z = [[110, 'g-s6', names.z4 || 'ranching'], [84, 'g-s5', names.z3 || 'grain'], [58, 'g-s3', names.z2 || 'forestry'], [34, 'g-s1', names.z1 || 'dairy and vegetables']];
+  let s = svgOpen(W, H, label);
+  Z.forEach(([r, c]) => { s += circ(cx, cy, r, c, ' fill-opacity="0.55" stroke="var(--paper)" stroke-width="2"'); });
+  s += circ(cx, cy, 12, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + note(cx, cy + 4, names.city || 'city');
+  if (river) s += path(`M${cx} ${cy} L${cx + 115} ${cy + 20}`, 'g-line g-l1', ' style="stroke-width:3"');
+  const L = 270, R = 488, T = 24, B = 214, X = d => L + d / 110 * (R - L), Y = v => B - v / 100 * (B - T);
+  const lines = [[100, 34, 'g-l1'], [72, 58, 'g-l3'], [50, 84, 'g-l5'], [30, 110, 'g-l6']];
+  lines.forEach(([v, d, c]) => { s += ln(X(0), Y(v), X(d * (1 + 0.35)), Y(0), `g-line ${c}`); });
+  let prev = 0; Z.slice().reverse().forEach(([r, c], i) => { s += rect(X(prev), B + 4, X(r) - X(prev), 8, c, 0, ' fill-opacity="0.8"'); prev = r; });
+  s += ln(L, T, L, B, 'fig-line') + ln(L, B, R, B, 'fig-line') + txt(L + 4, T - 6, names.rent || 'land rent', 'fig-small', 'start') + txt(R, B + 26, names.dist || 'distance from the city →', 'fig-small', 'end');
+  Z.slice().reverse().forEach(([r, c, t], i) => { const x = 20 + (i % 2) * 240, y = 258 + Math.floor(i / 2) * 20; s += rect(x, y - 10, 14, 12, c, 2, ' fill-opacity="0.8"') + note(x + 20, y, t, 'start'); });
+  return s + '</svg>';
+}
+
+/* Weber's location triangle: two material sources and a market, with the least-cost point */
+function weberSvg({ label, names = {}, pull = 'M1' } = {}) {
+  const W = 480, H = 260, A = [70, 210], Bp = [410, 210], C = [240, 30];
+  const P = pull === 'M1' ? [150, 170] : pull === 'K' ? [235, 80] : [245, 165];
+  let s = svgOpen(W, H, label) + polyg([A, Bp, C], 'g-land', ' fill-opacity="0.5" stroke="var(--ink-3)" stroke-dasharray="5 4"');
+  [A, Bp, C].forEach(p => { s += ln(p[0], p[1], P[0], P[1], 'g-line g-l1', ' style="stroke-width:1.8"'); });
+  s += circ(A[0], A[1], 8, 'g-rock-2') + circ(Bp[0], Bp[1], 8, 'g-rock-2') + circ(C[0], C[1], 9, 'g-hot') + circ(P[0], P[1], 7, 'g-s5', ' stroke="var(--paper)" stroke-width="2"');
+  s += lbl(A[0], A[1] + 26, names.m1 || 'Raw material 1') + lbl(Bp[0], Bp[1] + 26, names.m2 || 'Raw material 2') + lbl(C[0], C[1] - 14, names.k || 'Market') + lbl(P[0] + 12, P[1] + 4, names.p || 'least-cost location', 'start');
+  return s + '</svg>';
+}
+
+/* Christaller's hexagonal market areas (k = 3): one high-order centre, six middle-order and many low-order places */
+function christallerSvg({ label, names = {} } = {}) {
+  const W = 460, H = 380, cx = 230, cy = 190, a = 44;   // a: distance between neighbouring low-order places
+  const hex = (x, y, r, rot = 30) => [...Array(6)].map((_, i) => [x + r * cosD(60 * i + rot), y + r * sinD(60 * i + rot)]);
+  const pts = []; for (let i = -5; i <= 5; i++) for (let j = -5; j <= 5; j++) { const x = cx + a * (i + j / 2), y = cy + a * j * Math.sqrt(3) / 2; if (Math.hypot(x - cx, y - cy) < 172) pts.push([x, y, i, j]); }
+  let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land', 0, ' fill-opacity="0.45"');
+  pts.forEach(([x, y]) => { s += polyg(hex(x, y, a / Math.sqrt(3)), '', ' fill="none" stroke="var(--ink-3)" stroke-width="0.6" stroke-opacity="0.5"'); });
+  const mids = [...Array(6)].map((_, k) => [cx + a * Math.sqrt(3) * cosD(60 * k + 30), cy + a * Math.sqrt(3) * sinD(60 * k + 30)]);
+  mids.concat([[cx, cy]]).forEach(([x, y]) => { s += polyg(hex(x, y, a, 0), 'g-line g-l2', ' fill="none" stroke-width="1.6"'); });
+  s += polyg(hex(cx, cy, a * Math.sqrt(3), 30), 'g-line g-l1', ' fill="none" stroke-width="2.4"');
+  pts.forEach(([x, y]) => { s += circ(x, y, 3, 'g-rock-2'); });
+  mids.forEach(([x, y]) => { s += circ(x, y, 7, 'g-s2', ' stroke="var(--paper)" stroke-width="1.5"'); });
+  s += circ(cx, cy, 11, 'g-hot', ' stroke="var(--paper)" stroke-width="2"');
+  s += circ(20, H - 50, 8, 'g-hot') + lbl(34, H - 45, names.city || 'city (high order)', 'start') + circ(20, H - 30, 6, 'g-s2') + lbl(34, H - 25, names.town || 'town (middle order)', 'start') + circ(20, H - 10, 3, 'g-rock-2') + lbl(34, H - 5, names.village || 'village (low order)', 'start');
+  return s + '</svg>';
+}
+
+/* two towns on a line with the breaking point between them */
+function breakingPointSvg({ label, pa, pb, d, names = {} } = {}) {
+  const W = 480, H = 170, L = 60, R = 420, bpB = d / (1 + Math.sqrt(pa / pb)), X = t => L + t / d * (R - L);
+  const ra = 10 + 22 * Math.sqrt(pa / Math.max(pa, pb)), rb = 10 + 22 * Math.sqrt(pb / Math.max(pa, pb));
+  let s = svgOpen(W, H, label) + ln(L, 90, R, 90, 'g-line', ' style="stroke:var(--ink-3);stroke-width:2"');
+  s += rect(L, 60, X(d - bpB) - L, 60, 'g-s1', 0, ' fill-opacity="0.15"') + rect(X(d - bpB), 60, R - X(d - bpB), 60, 'g-s2', 0, ' fill-opacity="0.15"');
+  s += circ(L, 90, ra, 'g-s1', ' fill-opacity="0.85" stroke="var(--paper)" stroke-width="2"') + circ(R, 90, rb, 'g-s2', ' fill-opacity="0.85" stroke="var(--paper)" stroke-width="2"');
+  s += ln(X(d - bpB), 52, X(d - bpB), 128, 'g-line g-l5', ' stroke-dasharray="5 4" style="stroke-width:2"') + lbl(X(d - bpB), 44, names.bp || 'breaking point');
+  s += lbl(L, 150, `${names.a || 'A'} (${F(pa)})`) + lbl(R, 150, `${names.b || 'B'} (${F(pb)})`) + note((L + R) / 2, 84, `${F(d)} km`);
+  return s + '</svg>';
+}
+
+/* city structure models: 'burgess' (concentric zones), 'hoyt' (sectors), 'harris' (multiple nuclei) */
+function cityModelSvg(kind, { label, names = {} } = {}) {
+  const W = 260, H = 260, cx = 130, cy = 130, R = 115; let s = svgOpen(W, H, label);
+  const cls = ['g-hot', 'g-s4', 'g-s3', 'g-s1', 'g-s6'];
+  if (kind === 'burgess') {
+    [115, 92, 68, 44, 20].forEach((r, i) => { s += circ(cx, cy, r, cls[4 - i], ' fill-opacity="0.7" stroke="var(--paper)" stroke-width="2"'); });
+    ['1', '2', '3', '4', '5'].forEach((t, i) => { s += lbl(cx, cy + 5 - [0, 32, 56, 80, 103][i], t); });
+  } else if (kind === 'hoyt') {
+    const sec = [[-20, 30, 'g-s4', '2'], [30, 70, 'g-s3', '3'], [70, 120, 'g-s1', '4'], [120, 160, 'g-s3', '3'], [160, 200, 'g-s4', '2'], [200, 250, 'g-s6', '5'], [250, 290, 'g-s3', '3'], [290, 340, 'g-s1', '4']];
+    sec.forEach(([a0, a1, c, t]) => { const p = (a, r) => [cx + r * cosD(a), cy - r * sinD(a)]; const [x0, y0] = p(a0, R), [x1, y1] = p(a1, R); s += path(`M${cx} ${cy} L${f1(x0)} ${f1(y0)} A${R} ${R} 0 0 0 ${f1(x1)} ${f1(y1)}Z`, c, ' fill-opacity="0.75" stroke="var(--paper)" stroke-width="2"'); const [lx, ly] = p((a0 + a1) / 2, 76); s += lbl(lx, ly + 5, t); });
+    s += circ(cx, cy, 20, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + lbl(cx, cy + 5, '1');
+  } else {
+    s += rect(15, 15, 230, 230, 'g-s3', 12, ' fill-opacity="0.55"');
+    const blobs = [[70, 60, 55, 38, 'g-s4', '2'], [180, 170, 50, 45, 'g-s1', '4'], [175, 60, 45, 30, 'g-s6', '6'], [60, 190, 44, 34, 'g-s5', '7'], [120, 120, 30, 26, 'g-hot', '1'], [205, 115, 26, 20, 'g-s2', '8'], [110, 205, 30, 18, 'g-s6', '9']];
+    blobs.forEach(([x, y, rx, ry, c, t]) => { s += `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" class="${c}" fill-opacity="0.8" stroke="var(--paper)" stroke-width="2"/>` + lbl(x, y + 5, t); });
+    s += lbl(40, 130, '3');
+  }
+  return s + '</svg>';
+}
+
+/* rural settlement patterns: 'linear' | 'clustered' | 'dispersed' | 'circular' */
+function settlementSvg(kind, { label } = {}) {
+  const W = 220, H = 180; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land', 0, ' fill-opacity="0.6"');
+  const house = (x, y) => rect(x - 4, y - 3, 8, 7, 'g-hot', 1) + polyg([[x - 5, y - 3], [x + 5, y - 3], [x, y - 8]], 'g-rock-2');
+  let hs = [];
+  if (kind === 'linear') { s += path('M0 100 C60 90 150 110 220 95', 'g-line', ' style="stroke:var(--ink-3);stroke-width:5;fill:none"'); for (let x = 12; x < 215; x += 18) { const y = 100 + 5 * Math.sin(x / 30); hs.push([x, y - 14], [x + 8, y + 16]); } }
+  else if (kind === 'clustered') { for (let k = 0; k < 26; k++) { const a = k * 2.4, r = 6 * Math.sqrt(k + 1); hs.push([110 + r * Math.cos(a), 90 + r * Math.sin(a)]); } s += circ(110, 90, 44, '', ' fill="none" stroke="var(--g-veg)" stroke-width="6" stroke-opacity="0.6"'); }
+  else if (kind === 'dispersed') { const P = [[25, 30], [90, 50], [170, 25], [60, 110], [140, 100], [200, 140], [30, 160], [110, 160], [185, 75]]; hs = P; }
+  else { for (let k = 0; k < 16; k++) hs.push([110 + 60 * cosD(k * 22.5), 90 + 60 * sinD(k * 22.5)]); s += circ(110, 90, 26, 'g-s1', ' fill-opacity="0.5"'); }
+  hs.forEach(([x, y]) => { s += house(x, y); });
+  return s + '</svg>';
+}

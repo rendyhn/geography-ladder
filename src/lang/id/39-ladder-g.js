@@ -1,0 +1,22 @@
+/* Bahasa Indonesia — 39-ladder-g */
+addT('id', {
+  '1ombj4mwd5x': R`Mineral, batu bara dan minyak bumi ditemukan pada jenis-jenis batuan tertentu.`,
+  'ctlukhifs4': R`Daerah vulkanik menyimpan energi panas bumi dan banyak bijih logam.`,
+  'qwrf694842': R`Sumber energi terbarukan dan cara mengubahnya menjadi listrik.`,
+  '257azur5jpc': R`Pertanian bergantung pada tanah yang subur.`,
+  '239r6sa3dm7': R`Iklim menentukan tanaman apa yang dapat tumbuh.`,
+  '1qfofywrrf6': R`Sewa lahan von Thünen adalah fungsi linear dari jarak.`,
+  '1oonvb9xt6m': R`Industri mengolah sumber daya alam.`,
+  '11jzkyuppeg': R`Indeks material dan location quotient adalah perbandingan.`,
+  '4cjn168p04': R`Wilayah pasar dan jangkauan adalah jarak pada peta.`,
+  'f61634js1p': R`Ambang suatu layanan bergantung pada jumlah penduduk di sekitarnya.`,
+  '22na008mour': R`Heksagon dapat menutup bidang tanpa celah.`,
+  '1fxfucreej0': R`Pelanggan bepergian antara rumahnya dan tempat sentral.`,
+  '1hdqkwk0d1b': R`Dalam model gravitasi, interaksi berkurang sesuai kuadrat jarak.`,
+  '589x6s8yu': R`Migrasi dan ulang-alik adalah bentuk interaksi keruangan.`,
+  '1ubsqre8hje': R`Desa dan kota berbeda dalam hal siapa penduduknya dan apa pekerjaannya.`,
+  '1l82pzof9v9': R`Urbanisasi mengubah desa menjadi kota kecil dan membesarkan kota.`,
+  '1cr9h4uu1uu': R`Pusat pertumbuhan sering dibangun di sekitar industri unggulan.`,
+  '16hu0zz7vjy': R`Efek penyebaran dan pengurasan mengalir melalui hubungan antartempat.`,
+  '2bigle5iedz': R`Pembangunan diukur dengan indikator pendapatan dan pembangunan manusia.`,
+});
