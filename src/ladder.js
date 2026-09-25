@@ -91,3 +91,22 @@ link('climate-types', 'climate-change', () => T`Climate change shifts the climat
 link('atmosphere-layers', 'climate-change', () => T`Greenhouse gases are part of the air's composition.`);
 link('phys:climate', 'climate-change', () => T`The physics of the greenhouse effect explains why added gases warm the Earth.`);
 link('math:linear-functions', 'climate-change', () => T`A rate of change, such as ppm per year, is the slope of a trend line.`);
+
+/* ---------- D. The hydrosphere ---------- */
+link('precipitation', 'water-cycle', () => T`Rain and evaporation are the links of the water cycle.`);
+link('phys:heat', 'water-cycle', () => T`Evaporation and condensation are changes of state that take in or release heat.`);
+link('math:percent', 'water-cycle', () => T`The runoff coefficient is a fraction of the rainfall.`);
+link('water-cycle', 'rivers', () => T`Rivers carry the runoff of the water cycle back to the sea.`);
+link('contours', 'rivers', () => T`Watersheds and drainage basins are traced on contour maps.`);
+link('landforms', 'rivers', () => T`Rivers shape valleys, meanders and deltas.`);
+link('phys:fluid-dynamics', 'rivers', () => T`Discharge Q = A v is the flow rate of a fluid.`);
+link('water-cycle', 'groundwater', () => T`Infiltration and percolation refill the groundwater.`);
+link('rocks', 'groundwater', () => T`Whether rock stores water depends on its porosity and permeability.`);
+link('phys:fluid-statics', 'groundwater', () => T`Artesian water rises because it is under pressure.`);
+link('plate-tectonics', 'oceans', () => T`Ridges, trenches and seamounts are made at plate boundaries.`);
+link('winds', 'oceans', () => T`Winds drive the surface ocean currents.`);
+link('phys:fluid-statics', 'oceans', () => T`Pressure in the sea grows with depth.`);
+link('oceans', 'tides-coasts', () => T`Tides and waves are movements of the sea.`);
+link('landforms', 'tides-coasts', () => T`Coastal landforms are made by erosion and deposition, like river landforms.`);
+link('phys:gravitation', 'tides-coasts', () => T`Tides are raised by the gravity of the Moon and the Sun.`);
+link('phys:mech-waves', 'tides-coasts', () => T`Wave speed equals wavelength divided by period.`);

@@ -1,0 +1,20 @@
+/* Bahasa Indonesia — 27-ladder-d */
+addT('id', {
+  'yx82eivjgu': R`Hujan dan penguapan adalah mata rantai siklus air.`,
+  '214ek25qw0v': R`Penguapan dan pengembunan adalah perubahan wujud yang menyerap atau melepaskan kalor.`,
+  'wxaqeg9ayb': R`Koefisien limpasan adalah bagian dari curah hujan.`,
+  '25ggtsngqeh': R`Sungai membawa limpasan dari siklus air kembali ke laut.`,
+  '2gambuuxpvq': R`Batas DAS dan daerah aliran sungai ditelusuri pada peta kontur.`,
+  '1ljtjp35nko': R`Sungai membentuk lembah, meander dan delta.`,
+  '80zss9dz3u': R`Debit Q = A v adalah laju aliran fluida.`,
+  '1bluift8idy': R`Infiltrasi dan perkolasi mengisi kembali air tanah.`,
+  '1irtmx84lew': R`Kemampuan batuan menyimpan air bergantung pada porositas dan permeabilitasnya.`,
+  'fno6vjf2kr': R`Air artesis naik karena bertekanan.`,
+  '13urookcz3h': R`Punggung samudra, palung dan gunung laut terbentuk di batas lempeng.`,
+  '2m2nxyxacg': R`Angin menggerakkan arus permukaan laut.`,
+  '1qofo2389wz': R`Tekanan di dalam laut bertambah seiring kedalaman.`,
+  'ndh3z6rsgd': R`Pasang surut dan gelombang adalah gerakan air laut.`,
+  'aj1pnznqhe': R`Bentang alam pantai terbentuk oleh pengikisan dan pengendapan, seperti bentang alam sungai.`,
+  'g70n0mj17w': R`Pasang surut ditimbulkan oleh gravitasi Bulan dan Matahari.`,
+  '101gldwn5oi': R`Cepat rambat gelombang sama dengan panjang gelombang dibagi periode.`,
+});

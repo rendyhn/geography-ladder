@@ -699,3 +699,135 @@ function greenhouseSvg({ label, names = {} } = {}) {
   s += note(240, 250, names.ground || 'the warm ground gives off infrared', 'middle');
   return s + '</svg>';
 }
+
+/* ==========================================================================
+   Hydrosphere diagrams
+   ========================================================================== */
+/* the water cycle: sea, clouds, a mountain, rain, rivers and groundwater */
+function waterCycleSvg({ label, names = {} } = {}) {
+  const W = 500, H = 300; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-sky');
+  s += path('M0 230 L190 230 L190 300 L0 300Z', 'g-water-2') + path('M190 230 C230 225 260 200 300 150 L360 80 L420 150 C450 190 480 205 500 210 L500 300 L190 300Z', 'g-land-2 g-edge');
+  s += path('M190 262 C260 258 360 250 500 250 L500 300 L190 300Z', 'g-sand', ' fill-opacity="0.6"') + path('M190 262 C260 258 360 250 500 250', 'fig-dash');
+  s += circ(40, 36, 20, 'g-core', ' stroke="var(--g-magma)" stroke-width="2"');
+  const cloud = (x, y) => circ(x - 22, y + 6, 16, 'g-cloud g-edge') + circ(x, y - 3, 22, 'g-cloud g-edge') + circ(x + 22, y + 6, 16, 'g-cloud g-edge');
+  s += cloud(140, 60) + cloud(330, 40);
+  for (let k = 0; k < 6; k++) s += ln(315 + k * 9, 66, 309 + k * 9, 92, 'g-line g-l1', ' style="stroke-width:1.3"');
+  s += path('M372 96 C380 140 330 180 300 205 C270 225 230 228 196 231', 'g-line g-l1', ' style="stroke-width:3"');
+  s += arrow(80, 220, 110, 90, 'b', 2.4) + arrow(170, 58, 290, 44, 'c', 2.2) + arrow(455, 190, 440, 120, 'b', 2) + arrow(250, 250, 250, 272, 'a', 2) + arrow(340, 285, 220, 285, 'a', 2);
+  s += note(96, 170, names.evap || 'evaporation', 'end') + note(230, 34, names.cond || 'condensation', 'middle') + note(355, 116, names.prec || 'precipitation', 'start') + note(496, 150, names.trans || 'transpiration', 'end');
+  s += note(262, 202, names.runoff || 'runoff (river)', 'start') + note(258, 246, names.infil || 'infiltration', 'start') + note(350, 296, names.gw || 'groundwater flow', 'middle') + lbl(95, 262, names.sea || 'Sea');
+  s += path('M445 205 l-6 -24 l12 0Z', 'g-veg') + path('M470 207 l-6 -24 l12 0Z', 'g-veg');
+  return s + '</svg>';
+}
+
+/* drainage patterns: 'dendritic' | 'trellis' | 'radial' | 'rectangular' | 'annular' | 'centripetal' | 'parallel' */
+function drainageSvg(kind, { label } = {}) {
+  const W = 220, H = 200, cx = 110, cy = 100; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land', 0, ' fill-opacity="0.5"');
+  const R = (d, w = 2.2) => path(d, 'g-line g-l1', ` style="stroke-width:${w};fill:none"`);
+  if (kind === 'dendritic') {
+    s += R('M110 195 C105 150 112 110 100 60 C95 40 90 25 80 8', 3.2) + R('M106 140 C80 120 60 110 30 95') + R('M108 110 C130 90 160 80 190 50') + R('M101 70 C120 55 130 35 140 12') + R('M55 106 C45 80 40 60 30 45', 1.6) + R('M150 76 C160 100 180 110 205 115', 1.6) + R('M85 32 C70 25 55 20 40 12', 1.4) + R('M125 38 C150 35 165 25 185 15', 1.4);
+  } else if (kind === 'trellis') {
+    s += R('M110 195 L110 5', 3.2);
+    for (let y = 30; y < 190; y += 34) s += R(`M20 ${y} L110 ${y + 8}`) + R(`M200 ${y + 14} L110 ${y + 8}`);
+    for (let y = 30; y < 190; y += 34) s += R(`M50 ${y + 3} l0 -14`, 1.2) + R(`M170 ${y + 11} l0 -14`, 1.2);
+  } else if (kind === 'radial') {
+    s += circ(cx, cy, 16, 'g-rock') + txt(cx, cy + 4, '▲', 'fig-small');
+    for (let a = 0; a < 360; a += 45) s += R(`M${cx + 20 * cosD(a)} ${cy - 20 * sinD(a)} Q${cx + 55 * cosD(a + 12)} ${cy - 55 * sinD(a + 12)} ${cx + 95 * cosD(a)} ${cy - 95 * sinD(a)}`);
+  } else if (kind === 'centripetal') {
+    s += circ(cx, cy, 18, 'g-water-2');
+    for (let a = 0; a < 360; a += 45) s += R(`M${cx + 95 * cosD(a)} ${cy - 95 * sinD(a)} Q${cx + 55 * cosD(a + 12)} ${cy - 55 * sinD(a + 12)} ${cx + 20 * cosD(a)} ${cy - 20 * sinD(a)}`);
+  } else if (kind === 'annular') {
+    s += circ(cx, cy, 20, 'g-rock') + circ(cx, cy, 52, 'g-thin', ' fill="none" stroke-dasharray="3 4"') + circ(cx, cy, 82, 'g-thin', ' fill="none" stroke-dasharray="3 4"');
+    s += R(`M${cx} ${cy + 36} A36 36 0 1 1 ${cx + 36} ${cy}`) + R(`M${cx + 66} ${cy} A66 66 0 1 0 ${cx} ${cy + 66}`) + R(`M${cx} ${cy + 36} L${cx} ${cy + 99}`, 3);
+  } else if (kind === 'rectangular') {
+    s += R('M110 195 L110 140 L60 140 L60 90 L120 90 L120 40 L90 40 L90 5', 3) + R('M60 140 L10 140') + R('M60 90 L60 40 L20 40') + R('M120 90 L200 90') + R('M160 90 L160 150 L210 150') + R('M120 40 L180 40 L180 5');
+  } else {   // parallel
+    for (let x = 30; x < 200; x += 36) s += R(`M${x} 5 C${x + 6} 70 ${x - 6} 130 ${x + 4} 195`);
+  }
+  return s + '</svg>';
+}
+
+/* several drainage patterns side by side with their names */
+function drainageGridSvg(items, { label } = {}) {
+  const n = items.length, cols = Math.min(4, n), rows = Math.ceil(n / cols), cw = 120, ch = 132, W = cols * cw, H = rows * ch;
+  let s = svgOpen(W, H, label);
+  items.forEach(([k, t], i) => {
+    const x = (i % cols) * cw + 5, y = Math.floor(i / cols) * ch + 2, inner = drainageSvg(k, {}).replace(/^<svg[^>]*>/, '').replace(/<title>[\s\S]*?<\/title>/, '').replace(/<\/svg>$/, '');
+    s += `<g transform="translate(${x} ${y}) scale(0.5)">${inner}</g>` + (t ? lbl(x + 55, y + 118, t) : '');
+  });
+  return s + '</svg>';
+}
+/* a flood hydrograph: rainfall bars and river discharge curve */
+function hydrographSvg({ label, peakRain = 3, peakQ = 9, base = 20, peak = 120, names = {} } = {}) {
+  const rain = [0, 4, 12, 18, 9, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const q = [...Array(16)].map((_, i) => base + (peak - base) * Math.exp(-Math.pow((i - peakQ) / (i < peakQ ? 2.2 : 3.6), 2)));
+  return lineChartSvg([{ pts: q.map((v, i) => [i * 3, sig(v, 4)]), cls: 'g-l1', label: names.q || 'discharge', at: 12, dy: -10, anchor: 'start', dx: 4 }], { W: 480, H: 280, xMin: 0, xMax: 45, xStep: 6, yMin: 0, yMax: 160, yStep: 40, yl: names.yl || 'm³/s', xl: names.xl || 'hours after the rain started', label,
+    extra: a => rain.map((r, i) => r ? rect(a.X(i * 3) - 6, a.Y(160), 12, r * 3, 'g-s1', 1, ' fill-opacity="0.8"') : '').join('') + note(a.X(peakRain * 3) + 12, a.Y(160) + 44, names.rain || 'rainfall', 'start')
+      + ln(a.X(peakRain * 3), a.Y(160) + 58, a.X(peakRain * 3), a.Y(0), 'fig-dash') + ln(a.X(peakQ * 3), a.Y(peak), a.X(peakQ * 3), a.Y(0), 'fig-dash')
+      + arrow(a.X(peakRain * 3), a.Y(8), a.X(peakQ * 3), a.Y(8), 'c', 1.6) + note((a.X(peakRain * 3) + a.X(peakQ * 3)) / 2, a.Y(8) - 6, names.lag || 'lag time') });
+}
+
+/* groundwater cross-section: water table, unconfined and confined aquifers, a spring and an artesian well */
+function aquiferSvg({ label, names = {} } = {}) {
+  const W = 500, H = 290, xs = [...Array(51)].map((_, k) => k * 10);
+  const G = x => 55 + 0.14 * x + (Math.abs(x - 300) < 30 ? 26 * Math.cos((x - 300) / 30 * Math.PI / 2) : 0), WT = x => 92 + 0.08 * x, Y1 = x => 150 + 0.1 * x, Y2 = x => Y1(x) + 26, Y3 = x => Y2(x) + 36;
+  const band = (f, g, cls, extra = '') => path('M' + xs.map(x => `${x} ${f1(f(x))}`).join(' L') + ' L' + [...xs].reverse().map(x => `${x} ${f1(g(x))}`).join(' L') + 'Z', cls, extra);
+  let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-sky');
+  s += band(G, Y1, 'g-sand') + band(x => Math.max(WT(x), G(x)), Y1, 'g-water', ' fill-opacity="0.8"') + band(Y1, Y2, 'g-rock-2') + band(Y2, Y3, 'g-water-2', ' fill-opacity="0.55"') + band(Y3, () => H, 'g-rock-2');
+  s += path('M' + xs.map(x => `${x} ${f1(G(x))}`).join(' L'), 'g-line', ' style="fill:none;stroke:var(--ink-3);stroke-width:1.5"');
+  s += path('M' + xs.filter(x => WT(x) >= G(x) - 0.1 || Math.abs(x - 300) > 26).map(x => `${x} ${f1(Math.max(WT(x), G(x)))}`).join(' L'), 'fig-dash', ' style="stroke:var(--g-water-2);stroke-width:2"');
+  s += note(60, WT(60) - 5, names.wt || 'water table', 'middle');
+  s += rect(146, G(150) - 14, 8, WT(150) - G(150) + 34, 'fig-line', 0, ' fill="var(--paper)" stroke="var(--ink-3)"') + note(150, G(150) - 18, names.well || 'dug well', 'middle');
+  s += arrow(306, WT(306) + 2, 340, WT(306) - 12, 'a', 1.6) + note(344, WT(306) - 14, names.spring || 'spring', 'start');
+  const ax = 430;
+  s += rect(ax - 4, G(ax) - 6, 8, Y2(ax) - G(ax) + 20, 'fig-line', 0, ' fill="var(--paper)" stroke="var(--ink-3)"') + arrow(ax, G(ax) - 6, ax, G(ax) - 50, 'a', 2.4) + note(ax - 8, G(ax) - 40, names.art || 'artesian well', 'end');
+  s += arrow(24, 12, 24, 52, 'a', 1.6) + note(34, 24, names.rain || 'rain soaks in', 'start');
+  s += lbl(200, (WT(200) + Y1(200)) / 2 + 12, names.unconf || 'Unconfined aquifer', 'middle') + lbl(250, (Y1(250) + Y2(250)) / 2 + 5, names.imp || 'Impermeable layer', 'middle') + lbl(250, (Y2(250) + Y3(250)) / 2 + 5, names.conf || 'Confined aquifer', 'middle') + lbl(250, (Y3(250) + H) / 2 + 5, names.imp || 'Impermeable layer', 'middle');
+  return s + '</svg>';
+}
+
+/* profile of the ocean floor with its main features and depth zones */
+function seaFloorSvg({ label, names = {} } = {}) {
+  const W = 520, H = 280, top = 40, Y = d => top + d / 7000 * 200; let s = svgOpen(W, H, label) + rect(0, 0, W, top, 'g-sky') + rect(0, top, W, H - top, 'g-water', 0, ' fill-opacity="0.55"');
+  const P = [[0, -80], [20, 0], [90, 120], [120, 200], [165, 2500], [200, 4000], [240, 4300], [280, 4400], [300, 3500], [310, 4400], [345, 7000], [370, 4200], [410, 4300], [450, 2600], [470, 2200], [490, 2600], [520, 4000]];
+  s += path('M' + P.map(([x, d]) => `${x} ${f1(Y(d))}`).join(' L') + ` L${W} ${H} L0 ${H}Z`, 'g-rock g-edge');
+  [[200], [2000], [6000]].forEach(([d]) => { s += ln(0, Y(d), W, Y(d), 'g-thin', ' stroke-dasharray="2 5"') + txt(W - 4, Y(d) - 3, `${F(d)} m`, 'fig-small', 'end'); });
+  const L = [[60, 110, names.shelf || 'continental shelf'], [150, 1400, names.slope || 'slope'], [215, 4150, names.plain || 'abyssal plain'], [300, 3450, names.seamount || 'seamount'], [345, 7000, names.trench || 'trench'], [470, 2150, names.ridge || 'mid-ocean ridge']];
+  L.forEach(([x, d, t], i) => { s += note(x + (i ? 0 : 10), i ? Y(d) - 8 : Y(d) + 22, t, 'middle'); });
+  s += lbl(20, top - 10, names.land || 'Land', 'start');
+  return s + '</svg>';
+}
+
+/* tides: 'spring' (Sun, Moon and Earth in line) or 'neap' (at right angles) */
+function tidesSvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 220, ex = 250, ey = 110, spring = kind === 'spring'; let s = svgOpen(W, H, label);
+  s += circ(34, ey, 26, 'g-core', ' stroke="var(--g-magma)" stroke-width="2"') + lbl(34, ey + 46, names.sun || 'Sun');
+  s += `<ellipse cx="${ex}" cy="${ey}" rx="${spring ? 62 : 44}" ry="${spring ? 44 : 62}" class="g-water" fill-opacity="0.7"/>` + circ(ex, ey, 34, 'g-land-2 g-edge');
+  const mx = spring ? 410 : ex, my = spring ? ey : 22;
+  s += circ(mx, my, 13, 'g-snow', ' stroke="var(--ink-3)"') + lbl(mx + (spring ? 0 : 22), my + (spring ? 32 : 5), names.moon || 'Moon', spring ? 'middle' : 'start');
+  s += spring ? arrow(ex + 70, ey, mx - 18, my, 'c', 1.6) : arrow(ex, ey - 66, mx, my + 16, 'c', 1.6);
+  s += arrow(ex - 70, ey, 70, ey, 'c', 1.6) + lbl(ex, 205, spring ? (names.title || 'Spring tide: largest tidal range') : (names.title || 'Neap tide: smallest tidal range'));
+  return s + '</svg>';
+}
+
+/* coastal landforms: 'erosion' (cliff, notch, platform, arch, stack) or 'deposition' (beach, spit, tombolo, lagoon; plan view) */
+function coastSvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 240; let s = svgOpen(W, H, label);
+  if (kind === 'erosion') {
+    s += rect(0, 0, W, H, 'g-sky') + path('M0 150 L480 150 L480 240 L0 240Z', 'g-water', ' fill-opacity="0.7"');
+    s += path('M300 240 L300 180 L330 172 L330 40 L480 40 L480 240Z', 'g-rock g-edge') + path('M330 150 q-12 -8 -2 -22', 'g-line', ' style="fill:var(--paper);stroke:var(--ink-3)"');
+    s += path('M120 240 L150 176 L300 180 L300 240Z', 'g-rock', ' fill-opacity="0.8"');
+    s += path('M190 160 L190 90 L260 90 L260 160 L245 160 L245 125 Q225 105 205 125 L205 160Z', 'g-rock g-edge') + path('M90 160 L95 100 L125 96 L130 160Z', 'g-rock g-edge');
+    s += note(405, 30, names.cliff || 'cliff', 'middle') + note(340, 124, names.notch || 'wave-cut notch', 'start') + note(225, 204, names.platform || 'wave-cut platform', 'middle') + note(225, 82, names.arch || 'arch', 'middle') + note(110, 88, names.stack || 'stack', 'middle');
+    for (let k = 0; k < 3; k++) s += path(`M${20 + k * 30} ${146 + k * 4} q10 -8 20 0`, 'g-line g-l1', ' style="fill:none"');
+  } else {
+    s += rect(0, 0, W, H, 'g-water', 0, ' fill-opacity="0.6"');
+    s += path('M0 0 L480 0 L480 40 C400 50 330 40 250 60 C200 70 170 90 150 110 C130 90 90 80 0 80Z', 'g-land-2 g-edge');
+    s += path('M150 110 C180 120 230 130 300 128 L302 136 C230 140 180 132 146 118Z', 'g-sand g-edge') + note(300, 150, names.spit || 'spit', 'middle');
+    s += path('M60 80 C80 110 80 150 70 180 L78 182 C92 150 92 110 70 80Z', 'g-sand g-edge') + `<ellipse cx="70" cy="200" rx="30" ry="18" class="g-land-2 g-edge"/>` + note(90, 140, names.tombolo || 'tombolo', 'start') + note(70, 228, names.island || 'island', 'middle');
+    s += path('M330 44 C360 70 420 72 470 56 L470 50 C420 60 370 58 336 42Z', 'g-sand g-edge') + path('M340 46 C370 64 420 64 466 52 C420 44 380 42 340 46Z', 'g-water-2') + note(400, 84, names.lagoon || 'lagoon behind a barrier', 'middle');
+    s += path('M200 62 C215 56 240 52 260 58', 'g-sand', ' style="stroke:var(--g-sand);stroke-width:6;fill:none"') + note(230, 40, names.beach || 'beach', 'middle');
+    s += arrow(170, 165, 280, 165, 'a', 2) + note(170, 184, names.drift || 'longshore drift', 'start');
+  }
+  return s + '</svg>';
+}
