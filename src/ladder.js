@@ -159,3 +159,13 @@ link('migration', 'rural-urban', () => T`Urbanisation turns villages into towns 
 link('industry-location', 'regional-development', () => T`Growth centres are often built around leading industries.`);
 link('spatial-interaction', 'regional-development', () => T`Spread and backwash effects travel along the links between places.`);
 link('human-development', 'regional-development', () => T`Development is measured with income and human development indicators.`);
+
+/* ---------- H. Hazards & environment ---------- */
+link('earthquakes', 'disasters', () => T`Earthquakes and tsunamis are among Indonesia's deadliest hazards.`);
+link('volcanism', 'disasters', () => T`Eruptions, lahars and pyroclastic flows are volcanic hazards.`);
+link('rivers', 'disasters', () => T`Floods happen when rivers carry more water than their channels hold.`);
+link('climate-change', 'disasters', () => T`A warmer climate brings more extreme rain and longer droughts.`);
+link('conservation', 'sustainability', () => T`Protecting biodiversity is part of sustainable development.`);
+link('resources', 'sustainability', () => T`Sustainable use keeps resources available for the future.`);
+link('population-growth', 'sustainability', () => T`A growing population puts more pressure on the environment.`);
+link('disasters', 'sustainability', () => T`Reducing disaster risk is part of building sustainable communities.`);

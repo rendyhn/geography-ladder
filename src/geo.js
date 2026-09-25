@@ -997,3 +997,108 @@ function settlementSvg(kind, { label } = {}) {
   hs.forEach(([x, y]) => { s += house(x, y); });
   return s + '</svg>';
 }
+
+/* ==========================================================================
+   Environment, Indonesia and the world, university methods
+   ========================================================================== */
+/* three overlapping circles (sustainable development: environment, society, economy) */
+function vennSvg(labels, { label, center = '', pairs = [] } = {}) {
+  const W = 420, H = 320, r = 96, C = [[160, 120], [260, 120], [210, 205]], cls = ['g-s3', 'g-s4', 'g-s1'];
+  let s = svgOpen(W, H, label);
+  C.forEach(([x, y], i) => { s += circ(x, y, r, cls[i], ' fill-opacity="0.35" stroke="var(--paper)" stroke-width="2"'); });
+  s += lbl(118, 92, labels[0]) + lbl(302, 92, labels[1]) + lbl(210, 268, labels[2]);
+  const P = [[210, 94], [168, 188], [252, 188]]; pairs.forEach((t, i) => { s += note(P[i][0], P[i][1], t); });
+  if (center) s += lbl(210, 152, center);
+  return s + '</svg>';
+}
+
+/* the 17 Sustainable Development Goals as a grid of numbered tiles */
+function sdgGridSvg({ label, highlight = [] } = {}) {
+  const W = 480, cols = 6, sz = 72, gap = 6, H = 3 * (sz + gap) + 4;
+  const col = ['#E5243B', '#DDA63A', '#4C9F38', '#C5192D', '#FF3A21', '#26BDE2', '#FCC30B', '#A21942', '#FD6925', '#DD1367', '#FD9D24', '#BF8B2E', '#3F7E44', '#0A97D9', '#56C02B', '#00689D', '#19486A'];
+  let s = svgOpen(W, H, label);
+  for (let i = 0; i < 17; i++) { const x = 6 + (i % cols) * (sz + gap), y = 2 + Math.floor(i / cols) * (sz + gap), on = !highlight.length || highlight.includes(i + 1); s += `<rect x="${x}" y="${y}" width="${sz}" height="${sz}" rx="6" fill="${col[i]}" fill-opacity="${on ? 1 : 0.25}"/>` + `<text x="${x + sz / 2}" y="${y + sz / 2 + 12}" text-anchor="middle" style="font:800 32px var(--f-display);fill:#fff">${i + 1}</text>`; }
+  return s + '</svg>';
+}
+
+/* maritime zones under UNCLOS, schematic plan view from the coast outwards */
+function maritimeSvg({ label, names = {} } = {}) {
+  const W = 500, H = 230, x0 = 70, X = [x0, 110, 170, 230, 420, 490];
+  let s = svgOpen(W, H, label) + path(`M0 0 L${x0 - 10} 0 C${x0 + 10} 60 ${x0 - 20} 120 ${x0 + 5} 170 L${x0 - 10} 230 L0 230Z`, 'g-land-2 g-edge');
+  const Z = [[X[0], X[1], 'g-water', 0.9, names.inner || 'internal waters'], [X[1], X[2], 'g-s1', 0.35, names.terr || 'territorial sea'], [X[2], X[3], 'g-s4', 0.3, names.cont || 'contiguous zone'], [X[3], X[4], 'g-s3', 0.25, names.eez || 'exclusive economic zone (EEZ)'], [X[4], X[5], 'g-water', 0.5, names.high || 'high seas']];
+  Z.forEach(([a, b, c, o]) => { s += rect(a, 20, b - a, 150, c, 0, ` fill-opacity="${o}"`); });
+  s += ln(X[1], 14, X[1], 176, 'g-line g-l2', ' style="stroke-width:2.5"') + note(X[1], 10, names.base || 'baseline');
+  [[X[2], '12'], [X[3], '24'], [X[4], '200']].forEach(([x, t]) => { s += ln(x, 20, x, 176, 'fig-dash') + txt(x, 190, `${t} ${names.nm || 'nm'}`, 'fig-small'); });
+  Z.forEach(([a, b, c, o, t], i) => { s += `<text x="${(a + b) / 2}" y="95" text-anchor="middle" class="fig-small" transform="rotate(${i === 3 ? 0 : -90} ${(a + b) / 2} 95)">${t}</text>`; });
+  s += note((X[3] + X[4]) / 2, 120, names.eezNote || 'sovereign rights to fish, oil and gas') + note(X[2] - 30, 212, names.sov || '← full sovereignty →', 'middle');
+  return s + '</svg>';
+}
+
+/* seeded point patterns for nearest-neighbour analysis: 'clustered' | 'random' | 'regular' */
+function pointPatternSvg(kind, { label, n = 30, seed = 7 } = {}) {
+  const W = 220, H = 220; let s = svgOpen(W, H, label) + rect(10, 10, 200, 200, 'g-land', 0, ' fill-opacity="0.5" stroke="var(--ink-3)"');
+  let z = seed; const rnd = () => (z = (z * 16807) % 2147483647) / 2147483647;
+  const pts = [];
+  if (kind === 'regular') { const k = Math.round(Math.sqrt(n)); for (let i = 0; i < k; i++) for (let j = 0; j < k; j++) pts.push([10 + (i + 0.5 + (j % 2) * 0.25) * 200 / k, 10 + (j + 0.5) * 200 / k]); }
+  else if (kind === 'clustered') { const c = [[60, 60], [150, 140], [70, 160]]; for (let i = 0; i < n; i++) { const [cx, cy] = c[i % 3]; pts.push([cx + (rnd() - 0.5) * 36, cy + (rnd() - 0.5) * 36]); } }
+  else for (let i = 0; i < n; i++) pts.push([18 + rnd() * 184, 18 + rnd() * 184]);
+  pts.forEach(([x, y]) => { s += circ(x, y, 3.6, 'g-hot'); });
+  return s + '</svg>';
+}
+
+/* Thiessen (Voronoi) polygons for a set of rain gauges, by clipping the box with perpendicular bisectors */
+function thiessenSvg(sites, { label, values } = {}) {
+  const W = 300, H = 240, box = [[10, 10], [290, 10], [290, 230], [10, 230]];
+  const clip = (poly, [ax, ay], [bx, by]) => {   // keep the half-plane closer to a
+    const mx = (ax + bx) / 2, my = (ay + by) / 2, nx = bx - ax, ny = by - ay, side = ([x, y]) => (x - mx) * nx + (y - my) * ny, out = [];
+    poly.forEach((p, i) => { const q = poly[(i + 1) % poly.length], sp = side(p), sq = side(q); if (sp <= 0) out.push(p); if ((sp < 0) !== (sq < 0)) { const t = sp / (sp - sq); out.push([p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])]); } });
+    return out;
+  };
+  let s = svgOpen(W, H, label);
+  const cls = ['g-s1', 'g-s3', 'g-s4', 'g-s5', 'g-s6', 'g-s2'];
+  sites.forEach((a, i) => { let poly = box; sites.forEach((b, j) => { if (i !== j) poly = clip(poly, a, b); }); s += polyg(poly, cls[i % cls.length], ' fill-opacity="0.35" stroke="var(--ink-3)" stroke-width="1.2"'); });
+  sites.forEach(([x, y], i) => { s += circ(x, y, 4.5, 'g-hot', ' stroke="var(--paper)" stroke-width="1.5"') + (values ? lbl(x, y - 9, values[i]) : ''); });
+  return s + rect(10, 10, 280, 220, 'fig-frame') + '</svg>';
+}
+
+/* a stream network with Strahler orders */
+function strahlerSvg({ label, show = true } = {}) {
+  const W = 360, H = 260; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-land', 0, ' fill-opacity="0.5"');
+  const segs = [
+    [[40, 20], [80, 70], 1], [[120, 15], [80, 70], 1], [[80, 70], [120, 130], 2], [[20, 110], [70, 140], 1], [[70, 140], [120, 130], 1],
+    [[200, 10], [210, 60], 1], [[250, 20], [210, 60], 1], [[210, 60], [190, 110], 2], [[300, 60], [250, 110], 1], [[330, 100], [250, 110], 1], [[250, 110], [190, 110], 2],
+    [[190, 110], [170, 170], 3], [[120, 130], [170, 170], 2], [[170, 170], [180, 250], 3], [[320, 180], [230, 200], 1], [[230, 200], [180, 225], 1]];
+  segs.forEach(([a, b, o]) => { s += ln(a[0], a[1], b[0], b[1], 'g-line g-l1', ` style="stroke-width:${o * 1.6 + 0.6}"`); if (show) s += note((a[0] + b[0]) / 2 + 8, (a[1] + b[1]) / 2, String(o), 'start'); });
+  return s + '</svg>';
+}
+
+/* a choropleth of 12 districts shaded by class */
+function choroplethSvg(values, { label, breaks, unit = '' } = {}) {
+  const W = 420, H = 250, cells = [[20, 20, 90, 60], [110, 20, 70, 60], [180, 20, 100, 60], [20, 80, 60, 70], [80, 80, 100, 70], [180, 80, 50, 70], [230, 80, 50, 70], [20, 150, 80, 80], [100, 150, 60, 80], [160, 150, 70, 80], [230, 150, 50, 80], [280, 20, 0, 0]];
+  const cls = ['g-s4', 'g-s3', 'g-s1', 'g-s6'], op = [0.2, 0.45, 0.7, 0.95], k = v => breaks.findIndex(b => v <= b);
+  let s = svgOpen(W, H, label);
+  cells.slice(0, 11).forEach(([x, y, w, h], i) => { const c = k(values[i]); s += rect(x, y, w, h, 'g-s1', 0, ` fill-opacity="${op[c < 0 ? 3 : c]}" stroke="var(--paper)" stroke-width="2"`) + note(x + w / 2, y + h / 2 + 4, F(values[i])); });
+  let lo = Math.min(...values); breaks.forEach((b, i) => { s += rect(300, 30 + i * 28, 18, 18, 'g-s1', 2, ` fill-opacity="${op[i]}"`) + txt(324, 44 + i * 28, `${F(lo)}–${F(b)}${unit}`, 'fig-small', 'start'); lo = b + 1; });
+  return s + '</svg>';
+}
+
+/* sampling designs on a grid of households: 'random' | 'systematic' | 'stratified' */
+function samplingSvg(kind, { label } = {}) {
+  const W = 260, H = 200, n = 10, m = 7; let s = svgOpen(W, H, label);
+  if (kind === 'stratified') { s += rect(10, 8, 240, 78, 'g-s3', 0, ' fill-opacity="0.25"') + rect(10, 86, 240, 106, 'g-s4', 0, ' fill-opacity="0.25"') + ln(10, 86, 250, 86, 'fig-dash'); }
+  let z = 11; const rnd = () => (z = (z * 16807) % 2147483647) / 2147483647;
+  const pick = new Set();
+  if (kind === 'systematic') for (let k = 2; k < n * m; k += 7) pick.add(k);
+  else if (kind === 'random') while (pick.size < 10) pick.add(Math.floor(rnd() * n * m));
+  else { while (pick.size < 4) pick.add(Math.floor(rnd() * 30)); while (pick.size < 10) pick.add(30 + Math.floor(rnd() * 40)); }
+  for (let j = 0; j < m; j++) for (let i = 0; i < n; i++) { const k = j * n + i, x = 22 + i * 24, y = 22 + j * 25.5; s += circ(x, y, pick.has(k) ? 7 : 4, pick.has(k) ? 'g-hot' : 'g-rock-2', pick.has(k) ? ' stroke="var(--paper)" stroke-width="1.5"' : ''); }
+  return s + '</svg>';
+}
+
+/* slope as a right triangle: rise over run, in percent and degrees */
+function slopeSvg(rise, run, { label, names = {} } = {}) {
+  const W = 420, H = 200, L = 40, B = 170, sc = Math.min(340 / run, 140 / rise), x1 = L + run * sc, y1 = B - rise * sc;
+  let s = svgOpen(W, H, label) + polyg([[L, B], [x1, B], [x1, y1]], 'g-land-2', ' stroke="var(--ink-3)" stroke-width="1.5"');
+  s += note((L + x1) / 2, B + 18, `${names.run || 'horizontal distance'} = ${F(run)} m`) + note(x1, y1 - 10, `${names.rise || 'height difference'} = ${F(rise)} m`, 'end') + ln(x1, B, x1, y1, 'g-line g-l2', ' style="stroke-width:2.5"') + arcArrow(L, B, 40, 0, Math.atan2(rise, run) * 180 / Math.PI, 'c', 1.4) + txt(L + 48, B - 8, 'θ', 'fig-text', 'start');
+  return s + '</svg>';
+}

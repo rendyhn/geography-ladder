@@ -1,0 +1,292 @@
+##### disasters
+@xxnbh3tlcy  ; 0=FigW(platesIndonesiaSvg({ names: { eu: T | 1=Tbl([T`Group`, T`Hazards`], [[T`Geologic | 2=Key(T`<p><b>Disaster risk</b> combines t | 3=Fig(cycleSvg([T`Mitigation`, T`Preparedn | 4=Tbl([T`Stage`, T`Examples`], [[T`Mitigat | 5=Tip(T`<p>In an earthquake: <b>drop, cove
+
+<p>A <b>hazard</b> is a natural event that could cause harm, such as an earthquake or heavy rain. It becomes a <b>disaster</b> only when it hits people and they cannot cope: lives are lost, homes destroyed and normal life stops. Indonesia faces many hazards because it lies where three plates meet, has more than 120 active volcanoes, and has a wet tropical climate.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧
+@1dqxcw85cd3
+Map of Indonesia with plate boundaries and active volcanoes along the Sunda arc and around Sulawesi and Maluku
+@nqwdkj9sb5
+Plate boundaries and active volcanoes: the source of Indonesia's geological hazards.
+@1qj22m48jr6
+Hazards
+@y793hs0m8x
+Geological
+@u0v9teus6t
+earthquakes, tsunamis, volcanic eruptions, landslides
+@s054elajtp
+Hydrometeorological
+@1k2rb4zujj0
+floods, droughts, tropical cyclones, strong winds, forest and land fires, tidal floods
+@11e5cit9iyg
+Biological
+@1kglmig7mlw
+epidemics and pandemics, plant and animal diseases
+@29mzbregz0u
+<p><b>Disaster risk</b> combines the hazard with how exposed and vulnerable people are, and how well they can cope:</p><p>$$R = \frac{H \times V}{C}$$</p><p>with $H$ hazard, $V$ vulnerability (poor buildings, poverty, a dense population on a floodplain) and $C$ capacity (early warning, training, strong buildings, savings). We cannot stop earthquakes, but we can lower $V$ and raise $C$.</p>
+@doxt00aoc9
+Preparedness
+@99xmiw5y02
+Response
+@w5td8hqlk0
+Recovery
+@1q81m8w59k2
+Disaster
+@obf3sfr8a7
+The disaster management cycle: mitigation, preparedness, response and recovery
+@vpvfn4pgtb
+The disaster management cycle. Most of the work happens before a disaster.
+@1jbyjfxjfbe
+earthquake-resistant buildings, sea walls, mangroves, hazard maps, land-use rules
+@1cpqy42sua2
+early-warning systems, evacuation routes and drills, emergency bags
+@iin504l2if
+search and rescue, evacuation, first aid, shelters, food and water
+@227lh0ku8ug
+rebuilding homes and infrastructure (better than before), restoring livelihoods, trauma healing
+@1eck6mfh5r7
+<p>In an earthquake: <b>drop, cover and hold on</b>, away from windows. On a coast, if the ground shakes strongly for a long time or the sea suddenly recedes, go to high ground at once without waiting for a warning. Indonesia's disaster agencies are <b>BNPB</b> (national) and <b>BPBD</b> (regional); <b>BMKG</b> issues earthquake and tsunami warnings.</p>
+@1z3gbhwt1w9  ; 0=H | 1=V | 2=C
+Using $R = \frac{H \times V}{C}$, find the disaster risk score of a village with hazard ⟦0⟧, vulnerability ⟦1⟧ and capacity ⟦2⟧ (each on a 1–5 scale).
+@24h0hjz91t6  ; 0=C0 | 1=C1 | 2=H | 3=V
+After training and an early-warning system, a village's capacity score rises from ⟦0⟧ to ⟦1⟧ (hazard ⟦2⟧, vulnerability ⟦3⟧). What is its new risk score?
+@z9rnlpoeau  ; 0=H | 1=V | 2=C0 | 3=M(r0) | 4=H | 5=V | 6=C1 | 7=M(r1)
+Before: $\frac{⟦0⟧ \times ⟦1⟧}{⟦2⟧} = ⟦3⟧$. After: $\frac{⟦4⟧ \times ⟦5⟧}{⟦6⟧} = ⟦7⟧$: doubling capacity halves the risk.
+@mxy1hihg2s  ; 0=Q(d, 'm') | 1=Q(v, 'm/s')
+After a strong earthquake, residents must walk ⟦0⟧ to a tsunami evacuation hill. Walking at ⟦1⟧, how many minutes do they need?
+@299khkac66g
+Tsunami
+@1393wdvwfv2
+Volcanic eruption
+@yegchab58q
+Flood
+@1hvcw15ruue
+Drought
+@aadf68dawi
+Forest and land fire
+@28ubz1h06b
+Tropical cyclone
+@uibkhv0bl0
+Dengue epidemic
+@wyp1grt7vn  ; 0=d
+Which group of hazards does this belong to? <i>⟦0⟧</i>
+@ft6zkarpld
+Planting mangroves along a coast exposed to tsunamis
+@1px5wz7s5ik
+Holding an evacuation drill at school
+@1jl4cw1bu9t
+Searching collapsed buildings for survivors
+@amk2rqaj9s
+Rebuilding a market with earthquake-resistant design
+@26t393xfssz
+Installing sirens connected to BMKG's tsunami warning
+@2a4m3islb3z
+Setting up emergency tents and public kitchens
+@1hapg2wqg8q
+Banning houses on steep, unstable slopes
+@24gztj8seyn  ; 0=d | 1=Fig(cycleSvg([T`Mitigation`, T`Preparedn
+Which stage of the disaster management cycle is this? <i>⟦0⟧</i>⟦1⟧
+@h9fzo90lfy
+The disaster management cycle
+@1tknebxd8d8
+What is the difference between a hazard and a disaster?
+@1w9ay9rjaxf
+A disaster is a hazard that seriously harms people who cannot cope
+@zjskpla5yq
+A hazard is always bigger than a disaster
+@voq8pboqlz
+Disasters are caused only by people
+@1vi0x1wk7j9
+An earthquake in an empty desert is a hazard; the same earthquake under a crowded city with weak buildings becomes a disaster.
+@1fe6bsd2eav
+You are on a beach and the sea suddenly draws back far from the shore. What should you do?
+@15uh77ef1i
+Run to high ground immediately
+@118zeb6nrkf
+Go and collect the stranded fish
+@24bhjmy6j42
+Wait for an official announcement
+@28wewwgivb5
+Take photos of the sea floor
+@1m1sn750xzh
+A receding sea is a natural warning of an approaching tsunami: there may be only minutes.
+@eiwyzas15g
+Which agency issues earthquake and tsunami warnings in Indonesia?
+@pdcqbe8iyr
+BMKG
+@przabp63r8
+BPS
+@scrrnsruty
+BKKBN
+@viexk4yabo
+BI
+@2cqjv4kw15o
+BMKG (the meteorology, climatology and geophysics agency) runs the earthquake network and the tsunami early-warning system.
+@1f4sixl4jtl
+Why are floods in cities getting worse?
+@mvwuh154n7
+Less green space and blocked drains mean more, faster runoff
+@222ygvood0w
+Cities have fewer people
+@x1numgdhvd
+Rivers are getting wider
+@1amzl3mf462
+It rains only in the dry season
+@ykallzapjt
+Concrete surfaces, rubbish in drains and building on floodplains all raise flood risk.
+@f24jbnlt6r
+During an earthquake, what should you do indoors?
+@1fho119l0qa
+Run down the stairs at once
+@27jrxr08x7x
+Use the lift to go outside
+@c1jh8wrdep
+Most injuries come from falling objects and glass; take cover until the shaking stops.
+
+##### sustainability
+@1cthfh1sygj  ; 0=FigW(vennSvg([T`Environment`, T`Society` | 1=Key(T`<p><b>Sustainable development</b>  | 2=FigW(sdgGridSvg({ label: T`The 17 Sustai | 3=Tbl([T`Tool`, T`What it does`], [[T`AMDA | 4=Tip(T`<p>Environmental problems cross bo
+
+<p>People depend on the environment for air, water, food, materials and energy, but also damage it through <b>pollution</b> (air, water, soil), <b>deforestation</b>, <b>land degradation</b>, <b>overfishing</b> and <b>waste</b>. Indonesia produces tens of millions of tonnes of household waste a year, and much of it ends up in rivers and the sea.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+@uhhgok3rk5
+Environment
+@1pimudpcn0y
+Society
+@15canslgvov
+Economy
+@115gmhfbmb9
+Sustainable
+@14s98o864fn
+bearable
+@7xs9qcgyf6
+viable
+@1ufql9uijsn
+equitable
+@20s6cgxd1zb
+Three overlapping circles for environment, society and economy; where all three overlap is sustainable development
+@6zz4ifkmls
+Sustainable development balances the environment, society and the economy.
+@1hwv093g3ga
+<p><b>Sustainable development</b> is "development that meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Report, 1987). The <b>carrying capacity</b> of an area is the largest population it can support without being damaged:</p><p>$$\text{people supported} = \frac{\text{available resource}}{\text{need per person}}$$</p><p>The <b>ecological footprint</b> measures the land and sea area needed to supply what a person uses and absorb their waste. When the world's footprint exceeds its biocapacity, we are using more than one Earth.</p>
+@8r2qmuhqpd
+The 17 Sustainable Development Goals shown as numbered coloured tiles
+@23ve959rxy
+The 17 Sustainable Development Goals (SDGs), agreed in 2015 for 2030: for example 1 no poverty, 6 clean water, 7 clean energy, 11 sustainable cities, 13 climate action, 14 life below water, 15 life on land.
+@4jxxkmcuwc
+Tool
+@1a56fxt6c5v
+What it does
+@inbyeev3s4
+AMDAL (environmental impact assessment)
+@14ugc56mlkb
+required before big projects; studies the effects on the environment and plans how to manage them
+@1kct5ph3g31
+3R: reduce, reuse, recycle
+@271to7i9sse
+less waste at the source, using things again, making new products from waste
+@2ctbsqyh2sr
+Circular economy
+@1mufeqc6u56
+designing products and systems so materials keep circulating instead of becoming waste
+@r4lf733w7s
+Waste banks (bank sampah)
+@1l8wjptcdzb
+communities sort and sell recyclable waste
+@3syaqu2tmz
+<p>Environmental problems cross borders: haze from forest fires, plastic in the ocean and greenhouse gases affect everyone. That is why local action and international agreements both matter.</p>
+@1wp2537c0ge  ; 0=Q(A, 'ha') | 1=Q(need, 'ha')
+A valley has ⟦0⟧ of farmland. Each person needs ⟦1⟧ to grow their food. How many people can the valley support?
+@bkp9bvotkr  ; 0=M(A) | 1=M(need) | 2=M(n)
+$\frac{⟦0⟧}{⟦1⟧} = ⟦2⟧$ people.
+@1fns79ze0jo  ; 0=NUM(fp) | 1=NUM(bc)
+The average ecological footprint in a country is ⟦0⟧ global hectares per person, but the Earth's biocapacity is only ⟦1⟧ global hectares per person. If everyone lived like this, how many Earths would we need?
+@196vqg4pdop  ; 0=M(fp) | 1=M(bc) | 2=M(e)
+$\frac{⟦0⟧}{⟦1⟧} = ⟦2⟧$ Earths.
+@1qihy0t9qaz  ; 0=F(P) | 1=Q(kg, 'kg')
+Each of the ⟦0⟧ residents of a city produces about ⟦1⟧ of waste a day. How many tonnes of waste does the city produce each day?
+@14odwlubli8  ; 0=M(P) | 1=M(kg) | 2=M(sig(P * kg, 3)) | 3=QT(t, 't')
+$⟦0⟧ \times ⟦1⟧ = ⟦2⟧$ kg $= ⟦3⟧$ a day.
+@1dpi8ks95n4  ; 0=Q(tot, 't') | 1=Q(rec, 't')
+A town collects ⟦0⟧ of waste a week, of which ⟦1⟧ is recycled. What is its recycling rate?
+@27ubo03gvrr
+Bringing your own bag and bottle instead of buying plastic ones
+@1jlc64msp9f
+Reduce
+@1ttivdu8rkd
+Using glass jars again to store food
+@12c87qobp8h
+Reuse
+@1k9a4avjp73
+Turning plastic bottles into polyester fibre
+@femruxgvof
+Recycle
+@vg4ucqwktg
+Buying products with less packaging
+@y8mlyj3elg
+Giving old clothes to someone who can wear them
+@2cind573jys
+Composting food scraps into fertiliser
+@2c0tro09f3w  ; 0=d
+Which of the 3Rs is this? <i>⟦0⟧</i>
+@1c4vd73u8kg
+Climate action
+@2coz54w7un6
+Life below water
+@1odbz3u2yig
+Life on land
+@8xus89x0iz
+Clean water and sanitation
+@2fc1q7dzq8e
+Affordable and clean energy
+@tpkbxkzi4u
+Sustainable cities and communities
+@s7saavzw3d  ; 0=FigW(sdgGridSvg({ highlight: [g], label:
+Which Sustainable Development Goal is highlighted?⟦0⟧
+@tb56agrxbp
+The 17 SDGs with one highlighted
+@11uoqcm0231  ; 0=g | 1=d
+Goal ⟦0⟧ is <b>⟦1⟧</b>.
+@2evw70h5ss4
+What does AMDAL require before a large project is built?
+@f9088cgqck
+A study of its environmental impacts and how to manage them
+@114de8dgect
+A population census
+@6x6w5r8gf5
+A tax payment only
+@1jnn4xfxhin
+Permission from every resident
+@15axzi2cneg
+AMDAL is Indonesia's environmental impact assessment; without it big projects cannot get a permit.
+@1vqhaa7kfl7
+Which definition of sustainable development comes from the Brundtland Report (1987)?
+@1mxnhni9uvy
+Meeting present needs without compromising future generations
+@16lumz7ty6d
+Growing the economy as fast as possible
+@2fq4kbfjmw5
+Stopping all use of natural resources
+@zbonj1eo9n
+Protecting only national parks
+@10nwlu6hfcl
+It balances today's needs with those of future generations.
+@4haene1377
+What is the carrying capacity of an area?
+@1yb8nz8dvtr
+The largest population it can support without being damaged
+@1xeyyr1qecz
+The number of cars on its roads
+@2c89v804ejv
+The weight its bridges can carry
+@7wjv1h91q2
+Its total area
+@mrtc9p1ngg
+Beyond the carrying capacity, resources are used faster than they renew and the environment degrades.
