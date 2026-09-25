@@ -1,0 +1,50 @@
+/* ==========================================================================
+   The ladder: which topics each topic builds on, and why.
+   link(from, to, why): "to" builds on "from". An end may be a topic that is
+   still planned (shown greyed out), math:<id> (a topic on Math Ladder) or
+   phys:<id> (a topic on Physics Ladder); those open in a new tab.
+   The reason is shown on both pages, so it has to read well from either side.
+   ========================================================================== */
+const LADDER = [];
+const link = (from, to, why) => LADDER.push({ from, to, why });
+/* topics on the sister sites used as prerequisites (English titles; packs translate them under meta.math / meta.phys) */
+const EXT = {
+  math: {
+    url: 'https://rendyhn.github.io/math-ladder/', icon: '∑', label: 'mathLadder',
+    topics: {
+      'ratio': 'Ratio, Rates & Proportion', 'percent': 'Percentages', 'measurement': 'Measurement & Units', 'angles-shapes': 'Angles & Shapes',
+      'similarity': 'Transformations & Similarity', 'pythagoras': 'Pythagorean Theorem', 'circles': 'Circles', 'sci-notation': 'Scientific Notation',
+      'linear-functions': 'Linear Functions & Graphs', 'data-basic': 'Data & Averages', 'statistics-jh': 'Statistics: Centre & Spread',
+      'trig-basics': 'Trigonometry: Ratios & the Unit Circle', 'exp-log': 'Exponents & Logarithms', 'sequences': 'Sequences & Series',
+      'statistics-sh': 'Statistics: Spread & Distributions', 'probability-sh': 'Probability: Rules & Conditional', 'conics': 'Coordinate Geometry & Circles',
+      'integrals': 'Integrals', 'distributions': 'Probability Distributions', 'inference': 'Statistical Inference',
+    },
+  },
+  phys: {
+    url: 'https://rendyhn.github.io/physics-ladder/', icon: 'Φ', label: 'physLadder',
+    topics: {
+      'units': 'Quantities, Units & Conversions', 'circular': 'Circular Motion', 'gravitation': 'Gravitation & Orbits', 'fluid-statics': 'Fluids at Rest',
+      'fluid-dynamics': 'Fluids in Motion', 'mech-waves': 'Mechanical Waves', 'heat': 'Temperature, Heat & Expansion', 'gases': 'Kinetic Theory & Ideal Gases',
+      'heat-transfer': 'Heat Transfer: Conduction, Convection & Radiation', 'em-waves': 'Electromagnetic Waves', 'radioactivity': 'Nuclei & Radioactivity',
+      'renewables': 'Renewable & Alternative Energy', 'climate': 'Global Warming & the Greenhouse Effect',
+    },
+  },
+};
+
+/* ---------- A. Maps & geographic tools ---------- */
+link('geo-concepts', 'map-scale', () => T`A map is the geographer's main tool for showing location, distance and pattern.`);
+link('math:ratio', 'map-scale', () => T`A map scale is a ratio, and converting map distances to real distances is working with proportion.`);
+link('math:similarity', 'map-scale', () => T`A map is a reduced copy of the ground: lengths shrink by the scale factor and areas by its square.`);
+link('geo-concepts', 'coordinates', () => T`Coordinates give the absolute location of a place.`);
+link('math:circles', 'coordinates', () => T`Parallels and meridians are circles on a sphere, and degrees of latitude are arcs of a meridian.`);
+link('math:trig-basics', 'coordinates', () => T`A degree of longitude shrinks with the cosine of the latitude.`);
+link('coordinates', 'time-zones', () => T`Time zones follow the meridians: every 15° of longitude is one hour.`);
+link('coordinates', 'projections', () => T`A projection transfers the grid of parallels and meridians onto a flat map.`);
+link('map-scale', 'projections', () => T`Every projection distorts the scale somewhere on the map.`);
+link('map-scale', 'contours', () => T`The horizontal distance for a gradient is measured on the map and converted with the scale.`);
+link('math:linear-functions', 'contours', () => T`A gradient is rise over run, just like the slope of a straight line.`);
+link('math:trig-basics', 'contours', () => T`The slope angle is the inverse tangent of the gradient.`);
+link('phys:em-waves', 'remote-sensing', () => T`Sensors record reflected and emitted electromagnetic radiation, band by band across the spectrum.`);
+link('map-scale', 'remote-sensing', () => T`Aerial photographs have a scale, set by the focal length and the flying height.`);
+link('map-scale', 'gis', () => T`A GIS is built from digital map layers.`);
+link('remote-sensing', 'gis', () => T`Satellite images are one of the main sources of raster data in a GIS.`);

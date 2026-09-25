@@ -1,0 +1,1165 @@
+##### geo-concepts
+@zbb7dz97pb  ; 0=Tbl([T`Object`, T`What it is`, T`Example | 1=FigW(hubSvg(T`Geography`, [T`Location`,  | 2=Tbl([T`Concept`, T`Meaning`], [
+  [T`Loc | 3=Key(T`<p><b>Four principles.</b> <i>Dist | 4=Tip(T`<p>To name the concept in a questi
+
+<p><b>Geography</b> studies the similarities and differences between phenomena on the Earth's surface, seen from a spatial, environmental or regional point of view. A geographer always asks three questions: <i>where</i> is it, <i>why</i> is it there, and <i>what does it mean</i> for people and the environment?</p>
+<h3>The objects of geography</h3>
+⟦0⟧
+<h3>Ten essential concepts</h3>
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+@d5yammh8qw
+Object
+@1b00t4z3zq2
+What it is
+@1j1ms4p35q
+Examples
+@21odyfzf3pk
+Material object
+@ua7e9xkch1
+the geosphere: everything geography looks at
+@238n0bkj6uh
+lithosphere, atmosphere, hydrosphere, biosphere, pedosphere and anthroposphere (people)
+@2e3868ra3ax
+Formal object
+@piow0ocmhc
+the point of view used to look at it
+@1tkdmjm6ua3
+the spatial, environmental and regional viewpoint
+@rhipi3a7r6
+Geography
+@evxagy7yqs
+Location
+@2edghjfjyb9
+Distance
+@wn0cao3c9f
+Accessibility
+@jij6y8rh1q
+Pattern
+@1amf205t93u
+Morphology
+@185qoehqxgn
+Agglomeration
+@2gf372unp9q
+Use value
+@1f5e4rd2zv9
+Interaction
+@2nlcstw1xp
+Differentiation
+@aoffaz9uvq
+Spatial linkage
+@qlpnk7h3qx
+The ten essential concepts of geography arranged around the word Geography
+@160m8khk9aq
+The ten essential concepts: the ideas every geographical question uses.
+@1ox4hftyuan
+Concept
+@18vrcwaxvwu
+Meaning
+@nnavwjchwb
+absolute (coordinates, e.g. 6°S 106°E) or relative (in relation to other places, e.g. near a port)
+@zb4t99ghwh
+how far apart places are, in kilometres, travel time or cost
+@yqaq6ddhp8
+how easily a place can be reached
+@28h61mwiqb0
+the arrangement of phenomena, e.g. settlements along a river or a road
+@2bldow8cauj
+the shape of the land: plains, hills, mountains, coasts
+@2eq9uk6wd7t
+the clustering of similar activities in one area, e.g. an industrial estate
+@1mlmabbr72c
+how useful a place is, which differs from person to person
+@1nvenegrajg
+places depending on and influencing each other, e.g. a village supplying a city with food
+@r62wdsnch6
+each area has its own mix of characteristics that sets it apart
+@280sfqdwtyq
+how phenomena in one area are related, e.g. deforestation and floods downstream
+@2131rmdvvgn
+<p><b>Four principles.</b> <i>Distribution</i>: phenomena are spread unevenly over the Earth. <i>Interrelation</i>: phenomena influence each other. <i>Description</i>: the pattern and its causes are explained in words, maps, tables and graphs. <i>Chorology</i>: a phenomenon is studied together with everything around it in its region.</p><p><b>Three approaches.</b> The <i>spatial</i> approach looks at where things are and why. The <i>ecological</i> approach looks at the relationship between people and their environment. The <i>regional complex</i> approach combines both to compare whole regions.</p>
+@215l8o2u06v
+<p>To name the concept in a question, find the key idea: "clustered together" is agglomeration, "easy to reach" is accessibility, "one place supplies another" is interaction, "the shape of the land" is morphology.</p>
+@1eyzaejtlp7
+Many textile factories are clustered together in one industrial estate.
+@gfcry2nn0t
+Farmers in the mountains send vegetables to the city, and the city sends manufactured goods back.
+@gffwossn9w
+A village is hard to reach because there is no road and no bridge over the river.
+@rk9wq8afwi
+Jakarta lies at about 6°S and 107°E.
+@26azzv81v9o
+The market is 15 minutes by motorbike from the village.
+@wy199uusl9
+Houses in a valley are built in a line along the river bank.
+@kf011fwuo8
+The area is a lowland plain surrounded by steep hills.
+@qe9j3g8edp
+For a surfer a beach with big waves is valuable, but for a fisherman it is dangerous.
+@mrgx6aw7xu
+The highlands grow tea and vegetables while the lowlands grow rice.
+@giumrdi7h7
+Cutting forests upstream causes floods in towns downstream.
+@tytukq4as9
+A shopping centre is built next to a toll-road exit so that many people can get there.
+@jvtfg7zsvy
+Workshops of silver craftsmen are concentrated in one neighbourhood of the city.
+@wese6fjw25  ; 0=q
+Which essential concept of geography does this describe? <i>⟦0⟧</i>
+@1xwai6t55uq  ; 0=a
+The key idea of the statement is <b>⟦0⟧</b>.
+@1e98kt6q3z
+Explaining why landslides happen often in an area by studying its slopes, soil and rainfall together
+@2ewusy1rh8g
+Interrelation
+@wdm392gyiv
+Showing on a map that volcanoes in Indonesia are spread along an arc
+@115owsb7jcv
+Distribution
+@oeke05wg02
+Presenting data on rice harvests with a graph and a written explanation
+@1ls4al65qvg
+Description
+@6pljq0ucir
+Studying a flood by looking at the rainfall, land use and river network of the whole region
+@uzb9pcirp
+Chorology
+@1xsdvp5febo  ; 0=q
+Which principle of geography is being used? <i>⟦0⟧</i>
+@1h2m0974kje  ; 0=a | 1=a === T`Distribution` ? T`phenomena are 
+This is the principle of <b>⟦0⟧</b>: ⟦1⟧
+@l02tfh9bur
+phenomena are spread unevenly over space.
+@12wa7bb5alj
+phenomena influence one another.
+@1qx3fwt4w23
+the pattern is explained with words, maps, tables and graphs.
+@25nb04b1hy3
+a phenomenon is studied with everything around it in its region.
+@1b0uaxx9s4g
+A study of how farmers on the slopes of a volcano adapt their farming to the fertile ash soil
+@u1p4ki6gk7
+Ecological approach
+@19k9lte01z8
+A study of why shops in a town are concentrated along the main road
+@zcsalfjbri
+Spatial approach
+@11fhhnj2qqx
+A comparison of Java and Kalimantan, looking at their physical and human features together
+@2g86yr10cau
+Regional complex approach
+@ppvja1adct
+A study of how people's rubbish affects the quality of a river
+@df2850bm2k
+Mapping where schools are located and how far pupils must travel
+@1klo5eki5ee  ; 0=q
+Which geographical approach is used here? <i>⟦0⟧</i>
+@21wcp385i3q
+Historical approach
+@18psfteanw3  ; 0=a
+The spatial approach asks where and why; the ecological approach looks at people and their environment; the regional complex approach combines both to study and compare regions. Here it is the <b>⟦0⟧</b>.
+@104z52h3ulc
+Which of these is the <b>formal</b> object of geography?
+@2cyc9qcpsug
+The spatial, environmental and regional point of view
+@20lqlei3dsg
+The lithosphere
+@iy6jdqeb3d
+The atmosphere and hydrosphere
+@p8tcgcrw5h
+People and their activities
+@myeb950do7
+The formal object is the viewpoint geography uses; the layers of the geosphere are its material object.
+@2eg7vjwfhkr
+Which layer of the geosphere is made up of people and their activities?
+@15j1ephglm1
+Anthroposphere
+@moh2dbodt2
+Pedosphere
+@5oj3jin86r
+Biosphere
+@18fpjn4868m
+Lithosphere
+@6qe0o9q871
+The anthroposphere is the human layer: population, settlements and economic activity.
+@1sb0v1jbijy
+Which layer of the geosphere is the soil?
+@fmu4wnrx93
+Hydrosphere
+@p80akht8gt
+The pedosphere is the soil layer, formed where rock, air, water and living things meet.
+@ddh0mtgepe
+"Bandung lies about 180 km south-east of Jakarta." What kind of location is this?
+@2c9y2taecq2
+Relative location
+@28vye42v2qd
+Absolute location
+@rh90oc7a5r
+Astronomical location
+@1s3s6v48mn1
+Fixed location
+@bfg5x2lbqx
+It describes Bandung in relation to another place, so it is a relative location. An absolute location uses coordinates.
+@28qcnm1j9gp
+"Monas stands at 6°10′ S, 106°49′ E." What kind of location is this?
+@1fywqrez1ie
+Strategic location
+@20wip0qd2yd
+Geological location
+@1ztrd6k1zi6
+Coordinates of latitude and longitude give an absolute location, which never changes.
+@1nl8itto5u9
+Why are there more people living on Java than on Papua?
+@6z056hfmwf
+Why
+@27skujngfyb
+Where are Indonesia's active volcanoes found?
+@1ecnf40wtc4
+Where
+@fwmb728hc3
+What are the effects of a new toll road on the villages it passes?
+@1mowf2c7qqb
+What does it mean
+@s3zebmcp4d  ; 0=q
+Geographers ask three basic questions: <i>Where?</i>, <i>Why there?</i> and <i>What does it mean?</i> Which one does this question mainly ask? <i>⟦0⟧</i>
+@1iv93cqfjb0
+When
+@13flq2vt94q
+Where describes the location and distribution; why explains the causes; what does it mean looks at the consequences for people and the environment.
+
+##### map-scale
+@1ls4j68i65u  ; 0=FigW(mapSheetSvg({ title: T`Land Use of  | 1=Tbl([T`Component`, T`Purpose`], [[T`Titl | 2=Fm(T`\text{real distance} = \text{map di | 3=Key(T`<p>Work in centimetres, then conve | 4=Tip(T`<p>If a map is enlarged 2 times, e
+
+<p>A <b>map</b> is a drawing of all or part of the Earth's surface on a flat plane, reduced by a scale and simplified with symbols. Maps are either <b>general</b> (showing many features, such as a topographic map or an atlas) or <b>thematic</b> (showing one theme, such as rainfall or population density).</p>
+⟦0⟧
+⟦1⟧
+<h3>Scale</h3>
+<p>A <b>numerical scale</b> such as $1 : 50\,000$ means 1 unit on the map equals 50 000 of the same units on the ground. A <b>verbal scale</b> says it in words ("1 cm represents 500 m"), and a <b>graphic scale</b> is a bar, which stays correct when the map is enlarged or reduced.</p>
+⟦2⟧
+⟦3⟧
+<p>A <b>large-scale</b> map (e.g. $1 : 5\,000$) shows a small area in great detail; a <b>small-scale</b> map (e.g. $1 : 1\,000\,000$) shows a large area with little detail. The bigger the denominator, the smaller the scale.</p>
+⟦4⟧
+@28smpy8bvgs
+Land Use of Sukamaju Island
+@1mdxc4hikdp
+Sea
+@1ikfmkgi8xi
+Lowland
+@1lr46neuuwl
+Highland
+@9ndhhetc9i
+Town
+@hcrdbpqplz
+Scale 1 : 25,000
+@1m5wj81zxow
+A map sheet showing its title, grid, north arrow, legend, inset map and scale
+@2dtouzczn6o
+The components of a map: title, legend, scale, north arrow, inset map and coordinate grid.
+@bq9sko9wp1
+Component
+@1y5tfdaq81t
+Purpose
+@12lewi7lj6d
+Title
+@l01gzccsak
+says what the map shows, where and when
+@2d6zs5lf5dc
+Legend
+@8pby6qp4qp
+explains the symbols and colours
+@253nksi6vh8
+Scale
+@h8a3c4ux92
+relates distances on the map to distances on the ground
+@1lagya5v2xy
+Orientation (north arrow)
+@1bku7ep5ozl
+shows direction
+@8ttw07vywd
+Inset
+@24qi0q0engw
+shows where the mapped area lies in a larger region
+@2xrszc6n7p
+Grid and coordinates
+@14r1ox0d8dv
+help locate places exactly
+@1iyilocr2xl
+Source and year
+@1cznfvfrt3h
+show where the data came from and how up to date it is
+@1k3hbit88bj
+\text{real distance} = \text{map distance} \times \text{scale denominator}
+@joi1lsrau5
+<p>Work in centimetres, then convert: $1\,\mathrm{km} = 100\,000\,\mathrm{cm}$. On a $1 : 50\,000$ map, $4\,\mathrm{cm}$ represents $200\,000\,\mathrm{cm} = 2\,\mathrm{km}$. Areas scale with the <b>square</b>: $1\,\mathrm{cm^2}$ on that map is $(0.5\,\mathrm{km})^2 = 0.25\,\mathrm{km^2}$.</p>
+@1zaephm0zmk
+<p>If a map is enlarged 2 times, everything on it is twice as long, so the scale denominator is halved: $1 : 50\,000$ becomes $1 : 25\,000$.</p>
+@mh5py5z2xo  ; 0=M(den) | 1=Q(d, 'cm')
+On a map with a scale of $1 : ⟦0⟧$ the distance between two towns is ⟦1⟧. What is the real distance?
+@13gnl9oo03g  ; 0=M(d) | 1=M(den) | 2=M(d * den) | 3=Q(km, 'km')
+$⟦0⟧ \times ⟦1⟧ = ⟦2⟧\,\mathrm{cm}$. Divide by 100 000 to get kilometres: ⟦3⟧.
+@1ymol5ofscd  ; 0=Q(km, 'km') | 1=M(den)
+Two villages are ⟦0⟧ apart. How far apart are they on a map with a scale of $1 : ⟦1⟧$?
+@zqe2b3avt0  ; 0=M(km) | 1=M(km * 1e5) | 2=M(km * 1e5) | 3=M(den) | 4=QT(cm, 'cm')
+$⟦0⟧\,\mathrm{km} = ⟦1⟧\,\mathrm{cm}$, and $⟦2⟧ \div ⟦3⟧ = ⟦4⟧$.
+@2asexx9vq55  ; 0=Q(km, 'km') | 1=Q(d, 'cm')
+Two places ⟦0⟧ apart are ⟦1⟧ apart on a map. What is the scale of the map? Give the denominator.
+@2kk8utcpwb
+Type only the denominator, e.g. 50000 for 1 : 50,000.
+@11hyo7vj6vj  ; 0=M(d) | 1=M(km * 1e5) | 2=M(den)
+Scale $= ⟦0⟧\,\mathrm{cm} : ⟦1⟧\,\mathrm{cm} = 1 : ⟦2⟧$.
+@2cu4cr5adip  ; 0=M(den) | 1=enl ? T`enlarged` : T`reduced` | 2=k
+A map with a scale of $1 : ⟦0⟧$ is ⟦1⟧ ⟦2⟧ times. What is the new scale denominator?
+@20okbdetuil
+enlarged
+@7qguzg9dsf
+reduced
+@1mle68pzkig  ; 0=k | 1=k | 2=M(den) | 3=k | 4=M(den / k)
+Enlarging makes the map ⟦0⟧ times bigger, so each map centimetre stands for ⟦1⟧ times less ground: $1 : ⟦2⟧ \div ⟦3⟧ = 1 : ⟦4⟧$.
+@ox4c3trbsp  ; 0=k | 1=M(den) | 2=k | 3=M(den * k)
+Reducing makes each map centimetre stand for ⟦0⟧ times more ground: $1 : ⟦1⟧ \times ⟦2⟧ = 1 : ⟦3⟧$.
+@29g7blfelqa  ; 0=Q(A, 'cm^2') | 1=M(den)
+A lake covers ⟦0⟧ on a map with a scale of $1 : ⟦1⟧$. What is its real area?
+@4gfmzbikt4  ; 0=M(side) | 1=M(side) | 2=M(sig(side * side)) | 3=A | 4=M(sig(side * side)) | 5=QT(km2, 'km^2')
+$1\,\mathrm{cm}$ on the map is $⟦0⟧\,\mathrm{km}$, so $1\,\mathrm{cm^2}$ is $⟦1⟧^2 = ⟦2⟧\,\mathrm{km^2}$. The lake: $⟦3⟧ \times ⟦4⟧ = ⟦5⟧$.
+@236gk62ylp9  ; 0=M(den)
+How would a map with a scale of $1 : ⟦0⟧$ usually be classified?
+@1lf7edj2m3x
+Large scale
+@29rx9q3y93q
+Small scale
+@1n516i65vox
+Medium scale
+@27gl6xevdo4
+Very large area, large scale
+@11a9f77p3nr
+Roughly: larger than $1 : 25\,000$ is large scale (much detail, small area); $1 : 25\,000$ to $1 : 1\,000\,000$ is medium; smaller than $1 : 1\,000\,000$ is small scale.
+@1lq4dtt52c8
+Which map component shows where the mapped area lies within a larger region?
+@1ytzqohafny
+Inset map
+@1azgpo930ba
+North arrow
+@1ujnajvab3x
+The inset is a small map of a wider area with the mapped area marked on it.
+@3unq7eo7pa
+Which type of scale stays correct when a map is photocopied at a larger size?
+@12pyr8hal3j
+Graphic (bar) scale
+@lzn9xtpyu0
+Numerical scale
+@13decq2xbb3
+Verbal scale
+@qxvpi7g4j4
+None of them
+@159t3effmpu
+The bar is enlarged together with the map, so it still shows the right distance. A written ratio would become wrong.
+@1esk5unwzn
+Which map component explains the meaning of the symbols and colours?
+@d65vkv5nkq
+Grid
+@1ta82sps04n
+The legend (key) lists every symbol and colour with its meaning.
+@1b2imr5b72c
+Which map shows a single theme, such as population density?
+@171i5aupyol
+A thematic map
+@23jstnzm6gg
+A topographic map
+@1qw0vqsurlf
+A general map
+@1kesxxi2it0
+An inset map
+@1hp3wadb2ch
+Thematic maps show one subject; general maps such as topographic maps show many kinds of feature together.
+
+##### coordinates
+@143h5zc7enc  ; 0=Fig(globeSvg({ lat: -6.9, lon: 107.6, na | 1=Tbl([T``, T`Latitude`, T`Longitude`], [[ | 2=Key(T`<p>Along a meridian, $1^\circ$ of  | 3=Tip(T`<p>Important parallels: the Tropic
+
+<p>Every place on Earth can be pinpointed with two angles measured from the centre of the Earth.</p>
+⟦0⟧
+⟦1⟧
+<p>Each degree is split into 60 minutes ($'$) and each minute into 60 seconds ($''$), so $6^\circ 30' = 6.5^\circ$. A location is written latitude first: Jakarta is about $6^\circ 12'\,\mathrm{S},\ 106^\circ 49'\,\mathrm{E}$.</p>
+⟦2⟧
+<p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
+⟦3⟧
+@9q6nkst6t
+A globe with parallels and meridians; the equator, the prime meridian and the lines through Bandung are highlighted
+@l98q7xe428
+Bandung lies about 6.9° S and 107.6° E. The red line is the equator and the blue line the prime meridian.
+@1eggnk8ah0d
+Latitude
+@2684pgta76h
+Longitude
+@gg28on1gew
+Measures
+@27gggng15wp
+the angle north or south of the equator
+@2eoue6musla
+the angle east or west of the prime meridian (Greenwich)
+@2pwxqlv2sx
+Lines
+@kiq6fijfco
+parallels: circles that run east–west
+@1jskz3vu2xc
+meridians: half-circles that run from pole to pole
+@8wgrdlq9w9
+Range
+@25nabcw6va3
+0° to 90° N or S
+@un54f9uxoq
+0° to 180° E or W
+@7lc8px22mz
+Zero line
+@sn92c8zu44
+the equator
+@2gd4tpxbbr
+the prime meridian
+@2enwwxzfl1l
+<p>Along a meridian, $1^\circ$ of latitude is always about $111\,\mathrm{km}$. Along a parallel, $1^\circ$ of longitude is $111\,\mathrm{km}$ at the equator but shrinks towards the poles:</p><p>$$1^\circ\ \text{of longitude} \approx 111 \cos\varphi\ \mathrm{km}$$</p><p>where $\varphi$ is the latitude. At $60^\circ$ it is only about $55.5\,\mathrm{km}$.</p>
+@12smo81m14b
+<p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>
+@jvocqvpl2c  ; 0=lo | 1=dir('E') | 2=w(a) | 3=w(b)
+Two towns lie on the same meridian (⟦0⟧° ⟦1⟧), one at ⟦2⟧ and the other at ⟦3⟧. About how far apart are they? (Take $1^\circ = 111\,\mathrm{km}$.)
+@vhqp7of878  ; 0=deg | 1=(a > 0) !== (b > 0) && a && b ? T` (one  | 2=deg | 3=QT(d, 'km')
+The difference in latitude is ⟦0⟧°⟦1⟧. Distance $= ⟦2⟧ \times 111 = ⟦3⟧$.
+@23jdypg172z
+ (one is north and one south of the equator, so the latitudes add)
+@i6of4o5a2l  ; 0=la | 1=dlon
+Two places both lie on latitude ⟦0⟧° and are ⟦1⟧° of longitude apart. About how far apart are they along the parallel? (Take $1^\circ = 111\,\mathrm{km}$ at the equator.)
+@1mlwcpdfs8c  ; 0=dlon | 1=la | 2=QT(d, 'km')
+Along a parallel $1^\circ \approx 111\cos\varphi\ \mathrm{km}$: $⟦0⟧ \times 111 \cos ⟦1⟧^\circ = ⟦2⟧$.
+@1buknd9jjc5  ; 0=dg | 1=mn
+Write $⟦0⟧^\circ ⟦1⟧'$ as a decimal number of degrees.
+@1eub30prw07  ; 0=dg | 1=mn | 2=M(dec)
+There are 60 minutes in a degree: $⟦0⟧ + \frac{⟦1⟧}{60} = ⟦2⟧^\circ$.
+@gxqnzt0vxi
+Northern
+@jde9x30e0t
+Southern
+@28t9vc4rmwg
+Eastern
+@1k5yorns0v5
+Western
+@1tl5jsvkd5m  ; 0=city | 1=Math.abs(la) | 2=la > 0 ? dir('N') : dir('S') | 3=Math.abs(lo) | 4=lo > 0 ? dir('E') : dir('W') | 5=Fig(globeSvg({ lat: la, lon: lo, name: c
+⟦0⟧ lies at about ⟦1⟧° ⟦2⟧, ⟦3⟧° ⟦4⟧. In which hemispheres is it?⟦5⟧
+@26vfysbhfy6
+A globe with the city marked
+@xskc8g4l61  ; 0=la > 0 ? T`north` : T`south` | 1=la > 0 ? T`Northern` : T`Southern` | 2=lo > 0 ? T`east` : T`west` | 3=lo > 0 ? T`Eastern` : T`Western`
+Latitude ⟦0⟧ of the equator puts it in the ⟦1⟧ Hemisphere; longitude ⟦2⟧ of Greenwich puts it in the ⟦3⟧ Hemisphere.
+@qxa8sz7pic
+north
+@4zwbc4p6ms
+south
+@1tv51zwdq0h
+east
+@re3sls2k7m
+west
+@yf3wkgpf6i  ; 0=f(la, ns ? dir('N') : dir('S'), lo, ew ?
+The antipode of a place is the point exactly on the opposite side of the Earth. What is the antipode of ⟦0⟧?
+@2visirj159  ; 0=lo | 1=180 - lo
+Change the hemisphere of the latitude, keep its size; for longitude take $180^\circ - ⟦0⟧^\circ = ⟦1⟧^\circ$ and change east to west.
+@2bjfonpn6er
+Which line of latitude is a great circle?
+@1jawosgfntv
+The equator
+@49dajy0uix
+The Tropic of Cancer
+@1xmeet40g5z
+The Arctic Circle
+@a3lo1d3dv9
+Every parallel
+@1uzy64wv8ue
+A great circle has its centre at the centre of the Earth. Of all the parallels only the equator does; all meridians are halves of great circles.
+@ldltqzlczp
+What is the latitude of the Tropic of Capricorn?
+@a7bt16cuz
+23.5° S
+@1zjlusokegt
+23.5° N
+@1u209wzxgsj
+66.5° S
+@nzarxfe6kr
+The Tropic of Capricorn is at 23.5° S, the southernmost latitude where the Sun can be directly overhead (around 22 December).
+@1wdclvt2chp
+Which meridian is 0° longitude?
+@bcpawqbn4s
+The prime meridian through Greenwich
+@18ylwgw1ya7
+The International Date Line
+@c95229oyn
+The meridian through Jakarta
+@ojbxhhtf1t
+Longitude is measured from the prime meridian through Greenwich, London.
+@2cf7l6z058p
+Along which direction does 1° always cover about 111 km, wherever you are?
+@1a3jkdicp4y
+North–south (along a meridian)
+@q5hp6hz6lk
+East–west (along a parallel)
+@1el1fkgr1mv
+In every direction
+@1m2xm2aghyi
+Only at the poles
+@1lzrgoa4qya
+Parallels are evenly spaced, so a degree of latitude is always about 111 km. Meridians converge towards the poles, so a degree of longitude shrinks.
+
+##### time-zones
+@132cv5zy7hf  ; 0=Fm(T`\Delta t = \frac{\Delta\lambda}{15^ | 1=FigW(timeStripSvg({ places: [[106.8, 'Ja | 2=FigW(indonesiaSvg({ zones: [[104, 'WIB · | 3=Tbl([T`Zone`, T`Offset`, T`Regions`], [[ | 4=Key(T`<p>The <b>International Date Line< | 5=Tip(T`<p>To convert between zones, first
+
+<p>The Earth turns $360^\circ$ in 24 hours, so the Sun appears to move $15^\circ$ of longitude every hour, or $1^\circ$ every 4 minutes. Places further east see the Sun rise earlier, so their clocks are ahead.</p>
+⟦0⟧
+<p><b>Local mean time</b> is set by the Sun at that exact meridian. To avoid every town having its own time, the world uses <b>standard time zones</b>, each about $15^\circ$ wide and a whole number of hours from <b>UTC</b> (Coordinated Universal Time, the time at Greenwich).</p>
+⟦1⟧
+<h3>Indonesia's time zones</h3>
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧
+@xa9x024g4t
+\Delta t = \frac{\Delta\lambda}{15^\circ}\ \text{hours} = \Delta\lambda \times 4\ \text{minutes}
+@10owqifh9fm
+A strip of the world's time zones showing the time in four cities when it is 14:00 in Jakarta
+@44xz9dd46r
+When it is 14:00 in Jakarta (UTC+7), it is 07:00 in London, 16:00 in Tokyo and 02:00 in New York.
+@jco70sn9tq
+Map of Indonesia divided into three time zones
+@17twm5okk0s
+Indonesia spans about 46° of longitude, so it uses three time zones.
+@2d1rrqthtz4
+Zone
+@fnt8sh040m
+Offset
+@1rs9hai09m
+Regions
+@1qfv4zr6fo4
+WIB (Western Indonesia Time)
+@4nhmd771rr
+UTC+7
+@1yeda3s9ugd
+Sumatra, Java, West and Central Kalimantan
+@1v9nyzeq4cd
+WITA (Central Indonesia Time)
+@rhggpqnbp
+UTC+8
+@1v7jp7786bs
+Bali, Nusa Tenggara, South, East and North Kalimantan, Sulawesi
+@angveo1jnr
+WIT (Eastern Indonesia Time)
+@29sid2htkkg
+UTC+9
+@8qbcfxcyp2
+Maluku and Papua
+@wtzmepsqv7
+<p>The <b>International Date Line</b> runs roughly along $180^\circ$. Crossing it westwards (from America towards Asia) you move the date forward one day; crossing it eastwards you go back one day.</p>
+@pw87ay0gsw
+<p>To convert between zones, first convert to UTC, then to the other zone. 09:00 WIB is 02:00 UTC, which is 10:00 WITA and 11:00 WIT.</p>
+@1brfgrijaru  ; 0=d
+Two places are ⟦0⟧° of longitude apart. What is the difference between their local mean times, in minutes?
+@yvawmanvxb  ; 0=M(d) | 1=M(m)
+Each degree is 4 minutes: $⟦0⟧ \times 4 = ⟦1⟧$ minutes.
+@14o5zl68hxd  ; 0=hm(t) | 1=A | 2=oa >= 0 ? '+' : '' | 3=oa | 4=B | 5=ob >= 0 ? '+' : '' | 6=ob | 7=FigW(timeStripSvg({ places: [[oa * 15, A
+It is ⟦0⟧ in ⟦1⟧ (UTC⟦2⟧⟦3⟧). What is the standard time in ⟦4⟧ (UTC⟦5⟧⟦6⟧)?⟦7⟧
+@cgbgx4rjuy
+Time zone strip for the two cities
+@19i3ofwynjm  ; 0=ob | 1=oa | 2=ob - oa | 3=B | 4=hm(t) | 5=ob - oa >= 0 ? '+' : '−' | 6=Math.abs(ob - oa) | 7=hm(tb) | 8=tb >= 24 ? T` the next day` : tb < 0 ? T
+The difference is $⟦0⟧ - (⟦1⟧) = ⟦2⟧$ hours, so the time in ⟦3⟧ is ⟦4⟧ ⟦5⟧ ⟦6⟧ h = <b>⟦7⟧</b>⟦8⟧.
+@189qqrcdzl7
+ the next day
+@c2hqut453i
+ the previous day
+@4jbk9mbmmc  ; 0=A | 1=oa | 2=hm(dep) | 3=NUM(dur) | 4=B | 5=ob
+A plane leaves ⟦0⟧ (UTC+⟦1⟧) at ⟦2⟧ local time and the flight takes ⟦3⟧ hours. What is the local time in ⟦4⟧ (UTC+⟦5⟧) when it lands?
+@1jvr50ki5om  ; 0=A | 1=hm(dep) | 2=NUM(dur) | 3=hm(dep + dur) | 4=B | 5=Math.abs(ob - oa) | 6=Math.abs(ob - oa) === 1 ? T`hour` : T`ho | 7=ob > oa ? T`ahead` : T`behind` | 8=hm(arr)
+In ⟦0⟧'s time it lands at ⟦1⟧ + ⟦2⟧ h = ⟦3⟧. ⟦4⟧ is ⟦5⟧ ⟦6⟧ ⟦7⟧, so the local time is <b>⟦8⟧</b>.
+@14b0j8f8s8t
+hour
+@2eruzlr62qp
+hours
+@1er9vxdttz4
+ahead
+@1qi4vwohpdn
+behind
+@22zv3jt8ego  ; 0=city | 1=FigW(indonesiaSvg({ zones: [[104, 'WIB']
+Which Indonesian time zone does ⟦0⟧ use?⟦1⟧
+@2d769ffltqu
+Indonesia's time zones
+@2geugq486vc  ; 0=city | 1=zone
+WIB (UTC+7): Sumatra, Java, West and Central Kalimantan. WITA (UTC+8): Bali, Nusa Tenggara, the rest of Kalimantan and Sulawesi. WIT (UTC+9): Maluku and Papua. ⟦0⟧ uses <b>⟦1⟧</b>.
+@193f6b3wngb  ; 0=lo | 1=e ? dir('E') : dir('W')
+A place lies at ⟦0⟧° ⟦1⟧. If its time zone follows its central meridian exactly, what is its offset from UTC, in hours? (Use a minus sign for places behind UTC.)
+@1rpoyslsxlm  ; 0=lo | 1=off | 2=e ? T`ahead of UTC because it is east of | 3=e ? '+' : '−' | 4=off
+$⟦0⟧^\circ \div 15^\circ = ⟦1⟧$ hours, ⟦2⟧: UTC⟦3⟧⟦4⟧.
+@mnnobjk14q
+ahead of UTC because it is east of Greenwich
+@pic7y15yjm
+behind UTC because it is west of Greenwich
+@rga1laqt2k
+A ship crosses the International Date Line sailing <b>westwards</b>, from Hawaii towards Japan, on Monday. What happens to the date?
+@4uc3lgyjnc
+It becomes Tuesday: one day is skipped
+@1r2fzrrkw6a
+It becomes Sunday: one day is repeated
+@xy0kapmo53
+Nothing changes
+@5mwtkxnh6q
+The clock goes back 12 hours
+@xs09835yap
+Travelling west across the Date Line you jump forward one day, because places just west of it are almost a full day ahead of places just east of it.
+@jolcwhjurp
+Why do places further east see the Sun rise earlier?
+@20whwxb7ec9
+The Earth rotates from west to east
+@358w8eb4o
+The Earth rotates from east to west
+@c720srx36q
+The Sun moves around the Earth from east to west
+@1i77t5u9aq9
+Places in the east are closer to the Sun
+@qhrjs9zuxl
+The Earth spins towards the east, so eastern places turn into the sunlight first.
+@jeotr7ofdn
+Why does Indonesia have three time zones?
+@1a9vd7upxhs
+It stretches across about 46° of longitude
+@1wf8qmakork
+It lies on the equator
+@sgxpuvqyh3
+It stretches across many degrees of latitude
+@1sjrktisjut
+It has many islands
+@o2sq3c8skr
+From about 95° E to 141° E is some 46°, roughly three hours of solar time, so one zone would be far from the Sun's time at each end.
+
+##### projections
+@1iqnf9qrm18  ; 0=Fig(projectionSvg('cylindrical', { label | 1=Fig(projectionSvg('conic', { label: T`A  | 2=Fig(projectionSvg('azimuthal', { label:  | 3=Tbl([T`Property kept`, T`Name`, T`Used f | 4=Key(T`<p>The <b>Mercator</b> projection  | 5=Tip(T`<p>No projection is "the best": ch
+
+<p>A globe is the only map that shows shape, area, distance and direction correctly all at once. Flattening the curved surface onto paper always stretches or squeezes something. A <b>map projection</b> is the rule used to transfer the grid of parallels and meridians onto a flat surface.</p>
+<h3>Three developable surfaces</h3>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧
+@1a9lkuv5cj2
+A cylinder wrapped around the globe touching the equator, and the resulting rectangular grid
+@24mniad1l8
+<b>Cylindrical</b>: the cylinder touches the equator. Meridians become parallel straight lines; the areas near the poles are stretched. Best for the tropics and for world maps.
+@12kaicgi5jq
+A cone placed over the globe touching one parallel, and the resulting fan-shaped grid
+@5z4rv1wjvr
+<b>Conic</b>: the cone touches one parallel (the standard parallel). Parallels become arcs and meridians straight lines meeting at a point. Best for the middle latitudes.
+@2futz9zhg0c
+A flat plane touching the globe at the pole, and the resulting circular grid
+@xhm4p6lo67
+<b>Azimuthal (zenithal)</b>: a flat plane touches one point, often a pole. Parallels become circles and meridians radiate out. Best for polar regions.
+@uwi3v1lex
+Property kept
+@7gqysfvinh
+Name
+@2f8r78yu79b
+Used for
+@ygv0a8ut1b
+Shape of small areas (angles)
+@16ekizdrndv
+conformal (orthomorphic)
+@204crc0bkl5
+navigation charts, e.g. Mercator
+@9g9qb013dx
+Area
+@2dy1tmsrjk0
+equivalent (equal-area)
+@1qxzqtds8q0
+distribution maps such as population or forests
+@3wpljwsbet
+Distance from one point
+@syrfnky2co
+equidistant
+@sjcsozv7v6
+air routes from one airport
+@15uyq5y62y5
+<p>The <b>Mercator</b> projection is cylindrical and conformal: a straight line on it is a constant compass bearing, which is why sailors used it. The price is size: at latitude $\varphi$ lengths are stretched by $\dfrac{1}{\cos\varphi}$ and areas by $\dfrac{1}{\cos^2\varphi}$. Greenland (around $72^\circ$ N) looks as big as Africa though Africa is about 14 times larger.</p>
+@y251n3gouw
+<p>No projection is "the best": choose the one whose kept property matters for the map's purpose, and whose shape suits the area being mapped.</p>
+@1mk8uqbdfrt  ; 0=area ? T`areas` : T`lengths` | 1=la
+On a Mercator map, by what factor are ⟦0⟧ exaggerated at latitude ⟦1⟧°?
+@sgs9vawnji
+areas
+@smtaopx2rm
+lengths
+@s3bwpc2w6b  ; 0=la | 1=M(sig(k * k))
+Areas are stretched by $\frac{1}{\cos^2\varphi} = \frac{1}{\cos^2 ⟦0⟧^\circ} = ⟦1⟧$.
+@qids6cn7qi  ; 0=la | 1=M(sig(k))
+Lengths are stretched by $\frac{1}{\cos\varphi} = \frac{1}{\cos ⟦0⟧^\circ} = ⟦1⟧$.
+@on8sr1pxau
+Which projection is most suitable for a map of Antarctica?
+@u3d2yidg6c
+Azimuthal
+@xld0bqyo39
+Cylindrical
+@2efxyn78ybp
+Conic
+@22ip100c95q
+Mercator
+@efgk5bc8hs
+An azimuthal plane touching the pole shows the polar region with the least distortion.
+@2cv080ktdlf
+Which projection is most suitable for a map of Indonesia, which lies on the equator?
+@20da5v5bgz1
+Azimuthal (polar)
+@1tbhbzii1bp
+None; the equator cannot be mapped
+@oc8koi98p0
+A cylinder touching the equator has the least distortion near the equator.
+@25o8ilrq34k
+Which projection is most suitable for a map of Europe or the United States (middle latitudes)?
+@3jsbeuwx6n
+A cone touching a mid-latitude parallel fits a wide east–west band in the middle latitudes well.
+@1sgm7jlqoqw
+A map will show the population of each country with dots. Which property should its projection keep?
+@ror03dj6lw
+Area (equal-area)
+@20bub1phncw
+Shape (conformal)
+@77doyxywm8
+Distance (equidistant)
+@1xrqby99khr
+Direction only
+@1os22pm5elv
+Density and distribution maps must not make some areas look bigger than others, so an equal-area projection is used.
+@gn67mesrd
+Why did sailors use the Mercator projection?
+@115ogh0vijs
+A straight line on it is a constant compass bearing
+@1v0hj73iu0r
+It shows areas correctly
+@137c2hkvja
+It shows the poles without distortion
+@sfu0eny83h
+It shows true distances everywhere
+@1ia6h6ntix9
+Mercator is conformal: angles are true, so a course set with a compass is a straight line on the chart.
+@1eoco4keofe
+On a Mercator world map, why does Greenland look about as big as Africa?
+@26oz4l8gthe
+Areas are stretched more and more towards the poles
+@1ruowmgqcvj
+Greenland really is that big
+@fa8oy2mdie
+Africa is squeezed near the equator
+@fmmzio6fg4
+The map is drawn at two different scales on purpose
+@23zb75iz5kj
+At about $72^\circ$ the area factor $1/\cos^2\varphi$ is about 10, so Greenland is shown roughly ten times too large. Africa, on the equator, is barely stretched.
+@20kvytm951g
+What is a conformal projection?
+@1pfnfjg8t6u
+One that keeps the shape of small areas (true angles)
+@27rcusf7v1q
+One that keeps areas in the right proportion
+@g77wfgfa9c
+One that keeps distances from a single point
+@1bys0w63gxj
+One drawn on a cone
+@jujwphf5mm
+Conformal (orthomorphic) projections keep local angles and shapes; no projection can keep both shape and area.
+@1x12jdomqtg
+meridians and parallels are straight lines crossing at right angles
+@26w40gj3ys9
+parallels are arcs of circles and meridians are straight lines that meet at a point
+@28toj117oj8
+parallels are circles and meridians radiate out from the centre
+@p4zvjahmse  ; 0=desc | 1=Fig(projectionSvg(kind, { label: T`A pro
+On a projection, ⟦0⟧. Which type of projection is it?⟦1⟧
+@1lxl0i1zye
+A projection surface and the grid it produces
+@22dzopi8dlz
+Globe
+@8huuh9ywov  ; 0=name
+That grid is produced by a ⟦0⟧ projection.
+
+##### contours
+@n7hkpn7lfw  ; 0=FigW(contourSvg([[30, 26, 330, 11], [68, | 1=Key(T`<p><b>Reading contours.</b> Lines  | 2=Fm(T`\text{CI} = \frac{\text{scale denom | 3=Fm(T`\text{gradient} = \frac{\text{diffe | 4=Tip(T`<p>Measure the horizontal distance
+
+<p>Topographic maps show the height of the land with <b>contour lines</b>: lines joining points of equal height above mean sea level. The height difference between neighbouring contours is the <b>contour interval</b>; every fifth line (the index contour) is usually drawn thicker.</p>
+⟦0⟧
+⟦1⟧
+<p>A common rule for the contour interval of a map is</p>
+⟦2⟧
+<p>so a $1 : 50\,000$ map has contours every $25\,\mathrm{m}$.</p>
+<h3>Gradient and slope</h3>
+⟦3⟧
+<p>Both distances must be in the same unit. A rise of $100\,\mathrm{m}$ over $2\,\mathrm{km}$ is $\frac{100}{2000} = \frac{1}{20}$, which is $5\%$ or about $2.9^\circ$.</p>
+⟦4⟧
+@jufsfm0bpa
+A contour map of two hills with a line A–B and the cross-section along it
+@ihtflrcq58
+Two hills with a 50 m contour interval, and the cross-section (profile) along A–B.
+@lf52yutvlj
+<p><b>Reading contours.</b> Lines close together mean a steep slope; far apart, a gentle slope. Closed rings with rising values are a hill; contours never cross or split. Where contours form a V, the V points <b>upstream</b> in a valley and <b>downhill</b> along a ridge.</p>
+@1kngzlg9yce
+\text{CI} = \frac{\text{scale denominator}}{2000}\ \text{metres}
+@14yo3awq2qj
+\text{gradient} = \frac{\text{difference in height}}{\text{horizontal distance}} \qquad \text{slope angle} = \tan^{-1}(\text{gradient})
+@1bqos94mohx
+<p>Measure the horizontal distance on the map and convert it with the scale first. Only then divide the height difference by it.</p>
+@uup3uinru
+A contour map with points A and B
+@tjirnlys2y  ; 0=M(den) | 1=h1 | 2=h1 + dh | 3=Q(d, 'cm') | 4=fig
+On a map with a scale of $1 : ⟦0⟧$, point A (⟦1⟧ m) and point B (⟦2⟧ m) are ⟦3⟧ apart. What is the gradient from A to B? Give it as $1 : n$ and type $n$.⟦4⟧
+@75h3ynizkx  ; 0=d | 1=M(den) | 2=M(horiz) | 3=dh | 4=M(horiz) | 5=M(sig(horiz / dh))
+Horizontal distance $= ⟦0⟧ \times ⟦1⟧\,\mathrm{cm} = ⟦2⟧\,\mathrm{m}$. Gradient $= \frac{⟦3⟧}{⟦4⟧} = 1 : ⟦5⟧$.
+@1fub5sicwbt  ; 0=M(den) | 1=h1 | 2=h1 + dh | 3=Q(d, 'cm') | 4=fig
+On a map with a scale of $1 : ⟦0⟧$, point A (⟦1⟧ m) and point B (⟦2⟧ m) are ⟦3⟧ apart. What is the average slope between them, as a percentage?⟦4⟧
+@ycjnzy8c34  ; 0=M(horiz) | 1=dh | 2=M(horiz) | 3=M(sig(g * 100))
+Horizontal distance $= ⟦0⟧\,\mathrm{m}$, so the slope is $\frac{⟦1⟧}{⟦2⟧} \times 100\% = ⟦3⟧\%$.
+@jmbe9sbe9x  ; 0=M(den) | 1=h1 | 2=h1 + dh | 3=Q(d, 'cm') | 4=fig
+On a map with a scale of $1 : ⟦0⟧$, point A (⟦1⟧ m) and point B (⟦2⟧ m) are ⟦3⟧ apart. What is the average slope angle between them, in degrees?⟦4⟧
+@tnp072wfaj  ; 0=M(horiz) | 1=dh | 2=M(horiz) | 3=M(sig(g)) | 4=M(sig(g)) | 5=QT(sig(deg(Math.atan(g))), '°')
+Horizontal distance $= ⟦0⟧\,\mathrm{m}$; gradient $= \frac{⟦1⟧}{⟦2⟧} = ⟦3⟧$; angle $= \tan^{-1}(⟦4⟧) = ⟦5⟧$.
+@5pmgr7u8fv  ; 0=M(den)
+Using the rule $\text{CI} = \frac{\text{denominator}}{2000}$, what contour interval suits a map with a scale of $1 : ⟦0⟧$?
+@1a80r52t01y  ; 0=Q(lo, 'm') | 1=Q(hi, 'm') | 2=Q(ci, 'm')
+A hill has contours from ⟦0⟧ up to ⟦1⟧ with an interval of ⟦2⟧. How many contour lines are drawn on it (including both of those)?
+@109uo3h306a  ; 0=M(hi) | 1=M(lo) | 2=M(ci) | 3=n | 4=n | 5=n + 1
+$\frac{⟦0⟧ - ⟦1⟧}{⟦2⟧} = ⟦3⟧$ intervals, which need $⟦4⟧ + 1 = ⟦5⟧$ lines.
+@22ywl2w2u6s
+On a contour map the lines are very close together on the east side of a hill and far apart on the west side. What does this mean?
+@1d7wm4we8j2
+The east side is steeper
+@7ruvsv5vzm
+The west side is steeper
+@hauak460ew
+The east side is higher
+@yhbhr49q7r
+Both sides have the same slope
+@17cqc47iz3r
+The closer the contours, the more height is gained in a short distance: a steeper slope.
+@1r1uyhe17xj
+Contours cross a river in a V shape. Which way does the V point?
+@21u9hcx9p6z
+Upstream, towards higher ground
+@1rx0uh0ps69
+Downstream, towards the sea
+@m0frwrnn0q
+Towards the east
+@di1evvik8r
+It depends on the scale
+@2ce1o9nbt0o
+A valley cuts back into higher ground, so the V of the contours points upstream.
+@mcgur9lj4y
+What is shown by a set of closed contour rings whose values increase towards the centre?
+@1thvvyfpogo
+A hill or peak
+@136d8ya58ef
+A depression
+@navsv2197l
+A valley
+@tjeez6j3ly
+A plain
+@1k3adkt1991
+Rising values inwards mean the ground rises to a top. A depression is marked with small ticks pointing inwards.
+@1l47t8agc5p
+What does a contour line join?
+@gitsqhninz
+Points of equal height above sea level
+@18zboje6x9u
+Points of equal rainfall
+@2164gg01uhs
+Points of equal temperature
+@t6iahe43ls
+Points of equal pressure
+@mgssswgwi3
+Contours (isohypses) join equal heights. Lines of equal rainfall are isohyets, of equal temperature isotherms, of equal pressure isobars.
+
+##### remote-sensing
+@13yzuivuy73  ; 0=FigW(remoteSensingSvg({ sun: T`Sun`, sen | 1=FigW(lineChartSvg([
+  { pts: [[0.4, 5],  | 2=Tbl([T`Resolution`, T`Meaning`], [[T`Spa | 3=Key(T`<p><b>Elements of image interpreta | 4=Fm(T`\text{scale} = \frac{f}{H}`) | 5=Tip(T`<p>Put $f$ and $H$ in the same uni
+
+<p><b>Remote sensing</b> is gathering information about an object without touching it, by recording the electromagnetic energy it reflects or emits. Satellites, aircraft and drones carry the sensors.</p>
+⟦0⟧
+<p>A <b>passive</b> system records sunlight reflected by the surface (or heat it emits). An <b>active</b> system, such as radar, sends out its own energy, so it can work at night and see through clouds, which is very useful in cloudy Indonesia.</p>
+<h3>Spectral signatures</h3>
+⟦1⟧
+⟦2⟧
+⟦3⟧
+<p>The scale of a vertical aerial photograph depends on the camera's focal length $f$ and the flying height $H$ above the ground:</p>
+⟦4⟧
+⟦5⟧
+@2fyxww7qwgs
+Sun
+@fjn3o7rmgx
+Sensor
+@25bq1e3c0q2
+Atmosphere
+@uq74gsjtbk
+Ground station
+@rgpynb7xg7
+Sunlight passes through the atmosphere, is reflected by the ground and recorded by a satellite sensor, which sends the data to a ground station
+@ydw8cnph0r
+The components: an energy source, the atmosphere, the object, the sensor on its platform, and the receiving station where the data are processed and interpreted.
+@1icn1rbwng3
+Vegetation
+@5lmzphoman
+Dry soil
+@24uhc1w9ess
+Water
+@1r90szcqite
+wavelength (µm)
+@2aa78eaq2iw
+reflectance (%)
+@10mojnihqf3
+Spectral signatures of vegetation, dry soil and water
+@1loizu7g5sl
+Each surface reflects a different share of each wavelength. Healthy plants reflect strongly in the near infrared, water absorbs almost all of it.
+@2b7dqkzfjqd
+Resolution
+@zh0lxwsko0
+Spatial
+@18q8ktg8694
+the size of the smallest object that can be seen (one pixel covers e.g. $30\,\mathrm{m} \times 30\,\mathrm{m}$)
+@8ekfaxg1xx
+Spectral
+@gvimmr7xtc
+the number and width of the wavelength bands recorded
+@1p5z5c81eb3
+Temporal
+@2d9hszp92p9
+how often the same place is recorded (e.g. every 16 days)
+@27bt4egoxcb
+Radiometric
+@20vft5yxjxb
+how many brightness levels the sensor can distinguish
+@2c7vbhcqhfj
+<p><b>Elements of image interpretation</b>: tone or colour, size, shape, texture, pattern, shadow, site and association. For example, a large rectangle with a long straight strip beside it (shape and association) suggests an airport.</p>
+@hhzmdedkoe
+\text{scale} = \frac{f}{H}
+@ikqn6nqufv
+<p>Put $f$ and $H$ in the same unit: a $150\,\mathrm{mm}$ lens at $3000\,\mathrm{m}$ gives $\frac{0.15}{3000} = \frac{1}{20\,000}$.</p>
+@2f1qg06sul2  ; 0=Q(f, 'mm') | 1=Q(H, 'm')
+An aerial camera with a focal length of ⟦0⟧ takes vertical photos from ⟦1⟧ above the ground. What is the photo scale? Type the denominator.
+@few70rlrt1
+Type only the denominator, e.g. 20000 for 1 : 20,000.
+@28topwjq0cd  ; 0=M(den) | 1=Q(cm, 'cm')
+On an aerial photograph with a scale of $1 : ⟦0⟧$ a runway is ⟦1⟧ long. How long is it on the ground?
+@xbx4g0fifq  ; 0=Q(px, 'm') | 1=px | 2=px | 3=Q(km2, 'km^2')
+A satellite image has a spatial resolution of ⟦0⟧ (each pixel covers ⟦1⟧ m × ⟦2⟧ m). How many pixels cover an area of ⟦3⟧?
+@1ea6pou4lv3  ; 0=px | 1=M(px * px) | 2=km2 | 3=M(km2 * 1e6) | 4=M(km2 * 1e6) | 5=M(px * px) | 6=M(n)
+One pixel is $⟦0⟧^2 = ⟦1⟧\,\mathrm{m^2}$ and $⟦2⟧\,\mathrm{km^2} = ⟦3⟧\,\mathrm{m^2}$, so there are $\frac{⟦4⟧}{⟦5⟧} = ⟦6⟧$ pixels.
+@ck1kr3tfjr
+A satellite records the same area every 16 days. Which kind of resolution does this describe?
+@1228t1z4mc7
+Temporal resolution
+@tt1lhs462a
+Spatial resolution
+@c43wmqqw3j
+Spectral resolution
+@1eb9xt9x2fj
+Radiometric resolution
+@29y1qyi7r1s
+Temporal resolution is how often the same place is imaged.
+@5scbugzlr5
+A sensor records 11 separate wavelength bands. Which kind of resolution does this describe?
+@lyts8y35oi
+Spectral resolution is the number and width of the bands.
+@ab1l5o8e1m
+On an image, one pixel covers 10 m × 10 m of ground. Which kind of resolution is this?
+@8yjo0n92gb
+Spatial resolution is the ground size of one pixel: the smallest object that can be seen.
+@okky2alw1h
+Why is radar useful for mapping Indonesia?
+@oj64cpisd
+It sends its own energy, so it works at night and through clouds
+@23fiqyk9c3x
+It uses sunlight, so it has better colours
+@2935bpb5pcg
+It only records heat
+@dewt9wwhvi
+It is carried only by aircraft
+@1knhb4m0lgc
+Radar is an active system with microwaves that pass through clouds, which cover much of Indonesia for much of the year.
+@1nrmfamns4m
+Which surface reflects most strongly in the near-infrared band?
+@20xaw8nlipa
+Healthy vegetation
+@1gvtecufccn
+Clear water
+@l2zrmcwtur
+Asphalt
+@1lyz3a5r37f
+Deep shadow
+@6b1k72f3f8
+The cell structure of healthy leaves reflects near infrared strongly, which is why vegetation looks bright in infrared images. Water absorbs it.
+@2dee3pkdtdh
+Rice fields are recognised by their regular, square plots arranged side by side.
+@1sxgdewfxrl
+A football field is recognised by its size and rectangular outline.
+@1vbb9fjurso
+Shape
+@cn40tlhx48
+A forest looks rough and a grass field looks smooth.
+@kubo03qgwt
+Texture
+@1ngykz2ehjc
+Water appears dark on the image.
+@1ova5rehthl
+Tone / colour
+@43f3k3qw8k
+A tall chimney is recognised by the long shadow it casts.
+@r19qay55nr
+Shadow
+@2963qotly6
+A building next to a sports field and a car park is probably a school.
+@1olpirkhyuv
+Association
+@1w7l9ghq251
+Mangroves are recognised because they grow along muddy coasts.
+@5k1okfy1y2
+Site
+@1fjipw5qx4  ; 0=q
+Which element of image interpretation is used here? <i>⟦0⟧</i>
+@1czpi6e2j2z
+Size
+@1nss7mk6v2x  ; 0=a
+The clue is the object's <b>⟦0⟧</b>.
+
+##### gis
+@214nksy5pcp  ; 0=Fig(gisLayersSvg([T`Roads`, T`Rivers`, T | 1=Fig(rasterVectorSvg({ raster: T`Raster`, | 2=Tbl([T``, T`Vector`, T`Raster`], [[T`Sto | 3=Key(T`<p><b>Common analyses.</b> <i>Over | 4=Tip(T`<p>The area of a buffer around a s
+
+<p>A <b>Geographic Information System</b> (GIS) is a computer system for capturing, storing, analysing and displaying data that are tied to locations on the Earth. It turns maps into layers of data that can be combined and questioned.</p>
+⟦0⟧
+<p>Its five components are <b>hardware</b>, <b>software</b>, <b>data</b>, <b>people</b> (users and operators) and <b>methods</b>. The work runs in four stages: data input, data management, analysis and manipulation, and output (maps, tables, reports).</p>
+<h3>Two kinds of data</h3>
+⟦1⟧
+⟦2⟧
+<p><b>Spatial data</b> say <i>where</i> a feature is (its coordinates); <b>attribute data</b> say <i>what</i> it is (name, population, land use) and are kept in a table linked to the feature.</p>
+⟦3⟧
+⟦4⟧
+@1v1vvqc38h8
+Roads
+@19602mmjh24
+Rivers
+@1zt4pk2uyzd
+Settlements
+@1lqs93y836f
+Land use
+@1grh9d5p3n4
+Elevation
+@1d07p1vc9xd
+Five data layers of the same area stacked on top of each other
+@balcz12fyi
+A GIS stores each theme as a separate layer over the same area; layers can be switched on, combined and analysed.
+@1tt5ax76pq
+Raster
+@lzoquuql7c
+Vector
+@10udb8nw16x
+The same area stored as raster cells and as vector points, lines and polygons
+@ql7mdrfyb3
+Raster data are a grid of cells, each with one value. Vector data are points, lines and polygons defined by coordinates.
+@yvxzl1u0mf
+Stores
+@1s6ewfwnimd
+points, lines, polygons
+@4nj6553jlx
+a grid of cells (pixels)
+@r7hslu49e6
+Good for
+@47j4szgsl0
+boundaries, roads, rivers, wells
+@7eq6lx9jvg
+continuous surfaces: height, rainfall, satellite images
+@23edkdr6t6a
+Detail
+@22kh9gkw48a
+sharp edges, small files
+@xzy7524feu
+depends on cell size; can be large files
+@9eajv6zscd
+<p><b>Common analyses.</b> <i>Overlay</i>: combining layers, e.g. flat land that is not forest and not flood-prone. <i>Buffer</i>: a zone of set width around a feature, e.g. 100 m either side of a river. <i>Query</i>: selecting features that meet a condition. <i>Network analysis</i>: the shortest or fastest route along roads.</p>
+@1ndn3o1xej6
+<p>The area of a buffer around a single point of radius $r$ is $\pi r^2$; along a straight road of length $L$, a buffer of width $w$ on each side covers about $2wL$.</p>
+@1nk1go29n5e  ; 0=cell | 1=cell | 2=NUM(n)
+In a raster land-use map each cell is ⟦0⟧ m × ⟦1⟧ m. The forest class covers ⟦2⟧ cells. What area is that, in hectares? ($1\,\mathrm{ha} = 10\,000\,\mathrm{m^2}$.)
+@opgm8flgxc  ; 0=cell | 1=M(cell * cell) | 2=M(n) | 3=M(cell * cell) | 4=M(n * cell * cell) | 5=QT(ha, 'ha')
+One cell is $⟦0⟧^2 = ⟦1⟧\,\mathrm{m^2}$, so the forest covers $⟦2⟧ \times ⟦3⟧ = ⟦4⟧\,\mathrm{m^2} = ⟦5⟧$.
+@sl2t4ovp7h  ; 0=Q(r, 'm')
+A GIS draws a buffer of radius ⟦0⟧ around a well. What area does the buffer cover, in hectares?
+@io8aaae3oy  ; 0=Q(w, 'm') | 1=Q(L, 'km')
+A buffer of ⟦0⟧ is drawn on each side of a straight road ⟦1⟧ long. Ignoring the rounded ends, what area does it cover, in hectares?
+@1bzmj7x52gh  ; 0=w | 1=2 * w | 2=M(L * 1000) | 3=2 * w | 4=M(L * 1000) | 5=M(2 * w * L * 1000) | 6=QT(A, 'ha')
+Width $2 \times ⟦0⟧ = ⟦1⟧\,\mathrm{m}$, length $⟦2⟧\,\mathrm{m}$: $⟦3⟧ \times ⟦4⟧ = ⟦5⟧\,\mathrm{m^2} = ⟦6⟧$.
+@1xxdtq21i0a
+A planner wants land that is flat, not forest and outside the flood zone. Which GIS analysis combines these layers?
+@2bnm1nsfpvx
+Overlay
+@ev561peyu1
+Buffer
+@pxtmqx7agq
+Network analysis
+@1rq3pd8xlrv
+Digitising
+@kqtc6oa16y
+Overlay combines several layers to find places that meet all the conditions at once.
+@ns28n0e7bb
+Building is banned within 100 m of a river. Which GIS analysis marks this zone?
+@ac78hhe4h1
+Query
+@1kszugzhi5p
+Interpolation
+@23aqat0ctvb
+A buffer draws a zone of fixed distance around a feature.
+@2507rl7qd8o
+An ambulance needs the fastest route to a hospital. Which GIS analysis is used?
+@mvaagvdcw1
+Classification
+@pfxmsdrc3w
+Network analysis finds shortest or fastest routes along a road network.
+@1owelsejep3
+Which data model is best for a digital elevation model covering a whole province?
+@1ayhofbsu35
+Vector points only
+@rfk5tr9hs
+Vector lines
+@37vout5nm6
+Attribute table only
+@1kgzjfxxhij
+Height changes continuously, so a grid of cells (raster) suits it.
+@p6evgysagt
+In a GIS, how is a river usually stored as vector data?
+@2fyud6xlwv
+As a line
+@2a3sw0zan7q
+As a point
+@1124poksr44
+As a polygon
+@8ci8gzjbd2
+As a raster cell
+@vqbtp9khf8
+Rivers and roads are lines; wells and towns on a small-scale map are points; lakes and districts are polygons.
+@1j5ewus562t
+Which of these is attribute data?
+@97o9oklvnb
+The population of each village
+@1sp67l5fscx
+The coordinates of each village
+@a3n6sm9oj0
+The outline of each district
+@1k206z52sb3
+The route of a river
+@1yyahzq3hhb
+Attribute data describe what a feature is; coordinates and outlines are spatial data.
+@uo9q0nogu6
+Which is <b>not</b> one of the five components of a GIS?
+@c3re3p8ule
+A printed atlas
+@ou0b999ff3
+Hardware
+@286ixyv1jw4
+Software
+@2cuagleuhom
+People
+@3ghz02ofn8
+The components are hardware, software, data, people and methods.

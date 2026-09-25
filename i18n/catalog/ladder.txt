@@ -1,0 +1,33 @@
+##### core
+@131hcntqbl8
+A map is the geographer's main tool for showing location, distance and pattern.
+@sm8wzkv6li
+A map scale is a ratio, and converting map distances to real distances is working with proportion.
+@h2metwtcbi
+A map is a reduced copy of the ground: lengths shrink by the scale factor and areas by its square.
+@jkwa6kxxrt
+Coordinates give the absolute location of a place.
+@2aeuuke0no
+Parallels and meridians are circles on a sphere, and degrees of latitude are arcs of a meridian.
+@fyj2pghm5l
+A degree of longitude shrinks with the cosine of the latitude.
+@1f5merg3lq0
+Time zones follow the meridians: every 15° of longitude is one hour.
+@5ihedaj25g
+A projection transfers the grid of parallels and meridians onto a flat map.
+@10tqte8vlss
+Every projection distorts the scale somewhere on the map.
+@1rjgfhqvvpe
+The horizontal distance for a gradient is measured on the map and converted with the scale.
+@41kh8fqzxy
+A gradient is rise over run, just like the slope of a straight line.
+@13oouuyqzdr
+The slope angle is the inverse tangent of the gradient.
+@27tbx7t6ra0
+Sensors record reflected and emitted electromagnetic radiation, band by band across the spectrum.
+@1n85cmayzrv
+Aerial photographs have a scale, set by the focal length and the flying height.
+@1c8kukphbrv
+A GIS is built from digital map layers.
+@1bc8ifi2mp7
+Satellite images are one of the main sources of raster data in a GIS.
