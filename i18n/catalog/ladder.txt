@@ -165,3 +165,29 @@ Endemic species of Wallacea are especially vulnerable.
 Simpson's index is the probability that two individuals belong to different species.
 @1wld0ent0sb
 A fixed yearly percentage loss of forest is exponential decay.
+@26zi6j146g2
+People and their activities are the anthroposphere, the human part of geography.
+@xe6ols0myt
+Growth rates and crude rates are percentages and per-thousand rates.
+@1mzecqy5q0l
+Geometric growth P = P₀(1 + r)ᵗ is exponential.
+@1e6kkdh3iu6
+Births and deaths shape the age structure of a population.
+@1vzbzo6fhbc
+A population pyramid is a pair of bar charts of age groups.
+@15667wh9ly2
+The sex ratio and dependency ratio are ratios.
+@1zzvouf17x1
+Migration is the other way, besides births and deaths, that a population changes.
+@21deyfoknpf
+Migrants are mostly young adults, which changes the structure of both places.
+@21jkogeyqvo
+The model follows birth and death rates over time.
+@m4eop5m09y
+Each stage has its own pyramid shape.
+@6dsndvz60f
+Countries in later stages usually have longer lives and more schooling.
+@8cd6h7aelg
+Education and work are part of the structure of a population.
+@188rbvcgl06
+Indices, averages and the geometric mean summarise many indicators in one number.

@@ -123,3 +123,18 @@ link('biomes', 'conservation', () => T`Conservation protects the ecosystems of e
 link('biogeography', 'conservation', () => T`Endemic species of Wallacea are especially vulnerable.`);
 link('math:probability-sh', 'conservation', () => T`Simpson's index is the probability that two individuals belong to different species.`);
 link('math:exp-log', 'conservation', () => T`A fixed yearly percentage loss of forest is exponential decay.`);
+
+/* ---------- F. Population ---------- */
+link('geo-concepts', 'population-growth', () => T`People and their activities are the anthroposphere, the human part of geography.`);
+link('math:percent', 'population-growth', () => T`Growth rates and crude rates are percentages and per-thousand rates.`);
+link('math:exp-log', 'population-growth', () => T`Geometric growth P = P₀(1 + r)ᵗ is exponential.`);
+link('population-growth', 'population-structure', () => T`Births and deaths shape the age structure of a population.`);
+link('math:data-basic', 'population-structure', () => T`A population pyramid is a pair of bar charts of age groups.`);
+link('math:ratio', 'population-structure', () => T`The sex ratio and dependency ratio are ratios.`);
+link('population-growth', 'migration', () => T`Migration is the other way, besides births and deaths, that a population changes.`);
+link('population-structure', 'migration', () => T`Migrants are mostly young adults, which changes the structure of both places.`);
+link('population-growth', 'demographic-transition', () => T`The model follows birth and death rates over time.`);
+link('population-structure', 'demographic-transition', () => T`Each stage has its own pyramid shape.`);
+link('demographic-transition', 'human-development', () => T`Countries in later stages usually have longer lives and more schooling.`);
+link('population-structure', 'human-development', () => T`Education and work are part of the structure of a population.`);
+link('math:statistics-jh', 'human-development', () => T`Indices, averages and the geometric mean summarise many indicators in one number.`);

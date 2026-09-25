@@ -869,3 +869,38 @@ function energyPyramidSvg(levels, { label, values, unit = '' } = {}) {
   });
   return s + '</svg>';
 }
+
+/* ==========================================================================
+   Population diagrams
+   ========================================================================== */
+/* the demographic transition model: birth and death rates and total population through five stages */
+function dtmSvg({ label, names = {}, mark } = {}) {
+  const W = 500, H = 300, L = 44, R = 16, Tp = 40, B = 40, X = x => L + x / 100 * (W - L - R), Y = r => Tp + (1 - r / 50) * (H - Tp - B);
+  let s = svgOpen(W, H, label);
+  const bounds = [0, 18, 42, 68, 88, 100];
+  const stNames = names.stages || ['', '', '', '', ''];
+  for (let i = 0; i < 5; i++) { s += rect(X(bounds[i]), Tp, X(bounds[i + 1]) - X(bounds[i]), H - Tp - B, i % 2 ? 'g-sky' : 'g-water', 0, ' fill-opacity="0.35"') + lbl((X(bounds[i]) + X(bounds[i + 1])) / 2, Tp - 22, `${names.stage || 'Stage'} ${i + 1}`) + note((X(bounds[i]) + X(bounds[i + 1])) / 2, Tp - 8, stNames[i]); }
+  if (mark != null) s += rect(X(bounds[mark]), Tp, X(bounds[mark + 1]) - X(bounds[mark]), H - Tp - B, 'g-s4', 0, ' fill-opacity="0.18"');
+  const birth = [[0, 40], [18, 40], [30, 39], [42, 34], [55, 24], [68, 14], [80, 12], [88, 11], [94, 9], [100, 8]];
+  const death = [[0, 38], [10, 36], [18, 34], [28, 22], [42, 14], [55, 11], [68, 10], [88, 10], [100, 12]];
+  const pop = [[0, 6], [18, 7], [30, 11], [42, 19], [55, 28], [68, 34], [80, 37], [88, 38], [100, 36]];
+  s += path(smooth(pop.map(([x, y]) => [X(x), Y(y)])), 'g-line g-l5', ' stroke-dasharray="6 5"') + path(smooth(birth.map(([x, y]) => [X(x), Y(y)])), 'g-line g-l1') + path(smooth(death.map(([x, y]) => [X(x), Y(y)])), 'g-line g-l2');
+  s += path(`M${smooth(birth.slice(1, 7).map(([x, y]) => [X(x), Y(y)])).slice(1)} L${[...death.slice(2, 7)].reverse().map(([x, y]) => `${f1(X(x))} ${f1(Y(y))}`).join(' L')}Z`, '', ' fill="var(--g-hot)" fill-opacity="0.12"');
+  s += lbl(X(4), Y(43), names.birth || 'birth rate', 'start') + lbl(X(3), Y(29), names.death || 'death rate', 'start') + note(X(78), Y(40), names.pop || 'total population', 'middle') + note(X(47), Y(24), names.gap || 'natural increase', 'middle');
+  for (let r = 0; r <= 50; r += 10) s += txt(L - 6, Y(r) + 4, F(r), 'fig-small', 'end');
+  s += txt(L - 4, Tp - 4 + 0, '', 'fig-small') + ln(L, Tp, L, H - B, 'fig-line') + ln(L, H - B, W - R, H - B, 'fig-line') + txt(L + 4, H - 12, names.yl || 'rate per 1 000 per year', 'fig-small', 'start') + txt(W - R, H - 12, names.xl || 'time →', 'fig-small', 'end');
+  return s + '</svg>';
+}
+
+/* Lee's push–pull model of migration: origin, destination and obstacles between */
+function pushPullSvg({ label, names = {} } = {}) {
+  const W = 500, H = 220; let s = svgOpen(W, H, label);
+  const place = (cx, t, marks) => `<ellipse cx="${cx}" cy="110" rx="86" ry="74" class="g-land" stroke="var(--ink-3)"/>` + lbl(cx, 26, t) + marks.map(([dx, dy, m]) => txt(cx + dx, 110 + dy, m, 'fig-label')).join('');
+  const sym = [[-40, -20, '+'], [0, -34, '−'], [34, -12, '−'], [-30, 22, '0'], [10, 12, '+'], [44, 30, '−'], [-6, 48, '−']];
+  const sym2 = [[-40, -20, '+'], [0, -34, '+'], [34, -12, '−'], [-30, 22, '0'], [10, 12, '+'], [44, 30, '+'], [-6, 48, '0']];
+  s += place(96, names.origin || 'Origin', sym) + place(404, names.dest || 'Destination', sym2);
+  for (let k = 0; k < 4; k++) s += path(`M${230 + k * 12} ${60 + k * 8} q10 25 0 50 q-10 25 0 50`, 'g-line g-l2', ' style="fill:none;stroke-width:2.2"');
+  s += arrow(170, 110, 330, 110, 'a', 3) + note(250, 96, names.move || 'migration', 'middle') + note(250, 44, names.obst || 'obstacles: distance, cost, rules', 'middle');
+  s += note(96, 204, names.push || '+ pull  − push  0 neutral', 'middle');
+  return s + '</svg>';
+}
