@@ -585,3 +585,117 @@ function textureTriangleSvg(sand, clay, { label, names = {} } = {}) {
   const [x, y] = pt(sand, clay);
   return s + circ(x, y, 6, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + '</svg>';
 }
+
+/* ==========================================================================
+   Atmosphere diagrams
+   ========================================================================== */
+/* layers of the atmosphere with the temperature profile */
+function atmosphereSvg({ label, names = {} } = {}) {
+  const W = 480, H = 320, L = 60, Tp = 16, Bt = 290, Y = h => Bt - (h / 110) * (Bt - Tp), X = t => 250 + ((t + 100) / 130) * (W - 280);
+  const bands = [[0, 12, 'g-sky', names.tropo || 'Troposphere'], [12, 50, 'g-water', names.strato || 'Stratosphere'], [50, 85, 'g-sky', names.meso || 'Mesosphere'], [85, 110, 'g-water', names.thermo || 'Thermosphere']];
+  let s = svgOpen(W, H, label);
+  bands.forEach(([a, b, c, t]) => { s += rect(L, Y(b), W - L - 10, Y(a) - Y(b), c, 0, ' fill-opacity="0.8"'); });
+  s += rect(L, Y(35), W - L - 10, Y(20) - Y(35), 'g-s4', 0, ' fill-opacity="0.3"') + note(L + 8, Y(22) - 2, names.ozone || 'ozone layer', 'start');
+  bands.forEach(([a, b, c, t]) => { s += lbl(L + 8, a === 12 ? Y(44) : (Y(a) + Y(b)) / 2 + 5, t, 'start'); });
+  for (let h = 0; h <= 100; h += 20) s += txt(L - 6, Y(h) + 4, F(h), 'fig-small', 'end') + ln(L - 3, Y(h), L, Y(h), 'fig-line');
+  s += txt(L - 6, Tp - 2, 'km', 'fig-small', 'end');
+  const prof = [[15, 0], [-56, 12], [-56, 20], [-2, 50], [-90, 85], [20, 110]];
+  s += pline(prof.map(([t, h]) => [X(t), Y(h)]), 'g-line g-l2');
+  [-80, -40, 0].forEach(t => { s += txt(X(t), Bt + 16, `${F(t)}°C`, 'fig-small'); });
+  s += note(X(-90) + 8, Y(78), names.temp || 'temperature', 'start');
+  return s + ln(L, Tp, L, Bt, 'fig-line') + ln(L, Bt, W - 10, Bt, 'fig-line') + '</svg>';
+}
+
+/* a mountain with temperatures by height (Braak: T = 26.3 − 0.6 h/100) and optional Junghuhn zones */
+function mountainTempSvg({ label, peak = 3000, marks = [], zones = false, names = {} } = {}) {
+  const W = 480, H = 300, base = 270, top = 30, Y = h => base - (h / 3500) * (base - top), tB = h => 26.3 - 0.6 * h / 100;
+  let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-sky');
+  if (zones) [[0, 700, 'g-s4', names.z1 || 'Hot (0–700 m)'], [700, 1500, 'g-s3', names.z2 || 'Temperate (700–1 500 m)'], [1500, 2500, 'g-s6', names.z3 || 'Cool (1 500–2 500 m)'], [2500, 3500, 'g-s5', names.z4 || 'Cold (above 2 500 m)']].forEach(([a, b, c, t]) => { s += rect(0, Y(b), W, Y(a) - Y(b), c, 0, ' fill-opacity="0.16"') + note(W - 8, Y(b) + 16, t, 'end'); });
+  const px = 200, pk = Y(peak), lx = 20, rx = 380;
+  s += path(`M${lx} ${base} C80 ${base - 20} 130 ${pk + 90} ${px - 20} ${pk + 12} L${px} ${pk} L${px + 25} ${pk + 18} C${px + 90} ${pk + 100} 300 ${base - 30} ${rx} ${base} Z`, 'g-land-2 g-edge');
+  if (peak > 2500) s += path(`M${px - 22} ${pk + 14} L${px} ${pk} L${px + 25} ${pk + 18} L${px + 10} ${pk + 26} L${px - 6} ${pk + 18}Z`, 'g-snow');
+  s += rect(0, base, W, H - base, 'g-land');
+  marks.forEach(([h, t]) => { const y = Y(h), x = h <= 0 ? lx + 14 : lx + (px - lx) * Math.pow(Math.min(1, (base - y) / (base - pk)), 0.8) + 4; s += ln(8, y, x, y, 'fig-dash') + circ(x, y, 4, 'g-hot') + lbl(10, y - 6, t != null ? t : `${F(h)} m · ${F(sig(tB(h), 3))}°C`, 'start'); });
+  return s + '</svg>';
+}
+
+/* winds: 'sea' (sea breeze, day) | 'land' (land breeze, night) | 'valley' | 'mountain' | 'foehn' | 'cells' (global circulation) */
+function windSvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 250; let s = svgOpen(W, H, label);
+  if (kind === 'sea' || kind === 'land') {
+    const day = kind === 'sea', up = day ? 380 : 100, dn = day ? 100 : 380;
+    s += rect(0, 0, W, H, day ? 'g-sky' : 'g-water', 0, day ? '' : ' fill-opacity="0.35"') + rect(0, 190, 220, 60, 'g-water-2') + path('M220 190 L480 176 L480 250 L220 250Z', 'g-land-2 g-edge');
+    s += circ(day ? 440 : 40, 34, 18, day ? 'g-core' : 'g-snow', ' stroke="var(--ink-3)"');
+    s += arrow(up, 165, up, 80, 'b', 2.6) + arrow(up, 70, dn, 70, 'c', 2) + arrow(dn, 80, dn, 160, 'c', 2) + arrow(dn + (day ? 20 : -20), 172, up + (day ? -20 : 20), 172, 'a', 3.2);
+    s += lbl(240, 160, names.breeze || (day ? 'Sea breeze (day)' : 'Land breeze (night)')) + note(110, 218, names.sea || 'Sea') + note(350, 218, names.land || 'Land');
+    s += note(up + (day ? -8 : 8), 118, names.warm || 'warm air rises', day ? 'end' : 'start') + note(dn + (day ? 8 : -8), 118, names.cool || 'cool air sinks', day ? 'start' : 'end');
+  } else if (kind === 'valley' || kind === 'mountain') {
+    const day = kind === 'valley';
+    s += rect(0, 0, W, H, day ? 'g-sky' : 'g-water', 0, day ? '' : ' fill-opacity="0.35"') + path('M0 240 L0 120 L120 40 L240 200 L360 40 L480 120 L480 240Z', 'g-land-2 g-edge');
+    s += day ? arrow(215, 185, 140, 80, 'b', 3) + arrow(265, 185, 340, 80, 'b', 3) : arrow(140, 70, 215, 175, 'a', 3) + arrow(340, 70, 265, 175, 'a', 3);
+    s += lbl(240, 26, names.breeze || (day ? 'Valley breeze (day): air flows up the slopes' : 'Mountain breeze (night): cool air sinks into the valley'));
+  } else if (kind === 'foehn') {
+    s += rect(0, 0, W, H, 'g-sky') + path('M0 230 L120 200 L240 50 L360 200 L480 230 L480 250 L0 250Z', 'g-land-2 g-edge');
+    s += arrow(20, 205, 120, 178, 'a', 3) + arrow(130, 170, 220, 62, 'a', 3) + arrow(262, 62, 350, 172, 'b', 3) + arrow(360, 184, 460, 212, 'b', 3);
+    s += circ(160, 72, 18, 'g-cloud g-edge') + circ(184, 60, 22, 'g-cloud g-edge') + circ(140, 82, 15, 'g-cloud g-edge');
+    for (let k = 0; k < 5; k++) s += ln(128 + k * 12, 100 + k * 2, 120 + k * 12, 128 + k * 2, 'g-line g-l1', ' style="stroke-width:1.4"');
+    s += note(20, 190, names.wind || 'moist wind', 'start') + note(110, 40, names.cool || 'cools, clouds, rain', 'middle') + note(310, 90, names.warm || 'dry, warm wind', 'start') + lbl(420, 190, names.leeward || 'Leeward', 'middle') + lbl(60, 240, names.windward || 'Windward', 'middle');
+  } else {   // global circulation: three cells between the equator and the pole (cross-section)
+    const X = la => 40 + la * 4.4, G = 185, cy = 110, ry = 55;
+    s += rect(0, 0, W, H, 'g-sky') + rect(0, G, W, H - G, 'g-land-2');
+    [[0, 30, names.hadley || 'Hadley cell', 1], [30, 60, names.ferrel || 'Ferrel cell', -1], [60, 90, names.polar || 'Polar cell', 1]].forEach(([a, b, t, cw]) => {
+      const cx = (X(a) + X(b)) / 2, rx = (X(b) - X(a)) / 2 - 8;
+      s += `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" class="g-line g-l2" style="stroke-width:1.8"/>`;
+      s += arrow(cx - 10 * cw, cy - ry, cx + 10 * cw, cy - ry, 'c', 0.1) + arrow(cx + 10 * cw, cy + ry, cx - 10 * cw, cy + ry, 'c', 0.1) + lbl(cx, cy + 5, t);
+    });
+    [[0, 'L'], [30, 'H'], [60, 'L'], [90, 'H']].forEach(([la, p]) => { s += ln(X(la), 40, X(la), G, 'fig-dash') + lbl(X(la), G + 20, p === 'L' ? (names.low || 'Low') : (names.high || 'High')) + txt(X(la), 34, `${la}°`, 'fig-small'); });
+    [[15, -1, names.trade || 'trade winds'], [45, 1, names.west || 'westerlies'], [75, -1, names.pe || 'polar easterlies']].forEach(([la, d, t]) => { s += arrow(X(la) - 26 * d, G - 10, X(la) + 26 * d, G - 10, 'a', 2.4) + note(X(la), G + 44, t); });
+    s += note(X(0), 18, names.eq || 'Equator', 'middle') + note(X(90), 18, names.pole || 'Pole', 'middle');
+  }
+  return s + '</svg>';
+}
+
+/* Indonesia's monsoons: 'west' (December–February, wet, from Asia) or 'east' (June–August, dry, from Australia) */
+function monsoonSvg(which, { label, names = {} } = {}) {
+  const west = which === 'west';
+  return indonesiaSvg({ label, grid: false, extra: (X, Y) => {
+    let s = '';
+    const arrows = west ? [[[102, 7], [108, 1], [112, -5], [122, -9]], [[115, 7], [118, 2], [124, -3], [132, -8]], [[127, 7], [128, 1], [134, -3], [140, -7]]] : [[[134, -11.5], [126, -8], [116, -5], [106, -2]], [[126, -11.5], [118, -9.5], [108, -7.5], [98, -3]], [[140, -11.5], [134, -6], [128, -1], [124, 4]]];
+    arrows.forEach(p => { const q = p.map(([a, b]) => [X(a), Y(b)]); s += path(smooth(q), `fig-vec fig-vec-${west ? 'a' : 'b'}`, ' style="stroke-width:3;opacity:0.85"') + arrow(q[2][0], q[2][1], q[3][0], q[3][1], west ? 'a' : 'b', 0.1); });
+    s += lbl(X(west ? 96 : 130), Y(west ? -8 : -10.5) + 4, names.from || (west ? 'from Asia: moist, rainy season' : 'from Australia: dry season'), west ? 'start' : 'middle');
+    return s;
+  } });
+}
+
+/* three ways air is lifted to make rain: 'orographic' | 'convectional' | 'frontal' */
+function rainTypeSvg(kind, { label, names = {} } = {}) {
+  const W = 480, H = 240; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-sky');
+  const cloud = (x, y, k = 1) => circ(x - 22 * k, y + 6 * k, 18 * k, 'g-cloud g-edge') + circ(x, y - 4 * k, 24 * k, 'g-cloud g-edge') + circ(x + 24 * k, y + 6 * k, 18 * k, 'g-cloud g-edge');
+  const rain = (x, y) => [...Array(6)].map((_, k) => ln(x - 25 + k * 10, y, x - 30 + k * 10, y + 28, 'g-line g-l1', ' style="stroke-width:1.4"')).join('');
+  if (kind === 'orographic') {
+    s += path('M0 225 L130 205 L250 60 L370 205 L480 225 L480 240 L0 240Z', 'g-land-2 g-edge');
+    s += arrow(20, 200, 120, 175, 'a', 3) + arrow(130, 168, 215, 78, 'a', 3) + arrow(285, 70, 365, 165, 'b', 3) + cloud(165, 70) + rain(165, 95);
+    s += lbl(80, 236, names.windward || 'Windward: rain', 'middle') + lbl(400, 236, names.shadow || 'Leeward: rain shadow', 'middle');
+  } else if (kind === 'convectional') {
+    s += rect(0, 200, W, 40, 'g-land-2') + circ(60, 40, 22, 'g-core', ' stroke="var(--g-magma)" stroke-width="2"');
+    for (let k = 0; k < 4; k++) s += ln(80 + k * 8, 60 + k * 6, 180 + k * 30, 195, 'fig-dash');
+    s += cloud(290, 70, 1.3) + rain(290, 100) + arrow(290, 195, 290, 115, 'b', 3) + arrow(250, 190, 270, 120, 'b', 2) + arrow(330, 190, 310, 120, 'b', 2);
+    s += lbl(290, 226, names.heated || 'Ground heated by the Sun: warm air rises', 'middle');
+  } else {
+    s += path('M0 240 L0 80 L320 240Z', 'g-water', ' fill-opacity="0.6"') + path('M0 80 L320 240', 'g-line g-l1');
+    s += arrow(470, 225, 330, 225, 'b', 3) + arrow(320, 215, 150, 125, 'b', 3) + cloud(110, 60) + rain(110, 85);
+    s += lbl(70, 205, names.cold || 'Cold, dense air', 'middle') + lbl(400, 205, names.warm || 'Warm air forced up', 'middle');
+  }
+  return s + '</svg>';
+}
+
+/* the greenhouse effect: sunlight in, infrared out, part of it returned by greenhouse gases */
+function greenhouseSvg({ label, names = {} } = {}) {
+  const W = 480, H = 270; let s = svgOpen(W, H, label) + rect(0, 0, W, H, 'g-sky') + rect(0, 70, W, 50, 'g-s5', 0, ' fill-opacity="0.12"') + note(470, 88, names.gases || 'greenhouse gases', 'end');
+  s += path('M0 220 C120 205 360 205 480 220 L480 270 L0 270Z', 'g-land-2 g-edge') + circ(50, 36, 24, 'g-core', ' stroke="var(--g-magma)" stroke-width="2"');
+  s += arrow(72, 50, 150, 208, 'b', 3) + note(92, 150, names.sun || 'sunlight (short waves)', 'start');
+  s += arrow(175, 208, 230, 18, 'a', 2) + note(240, 30, names.space || 'some heat escapes to space', 'start');
+  s += arrow(230, 208, 280, 100, 'a', 2.4) + arrow(300, 100, 340, 206, 'a', 2.4) + note(470, 160, names.back || 'infrared sent back down', 'end');
+  s += note(240, 250, names.ground || 'the warm ground gives off infrared', 'middle');
+  return s + '</svg>';
+}

@@ -68,3 +68,26 @@ link('contours', 'landforms', () => T`Landforms are read from their contour patt
 link('weathering', 'soils', () => T`Soil forms from weathered rock mixed with organic matter.`);
 link('volcanism', 'soils', () => T`Volcanic ash weathers into Indonesia's fertile andosols.`);
 link('math:percent', 'soils', () => T`Soil texture is given as the percentages of sand, silt and clay.`);
+
+/* ---------- C. The atmosphere ---------- */
+link('geo-concepts', 'atmosphere-layers', () => T`The atmosphere is one of the layers of the geosphere that geography studies.`);
+link('phys:gases', 'atmosphere-layers', () => T`Air is a mixture of gases whose pressure and temperature follow the gas laws.`);
+link('math:exp-log', 'atmosphere-layers', () => T`Air pressure halves again and again with height: an exponential decrease.`);
+link('atmosphere-layers', 'weather-elements', () => T`Weather happens in the troposphere, where temperature falls with height.`);
+link('contours', 'weather-elements', () => T`Isotherms and isobars are read like contour lines.`);
+link('math:linear-functions', 'weather-elements', () => T`Braak's formula is a linear function of height.`);
+link('phys:heat', 'weather-elements', () => T`Temperature and its measurement come from physics.`);
+link('weather-elements', 'winds', () => T`Wind is driven by differences in air pressure and temperature.`);
+link('coordinates', 'winds', () => T`The wind belts are arranged by latitude.`);
+link('phys:heat-transfer', 'winds', () => T`Convection makes warm air rise and cool air sink.`);
+link('phys:circular', 'winds', () => T`The Coriolis effect comes from the rotation of the Earth.`);
+link('weather-elements', 'precipitation', () => T`Clouds form when humid air cools to its dew point.`);
+link('winds', 'precipitation', () => T`Winds lift moist air over mountains and into storms.`);
+link('math:ratio', 'precipitation', () => T`The Schmidt–Ferguson Q value is a ratio of dry to wet months.`);
+link('precipitation', 'climate-types', () => T`Climates are classified by their temperature and rainfall through the year.`);
+link('coordinates', 'climate-types', () => T`The solar climate zones follow lines of latitude.`);
+link('math:data-basic', 'climate-types', () => T`A climograph is a chart of monthly averages; range and totals are simple statistics.`);
+link('climate-types', 'climate-change', () => T`Climate change shifts the climates of whole regions.`);
+link('atmosphere-layers', 'climate-change', () => T`Greenhouse gases are part of the air's composition.`);
+link('phys:climate', 'climate-change', () => T`The physics of the greenhouse effect explains why added gases warm the Earth.`);
+link('math:linear-functions', 'climate-change', () => T`A rate of change, such as ppm per year, is the slope of a trend line.`);
