@@ -337,7 +337,7 @@ function indonesiaSvg({ label, zones = false, lines = [], marks = [], grid = tru
   const LCLS = { wallace: 'g-l2', weber: 'g-l4', lydekker: 'g-l5' };
   lines.forEach(([key, text]) => { const p = LINES[key]; s += path(smooth(p.map(([lo, la]) => [X(lo), Y(la)])), `g-line ${LCLS[key]}`, ' stroke-dasharray="7 4"'); });
   s += '</g>' + rect(30, 8, X(lonMax) - 30, Y(latMin) - 8, 'fig-frame');
-  const LAB = { wallace: [1, 'start', 5, 12], weber: [2, 'end', -6, 0], lydekker: [3, 'start', 6, 0] };   // which vertex to label, and how
+  const LAB = { wallace: [1, 'start', 5, 12], weber: [2, 'end', -6, 0], lydekker: [2, 'start', 6, 0] };   // which vertex to label, and how
   lines.forEach(([key, text]) => { const [i, an, dx, dy] = LAB[key], p = LINES[key][i]; s += note(X(p[0]) + dx, Y(p[1]) + dy, text, an); });
   if (grid) { for (let lo = 95; lo <= lonMax; lo += 10) s += txt(X(lo), Y(latMin) + 14, `${lo}°${dir('E')}`, 'fig-small'); [5, 0, -5, -10].forEach(la => { s += txt(26, Y(la) + 4, `${Math.abs(la)}°${la > 0 ? dir('N') : la < 0 ? dir('S') : ''}`, 'fig-small', 'end'); }); }
   if (zones) zones.forEach(([lo, text]) => { s += lbl(X(lo), 24, text); });
@@ -829,5 +829,43 @@ function coastSvg(kind, { label, names = {} } = {}) {
     s += path('M200 62 C215 56 240 52 260 58', 'g-sand', ' style="stroke:var(--g-sand);stroke-width:6;fill:none"') + note(230, 40, names.beach || 'beach', 'middle');
     s += arrow(170, 165, 280, 165, 'a', 2) + note(170, 184, names.drift || 'longshore drift', 'start');
   }
+  return s + '</svg>';
+}
+
+/* ==========================================================================
+   Biosphere diagrams
+   ========================================================================== */
+/* Whittaker's biome chart: mean annual temperature against annual rainfall */
+function whittakerSvg({ label, names = {}, mark } = {}) {
+  const W = 480, H = 320, L = 56, R = 16, Tp = 18, B = 44, X = t => L + (t + 15) / 45 * (W - L - R), Y = p => Tp + (1 - p / 4500) * (H - Tp - B);
+  let s = svgOpen(W, H, label);
+  const B6 = [
+    ['tundra', 'g-s6', [[-15, 0], [-5, 0], [-5, 600], [-15, 300]], [-10, 200]],
+    ['taiga', 'g-s3', [[-5, 0], [3, 250], [5, 1200], [-5, 600]], [-1, 450]],
+    ['temperate', 'g-s4', [[3, 250], [20, 700], [20, 3000], [12, 2500], [5, 1200]], [12, 1300]],
+    ['grass', 'g-s5', [[3, 250], [3, 0], [30, 500], [30, 1300], [20, 700]], [18, 470]],
+    ['desert', 'g-s2', [[3, 0], [30, 0], [30, 500]], [22, 160]],
+    ['savanna', 'g-s2', [[20, 700], [30, 1300], [30, 2500], [20, 1300]], [25, 1500]],
+    ['rain', 'g-s1', [[20, 1300], [30, 2500], [30, 4500], [20, 3000]], [25, 3500]],
+  ];
+  const lab = { tundra: names.tundra || 'Tundra', taiga: names.taiga || 'Taiga', temperate: names.temperate || 'Temperate forest', grass: names.grass || 'Grassland', desert: names.desert || 'Desert', savanna: names.savanna || 'Savanna', rain: names.rain || 'Rainforest' };
+  B6.forEach(([k, c, pts]) => { s += polyg(pts.map(([t, p]) => [X(t), Y(p)]), c, ' fill-opacity="0.55" stroke="var(--paper)" stroke-width="2"'); });
+  B6.forEach(([k, c, pts, [t, p]]) => { s += lbl(X(t), Y(p) + 4, lab[k]); });
+  for (let t = -10; t <= 30; t += 10) s += ln(X(t), H - B, X(t), H - B + 4, 'fig-line') + txt(X(t), H - B + 17, F(t), 'fig-small');
+  for (let p = 0; p <= 4000; p += 1000) s += ln(L - 4, Y(p), L, Y(p), 'fig-line') + txt(L - 7, Y(p) + 4, F(p), 'fig-small', 'end');
+  s += ln(L, Tp, L, H - B, 'fig-line') + ln(L, H - B, W - R, H - B, 'fig-line') + txt((L + W - R) / 2, H - 8, names.xl || 'mean annual temperature (°C)', 'fig-small') + txt(L - 4, Tp - 6, names.yl || 'rain (mm/year)', 'fig-small', 'start');
+  if (mark) s += circ(X(mark[0]), Y(mark[1]), 6, 'g-hot', ' stroke="var(--paper)" stroke-width="2"') + lbl(X(mark[0]), Y(mark[1]) + 24, mark[2] || '?');
+  return s + '</svg>';
+}
+
+/* an energy pyramid: each level keeps about 10% of the energy of the level below */
+function energyPyramidSvg(levels, { label, values, unit = '' } = {}) {
+  const W = 480, n = levels.length, rowH = 44, H = n * rowH + 20, cx = 200;
+  let s = svgOpen(W, H, label);
+  levels.forEach((t, i) => {
+    const y = H - 10 - (i + 1) * rowH, w = 360 * (1 - i / (n + 0.3)), cls = ['g-s3', 'g-s4', 'g-s2', 'g-s5', 'g-s6'][i % 5];
+    s += polyg([[cx - w / 2, y + rowH], [cx + w / 2, y + rowH], [cx + w / 2 - 360 / (n + 0.3) / 2, y + 2], [cx - w / 2 + 360 / (n + 0.3) / 2, y + 2]], cls, ' fill-opacity="0.75" stroke="var(--paper)" stroke-width="2"') + lbl(cx, y + rowH / 2 + 6, t);
+    if (values) s += note(cx + w / 2 + 14, y + rowH / 2 + 5, values[i] + unit, 'start');
+  });
   return s + '</svg>';
 }

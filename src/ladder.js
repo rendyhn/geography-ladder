@@ -110,3 +110,16 @@ link('oceans', 'tides-coasts', () => T`Tides and waves are movements of the sea.
 link('landforms', 'tides-coasts', () => T`Coastal landforms are made by erosion and deposition, like river landforms.`);
 link('phys:gravitation', 'tides-coasts', () => T`Tides are raised by the gravity of the Moon and the Sun.`);
 link('phys:mech-waves', 'tides-coasts', () => T`Wave speed equals wavelength divided by period.`);
+
+/* ---------- E. The biosphere ---------- */
+link('climate-types', 'biogeography', () => T`Climate is the strongest control on where plants and animals live.`);
+link('soils', 'biogeography', () => T`Soil is the edaphic factor in the distribution of plants.`);
+link('plate-tectonics', 'biogeography', () => T`The Sunda and Sahul shelves and the deep seas of Wallacea come from plate movements.`);
+link('weather-elements', 'biogeography', () => T`Temperature falls with height, which gives mountains their vegetation zones.`);
+link('climate-types', 'biomes', () => T`Biomes follow the climate zones.`);
+link('biogeography', 'biomes', () => T`Biomes are the world-scale pattern of plant and animal distribution.`);
+link('math:exp-log', 'biomes', () => T`Energy falls by a factor of ten at each level of a food chain.`);
+link('biomes', 'conservation', () => T`Conservation protects the ecosystems of each biome.`);
+link('biogeography', 'conservation', () => T`Endemic species of Wallacea are especially vulnerable.`);
+link('math:probability-sh', 'conservation', () => T`Simpson's index is the probability that two individuals belong to different species.`);
+link('math:exp-log', 'conservation', () => T`A fixed yearly percentage loss of forest is exponential decay.`);
