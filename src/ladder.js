@@ -169,3 +169,17 @@ link('conservation', 'sustainability', () => T`Protecting biodiversity is part o
 link('resources', 'sustainability', () => T`Sustainable use keeps resources available for the future.`);
 link('population-growth', 'sustainability', () => T`A growing population puts more pressure on the environment.`);
 link('disasters', 'sustainability', () => T`Reducing disaster risk is part of building sustainable communities.`);
+
+/* ---------- I. Indonesia & the world ---------- */
+link('coordinates', 'indonesia-position', () => T`Latitude and longitude give Indonesia's astronomical position.`);
+link('time-zones', 'indonesia-position', () => T`Indonesia's span of longitude gives it three time zones.`);
+link('plate-tectonics', 'indonesia-position', () => T`Indonesia's geological position is where three plates meet.`);
+link('indonesia-position', 'geopolitics', () => T`Territory and borders start from where a country lies.`);
+link('oceans', 'geopolitics', () => T`Maritime zones are measured across the sea and the sea bed.`);
+link('math:measurement', 'geopolitics', () => T`Nautical miles are converted to kilometres.`);
+link('human-development', 'development-levels', () => T`The HDI is one measure of how developed a country is.`);
+link('regional-development', 'development-levels', () => T`Countries develop as regions do, through growth, jobs and investment.`);
+link('math:percent', 'development-levels', () => T`Shares of workers by sector are percentages.`);
+link('development-levels', 'cooperation', () => T`Countries at different levels of development trade and cooperate.`);
+link('spatial-interaction', 'cooperation', () => T`Globalisation is spatial interaction at the scale of the world.`);
+link('geopolitics', 'cooperation', () => T`Cooperation between countries rests on agreed borders and rules.`);
