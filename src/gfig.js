@@ -93,3 +93,50 @@ function incomeBandsSvg() {   // World Bank income groups (GNI per capita, Atlas
   s += sL(X(4870), 40, X(4870), 90, 'mf-c4', ' stroke-width="2.5"') + sT(X(4870) + 4, 34, T`Indonesia ≈ 4 870`, 'mf-lab-b', 'start');
   return s + sT(W - 20, 124, T`GNI per person (US$)`, 'mf-small', 'end') + '</svg>';
 }
+
+/* ---------- the 17 SDGs as tiles: number, title and a simple line icon (HTML grid, so it reflows on phones) ---------- */
+const SDG_ICON = [
+  // 1 no poverty: a family
+  '<circle cx="12" cy="15" r="3.4" class="f"/><path d="M12 20v14M7 25h10M12 34l-4 8M12 34l4 8"/><circle cx="24" cy="23" r="2.6" class="f"/><path d="M24 27v8M20.5 30h7M24 35l-3 6M24 35l3 6"/><circle cx="36" cy="15" r="3.4" class="f"/><path d="M36 20v14M31 25h10M36 34l-4 8M36 34l4 8"/>',
+  // 2 zero hunger: a steaming bowl
+  '<path d="M8 26h32a16 14 0 0 1-32 0z" class="f"/><path d="M17 20c-3-3 3-5 0-9M24 20c-3-3 3-5 0-9M31 20c-3-3 3-5 0-9"/><path d="M18 40h12"/>',
+  // 3 good health: heartbeat and heart
+  '<path d="M4 26h8l4-9 5 17 4-12 3 4h6"/><path d="M38 34s-7-5-7-10a3.6 3.6 0 0 1 7-1 3.6 3.6 0 0 1 7 1c0 5-7 10-7 10z" class="f"/>',
+  // 4 quality education: open book and pencil
+  '<path d="M6 13q9-3 16 2v24q-7-5-16-2z"/><path d="M34 13q-6-3-12 2v24q6-5 12-2z"/><path d="M40 10v26l2 5 2-5V10z"/>',
+  // 5 gender equality: circle with =, arrow and cross
+  '<circle cx="22" cy="22" r="10"/><path d="M18 20h8M18 25h8M29 15l8-8M31 7h6v6M22 32v11M17 38h10"/>',
+  // 6 clean water: glass with a drop
+  '<path d="M13 8h22l-3 30H16z"/><path d="M24 17c-4 6-5 8-5 10a5 5 0 0 0 10 0c0-2-1-4-5-10z" class="f"/><path d="M24 40v5"/>',
+  // 7 clean energy: sun with power symbol
+  '<circle cx="24" cy="24" r="9"/><path d="M24 17v7M20 20a5.5 5.5 0 1 0 8 0"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.5 10.5l4 4M33.5 33.5l4 4M10.5 37.5l4-4M33.5 14.5l4-4"/>',
+  // 8 decent work: rising bars and arrow
+  '<path d="M8 40V30h5v10M17 40V25h5v15M26 40V28h5v12M35 40V20h5v20" class="f"/><path d="M7 26l10-8 7 5 16-13M33 10h7v7"/>',
+  // 9 industry, innovation: stacked cubes
+  '<path d="M24 6l8 4.5v9L24 24l-8-4.5v-9z M16 10.5l8 4.5 8-4.5M24 15v9"/><path d="M16 24l8 4.5v9L16 42l-8-4.5v-9z M8 28.5l8 4.5 8-4.5M16 33v9"/><path d="M32 24l8 4.5v9L32 42l-8-4.5v-9z M24 28.5l8 4.5 8-4.5M32 33v9"/>',
+  // 10 reduced inequalities: open circle with =
+  '<path d="M36 13A15 15 0 1 0 39 24"/><path d="M17 20h14M17 28h14"/>',
+  // 11 sustainable cities: skyline and house
+  '<path d="M6 42V30l6-5 6 5v12M9 42v-6h6v6"/><path d="M20 42V12h9v30M23 17h3M23 23h3M23 29h3M23 35h3"/><path d="M32 42V20l10-6v28M35 25h4M35 31h4M35 37h4"/>',
+  // 12 responsible consumption: infinity loop with arrow
+  '<path d="M24 24c-4-5-7-8-11-8a8 8 0 0 0 0 16c4 0 7-3 11-8s7-8 11-8a8 8 0 0 1 0 16c-4 0-7-3-11-8z"/><path d="M33 12l3 4-4 2"/>',
+  // 13 climate action: eye with a globe
+  '<path d="M4 24q20-20 40 0-20 20-40 0z"/><circle cx="24" cy="24" r="9" class="f"/><path d="M15 24h18M24 15c-5 5-5 13 0 18M24 15c5 5 5 13 0 18" class="k"/>',
+  // 14 life below water: waves and a fish
+  '<path d="M4 12q5-4 10 0t10 0 10 0 10 0M4 19q5-4 10 0t10 0 10 0 10 0"/><path d="M12 34q10-10 20 0-10 10-20 0z M32 34l7-5v10z" class="f"/><circle cx="17" cy="33" r="1.4" class="k0"/>',
+  // 15 life on land: tree, birds and ground
+  '<circle cx="18" cy="20" r="9" class="f"/><path d="M18 28v12M6 40h36M8 44h32"/><path d="M28 13q3-3 5 0 2-3 5 0M33 21q2-2 4 0 2-2 4 0"/>',
+  // 16 peace and justice: the scales of justice
+  '<path d="M24 7v31M15 41h18M9 13h30M24 7l-2 3h4z"/><path d="M9 13L4 26M9 13l5 13M39 13l-5 13M39 13l5 13"/><path d="M3 26a6 4 0 0 0 12 0zM33 26a6 4 0 0 0 12 0z" class="f"/>',
+  // 17 partnerships: five linked rings
+  '<circle cx="24" cy="15" r="7"/><circle cx="33" cy="21.5" r="7"/><circle cx="29.5" cy="32" r="7"/><circle cx="18.5" cy="32" r="7"/><circle cx="15" cy="21.5" r="7"/>',
+];
+const SDG_COL = ['#E5243B', '#DDA63A', '#4C9F38', '#C5192D', '#FF3A21', '#26BDE2', '#FCC30B', '#A21942', '#FD6925', '#DD1367', '#FD9D24', '#BF8B2E', '#3F7E44', '#0A97D9', '#56C02B', '#00689D', '#19486A'];
+function sdgTilesHtml({ label } = {}) {
+  const names = [T`No poverty`, T`Zero hunger`, T`Good health and well-being`, T`Quality education`, T`Gender equality`, T`Clean water and sanitation`, T`Affordable and clean energy`, T`Decent work and economic growth`, T`Industry, innovation and infrastructure`, T`Reduced inequalities`, T`Sustainable cities and communities`, T`Responsible consumption and production`, T`Climate action`, T`Life below water`, T`Life on land`, T`Peace, justice and strong institutions`, T`Partnerships for the goals`];
+  const tiles = names.map((t, i) => `<div class="sdg" role="listitem" style="background:${SDG_COL[i]};--c:${SDG_COL[i]}"><span class="sdg-n">${i + 1}</span><span class="sdg-t">${t}</span><svg class="sdg-i" viewBox="0 0 48 48" aria-hidden="true">${SDG_ICON[i]}</svg></div>`);
+  let wheel = '';
+  for (let i = 0; i < 17; i++) { const a0 = (i / 17) * 2 * Math.PI - Math.PI / 2, a1 = ((i + 1) / 17) * 2 * Math.PI - Math.PI / 2, p = (a, r) => `${(24 + r * Math.cos(a)).toFixed(2)} ${(24 + r * Math.sin(a)).toFixed(2)}`; wheel += `<path d="M${p(a0, 20)} A20 20 0 0 1 ${p(a1, 20)} L${p(a1, 12)} A12 12 0 0 0 ${p(a0, 12)}Z" fill="${SDG_COL[i]}"/>`; }
+  tiles.push(`<div class="sdg sdg-logo" role="listitem"><svg class="sdg-w" viewBox="0 0 48 48" aria-hidden="true">${wheel}</svg><span class="sdg-t">${T`Sustainable Development Goals`}</span></div>`);
+  return `<div class="sdg-grid" role="list" aria-label="${String(label || '').split('"').join('&quot;')}">${tiles.join('')}</div>`;
+}

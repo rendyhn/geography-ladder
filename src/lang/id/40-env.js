@@ -92,8 +92,6 @@ addT('id', {
   '20s6cgxd1zb': R`Tiga lingkaran yang saling beririsan untuk lingkungan, sosial dan ekonomi; bagian yang beririsan ketiganya adalah pembangunan berkelanjutan`,
   '6zz4ifkmls': R`Pembangunan berkelanjutan menyeimbangkan lingkungan, sosial dan ekonomi.`,
   '1hwv093g3ga': R`<p><b>Pembangunan berkelanjutan</b> adalah "pembangunan yang memenuhi kebutuhan masa kini tanpa mengorbankan kemampuan generasi mendatang untuk memenuhi kebutuhannya" (Laporan Brundtland, 1987). <b>Daya dukung</b> suatu wilayah adalah jumlah penduduk terbesar yang dapat didukungnya tanpa merusaknya:</p><p>$$\text{penduduk yang didukung} = \frac{\text{sumber daya tersedia}}{\text{kebutuhan per orang}}$$</p><p><b>Jejak ekologis</b> mengukur luas daratan dan lautan yang diperlukan untuk memenuhi kebutuhan seseorang dan menyerap limbahnya. Jika jejak ekologis dunia melebihi biokapasitasnya, kita memakai lebih dari satu Bumi.</p>`,
-  '8r2qmuhqpd': R`17 Tujuan Pembangunan Berkelanjutan ditampilkan sebagai kotak-kotak berwarna bernomor`,
-  '23ve959rxy': R`17 Tujuan Pembangunan Berkelanjutan (TPB/SDGs), disepakati pada 2015 untuk 2030: misalnya 1 tanpa kemiskinan, 6 air bersih, 7 energi bersih, 11 kota berkelanjutan, 13 penanganan perubahan iklim, 14 ekosistem lautan, 15 ekosistem daratan.`,
   '4jxxkmcuwc': R`Alat`,
   '1a56fxt6c5v': R`Fungsinya`,
   'inbyeev3s4': R`AMDAL (analisis mengenai dampak lingkungan)`,

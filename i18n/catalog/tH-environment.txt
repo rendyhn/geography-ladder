@@ -148,7 +148,7 @@ Use the lift to go outside
 Most injuries come from falling objects and glass; take cover until the shaking stops.
 
 ##### sustainability
-@1cthfh1sygj  ; 0=FigW(vennSvg([T`Environment`, T`Society` | 1=Key(T`<p><b>Sustainable development</b>  | 2=FigW(sdgGridSvg({ label: T`The 17 Sustai | 3=Tbl([T`Tool`, T`What it does`], [[T`AMDA | 4=Tip(T`<p>Environmental problems cross bo
+@1cthfh1sygj  ; 0=FigW(vennSvg([T`Environment`, T`Society` | 1=Key(T`<p><b>Sustainable development</b>  | 2=FigW(sdgTilesHtml({ label: T`The 17 Sust | 3=Tbl([T`Tool`, T`What it does`], [[T`AMDA | 4=Tip(T`<p>Environmental problems cross bo
 
 <p>People depend on the environment for air, water, food, materials and energy, but also damage it through <b>pollution</b> (air, water, soil), <b>deforestation</b>, <b>land degradation</b>, <b>overfishing</b> and <b>waste</b>. Indonesia produces tens of millions of tonnes of household waste a year, and much of it ends up in rivers and the sea.</p>
 ⟦0⟧
@@ -176,10 +176,10 @@ Three overlapping circles for environment, society and economy; where all three 
 Sustainable development balances the environment, society and the economy.
 @1hwv093g3ga
 <p><b>Sustainable development</b> is "development that meets the needs of the present without compromising the ability of future generations to meet their own needs" (Brundtland Report, 1987). The <b>carrying capacity</b> of an area is the largest population it can support without being damaged:</p><p>$$\text{people supported} = \frac{\text{available resource}}{\text{need per person}}$$</p><p>The <b>ecological footprint</b> measures the land and sea area needed to supply what a person uses and absorb their waste. When the world's footprint exceeds its biocapacity, we are using more than one Earth.</p>
-@8r2qmuhqpd
-The 17 Sustainable Development Goals shown as numbered coloured tiles
-@23ve959rxy
-The 17 Sustainable Development Goals (SDGs), agreed in 2015 for 2030: for example 1 no poverty, 6 clean water, 7 clean energy, 11 sustainable cities, 13 climate action, 14 life below water, 15 life on land.
+@1dm8r7obv9l
+The 17 Sustainable Development Goals, each tile with its number, title and symbol
+@1e7vqaiv5e7
+The 17 Sustainable Development Goals (SDGs), agreed by all UN member states in 2015 to be reached by 2030. Indonesia puts them into practice through its national SDG action plans (coordinated by Bappenas).
 @4jxxkmcuwc
 Tool
 @1a56fxt6c5v
@@ -236,18 +236,6 @@ Giving old clothes to someone who can wear them
 Composting food scraps into fertiliser
 @2c0tro09f3w  ; 0=d
 Which of the 3Rs is this? <i>⟦0⟧</i>
-@1c4vd73u8kg
-Climate action
-@2coz54w7un6
-Life below water
-@1odbz3u2yig
-Life on land
-@8xus89x0iz
-Clean water and sanitation
-@2fc1q7dzq8e
-Affordable and clean energy
-@tpkbxkzi4u
-Sustainable cities and communities
 @s7saavzw3d  ; 0=FigW(sdgGridSvg({ highlight: [g], label:
 Which Sustainable Development Goal is highlighted?⟦0⟧
 @tb56agrxbp

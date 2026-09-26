@@ -453,3 +453,13 @@ mjx-container { direction: ltr; unicode-bidi: isolate; }
 .g-line { fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
 .fig.fig-wide > svg { max-width: 680px; }
 @media (max-width: 420px) { .brand { font-size: 1.04rem; gap: 7px; min-width: 0; white-space: normal; line-height: 1.1; } }   /* the longer name must fit beside the language and theme buttons */
+/* SDG tiles */
+.sdg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 6px; max-width: 700px; }
+.sdg { aspect-ratio: 1; border-radius: 6px; color: #fff; padding: 8px 8px 7px; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.sdg-n { font: 800 1.5rem/1 var(--f-display); }
+.sdg-t { font: 700 0.54rem/1.2 var(--f-body); text-transform: uppercase; margin-top: 3px; overflow-wrap: break-word; }
+.sdg-i { flex: 1 1 0; min-height: 0; width: 100%; margin-top: 5px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+.sdg-i .f { fill: #fff; } .sdg-i .k { stroke: var(--c); stroke-width: 1.6; } .sdg-i .k0 { fill: var(--c); stroke: none; }
+.sdg-logo { background: var(--paper); color: var(--ink); border: 1px solid var(--rule); align-items: center; justify-content: center; text-align: center; gap: 4px; }
+.sdg-w { width: 52%; }
+@media print { .sdg { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }

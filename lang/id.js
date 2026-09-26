@@ -3719,8 +3719,6 @@ addT('id', {
   '20s6cgxd1zb': R`Tiga lingkaran yang saling beririsan untuk lingkungan, sosial dan ekonomi; bagian yang beririsan ketiganya adalah pembangunan berkelanjutan`,
   '6zz4ifkmls': R`Pembangunan berkelanjutan menyeimbangkan lingkungan, sosial dan ekonomi.`,
   '1hwv093g3ga': R`<p><b>Pembangunan berkelanjutan</b> adalah "pembangunan yang memenuhi kebutuhan masa kini tanpa mengorbankan kemampuan generasi mendatang untuk memenuhi kebutuhannya" (Laporan Brundtland, 1987). <b>Daya dukung</b> suatu wilayah adalah jumlah penduduk terbesar yang dapat didukungnya tanpa merusaknya:</p><p>$$\text{penduduk yang didukung} = \frac{\text{sumber daya tersedia}}{\text{kebutuhan per orang}}$$</p><p><b>Jejak ekologis</b> mengukur luas daratan dan lautan yang diperlukan untuk memenuhi kebutuhan seseorang dan menyerap limbahnya. Jika jejak ekologis dunia melebihi biokapasitasnya, kita memakai lebih dari satu Bumi.</p>`,
-  '8r2qmuhqpd': R`17 Tujuan Pembangunan Berkelanjutan ditampilkan sebagai kotak-kotak berwarna bernomor`,
-  '23ve959rxy': R`17 Tujuan Pembangunan Berkelanjutan (TPB/SDGs), disepakati pada 2015 untuk 2030: misalnya 1 tanpa kemiskinan, 6 air bersih, 7 energi bersih, 11 kota berkelanjutan, 13 penanganan perubahan iklim, 14 ekosistem lautan, 15 ekosistem daratan.`,
   '4jxxkmcuwc': R`Alat`,
   '1a56fxt6c5v': R`Fungsinya`,
   'inbyeev3s4': R`AMDAL (analisis mengenai dampak lingkungan)`,
@@ -4926,4 +4924,22 @@ addT('id', {
   '1n85cmayzrv': R`Foto udara memiliki skala yang ditentukan oleh panjang fokus dan tinggi terbang.`,
   '1c8kukphbrv': R`SIG dibangun dari lapisan-lapisan peta digital.`,
   '1bc8ifi2mp7': R`Citra satelit adalah salah satu sumber utama data raster dalam SIG.`,
+});
+
+/* Bahasa Indonesia — 9-sdg */
+addT('id', {
+  '2dktjb873gh': R`Tanpa kemiskinan`,
+  '1964zz8jv5r': R`Tanpa kelaparan`,
+  '1skpdsizona': R`Kehidupan sehat dan sejahtera`,
+  '1bsy1stzw1t': R`Pendidikan berkualitas`,
+  '13rpl4drywc': R`Kesetaraan gender`,
+  '12jtzwl9gfi': R`Pekerjaan layak dan pertumbuhan ekonomi`,
+  '1ghecef5xd7': R`Industri, inovasi, dan infrastruktur`,
+  's3d16q2cfw': R`Berkurangnya kesenjangan`,
+  '1671ai1p41j': R`Konsumsi dan produksi yang bertanggung jawab`,
+  '1hj3wx0lsoc': R`Perdamaian, keadilan, dan kelembagaan yang tangguh`,
+  '2cvp7sn1j8c': R`Kemitraan untuk mencapai tujuan`,
+  '1mzwhrx9wc8': R`Tujuan Pembangunan Berkelanjutan`,
+  '1dm8r7obv9l': R`17 Tujuan Pembangunan Berkelanjutan, setiap kotak berisi nomor, judul, dan simbolnya`,
+  '1e7vqaiv5e7': R`17 Tujuan Pembangunan Berkelanjutan (TPB/SDGs), disepakati seluruh negara anggota PBB pada 2015 untuk dicapai pada 2030. Indonesia menjalankannya melalui rencana aksi nasional TPB/SDGs yang dikoordinasikan Bappenas.`,
 });
