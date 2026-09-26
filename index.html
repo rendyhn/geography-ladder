@@ -193,7 +193,7 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .fig { margin: 1.4em 0; } .fig > svg { width: 100%; max-width: 520px; height: auto; display: block; }   /* direct child only: MathJax output in a caption is SVG too */
 .fig figcaption { font-size: 0.85rem; color: var(--ink-3); margin-top: 6px; }
 .g-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 680px; }   /* small multiples side by side */
-.g-row svg { width: 100%; height: auto; display: block; }
+.g-row > div > svg { width: 100%; height: auto; display: block; }
 .g-cap { font-size: 0.8rem; color: var(--ink-3); text-align: center; margin-top: 4px; line-height: 1.3; }
 .fig-shape { fill: var(--accent-soft); stroke: var(--ink-2); stroke-width: 1.5; }
 .fig-alpha { fill-opacity: 0.55; }
@@ -206,7 +206,7 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .fig-small { fill: var(--ink-2); font: 12px var(--f-body); }
 .fig.fig-wide > svg { max-width: 680px; }
 .fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; max-width: 680px; }
-.fig-row svg { width: 100%; height: auto; display: block; }
+.fig-row > div > svg { width: 100%; height: auto; display: block; }
 .fig-row .cap { font-size: 0.8rem; color: var(--ink-3); text-align: center; margin-top: 4px; }
 /* figure library (src/fig.js) */
 .mf-grid { stroke: var(--rule-soft); stroke-width: 1; }
