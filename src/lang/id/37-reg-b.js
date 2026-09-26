@@ -1,13 +1,5 @@
 /* Bahasa Indonesia — 37-reg-b */
 addT('id', {
-  '1w2a5duxgo3': R`
-<p><b>Industri</b> mengolah bahan mentah atau komponen menjadi barang yang nilainya lebih tinggi. Industri digolongkan menurut bahan bakunya (pertanian, pertambangan, kehutanan), menurut produknya (ringan atau berat), menurut ukurannya (jumlah tenaga kerja) dan menurut tahapannya (industri <b>hulu</b> membuat bahan dasar seperti baja atau semen; industri <b>hilir</b> membuat barang jadi).</p>
-⟦0⟧
-<h3>Lokasi industri</h3>
-<p>Faktor utamanya adalah bahan baku, pasar, tenaga kerja, transportasi, energi dan air, modal, kebijakan pemerintah serta <b>aglomerasi</b> (perusahaan-perusahaan mengelompok untuk berbagi pemasok, tenaga kerja dan layanan).</p>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1sf8skfr22y': R`Ukuran (BPS)`,
   'es2l43hvah': R`Tenaga kerja`,
   '2cs4mefzc1x': R`Industri rumah tangga`,
@@ -66,12 +58,6 @@ addT('id', {
   '1220v26619u': R`Tidak ada persaingan`,
   '21ok69sbdxf': R`Bebas dari semua pajak`,
   '2f92yhmsw5c': R`Mengelompok menekan biaya: pemasok, tenaga kerja, bank dan infrastruktur semuanya dekat.`,
-  '1qhye0xtlzl': R`
-<p><b>Tempat sentral</b> adalah permukiman yang menyediakan barang dan jasa bagi penduduk di sekitarnya. Walter Christaller (1933), yang meneliti Jerman selatan, mempertanyakan mengapa kota memiliki ukuran dan jarak seperti yang ada.</p>
-⟦0⟧
-⟦1⟧
-<p>Setiap kota kecil melayani setara tiga wilayah desa, dan setiap kota besar melayani setara tiga wilayah kota kecil: inilah <b>prinsip pasar</b>, $k = 3$. Karena itu, tempat kecil selalu lebih banyak daripada tempat besar. Christaller juga menjelaskan $k = 4$ (prinsip transportasi, tempat-tempat di sepanjang jalan) dan $k = 7$ (prinsip administrasi).</p>
-⟦2⟧`,
   '1xpqx8aw9l2': R`<p><b>Ambang</b> (threshold): jumlah minimum pelanggan yang dibutuhkan suatu layanan agar bertahan. <b>Jangkauan</b> (range): jarak terjauh yang mau ditempuh orang untuk menggunakannya. Suatu layanan hanya dapat ada jika jangkauannya mencakup setidaknya ambangnya. Barang <b>berorde rendah</b> sehari-hari (warung, sekolah dasar) memiliki ambang rendah dan jangkauan pendek; barang <b>berorde tinggi</b> (universitas, rumah sakit spesialis, pusat perbelanjaan) memiliki ambang tinggi dan jangkauan jauh.</p>`,
   '2ggrucowhou': R`kota besar (orde tinggi)`,
   '1bwntu8ig53': R`kota kecil (orde menengah)`,

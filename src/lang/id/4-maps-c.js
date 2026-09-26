@@ -77,17 +77,6 @@ addT('id', {
   '1lxl0i1zye': R`Bidang proyeksi dan jaring-jaring yang dihasilkannya`,
   '22dzopi8dlz': R`Globe`,
   '8huuh9ywov': R`Jaring-jaring itu dihasilkan oleh proyeksi ⟦0⟧.`,
-  'n7hkpn7lfw': R`
-<p>Peta topografi menampilkan ketinggian lahan dengan <b>garis kontur</b>: garis yang menghubungkan titik-titik yang sama tingginya dari permukaan laut rata-rata. Selisih tinggi antara dua kontur yang berdekatan disebut <b>interval kontur</b>; setiap garis kelima (kontur indeks) biasanya digambar lebih tebal.</p>
-⟦0⟧
-⟦1⟧
-<p>Aturan yang umum dipakai untuk interval kontur suatu peta adalah</p>
-⟦2⟧
-<p>sehingga peta $1 : 50\,000$ memiliki kontur setiap $25\,\mathrm{m}$.</p>
-<h3>Gradien dan kemiringan lereng</h3>
-⟦3⟧
-<p>Kedua jarak harus dalam satuan yang sama. Kenaikan $100\,\mathrm{m}$ sejauh $2\,\mathrm{km}$ sama dengan $\frac{100}{2000} = \frac{1}{20}$, yaitu $5\%$ atau sekitar $2{,}9^\circ$.</p>
-⟦4⟧`,
   'jufsfm0bpa': R`Peta kontur dua bukit dengan garis A–B dan penampang melintang di sepanjang garis itu`,
   'ihtflrcq58': R`Dua bukit dengan interval kontur 50 m, dan penampang melintang (profil) di sepanjang A–B.`,
   'lf52yutvlj': R`<p><b>Membaca kontur.</b> Garis yang rapat berarti lereng curam; garis yang renggang berarti lereng landai. Lingkaran tertutup dengan nilai yang makin tinggi ke dalam adalah bukit; kontur tidak pernah berpotongan atau bercabang. Jika kontur membentuk huruf V, ujung V mengarah ke <b>hulu</b> pada lembah dan ke <b>bawah</b> pada punggungan.</p>`,

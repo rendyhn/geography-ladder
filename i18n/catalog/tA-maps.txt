@@ -1,6 +1,6 @@
 ##### geo-concepts
-@zbb7dz97pb  ; 0=Tbl([T`Object`, T`What it is`, T`Example | 1=FigW(hubSvg(T`Geography`, [T`Location`,  | 2=Tbl([T`Concept`, T`Meaning`], [
-  [T`Loc | 3=Key(T`<p><b>Four principles.</b> <i>Dist | 4=Tip(T`<p>To name the concept in a questi
+@ltvz4x899f  ; 0=Tbl([T`Object`, T`What it is`, T`Example | 1=FigW(hubSvg(T`Geography`, [T`Location`,  | 2=Tbl([T`Concept`, T`Meaning`], [
+  [T`Loc | 3=Key(T`<p><b>Four principles.</b> <i>Dist | 4=Fig(vennSvg([T`Spatial`, T`Ecological`,  | 5=Tip(T`<p>To name the concept in a questi
 
 <p><b>Geography</b> studies the similarities and differences between phenomena on the Earth's surface, seen from a spatial, environmental or regional point of view. A geographer always asks three questions: <i>where</i> is it, <i>why</i> is it there, and <i>what does it mean</i> for people and the environment?</p>
 <h3>The objects of geography</h3>
@@ -10,6 +10,7 @@
 ⟦2⟧
 ⟦3⟧
 ⟦4⟧
+⟦5⟧
 @d5yammh8qw
 Object
 @1b00t4z3zq2
@@ -80,6 +81,16 @@ each area has its own mix of characteristics that sets it apart
 how phenomena in one area are related, e.g. deforestation and floods downstream
 @2131rmdvvgn
 <p><b>Four principles.</b> <i>Distribution</i>: phenomena are spread unevenly over the Earth. <i>Interrelation</i>: phenomena influence each other. <i>Description</i>: the pattern and its causes are explained in words, maps, tables and graphs. <i>Chorology</i>: a phenomenon is studied together with everything around it in its region.</p><p><b>Three approaches.</b> The <i>spatial</i> approach looks at where things are and why. The <i>ecological</i> approach looks at the relationship between people and their environment. The <i>regional complex</i> approach combines both to compare whole regions.</p>
+@zh0lxwsko0
+Spatial
+@15if5a2mg9e
+Ecological
+@29syuxo4y28
+Regional complex
+@1s4fqicypq6
+Three overlapping circles for the spatial, ecological and regional complex approaches
+@1398smj0x75
+The three approaches of geography overlap: <i>spatial</i> (where and why there), <i>ecological</i> (people and environment) and <i>regional complex</i> (both together, for a whole region).
 @215l8o2u06v
 <p>To name the concept in a question, find the key idea: "clustered together" is agglomeration, "easy to reach" is accessibility, "one place supplies another" is interaction, "the shape of the land" is morphology.</p>
 @1eyzaejtlp7
@@ -230,7 +241,7 @@ When
 Where describes the location and distribution; why explains the causes; what does it mean looks at the consequences for people and the environment.
 
 ##### map-scale
-@1ls4j68i65u  ; 0=FigW(mapSheetSvg({ title: T`Land Use of  | 1=Tbl([T`Component`, T`Purpose`], [[T`Titl | 2=Fm(T`\text{real distance} = \text{map di | 3=Key(T`<p>Work in centimetres, then conve | 4=Tip(T`<p>If a map is enlarged 2 times, e
+@s0be74r35h  ; 0=FigW(mapSheetSvg({ title: T`Land Use of  | 1=Tbl([T`Component`, T`Purpose`], [[T`Titl | 2=Fm(T`\text{real distance} = \text{map di | 3=Key(T`<p>Work in centimetres, then conve | 4=Fig(graphicScaleSvg(), T`A graphic scale | 5=Tip(T`<p>If a map is enlarged 2 times, e
 
 <p>A <b>map</b> is a drawing of all or part of the Earth's surface on a flat plane, reduced by a scale and simplified with symbols. Maps are either <b>general</b> (showing many features, such as a topographic map or an atlas) or <b>thematic</b> (showing one theme, such as rainfall or population density).</p>
 ⟦0⟧
@@ -239,8 +250,9 @@ Where describes the location and distribution; why explains the causes; what doe
 <p>A <b>numerical scale</b> such as $1 : 50\,000$ means 1 unit on the map equals 50 000 of the same units on the ground. A <b>verbal scale</b> says it in words ("1 cm represents 500 m"), and a <b>graphic scale</b> is a bar, which stays correct when the map is enlarged or reduced.</p>
 ⟦2⟧
 ⟦3⟧
-<p>A <b>large-scale</b> map (e.g. $1 : 5\,000$) shows a small area in great detail; a <b>small-scale</b> map (e.g. $1 : 1\,000\,000$) shows a large area with little detail. The bigger the denominator, the smaller the scale.</p>
 ⟦4⟧
+<p>A <b>large-scale</b> map (e.g. $1 : 5\,000$) shows a small area in great detail; a <b>small-scale</b> map (e.g. $1 : 1\,000\,000$) shows a large area with little detail. The bigger the denominator, the smaller the scale.</p>
+⟦5⟧
 @28smpy8bvgs
 Land Use of Sukamaju Island
 @1mdxc4hikdp
@@ -293,6 +305,8 @@ show where the data came from and how up to date it is
 \text{real distance} = \text{map distance} \times \text{scale denominator}
 @joi1lsrau5
 <p>Work in centimetres, then convert: $1\,\mathrm{km} = 100\,000\,\mathrm{cm}$. On a $1 : 50\,000$ map, $4\,\mathrm{cm}$ represents $200\,000\,\mathrm{cm} = 2\,\mathrm{km}$. Areas scale with the <b>square</b>: $1\,\mathrm{cm^2}$ on that map is $(0.5\,\mathrm{km})^2 = 0.25\,\mathrm{km^2}$.</p>
+@1cite4yhgp1
+A graphic scale for $1 : 50\,000$: each 2 cm block on the map stands for 1 km. It stays correct even if the map is enlarged or shrunk.
 @1zaephm0zmk
 <p>If a map is enlarged 2 times, everything on it is twice as long, so the scale denominator is halved: $1 : 50\,000$ becomes $1 : 25\,000$.</p>
 @mh5py5z2xo  ; 0=M(den) | 1=Q(d, 'cm')
@@ -375,15 +389,16 @@ An inset map
 Thematic maps show one subject; general maps such as topographic maps show many kinds of feature together.
 
 ##### coordinates
-@143h5zc7enc  ; 0=Fig(globeSvg({ lat: -6.9, lon: 107.6, na | 1=Tbl([T``, T`Latitude`, T`Longitude`], [[ | 2=Key(T`<p>Along a meridian, $1^\circ$ of  | 3=Tip(T`<p>Important parallels: the Tropic
+@29tjjz7ls0x  ; 0=Fig(globeSvg({ lat: -6.9, lon: 107.6, na | 1=Tbl([T``, T`Latitude`, T`Longitude`], [[ | 2=Key(T`<p>Along a meridian, $1^\circ$ of  | 3=Fig(planeSvg({ W: 340, H: 210, x: [0, 92 | 4=Tip(T`<p>Important parallels: the Tropic
 
 <p>Every place on Earth can be pinpointed with two angles measured from the centre of the Earth.</p>
 ⟦0⟧
 ⟦1⟧
 <p>Each degree is split into 60 minutes ($'$) and each minute into 60 seconds ($''$), so $6^\circ 30' = 6.5^\circ$. A location is written latitude first: Jakarta is about $6^\circ 12'\,\mathrm{S},\ 106^\circ 49'\,\mathrm{E}$.</p>
 ⟦2⟧
-<p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
 ⟦3⟧
+<p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
+⟦4⟧
 @9q6nkst6t
 A globe with parallels and meridians; the equator, the prime meridian and the lines through Bandung are highlighted
 @l98q7xe428
@@ -418,6 +433,12 @@ the equator
 the prime meridian
 @2enwwxzfl1l
 <p>Along a meridian, $1^\circ$ of latitude is always about $111\,\mathrm{km}$. Along a parallel, $1^\circ$ of longitude is $111\,\mathrm{km}$ at the equator but shrinks towards the poles:</p><p>$$1^\circ\ \text{of longitude} \approx 111 \cos\varphi\ \mathrm{km}$$</p><p>where $\varphi$ is the latitude. At $60^\circ$ it is only about $55.5\,\mathrm{km}$.</p>
+@12mh53xgt6w
+latitude
+@d4tfrutcju
+Length of one degree of longitude falling from 111 kilometres at the equator to zero at the poles
+@nw1dgxj4we
+One degree of longitude is $111\,\mathrm{km} \times \cos(\text{latitude})$: 111 km at the equator, about 56 km at $60^\circ$, and zero at the poles.
 @12smo81m14b
 <p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>
 @jvocqvpl2c  ; 0=lo | 1=dir('E') | 2=w(a) | 3=w(b)
@@ -781,24 +802,27 @@ Globe
 That grid is produced by a ⟦0⟧ projection.
 
 ##### contours
-@n7hkpn7lfw  ; 0=FigW(contourSvg([[30, 26, 330, 11], [68, | 1=Key(T`<p><b>Reading contours.</b> Lines  | 2=Fm(T`\text{CI} = \frac{\text{scale denom | 3=Fm(T`\text{gradient} = \frac{\text{diffe | 4=Tip(T`<p>Measure the horizontal distance
+@10i8o0cvebf  ; 0=FigW(contourSvg([[30, 26, 330, 11], [68, | 1=Key(T`<p><b>Reading contours.</b> Lines  | 2=FigW(contourSpacingSvg(), T`The spacing  | 3=Fm(T`\text{CI} = \frac{\text{scale denom | 4=Fm(T`\text{gradient} = \frac{\text{diffe | 5=Tip(T`<p>Measure the horizontal distance
 
 <p>Topographic maps show the height of the land with <b>contour lines</b>: lines joining points of equal height above mean sea level. The height difference between neighbouring contours is the <b>contour interval</b>; every fifth line (the index contour) is usually drawn thicker.</p>
 ⟦0⟧
 ⟦1⟧
-<p>A common rule for the contour interval of a map is</p>
 ⟦2⟧
+<p>A common rule for the contour interval of a map is</p>
+⟦3⟧
 <p>so a $1 : 50\,000$ map has contours every $25\,\mathrm{m}$.</p>
 <h3>Gradient and slope</h3>
-⟦3⟧
-<p>Both distances must be in the same unit. A rise of $100\,\mathrm{m}$ over $2\,\mathrm{km}$ is $\frac{100}{2000} = \frac{1}{20}$, which is $5\%$ or about $2.9^\circ$.</p>
 ⟦4⟧
+<p>Both distances must be in the same unit. A rise of $100\,\mathrm{m}$ over $2\,\mathrm{km}$ is $\frac{100}{2000} = \frac{1}{20}$, which is $5\%$ or about $2.9^\circ$.</p>
+⟦5⟧
 @jufsfm0bpa
 A contour map of two hills with a line A–B and the cross-section along it
 @ihtflrcq58
 Two hills with a 50 m contour interval, and the cross-section (profile) along A–B.
 @lf52yutvlj
 <p><b>Reading contours.</b> Lines close together mean a steep slope; far apart, a gentle slope. Closed rings with rising values are a hill; contours never cross or split. Where contours form a V, the V points <b>upstream</b> in a valley and <b>downhill</b> along a ridge.</p>
+@gkoqtoggdl
+The spacing of contours shows the slope: the same 200 m climb over a short distance is steep, over a long distance gentle.
 @1kngzlg9yce
 \text{CI} = \frac{\text{scale denominator}}{2000}\ \text{metres}
 @14yo3awq2qj
@@ -916,8 +940,6 @@ Spectral signatures of vegetation, dry soil and water
 Each surface reflects a different share of each wavelength. Healthy plants reflect strongly in the near infrared, water absorbs almost all of it.
 @2b7dqkzfjqd
 Resolution
-@zh0lxwsko0
-Spatial
 @18q8ktg8694
 the size of the smallest object that can be seen (one pixel covers e.g. $30\,\mathrm{m} \times 30\,\mathrm{m}$)
 @8ekfaxg1xx

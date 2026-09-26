@@ -76,15 +76,6 @@ addT('id', {
   '110sn23wjt': R`Berdiri di dekat jendela`,
   'zb786tinxl': R`Memakai lift untuk keluar dari gedung`,
   'sdxcetovdb': R`Merunduk, berlindung, dan berpegangan melindungimu dari benda yang jatuh. Keluarlah hanya setelah guncangan berhenti, dan jangan memakai lift.`,
-  '1a5d92jqmzq': R`
-<p>Tenaga dari dalam Bumi (<b>endogen</b>) membangun daratan; tenaga dari permukaan (<b>eksogen</b>) mengikisnya. Proses eksogen meliputi pelapukan, gerakan massa, erosi, dan pengendapan.</p>
-⟦0⟧
-⟦1⟧
-<h3>Gerakan massa</h3>
-<p><b>Gerakan massa</b> adalah perpindahan material hasil pelapukan menuruni lereng karena gaya gravitasi: <b>runtuhan batu</b>, <b>tanah longsor</b> (massa yang meluncur di atas bidang gelincir), <b>aliran lumpur</b>, dan <b>rayapan tanah</b> yang lambat (ditandai pohon dan pagar yang miring). Gerakan massa paling mungkin terjadi di lereng terjal, setelah hujan lebat, di tempat yang vegetasinya telah dibabat, dan di tempat yang diguncang gempa.</p>
-<h3>Erosi dan pengendapan</h3>
-<p><b>Erosi</b> adalah pengikisan dan pengangkutan material oleh air mengalir, angin, gelombang, dan gletser. Ketika tenaga pengangkutnya melemah, muatannya diendapkan: <b>sedimentasi</b>. Erosi tanah oleh hujan di lahan pertanian miring yang terbuka merupakan masalah serius; erosi dapat dikurangi dengan terasering, pembajakan menurut kontur, tanaman penutup tanah, dan reboisasi.</p>
-⟦2⟧`,
   '1uexx2zh8cp': R`Pelapukan`,
   '13vl8cid5at': R`Cara kerja`,
   '1q9wj278yrc': R`Fisik (mekanis)`,

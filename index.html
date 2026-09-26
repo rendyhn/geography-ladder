@@ -204,6 +204,39 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .fig-dot { fill: var(--ink); }
 .fig-text { fill: var(--ink); font: italic 600 15px var(--f-body); }
 .fig-small { fill: var(--ink-2); font: 12px var(--f-body); }
+.fig.fig-wide > svg { max-width: 680px; }
+.fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; max-width: 680px; }
+.fig-row svg { width: 100%; height: auto; display: block; }
+.fig-row .cap { font-size: 0.8rem; color: var(--ink-3); text-align: center; margin-top: 4px; }
+/* figure library (src/fig.js) */
+.mf-grid { stroke: var(--rule-soft); stroke-width: 1; }
+.mf-axis { stroke: var(--ink-3); stroke-width: 1.4; fill: none; }
+.mf-line { stroke: var(--ink-2); stroke-width: 1.6; fill: none; }
+.mf-thin { stroke: var(--ink-3); stroke-width: 0.8; fill: none; }
+.mf-ink { fill: var(--ink-2); } .mf-ink3 { fill: var(--ink-3); }
+.mf-c1, .mf-c2, .mf-c3, .mf-c4 { fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.mf-c1 { stroke: var(--accent); } .mf-c2 { stroke: var(--lv1); } .mf-c3 { stroke: var(--lv2); } .mf-c4 { stroke: var(--lv4); }
+.mf-s1 { fill: var(--accent); } .mf-s2 { fill: var(--lv1); } .mf-s3 { fill: var(--lv2); } .mf-s4 { fill: var(--lv4); }
+.mf-f1 { fill: var(--accent); fill-opacity: 0.18; } .mf-f2 { fill: var(--lv1); fill-opacity: 0.22; } .mf-f3 { fill: var(--lv2); fill-opacity: 0.22; } .mf-f4 { fill: var(--lv4); fill-opacity: 0.2; }
+.mf-s1l, .mf-s2l, .mf-s3l, .mf-s4l { stroke: var(--ink-2); }
+.mf-s1l { fill: color-mix(in srgb, var(--accent) 26%, var(--paper)); } .mf-s2l { fill: color-mix(in srgb, var(--lv1) 26%, var(--paper)); }
+.mf-s3l { fill: color-mix(in srgb, var(--lv2) 26%, var(--paper)); } .mf-s4l { fill: color-mix(in srgb, var(--lv4) 24%, var(--paper)); }
+.mf-shape { fill: var(--accent-soft); stroke: var(--ink-2); stroke-width: 1.6; }
+.mf-cell { fill: var(--paper); stroke: var(--ink-3); }
+.mf-cellc { fill: var(--sunken); stroke: var(--rule); }
+.mf-frame, .mf-ring { fill: none; stroke: var(--ink-2); stroke-width: 1.8; }
+.mf-paper { fill: var(--paper); }
+.mf-dot { fill: var(--ink); } .mf-open { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
+.mf-open-c { fill: var(--paper); stroke: var(--accent); stroke-width: 2.6; }
+.mf-prime { fill: color-mix(in srgb, var(--lv1) 24%, var(--paper)); stroke: var(--lv1); stroke-width: 2; }
+.mf-node-c { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.mf-lab, .mf-lab-b, .mf-small, .mf-var, .mf-node { paint-order: stroke; stroke: var(--paper); stroke-width: 3.5px; stroke-linejoin: round; }
+.mf-lab { fill: var(--ink); font: 13px var(--f-body); } .mf-lab-b { fill: var(--ink); font: 700 13px var(--f-body); }
+.mf-small { fill: var(--ink-2); font: 11.5px var(--f-body); }
+.mf-var { fill: var(--ink); font: italic 600 15px 'Times New Roman', Georgia, serif; }
+.mf-node { fill: var(--ink); font: 700 15px var(--f-body); }
+.mf-node-a { fill: var(--accent); font: 700 15px var(--f-body); paint-order: stroke; stroke: var(--paper); stroke-width: 3.5px; }
+.mf-carry { fill: var(--lv4, var(--accent)); font: 700 12px var(--f-body); }
 .lesson-foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); display: grid; gap: 20px; }
 .lesson-foot > .btn { justify-self: start; }
 .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -1786,6 +1819,465 @@ function slopeSvg(rise, run, { label, names = {} } = {}) {
 }
 
 /* ==========================================================================
+   Figures: small SVG builders for the lessons and questions.
+   Colours come from CSS classes (.mf-*) so every figure follows light/dark mode.
+   ========================================================================== */
+const svgBox = (w, h, label) => `<svg viewBox="0 0 ${w} ${h}" style="max-width:${Math.round(w * 1.3)}px" role="img" aria-label="${String(label || '').split('"').join('&quot;')}">`;   // small figures do not blow up to full width
+const niceStep = (top, n = 4) => { const raw = top / n, p = 10 ** Math.floor(Math.log10(raw)), m = raw / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * p; };
+const sT = (x, y, t, cls = 'mf-lab', anchor = 'middle', extra = '') => `<text x="${f1(x)}" y="${f1(y)}" class="${cls}" text-anchor="${anchor}"${extra}>${t}</text>`;
+const sL = (x1, y1, x2, y2, cls = 'mf-line', extra = '') => `<line x1="${f1(x1)}" y1="${f1(y1)}" x2="${f1(x2)}" y2="${f1(y2)}" class="${cls}"${extra}/>`;
+const sC = (cx, cy, r, cls = 'mf-shape', extra = '') => `<circle cx="${f1(cx)}" cy="${f1(cy)}" r="${f1(r)}" class="${cls}"${extra}/>`;
+const sR = (x, y, w, h, cls = 'mf-shape', rx = 0, extra = '') => `<rect x="${f1(x)}" y="${f1(y)}" width="${f1(w)}" height="${f1(h)}" rx="${rx}" class="${cls}"${extra}/>`;
+const sP = (d, cls = 'mf-line', extra = '') => `<path d="${d}" class="${cls}"${extra}/>`;
+const sPoly = (pts, cls = 'mf-shape', extra = '') => `<polygon points="${pts.map(p => f1(p[0]) + ',' + f1(p[1])).join(' ')}" class="${cls}"${extra}/>`;
+const sPline = (pts, cls = 'mf-line', extra = '') => `<polyline points="${pts.map(p => f1(p[0]) + ',' + f1(p[1])).join(' ')}" class="${cls}"${extra}/>`;
+function sArrow(x1, y1, x2, y2, cls = 'mf-line', head = 8) {   // line with a filled head; cls may be a curve class (mf-c1 …)
+  const a = Math.atan2(y2 - y1, x2 - x1), bx = x2 - head * Math.cos(a), by = y2 - head * Math.sin(a), w = head * 0.45;
+  const hc = cls.replace(/mf-c(\d)/, 'mf-s$1').replace('mf-line', 'mf-ink').replace('mf-axis', 'mf-ink3');
+  return sL(x1, y1, bx, by, cls) + sPoly([[x2, y2], [bx + w * Math.sin(a), by - w * Math.cos(a)], [bx - w * Math.sin(a), by + w * Math.cos(a)]], hc);
+}
+const sAngle = (cx, cy, r, a1, a2, cls = 'mf-line') => {   // arc between two directions (degrees, maths convention, y up)
+  const p = a => [cx + r * Math.cos(a * Math.PI / 180), cy - r * Math.sin(a * Math.PI / 180)], [x1, y1] = p(a1), [x2, y2] = p(a2);
+  return sP(`M${f1(x1)} ${f1(y1)} A${r} ${r} 0 ${Math.abs(a2 - a1) > 180 ? 1 : 0} 0 ${f1(x2)} ${f1(y2)}`, cls, ' fill="none"');
+};
+const sRight = (x, y, ux, uy, vx, vy, s = 11) => sPline([[x + ux * s, y + uy * s], [x + ux * s + vx * s, y + uy * s + vy * s], [x + vx * s, y + vy * s]], 'mf-line');   // right-angle mark
+
+/* ---------- coordinate plane with curves, points, segments and shading ---------- */
+function planeSvg(o) {
+  const W = o.W || 420, [a, b] = o.x, [c, d] = o.y, L = 34, R = 16, Tp = 14, B = 26;
+  const H = o.H || (o.equal ? Math.round((W - L - R) * (d - c) / (b - a) + Tp + B) : 300);
+  const X = x => L + (x - a) / (b - a) * (W - L - R), Y = y => Tp + (d - y) / (d - c) * (H - Tp - B);
+  const [sx, sy] = o.step || [1, 1];
+  let s = svgBox(W, H, o.label);
+  if (o.grid !== false) {
+    for (let x = Math.ceil(a / sx) * sx; x <= b + 1e-9; x += sx) s += sL(X(x), Y(d), X(x), Y(c), 'mf-grid');
+    for (let y = Math.ceil(c / sy) * sy; y <= d + 1e-9; y += sy) s += sL(X(a), Y(y), X(b), Y(y), 'mf-grid');
+  }
+  (o.shade || []).forEach(({ f, g = () => 0, from, to, cls = 'mf-f1' }) => {
+    const n = 80, top = [], bot = [];
+    for (let i = 0; i <= n; i++) { const x = from + (to - from) * i / n; top.push([X(x), Y(Math.max(c, Math.min(d, f(x))))]); bot.push([X(x), Y(Math.max(c, Math.min(d, g(x))))]); }
+    s += sPoly(top.concat(bot.reverse()), cls);
+  });
+  (o.polys || []).forEach(({ pts, cls = 'mf-f1' }) => { s += sPoly(pts.map(([x, y]) => [X(x), Y(y)]), cls); });
+  (o.rects || []).forEach(([x, y, w, h, cls = 'mf-f2']) => { s += sR(X(x), Y(y + h), X(x + w) - X(x), Y(y) - Y(y + h), cls); });
+  const y0 = Math.max(c, Math.min(d, 0)), x0 = Math.max(a, Math.min(b, 0));
+  s += sArrow(X(a), Y(y0), X(b) + 8, Y(y0), 'mf-axis', 7) + sArrow(X(x0), Y(c), X(x0), Y(d) - 8, 'mf-axis', 7);
+  if (o.ticks !== false) {
+    const lx = o.tickX || sx, ly = o.tickY || sy, fx0 = o.fmtX || F, fy0 = o.fmtY || F;
+    for (let x = Math.ceil(a / lx) * lx; x <= b + 1e-9; x += lx) if (Math.abs(x) > 1e-9) s += sL(X(x), Y(y0) - 3, X(x), Y(y0) + 3, 'mf-axis') + sT(X(x), Y(y0) + 15, fx0(+x.toFixed(6)), 'mf-small');
+    for (let y = Math.ceil(c / ly) * ly; y <= d + 1e-9; y += ly) if (Math.abs(y) > 1e-9) s += sL(X(x0) - 3, Y(y), X(x0) + 3, Y(y), 'mf-axis') + sT(X(x0) - 6, Y(y) + 4, fy0(+y.toFixed(6)), 'mf-small', 'end');
+    if (a <= 0 && b >= 0 && c <= 0 && d >= 0) s += sT(X(0) - 6, Y(0) + 14, '0', 'mf-small', 'end');
+  }
+  s += sT(X(b) + 4, Y(y0) - 8, o.xl || 'x', 'mf-var', 'end') + sT(X(x0) + 8, Y(d) + 4, o.yl || 'y', 'mf-var', 'start');
+  (o.segs || []).forEach(([x1, y1, x2, y2, cls = 'mf-line', dash]) => { s += sL(X(x1), Y(y1), X(x2), Y(y2), cls, dash ? ' stroke-dasharray="5 4"' : ''); });
+  (o.vecs || []).forEach(([x1, y1, x2, y2, cls = 'mf-c1']) => { s += sArrow(X(x1), Y(y1), X(x2), Y(y2), cls, 9); });
+  (o.circles || []).forEach(([cx, cy, r, cls = 'mf-c1']) => { s += `<ellipse cx="${f1(X(cx))}" cy="${f1(Y(cy))}" rx="${f1(X(cx + r) - X(cx))}" ry="${f1(Y(cy) - Y(cy + r))}" class="${cls}" fill="none"/>`; });
+  (o.fns || []).forEach(({ f, cls = 'mf-c1', from = a, to = b, n = 240, label, at, dx = 6, dy = -6, anchor = 'start', dash }) => {
+    let dstr = '', pen = false;
+    for (let i = 0; i <= n; i++) {
+      const x = from + (to - from) * i / n, y = f(x);
+      if (!isFinite(y) || y > d + (d - c) * 0.6 || y < c - (d - c) * 0.6) { pen = false; continue; }
+      dstr += `${pen ? 'L' : 'M'}${f1(X(x))} ${f1(Y(Math.max(c - (d - c) * 0.05, Math.min(d + (d - c) * 0.05, y))))}`; pen = true;
+    }
+    s += `<clipPath id="cp${++planeSvg.n}"><rect x="${L}" y="${Tp}" width="${W - L - R}" height="${H - Tp - B}"/></clipPath>` + sP(dstr, cls, ` fill="none" clip-path="url(#cp${planeSvg.n})"${dash ? ' stroke-dasharray="6 5"' : ''}`);
+    if (label) { const xa = at != null ? at : to; s += sT(X(xa) + dx, Y(f(xa)) + dy, label, 'mf-lab', anchor); }
+  });
+  (o.pts || []).forEach(([x, y, label, anchor = 'start', open, dx = 7, dy = -7]) => { s += sC(X(x), Y(y), 4, open ? 'mf-open' : 'mf-dot') + (label ? sT(X(x) + (anchor === 'end' ? -dx : anchor === 'middle' ? 0 : dx), Y(y) + dy, label, 'mf-lab', anchor) : ''); });
+  (o.texts || []).forEach(([x, y, t, anchor = 'middle', cls = 'mf-lab']) => { s += sT(X(x), Y(y), t, cls, anchor); });
+  return s + (o.extra ? o.extra(X, Y) : '') + '</svg>';
+}
+planeSvg.n = 0;
+
+/* ---------- number line ---------- */
+function numberLineSvg(o) {
+  const W = o.W || 460, H = o.H || 90, L = 24, R = 24, y = o.y || 52, { min, max } = o, step = o.step || 1, X = v => L + (v - min) / (max - min) * (W - L - R);
+  let s = svgBox(W, H, o.label) + sArrow(L - 10, y, W - 6, y, 'mf-axis', 7) + sArrow(L + 2, y, L - 12, y, 'mf-axis', 7);
+  const every = o.labelEvery || step, fmt = o.fmt || F;
+  for (let v = min, i = 0; v <= max + 1e-9; v = +(min + step * ++i).toFixed(9)) {
+    const major = Math.abs(v / every - Math.round(v / every)) < 1e-6;
+    s += sL(X(v), y - (major ? 6 : 3.5), X(v), y + (major ? 6 : 3.5), 'mf-axis') + (major && o.ticks !== false ? sT(X(v), y + 22, fmt(v), 'mf-small') : '');
+  }
+  if (o.ray) { const { from, dir, open } = o.ray, end = dir > 0 ? W - 10 : L - 10; s += sL(X(from), y, end, y, 'mf-c1', ' stroke-width="5" stroke-opacity="0.75"') + sC(X(from), y, 6, open ? 'mf-open-c' : 'mf-s1'); }
+  if (o.seg) { const [p, q, oa, ob] = o.seg; s += sL(X(p), y, X(q), y, 'mf-c1', ' stroke-width="5" stroke-opacity="0.75"') + sC(X(p), y, 6, oa ? 'mf-open-c' : 'mf-s1') + sC(X(q), y, 6, ob ? 'mf-open-c' : 'mf-s1'); }
+  (o.jumps || []).forEach(({ from, to, label, cls = 'mf-c2' }, i) => {
+    const x1 = X(from), x2 = X(to), h = Math.min(34, Math.abs(x2 - x1) * 0.5 + 10), mx = (x1 + x2) / 2;
+    s += sP(`M${f1(x1)} ${y - 6} Q${f1(mx)} ${f1(y - 6 - 2 * h)} ${f1(x2)} ${y - 6}`, cls, ' fill="none"') + sArrow(x2 - (x2 > x1 ? 7 : -7), y - 13, x2, y - 6, cls, 7);
+    if (label) s += sT(mx, y - 10 - h, label, 'mf-lab');
+  });
+  (o.marks || []).forEach(({ v, label, cls = 'mf-s1', below, open }) => { s += sC(X(v), y, 5.5, open ? 'mf-open-c' : cls) + (label ? sT(X(v), below ? y + 38 : y - 14, label, 'mf-lab') : ''); });
+  return s + '</svg>';
+}
+
+/* ---------- fraction bars, pies and grids ---------- */
+function fracBarsSvg(rows, { label, W = 440, total = 1, names } = {}) {   // rows: [n, d, text]
+  const rowH = 34, H = rows.length * (rowH + 10) + 6, L = names === false ? 8 : 64, bw = W - L - 10;
+  let s = svgBox(W, H, label);
+  rows.forEach(([n, d, t, cls = 'mf-s1'], r) => {
+    const y = 4 + r * (rowH + 10), cw = bw * total / d;
+    for (let i = 0; i < d; i++) s += sR(L + i * cw, y, cw, rowH, i < n ? cls : 'mf-cell', 0, ' stroke-width="1.5"');
+    s += sR(L, y, cw * d, rowH, 'mf-frame', 3);
+    if (t != null) s += sT(L - 10, y + rowH / 2 + 5, t, 'mf-lab-b', 'end');
+  });
+  return s + '</svg>';
+}
+function piesSvg(items, { label, r = 44 } = {}) {   // items: [n, d, text]
+  const W = items.length * (2 * r + 30) + 10, H = 2 * r + 40;
+  let s = svgBox(W, H, label);
+  items.forEach(([n, d, t, cls = 'mf-s1'], k) => {
+    const cx = 20 + r + k * (2 * r + 30), cy = r + 8;
+    for (let i = 0; i < d; i++) {
+      const a0 = -90 + 360 * i / d, a1 = -90 + 360 * (i + 1) / d, p = a => [cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)], [x0, y0] = p(a0), [x1, y1] = p(a1);
+      s += d === 1 ? sC(cx, cy, r, i < n ? cls : 'mf-cell') : sP(`M${cx} ${cy} L${f1(x0)} ${f1(y0)} A${r} ${r} 0 ${a1 - a0 > 180 ? 1 : 0} 1 ${f1(x1)} ${f1(y1)}Z`, i < n ? cls : 'mf-cell', ' stroke-width="1.5"');
+    }
+    s += sC(cx, cy, r, 'mf-frame') + (t != null ? sT(cx, cy + r + 24, t, 'mf-lab-b') : '');
+  });
+  return s + '</svg>';
+}
+function gridSvg(rows, cols, shaded, { label, cell = 22, dots = false, cls = 'mf-s1', caption } = {}) {   // shaded: count (row by row) or function (r, c) => class | false
+  const W = Math.max(cols * cell + 8, caption ? String(caption).length * 7.6 : 0), H = rows * cell + 8 + (caption ? 22 : 0), x0 = (W - cols * cell) / 2;
+  let s = svgBox(W, H, label);
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+    const on = typeof shaded === 'function' ? shaded(r, c) : r * cols + c < shaded, x = x0 + c * cell, y = 4 + r * cell;
+    if (on === null) continue;   // null leaves the cell out entirely
+    s += dots ? sC(x + cell / 2, y + cell / 2, cell * 0.32, on ? (typeof on === 'string' ? on : cls) : 'mf-cell') : sR(x, y, cell, cell, on ? (typeof on === 'string' ? on : cls) : 'mf-cell', 0, ' stroke-width="1.2"');
+  }
+  if (!dots) s += sR(x0, 4, cols * cell, rows * cell, 'mf-frame', 2);
+  return s + (caption ? sT(W / 2, H - 4, caption, 'mf-lab') : '') + '</svg>';
+}
+
+/* ---------- area model for multiplication or expanding brackets ---------- */
+function areaModelSvg(top, side, { label, cells, total } = {}) {   // top/side: [value or text, …] with sizes
+  const W = 440, L = 60, Tp = 34, sizes = v => v.map(p => p[1]);
+  const tw = sizes(top).reduce((x, y) => x + y, 0), sh = sizes(side).reduce((x, y) => x + y, 0), k = Math.min((W - L - 16) / tw, 190 / sh), H = Tp + sh * k + 12 + (total ? 24 : 0);
+  let s = svgBox(W, H, label), x = L;
+  top.forEach(([t, w]) => { s += sT(x + w * k / 2, Tp - 10, t, 'mf-lab-b'); x += w * k; });
+  let y = Tp;
+  side.forEach(([t, h], i) => {
+    s += sT(L - 10, y + h * k / 2 + 5, t, 'mf-lab-b', 'end'); let xx = L;
+    top.forEach(([, w], j) => { s += sR(xx, y, w * k, h * k, ['mf-s1l', 'mf-s2l', 'mf-s3l', 'mf-s4l'][(i + j) % 4], 0, ' stroke-width="1.5"') + sT(xx + w * k / 2, y + h * k / 2 + 5, cells ? cells[i][j] : '', 'mf-lab'); xx += w * k; });
+    y += h * k;
+  });
+  return s + (total ? sT(L, H - 6, total, 'mf-lab', 'start') : '') + '</svg>';
+}
+
+/* ---------- factor tree ---------- */
+function factorTreeSvg(n, { label } = {}) {
+  const chain = []; let m = n;
+  while (true) { let p = 2; while (m % p) p++; if (p === m) break; chain.push(p); m /= p; }
+  const depth = chain.length, W = 70 + 40 * depth + 90, H = 50 * depth + 58;
+  let s = svgBox(W, H, label), x = 50, y = 24, v = n;
+  s += sT(x, y + 5, F(v), 'mf-node');
+  chain.forEach(p => {
+    const q = v / p;
+    s += sL(x - 5, y + 10, x - 24, y + 36) + sL(x + 5, y + 10, x + 24, y + 36) + sC(x - 30, y + 48, 14, 'mf-prime') + sT(x - 30, y + 53, F(p), 'mf-lab-b');
+    x += 30; y += 50; v = q;
+    s += q === m && chain[chain.length - 1] === p ? sC(x, y - 2, 14, 'mf-prime') + sT(x, y + 3, F(q), 'mf-lab-b') : sT(x, y + 3, F(q), 'mf-node');
+  });
+  return s + '</svg>';
+}
+/* ---------- simple charts ---------- */
+function barsSvg(items, { label, yMax, step, W = 440, H = 240, hist = false, yl = '', values = true, cls = 'mf-s1' } = {}) {
+  const L = 40, R = 10, Tp = 18, B = 34, n = items.length, st = step || niceStep((yMax || Math.max(...items.map(i => i[1]))) * 1.1), top = yMax || Math.ceil(Math.max(...items.map(i => i[1])) * 1.1 / st) * st;
+  const X = i => L + i * (W - L - R) / n, Y = v => Tp + (1 - v / top) * (H - Tp - B), bw = (W - L - R) / n * (hist ? 1 : 0.62);
+  let s = svgBox(W, H, label);
+  for (let v = 0; v <= top + 1e-9; v += st) s += sL(L, Y(v), W - R, Y(v), 'mf-grid') + sT(L - 6, Y(v) + 4, F(+v.toFixed(6)), 'mf-small', 'end');
+  items.forEach(([t, v, c], i) => { const x = X(i) + ((W - L - R) / n - bw) / 2; s += sR(x, Y(v), bw, Y(0) - Y(v), c || cls, hist ? 0 : 2, hist ? ' stroke-width="1.5"' : '') + (hist ? '' : sT(x + bw / 2, H - B + 16, t, 'mf-small')) + (values ? sT(x + bw / 2, Y(v) - 5, F(v), 'mf-small') : ''); });
+  if (hist) items.forEach(([t], i) => { s += sT(X(i), H - B + 16, t, 'mf-small'); });
+  if (hist && items.length && items[items.length - 1][3] != null) s += sT(X(n), H - B + 16, items[n - 1][3], 'mf-small');
+  return s + sL(L, Y(0), W - R, Y(0), 'mf-axis') + sL(L, Tp - 4, L, Y(0), 'mf-axis') + (yl ? sT(L - 4, Tp - 6, yl, 'mf-small', 'start') : '') + '</svg>';
+}
+function dotPlotSvg(data, { label, min, max, marks = [] } = {}) {
+  const W = 440, lo = min != null ? min : Math.min(...data), hi = max != null ? max : Math.max(...data), cnt = {};
+  data.forEach(v => { cnt[v] = (cnt[v] || 0) + 1; });
+  const mh = marks.length ? (marks.length > 1 ? 38 : 22) : 0, H = 60 + 14 * Math.max(...Object.values(cnt)) + mh, L = 24, R = 24, y = H - 34 - mh, X = v => L + (v - lo) / (hi - lo || 1) * (W - L - R);
+  let s = svgBox(W, H, label) + sL(L - 8, y, W - R + 8, y, 'mf-axis');
+  for (let v = lo; v <= hi; v++) s += sL(X(v), y, X(v), y + 5, 'mf-axis') + sT(X(v), y + 19, F(v), 'mf-small');
+  Object.entries(cnt).forEach(([v, k]) => { for (let i = 0; i < k; i++) s += sC(X(+v), y - 9 - i * 14, 5.5, 'mf-s1'); });
+  marks.forEach(([v, t, cls], i) => { s += sL(X(v), 12, X(v), y, cls || 'mf-c2', ' stroke-dasharray="4 3" stroke-width="2"') + sT(X(v), H - 6 - (marks.length > 1 && i % 2 === 0 ? 16 : 0), t, 'mf-lab'); });
+  return s + '</svg>';
+}
+function boxPlotSvg([mn, q1, md, q3, mx], { label, lo, hi, step = 1, names } = {}) {
+  const W = 440, H = 118, L = 24, R = 24, y = 44, a = lo != null ? lo : mn, b = hi != null ? hi : mx, X = v => L + (v - a) / (b - a) * (W - L - R);
+  let s = svgBox(W, H, label) + sL(X(mn), y, X(q1), y) + sL(X(q3), y, X(mx), y) + sL(X(mn), y - 10, X(mn), y + 10) + sL(X(mx), y - 10, X(mx), y + 10);
+  s += sR(X(q1), y - 18, X(q3) - X(q1), 36, 'mf-s1l', 3, ' stroke-width="1.8"') + sL(X(md), y - 18, X(md), y + 18, 'mf-c2', ' stroke-width="3"');
+  s += sL(L - 6, 88, W - R + 6, 88, 'mf-axis');
+  for (let v = a; v <= b + 1e-9; v += step) s += sL(X(v), 88, X(v), 93, 'mf-axis') + sT(X(v), 108, F(+v.toFixed(6)), 'mf-small');
+  const nm = names || ['min', 'Q₁', T`median`, 'Q₃', 'max'];
+  [mn, q1, md, q3, mx].forEach((v, i) => { s += sT(X(v), i % 2 ? 72 : 18, nm[i], 'mf-small'); });
+  return s + '</svg>';
+}
+
+/* ---------- geometry ---------- */
+function triangleSvg(P, { label, sides = [], verts = [], angles = [], right, fill = 'mf-shape', H = 220, W = 360 } = {}) {   // P: three points in px
+  let s = svgBox(W, H, label) + sPoly(P, fill);
+  const cen = [(P[0][0] + P[1][0] + P[2][0]) / 3, (P[0][1] + P[1][1] + P[2][1]) / 3];
+  sides.forEach((t, i) => { if (!t) return; const A = P[i], Bp = P[(i + 1) % 3], mx = (A[0] + Bp[0]) / 2, my = (A[1] + Bp[1]) / 2, dx = mx - cen[0], dy = my - cen[1], k = 16 / Math.hypot(dx, dy); s += sT(mx + dx * k, my + dy * k + 5, t, 'mf-var'); });
+  verts.forEach((t, i) => { if (!t) return; const dx = P[i][0] - cen[0], dy = P[i][1] - cen[1], k = 16 / Math.hypot(dx, dy); s += sT(P[i][0] + dx * k, P[i][1] + dy * k + 5, t, 'mf-lab-b'); });
+  angles.forEach((t, i) => {
+    if (!t) return; const A = P[i], u = P[(i + 1) % 3], v = P[(i + 2) % 3], a1 = Math.atan2(A[1] - u[1], u[0] - A[0]) * 180 / Math.PI, a2 = Math.atan2(A[1] - v[1], v[0] - A[0]) * 180 / Math.PI;
+    let lo = Math.min(a1, a2), hi = Math.max(a1, a2); if (hi - lo > 180) [lo, hi] = [hi, lo + 360];
+    const mid = (lo + hi) / 2 * Math.PI / 180; s += sAngle(A[0], A[1], 22, lo, hi, 'mf-c2') + sT(A[0] + 36 * Math.cos(mid), A[1] - 36 * Math.sin(mid) + 5, t, 'mf-var');
+  });
+  if (right != null) { const A = P[right], u = P[(right + 1) % 3], v = P[(right + 2) % 3], nu = Math.hypot(u[0] - A[0], u[1] - A[1]), nv = Math.hypot(v[0] - A[0], v[1] - A[1]); s += sRight(A[0], A[1], (u[0] - A[0]) / nu, (u[1] - A[1]) / nu, (v[0] - A[0]) / nv, (v[1] - A[1]) / nv); }
+  return s + '</svg>';
+}
+function anglesRowSvg(items, { label } = {}) {   // items: [degrees, name]
+  const cw = 130, W = items.length * cw, H = 128;
+  let s = svgBox(W, H, label);
+  items.forEach(([deg, name], i) => {
+    const r = 70, a = deg * Math.PI / 180, e = Math.max(0, -0.8 * r * Math.cos(a)), cx = i * cw + 10 + e, cy = 82, rr = Math.min(r, cw - 20 - e);
+    s += sL(cx, cy, cx + rr, cy, 'mf-line', ' stroke-width="2"') + sL(cx, cy, cx + r * Math.cos(a) * (deg > 90 ? 0.8 : 1), cy - r * Math.sin(a) * (deg > 90 ? 0.8 : 1), 'mf-line', ' stroke-width="2"');
+    s += deg === 90 ? sRight(cx, cy, 1, 0, 0, -1, 14) : sAngle(cx, cy, 20, 0, deg, 'mf-c2');
+    s += sT(cx + (deg > 120 ? 20 : 34), cy - 22 - (deg > 150 ? 6 : 0), `${deg}°`, 'mf-small', 'start') + sT(i * cw + cw / 2, H - 8, name, 'mf-lab-b');
+  });
+  return s + '</svg>';
+}
+function polygonsSvg(items, { label } = {}) {   // items: [sides, name]
+  const cw = 104, W = items.length * cw, H = 124;
+  let s = svgBox(W, H, label);
+  items.forEach(([n, name], i) => {
+    const cx = i * cw + cw / 2, cy = 50, r = 38, pts = [...Array(n)].map((_, k) => [cx + r * Math.cos(-Math.PI / 2 + 2 * Math.PI * k / n + (n % 2 ? 0 : Math.PI / n)), cy + r * Math.sin(-Math.PI / 2 + 2 * Math.PI * k / n + (n % 2 ? 0 : Math.PI / n))]);
+    s += sPoly(pts, ['mf-s1l', 'mf-s2l', 'mf-s3l', 'mf-s4l'][i % 4], ' stroke-width="1.8"') + sT(cx, 110, name, 'mf-lab-b');
+  });
+  return s + '</svg>';
+}
+/* a cuboid in oblique projection; optional unit cubes and labels */
+function cuboidSvg(l, w, h, { label, unit = 26, cubes = false, labels } = {}) {
+  const dx = unit * 0.5, dy = unit * 0.35, W = l * unit + w * dx + 90, H = h * unit + w * dy + 50, x0 = 44, y0 = H - 30;
+  const P = (x, y, z) => [x0 + x * unit + y * dx, y0 - z * unit - y * dy];
+  let s = svgBox(W, H, label);
+  const face = (pts, cls) => sPoly(pts.map(p => P(...p)), cls, ' stroke-width="1.6"');
+  s += face([[0, 0, 0], [l, 0, 0], [l, 0, h], [0, 0, h]], 'mf-s1l') + face([[0, 0, h], [l, 0, h], [l, w, h], [0, w, h]], 'mf-s2l') + face([[l, 0, 0], [l, w, 0], [l, w, h], [l, 0, h]], 'mf-s3l');
+  if (cubes) {
+    for (let i = 1; i < l; i++) s += sL(...P(i, 0, 0), ...P(i, 0, h), 'mf-thin') + sL(...P(i, 0, h), ...P(i, w, h), 'mf-thin');
+    for (let k = 1; k < h; k++) s += sL(...P(0, 0, k), ...P(l, 0, k), 'mf-thin') + sL(...P(l, 0, k), ...P(l, w, k), 'mf-thin');
+    for (let j = 1; j < w; j++) s += sL(...P(0, j, h), ...P(l, j, h), 'mf-thin') + sL(...P(l, j, 0), ...P(l, j, h), 'mf-thin');
+  }
+  const [lt, wt, ht] = labels || [`${l}`, `${w}`, `${h}`];
+  s += sT((P(0, 0, 0)[0] + P(l, 0, 0)[0]) / 2, y0 + 20, lt, 'mf-var') + sT(P(l, w / 2, 0)[0] + 16, P(l, w / 2, 0)[1] + 4, wt, 'mf-var', 'start') + sT(x0 - 10, (P(0, 0, 0)[1] + P(0, 0, h)[1]) / 2 + 5, ht, 'mf-var', 'end');
+  return s + '</svg>';
+}
+/* common solids side by side: 'cube' | 'cylinder' | 'cone' | 'sphere' | 'pyramid' | 'prism' */
+function solidsSvg(items, { label } = {}) {   // items: [kind, name]
+  const cw = 112, W = items.length * cw, H = 150;
+  let s = svgBox(W, H, label);
+  items.forEach(([k, name], i) => {
+    const cx = i * cw + cw / 2, by = 110;
+    if (k === 'cube' || k === 'prism') {
+      const a = 50, d = 20, x = cx - 34, y = by - a;
+      if (k === 'cube') s += sR(x, y, a, a, 'mf-s1l', 0, ' stroke-width="1.6"') + sPoly([[x, y], [x + d, y - d], [x + a + d, y - d], [x + a, y]], 'mf-s2l', ' stroke-width="1.6"') + sPoly([[x + a, y], [x + a + d, y - d], [x + a + d, by - d], [x + a, by]], 'mf-s3l', ' stroke-width="1.6"');
+      else s += sPoly([[x, by], [x + 36, by], [x + 18, by - 44]], 'mf-s1l', ' stroke-width="1.6"') + sPoly([[x + 36, by], [x + 68, by - 18], [x + 50, by - 62], [x + 18, by - 44]], 'mf-s3l', ' stroke-width="1.6"');
+    } else if (k === 'cylinder') s += sP(`M${cx - 30} ${by - 70} L${cx - 30} ${by} A30 9 0 0 0 ${cx + 30} ${by} L${cx + 30} ${by - 70}`, 'mf-s1l', ' stroke-width="1.6"') + `<ellipse cx="${cx}" cy="${by - 70}" rx="30" ry="9" class="mf-s2l" stroke-width="1.6"/>`;
+    else if (k === 'cone') s += sP(`M${cx - 32} ${by} L${cx} ${by - 78} L${cx + 32} ${by} A32 9 0 0 1 ${cx - 32} ${by}Z`, 'mf-s1l', ' stroke-width="1.6"') + sP(`M${cx - 32} ${by} A32 9 0 0 1 ${cx + 32} ${by}`, 'mf-line', ' fill="none" stroke-dasharray="4 3"');
+    else if (k === 'sphere') s += sC(cx, by - 38, 38, 'mf-s1l', ' stroke-width="1.6"') + `<ellipse cx="${cx}" cy="${by - 38}" rx="38" ry="11" fill="none" class="mf-line" stroke-dasharray="4 3"/>`;
+    else if (k === 'pyramid') s += sPoly([[cx - 36, by], [cx + 22, by], [cx, by - 76]], 'mf-s1l', ' stroke-width="1.6"') + sPoly([[cx + 22, by], [cx + 40, by - 16], [cx, by - 76]], 'mf-s3l', ' stroke-width="1.6"');
+    s += sT(cx, H - 10, name, 'mf-lab-b');
+  });
+  return s + '</svg>';
+}
+
+/* ---------- diagrams ---------- */
+function treeSvg(levels, { label, W = 440, leaf } = {}) {   // levels: [[labels of the first branches with probabilities], [...second level per branch]]
+  const [lv1, lv2] = levels, n1 = lv1.length, n2 = lv2 ? lv2[0].length : 0, leaves = n1 * Math.max(1, n2), H = Math.max(140, leaves * 36 + 20);
+  const x0 = 20, x1 = lv2 ? 180 : 260, x2 = 340, rowY = i => 18 + (i + 0.5) * (H - 30) / leaves;
+  let s = svgBox(W, H, label) + sC(x0, H / 2, 4, 'mf-dot');
+  lv1.forEach(([t, p], i) => {
+    const y1 = lv2 ? (rowY(i * n2) + rowY(i * n2 + n2 - 1)) / 2 : rowY(i);
+    s += sL(x0, H / 2, x1 - 20, y1, 'mf-c1') + sT((x0 + x1) / 2 - 8, (H / 2 + y1) / 2 - 6, p, 'mf-small') + sT(x1 - 12, y1 + 5, t, 'mf-lab-b', 'start');
+    if (lv2) lv2[i].forEach(([t2, p2], j) => {
+      const y2 = rowY(i * n2 + j);
+      s += sL(x1 + 20, y1, x2 - 20, y2, 'mf-c2') + sT((x1 + x2) / 2 + 6, (y1 + y2) / 2 - 6, p2, 'mf-small') + sT(x2 - 12, y2 + 5, t2, 'mf-lab-b', 'start') + (leaf ? sT(x2 + 26, y2 + 5, leaf[i][j], 'mf-small', 'start') : '');
+    });
+  });
+  return s + '</svg>';
+}
+function venn2Svg({ label, a = 'A', b = 'B', shade = [], texts = {} } = {}) {   // shade: any of 'a' (A only), 'ab', 'b', 'out'
+  const W = 320, H = 190, id = 'vn' + (++venn2Svg.n);
+  let s = svgBox(W, H, label) + `<defs><clipPath id="${id}a"><circle cx="125" cy="98" r="64"/></clipPath><clipPath id="${id}b"><circle cx="195" cy="98" r="64"/></clipPath></defs>`;
+  if (shade.includes('out')) s += sR(6, 6, 308, 178, 'mf-s1l', 4);
+  if (shade.includes('a') || shade.includes('out')) s += sC(125, 98, 64, shade.includes('a') ? 'mf-s1l' : 'mf-paper');
+  if (shade.includes('b') || shade.includes('out')) s += sC(195, 98, 64, shade.includes('b') ? 'mf-s1l' : 'mf-paper');
+  if (shade.includes('ab')) s += `<circle cx="195" cy="98" r="64" class="mf-s2" clip-path="url(#${id}a)" fill-opacity="0.55"/>`;
+  else if (shade.includes('a') || shade.includes('b') || shade.includes('out')) s += `<circle cx="195" cy="98" r="64" class="mf-paper" clip-path="url(#${id}a)"/>`;
+  s += sR(6, 6, 308, 178, 'mf-frame', 4) + sC(125, 98, 64, 'mf-ring') + sC(195, 98, 64, 'mf-ring') + sT(18, 26, 'U', 'mf-var', 'start') + sT(72, 36, a, 'mf-var') + sT(248, 36, b, 'mf-var');
+  Object.entries(texts).forEach(([k, t]) => { const p = { a: [98, 103], ab: [160, 103], b: [222, 103], out: [160, 178] }[k]; s += sT(p[0], p[1], t, 'mf-lab'); });
+  return s + '</svg>';
+}
+venn2Svg.n = 0;
+function balanceSvg(left, right, { label, tilt = 0 } = {}) {   // left/right: text on each pan
+  const W = 420, H = 200, cx = 210, t = tilt * 8;
+  let s = svgBox(W, H, label) + sPoly([[cx - 26, 186], [cx + 26, 186], [cx, 70]], 'mf-s3l', ' stroke-width="1.6"') + sL(cx - 150, 70 + t, cx + 150, 70 - t, 'mf-line', ' stroke-width="4"') + sC(cx, 70, 6, 'mf-dot');
+  [[cx - 150, 70 + t, left], [cx + 150, 70 - t, right]].forEach(([x, y, txt]) => { s += sL(x, y, x - 50, y + 50) + sL(x, y, x + 50, y + 50) + sP(`M${x - 64} ${y + 50} L${x + 64} ${y + 50} Q${x} ${y + 84} ${x - 64} ${y + 50}Z`, 'mf-s1l', ' stroke-width="1.6"') + sT(x, y + 40, txt, 'mf-lab-b'); });
+  return s + '</svg>';
+}
+function stepsSvg(items, { label, W = 460, down = true, arrowText } = {}) {   // a staircase of boxes, e.g. metric units
+  const n = items.length, bw = (W - 20) / n, H = 40 + n * 16 + 40;
+  let s = svgBox(W, H, label);
+  items.forEach((t, i) => { const x = 10 + i * bw, y = 20 + (down ? i : n - 1 - i) * 16; s += sR(x + 3, y, bw - 6, 34, ['mf-s1l', 'mf-s2l', 'mf-s3l', 'mf-s4l'][i % 4], 6, ' stroke-width="1.5"') + sT(x + bw / 2, y + 22, t, 'mf-lab-b'); if (i < n - 1 && arrowText) s += sT(x + bw, y + 58, arrowText, 'mf-small'); });
+  return s + '</svg>';
+}
+function flowSvg(items, { label, W = 460 } = {}) {   // vertical flow of boxes joined by arrows
+  const bh = 38, gap = 22, H = items.length * (bh + gap) - gap + 8;
+  let s = svgBox(W, H, label);
+  items.forEach((t, i) => { const y = 4 + i * (bh + gap); s += sR(30, y, W - 60, bh, ['mf-s1l', 'mf-s2l', 'mf-s3l', 'mf-s4l'][i % 4], 8, ' stroke-width="1.5"') + sT(W / 2, y + bh / 2 + 5, t, 'mf-lab-b'); if (i < items.length - 1) s += sArrow(W / 2, y + bh + 2, W / 2, y + bh + gap - 2, 'mf-line', 8); });
+  return s + '</svg>';
+}
+function networkSvg(nodes, edges, { label, W = 360, H = 220, degrees = false, highlight = [] } = {}) {   // nodes: [[x, y, name]] in px
+  let s = svgBox(W, H, label);
+  edges.forEach(([i, j, t]) => { const [x1, y1] = nodes[i], [x2, y2] = nodes[j], hl = highlight.some(([a, b]) => (a === i && b === j) || (a === j && b === i)); s += sL(x1, y1, x2, y2, hl ? 'mf-c2' : 'mf-line', hl ? ' stroke-width="4"' : ' stroke-width="2"') + (t != null ? sT((x1 + x2) / 2, (y1 + y2) / 2 - 5, t, 'mf-small') : ''); });
+  nodes.forEach(([x, y, t], i) => { const d = edges.filter(e => e[0] === i || e[1] === i).length; s += sC(x, y, 15, 'mf-node-c') + sT(x, y + 5, t, 'mf-lab-b') + (degrees ? sT(x + 20, y - 14, `d=${d}`, 'mf-small', 'start') : ''); });
+  return s + '</svg>';
+}
+function pascalSvg(rows, { label, hl = [] } = {}) {
+  const W = 40 * rows + 40, H = 30 * rows + 16;
+  let s = svgBox(W, H, label);
+  for (let n = 0; n < rows; n++) for (let k = 0; k <= n; k++) { const x = W / 2 + (k - n / 2) * 40, y = 22 + n * 30, on = hl.some(([a, b]) => a === n && b === k); s += sC(x, y - 5, 14, on ? 'mf-s2l' : 'mf-cellc') + sT(x, y, F(nCr(n, k)), 'mf-lab'); }
+  return s + '</svg>';
+}
+
+/* ---------- more builders for the elementary topics ---------- */
+const FigRow = (items, cap) => `<figure class="fig"><div class="fig-row">${items.map(([svg, c]) => `<div>${svg}${c ? `<div class="cap">${c}</div>` : ''}</div>`).join('')}</div>${cap ? `<figcaption>${cap}</figcaption>` : ''}</figure>`;
+function placeChartSvg(heads, digits, { label, values, hl = -1 } = {}) {   // a row of place-value columns: header, digit, value
+  const n = heads.length, cw = 78, W = n * cw + 8, H = values ? 124 : 96;
+  let s = svgBox(W, H, label);
+  heads.forEach((h, i) => {
+    const x = 4 + i * cw, on = i === hl;
+    s += sR(x, 4, cw, 34, ['mf-s1l', 'mf-s2l', 'mf-s3l', 'mf-s4l'][Math.floor((n - 1 - i) / 3) % 4], 0, ' stroke-width="1.4"') + sT(x + cw / 2, 25, h, 'mf-small');
+    s += sR(x, 38, cw, 46, on ? 'mf-s2l' : 'mf-cell', 0, ' stroke-width="1.4"') + sT(x + cw / 2, 70, digits[i], 'mf-node');
+    if (values) s += sT(x + cw / 2, 108, values[i], 'mf-small');
+  });
+  return s + '</svg>';
+}
+function columnSvg(a, b, op = '+', { label } = {}) {   // column addition or subtraction with carries / borrows shown above
+  const r = op === '+' ? a + b : a - b, len = Math.max(String(a).length, String(b).length, String(r).length), cw = 34, W = (len + 2) * cw, H = 170, x0 = W - cw;
+  const dig = (n, i) => { const s = String(n); return i < s.length ? s[s.length - 1 - i] : ''; };
+  let s = svgBox(W, H, label), carry = 0;
+  for (let i = 0; i < len; i++) {
+    const x = x0 - i * cw - cw / 2, da = +(dig(a, i) || 0), db = +(dig(b, i) || 0);
+    if (op === '+') { if (carry) s += sT(x, 28, '1', 'mf-carry'); carry = da + db + carry >= 10 ? 1 : 0; }
+    s += sT(x, 62, dig(a, i), 'mf-node') + sT(x, 96, dig(b, i), 'mf-node') + sT(x, 150, dig(r, i), 'mf-node-a');
+  }
+  if (op === '-') {   // mark the columns that had to borrow
+    let bor = 0;
+    for (let i = 0; i < len; i++) { const da = +(dig(a, i) || 0) - bor, db = +(dig(b, i) || 0); bor = da < db ? 1 : 0; if (bor) s += sT(x0 - i * cw - cw / 2, 28, '+10', 'mf-carry'); }
+  }
+  return s + sT(x0 - len * cw - 4, 96, op === '+' ? '+' : '−', 'mf-node') + sL(x0 - len * cw - 14, 112, x0 + 4, 112, 'mf-line', ' stroke-width="2"') + '</svg>';
+}
+function barModelSvg(parts, { label, W = 440, top, bottom } = {}) {   // parts: [text, weight, cls]
+  const tot = parts.reduce((x, p) => x + p[1], 0), bw = W - 20, H = 64 + (top ? 28 : 0) + (bottom ? 26 : 0), y = top ? 32 : 8;
+  let s = svgBox(W, H, label), x = 10;
+  if (top) s += sP(`M10 ${y - 6} q0 -10 10 -10 H${W - 20} q10 0 10 10`, 'mf-line', ' fill="none"') + sT(W / 2, y - 20, top, 'mf-lab-b');
+  parts.forEach(([t, w, cls = 'mf-s1l']) => { const pw = bw * w / tot; s += sR(x, y, pw, 44, cls, 0, ' stroke-width="1.6"') + sT(x + pw / 2, y + 27, t, 'mf-lab-b'); x += pw; });
+  if (bottom) s += sT(W / 2, y + 66, bottom, 'mf-lab');
+  return s + '</svg>';
+}
+function netSvg(l, w, h, { label, unit = 22 } = {}) {   // net of a cuboid (cross shape)
+  const u = unit, W = (2 * l + 2 * w) * u + 20, H = (2 * w + h) * u + 20, x0 = 10 + w * u, y0 = 10;
+  const R = (x, y, ww, hh, cls, t) => sR(x, y, ww * u, hh * u, cls, 0, ' stroke-width="1.6"') + sT(x + ww * u / 2, y + hh * u / 2 + 5, t, 'mf-small');
+  let s = svgBox(W, H, label);
+  s += R(x0, y0, l, w, 'mf-s2l', T`top`) + R(x0, y0 + w * u, l, h, 'mf-s1l', T`front`) + R(x0, y0 + (w + h) * u, l, w, 'mf-s2l', T`bottom`);
+  s += R(x0 - w * u, y0 + w * u, w, h, 'mf-s3l', T`side`) + R(x0 + l * u, y0 + w * u, w, h, 'mf-s3l', T`side`) + R(x0 + (l + w) * u, y0 + w * u, l, h, 'mf-s1l', T`back`);
+  return s + '</svg>';
+}
+const cP = (...v) => `(${v.map(x => F(x)).join(LS())})`;   // a coordinate label that follows the language's decimal comma, e.g. (1; 2,5)
+
+/* ==========================================================================
+   More geography figures built on fig.js (small diagrams for thin topics).
+   ========================================================================== */
+function graphicScaleSvg() {   // 1 : 50 000 → 2 cm per km
+  const u = 80, x0 = 40;
+  let s = svgBox(420, 110, T`A graphic scale bar from 0 to 4 kilometres for a 1 to 50 000 map, where 2 centimetres represent 1 kilometre`);
+  for (let i = 0; i < 4; i++) s += sR(x0 + i * u, 40, u, 12, i % 2 ? 'mf-cell' : 'mf-s1', 0, ' stroke="var(--ink-2)" stroke-width="1.2"');
+  for (let i = 0; i <= 4; i++) s += sT(x0 + i * u, 32, `${i}`, 'mf-lab') ;
+  s += sT(x0 + 4 * u + 12, 50, 'km', 'mf-lab', 'start') + sArrow(x0, 74, x0 + u, 74, 'mf-c2', 6) + sArrow(x0 + u, 74, x0, 74, 'mf-c2', 6) + sT(x0 + u / 2, 92, T`2 cm on the map`, 'mf-small');
+  return s + sT(x0 + 2.5 * u, 92, '1 : 50 000', 'mf-lab-b') + '</svg>';
+}
+function contourSpacingSvg() {
+  const panel = (x0, gap, t) => {
+    let s = '';
+    for (let i = 0; i < 5; i++) s += sL(x0 + 20 + i * gap, 20, x0 + 20 + i * gap, 90, 'mf-c1', ' stroke-width="1.4"') + (gap >= 40 || i % 4 === 0 ? sT(x0 + 20 + i * gap, 16, String(100 + 50 * i), 'mf-small') : '');
+    s += sPline([[x0 + 10, 180], ...[0, 1, 2, 3, 4].map(i => [x0 + 20 + i * gap, 170 - i * 18])], 'mf-c2', ' stroke-width="2.2"') + sL(x0 + 10, 180, x0 + 210, 180, 'mf-axis');
+    return s + sT(x0 + 110, 198, t, 'mf-lab-b');
+  };
+  return svgBox(460, 210, T`Contour lines close together make a steep profile; contour lines far apart make a gentle profile`) + panel(10, 20, T`close together: steep`) + panel(240, 46, T`far apart: gentle`) + '</svg>';
+}
+function rockSettingsSvg() {
+  let s = svgBox(480, 230, T`Where rocks form: lava cools at the surface into extrusive igneous rock, magma cools underground into intrusive rock, sediments settle in layers in the sea, and rock next to the hot magma is changed into metamorphic rock`);
+  s += sR(300, 60, 180, 30, 'g-water') + sP('M0 90 L120 90 L175 30 L230 90 L480 90 L480 230 L0 230 Z', 'g-land', ' stroke="var(--ink-3)" stroke-width="1"');
+  for (let i = 0; i < 4; i++) s += sP(`M300 ${96 + i * 12} L480 ${96 + i * 12}`, 'mf-thin');
+  s += `<ellipse cx="190" cy="175" rx="78" ry="34" class="mf-s4l" stroke="var(--lv4)" stroke-width="10" stroke-opacity="0.35"/>` + `<ellipse cx="190" cy="175" rx="70" ry="28" class="mf-s4" fill-opacity="0.55"/>`;
+  s += sP('M175 30 L182 140', 'mf-c4', ' stroke-width="4"') + sP('M160 48 Q150 70 136 86', 'mf-c4', ' fill="none" stroke-width="5" stroke-opacity="0.8"');
+  s += sT(100, 60, T`lava: extrusive`, 'mf-small', 'end') + sT(190, 180, T`intrusive (batholith)`, 'mf-lab-b') + sT(390, 150, T`sedimentary layers`, 'mf-small') + sT(284, 206, T`metamorphic zone`, 'mf-small', 'start') + sL(280, 202, 256, 190, 'mf-thin');
+  return s + '</svg>';
+}
+function massMovementSvg() {
+  const cw = 120, slope = x0 => sP(`M${x0 + 8} 110 L${x0 + 8} 30 L${x0 + 30} 30 L${x0 + 112} 110 Z`, 'g-land', ' stroke="var(--ink-3)"');
+  let s = svgBox(cw * 4, 140, T`Four kinds of mass movement: rockfall, landslide, mudflow and soil creep`);
+  [T`rockfall`, T`landslide`, T`mudflow`, T`creep`].forEach((t, i) => { const x0 = i * cw; s += slope(x0) + sT(x0 + cw / 2, 132, t, 'mf-lab-b'); });
+  s += sR(46, 60, 12, 10, 'mf-s4l', 2, ' stroke="var(--ink-2)"') + sR(62, 88, 10, 9, 'mf-s4l', 2, ' stroke="var(--ink-2)"') + sArrow(44, 44, 58, 80, 'mf-c2', 6);
+  s += sP(`M${cw + 32} 32 Q${cw + 50} 80 ${cw + 100} 104`, 'mf-c2', ' fill="none" stroke-width="2" stroke-dasharray="4 3"') + sPoly([[cw + 58, 60], [cw + 78, 58], [cw + 92, 86], [cw + 70, 90]], 'mf-s4l', ' stroke="var(--ink-2)"') + sArrow(cw + 70, 64, cw + 88, 84, 'mf-c2', 6);
+  s += sP(`M${2 * cw + 40} 40 C${2 * cw + 60} 70 ${2 * cw + 70} 90 ${2 * cw + 116} 108 L${2 * cw + 118} 110 L${2 * cw + 70} 110 C${2 * cw + 60} 96 ${2 * cw + 44} 70 ${2 * cw + 36} 40 Z`, 'mf-s4l', ' stroke="var(--ink-2)"');
+  [[3 * cw + 40, 36], [3 * cw + 62, 58], [3 * cw + 84, 80]].forEach(([x, y]) => { s += sL(x, y, x + 6, y - 22, 'mf-line', ' stroke-width="2"'); });
+  return s + sArrow(3 * cw + 50, 70, 3 * cw + 80, 100, 'mf-c2', 6) + '</svg>';
+}
+function pyramidShapesSvg() {
+  const shapes = [[T`expansive`, [9, 8, 7, 6, 5, 4, 3, 2, 1.2, 0.6]], [T`stationary`, [5, 5, 5, 4.9, 4.8, 4.6, 4.2, 3.6, 2.6, 1.4]], [T`constrictive`, [3, 3.4, 3.8, 4.4, 5, 5.2, 5, 4.4, 3.4, 2]]];
+  const cw = 150;
+  let s = svgBox(cw * 3, 170, T`Three pyramid shapes: expansive with a wide base, stationary with straight sides, and constrictive with a narrow base`);
+  shapes.forEach(([t, v], i) => { const cx = i * cw + cw / 2; v.forEach((w, k) => { const y = 132 - (k + 1) * 11; s += sR(cx - w * 6, y, w * 6, 10, 'mf-s1l', 0, ' stroke-width="0.8"') + sR(cx, y, w * 6, 10, 'mf-s4l', 0, ' stroke-width="0.8"'); }); s += sL(cx, 20, cx, 132, 'mf-line') + sT(cx, 156, t, 'mf-lab-b'); });
+  return s + '</svg>';
+}
+function hdiSvg() {
+  const box = (x, y, w, t1, t2, cls) => sR(x, y, w, 50, cls, 8, ' stroke-width="1.4"') + sT(x + w / 2, y + 22, t1, 'mf-lab-b') + sT(x + w / 2, y + 40, t2, 'mf-small');
+  let s = svgBox(480, 200, T`The Human Development Index combines three indices, for health, knowledge and standard of living, by a geometric mean`);
+  s += box(10, 10, 145, T`Health`, T`life expectancy`, 'mf-s2l') + box(167, 10, 145, T`Knowledge`, T`years of schooling`, 'mf-s1l') + box(324, 10, 145, T`Standard of living`, T`income per person`, 'mf-s4l');
+  [82, 240, 396].forEach(x => { s += sArrow(x, 62, 240 + (x - 240) * 0.3, 124, 'mf-line', 8); });
+  return s + sR(150, 128, 180, 50, 'mf-s3l', 8, ' stroke-width="1.6"') + sT(240, 150, T`HDI`, 'mf-lab-b') + sT(240, 168, '∛(I₁ × I₂ × I₃)', 'mf-small') + '</svg>';
+}
+function materialIndexSvg() {
+  const row = (y, t, near, cap) => {
+    const R = 60, Mx = 400, fx = near === 'R' ? 110 : 350;
+    return sL(R, y, Mx, y, 'mf-line', ' stroke-width="2" stroke-dasharray="6 4"') + sC(R, y, 16, 'mf-s2l', ' stroke-width="1.4"') + sT(R, y + 5, 'R', 'mf-lab-b') + sC(Mx, y, 16, 'mf-s1l', ' stroke-width="1.4"') + sT(Mx, y + 5, 'M', 'mf-lab-b') + sR(fx - 16, y - 14, 32, 28, 'mf-s4l', 3, ' stroke-width="1.4"') + sT(fx, y - 20, T`factory`, 'mf-small') + sT(20, y - 36, t, 'mf-lab-b', 'start') + sT(230, y + 32, cap, 'mf-small');
+  };
+  return svgBox(460, 210, T`Weight-losing industries locate near the raw material; weight-gaining industries locate near the market`) + row(70, T`weight-losing (MI > 1)`, 'R', T`e.g. sugar mill, cement: near the raw material`) + row(160, T`weight-gaining (MI < 1)`, 'M', T`e.g. bottled drinks, bread: near the market`) + '</svg>';
+}
+function thresholdRangeSvg() {
+  const panel = (cx, rr, rt, t) => sC(cx, 100, rr, 'mf-s2l', ' fill-opacity="0.35" stroke="var(--lv2)" stroke-width="2"') + sC(cx, 100, rt, 'mf-ring', ' stroke="var(--lv4)" stroke-dasharray="5 4" stroke-width="2"') + sC(cx, 100, 5, 'mf-dot') + sT(cx, 196, t, 'mf-lab-b');
+  let s = svgBox(460, 210, T`Left: the range is larger than the threshold area, so the service survives. Right: the range is smaller than the threshold, so it fails`);
+  s += panel(120, 80, 55, T`range > threshold: viable`) + panel(345, 50, 78, T`range < threshold: fails`);
+  return s + sT(120, 16, T`range`, 'mf-small') + sT(345, 16, T`threshold`, 'mf-small') + sL(120, 20, 120, 24, 'mf-thin') + '</svg>';
+}
+function bufferSvg() {
+  const river = [[10, 150], [80, 130], [160, 150], [240, 120], [320, 135], [410, 110]];
+  let s = svgBox(420, 220, T`A buffer of equal width along a river and circular buffers around two wells, used to find which houses lie close to them`);
+  s += sPline(river, 'mf-c1', ' stroke-width="40" stroke-opacity="0.18" stroke-linejoin="round"') + sPline(river, 'mf-c1', ' stroke-width="3"');
+  [[120, 60], [300, 60]].forEach(([x, y]) => { s += sC(x, y, 38, 'mf-s4l', ' fill-opacity="0.35" stroke="var(--lv4)" stroke-dasharray="4 3"') + sC(x, y, 4, 'mf-s4'); });
+  [[40, 120], [100, 150], [150, 70], [190, 180], [210, 40], [260, 128], [290, 80], [330, 190], [370, 40], [395, 150], [60, 200]].forEach(([x, y]) => { s += sR(x - 5, y - 5, 10, 10, 'mf-s3l', 1, ' stroke="var(--ink-2)"'); });
+  return s + sT(410, 96, T`river buffer`, 'mf-small', 'end') + sT(120, 16, T`well buffer`, 'mf-small') + '</svg>';
+}
+function propCirclesSvg() {
+  let s = svgBox(440, 170, T`Proportional circles for values 1, 4 and 9: the areas are proportional to the values, so the radii are 1, 2 and 3`);
+  [[1, 60], [4, 150], [9, 290]].forEach(([v, x]) => { const r = 18 * Math.sqrt(v); s += sC(x, 130 - r, r, 'mf-s1l', ' stroke-width="1.6"') + sT(x, 158, `${v}`, 'mf-lab-b'); });
+  return s + sT(420, 20, 'r ∝ √v', 'mf-lab', 'end') + '</svg>';
+}
+function terraceSvg() {
+  let s = svgBox(440, 200, T`Rice terraces cut into a hillside: flat flooded steps held by low walls, with water flowing from one step to the next`), d = 'M10 190', x = 10, y = 190;
+  for (let i = 0; i < 6; i++) { s += sR(x + 8, y - 26, 58, 6, 'g-water'); d += ` L${x + 66} ${y} L${x + 66} ${y - 26}`; x += 66; y -= 26; }
+  s += sP(d + ` L430 ${y} L430 190 Z`, 'g-land', ' stroke="var(--ink-3)"');
+  for (let i = 0, xx = 10, yy = 190; i < 6; i++, xx += 66, yy -= 26) s += [0, 1, 2].map(k => sL(xx + 16 + k * 18, yy - 26, xx + 16 + k * 18, yy - 38, 'mf-c2', ' stroke-width="1.6"')).join('');
+  return s + sArrow(390, 40, 330, 58, 'mf-c1', 7) + sT(398, 36, T`irrigation water`, 'mf-small', 'end') + '</svg>';
+}
+function incomeBandsSvg() {   // World Bank income groups (GNI per capita, Atlas method, FY2025 thresholds)
+  const W = 540, X = v => 24 + v / 16000 * (W - 48);
+  const bands = [[0, 1145, T`low`, 'mf-s4l'], [1145, 4515, T`lower-middle`, 'mf-s3l'], [4515, 14005, T`upper-middle`, 'mf-s2l'], [14005, 16000, T`high →`, 'mf-s1l']];
+  let s = svgBox(W, 150, T`World Bank income groups by GNI per person, with Indonesia at about 4 870 US dollars in the upper-middle group`);
+  bands.forEach(([a, b, t, cls], i) => { s += sR(X(a), 50, X(b) - X(a), 30, cls, 0, ' stroke="var(--paper)"') + (i === 0 ? sT(X(a), 118, t + ' ↑', 'mf-small', 'start') : sT((X(a) + X(b)) / 2, 70, t, 'mf-small')); });
+  [0, 4000, 8000, 12000, 16000].forEach(v => { s += sL(X(v), 80, X(v), 86, 'mf-axis') + sT(X(v), 100, F(v), 'mf-small'); });
+  s += sL(X(4870), 40, X(4870), 90, 'mf-c4', ' stroke-width="2.5"') + sT(X(4870) + 4, 34, T`Indonesia ≈ 4 870`, 'mf-lab-b', 'start');
+  return s + sT(W - 20, 124, T`GNI per person (US$)`, 'mf-small', 'end') + '</svg>';
+}
+
+/* ==========================================================================
    TRACK A — Maps & Geographic Tools
    ========================================================================== */
 level({
@@ -1813,6 +2305,7 @@ ${Tbl([T`Concept`, T`Meaning`], [
   [T`Differentiation`, T`each area has its own mix of characteristics that sets it apart`],
   [T`Spatial linkage`, T`how phenomena in one area are related, e.g. deforestation and floods downstream`]])}
 ${Key(T`<p><b>Four principles.</b> <i>Distribution</i>: phenomena are spread unevenly over the Earth. <i>Interrelation</i>: phenomena influence each other. <i>Description</i>: the pattern and its causes are explained in words, maps, tables and graphs. <i>Chorology</i>: a phenomenon is studied together with everything around it in its region.</p><p><b>Three approaches.</b> The <i>spatial</i> approach looks at where things are and why. The <i>ecological</i> approach looks at the relationship between people and their environment. The <i>regional complex</i> approach combines both to compare whole regions.</p>`)}
+${Fig(vennSvg([T`Spatial`, T`Ecological`, T`Regional complex`], { center: T`Geography`, label: T`Three overlapping circles for the spatial, ecological and regional complex approaches` }), T`The three approaches of geography overlap: <i>spatial</i> (where and why there), <i>ecological</i> (people and environment) and <i>regional complex</i> (both together, for a whole region).`)}
 ${Tip(T`<p>To name the concept in a question, find the key idea: "clustered together" is agglomeration, "easy to reach" is accessibility, "one place supplies another" is interaction, "the shape of the land" is morphology.</p>`)}`,
   gens: [
     () => pick([
@@ -1867,6 +2360,7 @@ ${Tbl([T`Component`, T`Purpose`], [[T`Title`, T`says what the map shows, where a
 <p>A <b>numerical scale</b> such as $1 : 50\,000$ means 1 unit on the map equals 50 000 of the same units on the ground. A <b>verbal scale</b> says it in words ("1 cm represents 500 m"), and a <b>graphic scale</b> is a bar, which stays correct when the map is enlarged or reduced.</p>
 ${Fm(T`\text{real distance} = \text{map distance} \times \text{scale denominator}`)}
 ${Key(T`<p>Work in centimetres, then convert: $1\,\mathrm{km} = 100\,000\,\mathrm{cm}$. On a $1 : 50\,000$ map, $4\,\mathrm{cm}$ represents $200\,000\,\mathrm{cm} = 2\,\mathrm{km}$. Areas scale with the <b>square</b>: $1\,\mathrm{cm^2}$ on that map is $(0.5\,\mathrm{km})^2 = 0.25\,\mathrm{km^2}$.</p>`)}
+${Fig(graphicScaleSvg(), T`A graphic scale for $1 : 50\,000$: each 2 cm block on the map stands for 1 km. It stays correct even if the map is enlarged or shrunk.`)}
 <p>A <b>large-scale</b> map (e.g. $1 : 5\,000$) shows a small area in great detail; a <b>small-scale</b> map (e.g. $1 : 1\,000\,000$) shows a large area with little detail. The bigger the denominator, the smaller the scale.</p>
 ${Tip(T`<p>If a map is enlarged 2 times, everything on it is twice as long, so the scale denominator is halved: $1 : 50\,000$ becomes $1 : 25\,000$.</p>`)}`,
   gens: [
@@ -1918,6 +2412,7 @@ ${Fig(globeSvg({ lat: -6.9, lon: 107.6, name: 'Bandung', label: T`A globe with p
 ${Tbl([T``, T`Latitude`, T`Longitude`], [[T`Measures`, T`the angle north or south of the equator`, T`the angle east or west of the prime meridian (Greenwich)`], [T`Lines`, T`parallels: circles that run east–west`, T`meridians: half-circles that run from pole to pole`], [T`Range`, T`0° to 90° N or S`, T`0° to 180° E or W`], [T`Zero line`, T`the equator`, T`the prime meridian`]])}
 <p>Each degree is split into 60 minutes ($'$) and each minute into 60 seconds ($''$), so $6^\circ 30' = 6.5^\circ$. A location is written latitude first: Jakarta is about $6^\circ 12'\,\mathrm{S},\ 106^\circ 49'\,\mathrm{E}$.</p>
 ${Key(T`<p>Along a meridian, $1^\circ$ of latitude is always about $111\,\mathrm{km}$. Along a parallel, $1^\circ$ of longitude is $111\,\mathrm{km}$ at the equator but shrinks towards the poles:</p><p>$$1^\circ\ \text{of longitude} \approx 111 \cos\varphi\ \mathrm{km}$$</p><p>where $\varphi$ is the latitude. At $60^\circ$ it is only about $55.5\,\mathrm{km}$.</p>`)}
+${Fig(planeSvg({ W: 340, H: 210, x: [0, 92], y: [0, 125], step: [15, 25], tickX: 30, fmtX: v => v + '°', xl: T`latitude`, yl: 'km', fns: [{ f: p => 111.3 * Math.cos(p * Math.PI / 180), to: 90 }], pts: [[0, 111.3, '111 km', 'start', false, 8, -6], [30, 96.4, '96 km', 'start', false, 8, -6], [60, 55.7, '56 km', 'start', false, 8, -6], [90, 0]], label: T`Length of one degree of longitude falling from 111 kilometres at the equator to zero at the poles` }), T`One degree of longitude is $111\,\mathrm{km} \times \cos(\text{latitude})$: 111 km at the equator, about 56 km at $60^\circ$, and zero at the poles.`)}
 <p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
 ${Tip(T`<p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>`)}`,
   gens: [
@@ -2052,6 +2547,7 @@ ${Tip(T`<p>No projection is "the best": choose the one whose kept property matte
 <p>Topographic maps show the height of the land with <b>contour lines</b>: lines joining points of equal height above mean sea level. The height difference between neighbouring contours is the <b>contour interval</b>; every fifth line (the index contour) is usually drawn thicker.</p>
 ${FigW(contourSvg([[30, 26, 330, 11], [68, 34, 240, 9], [86, 12, 130, 7]], { interval: 50, A: [8, 30], B: [94, 30], label: T`A contour map of two hills with a line A–B and the cross-section along it` }), T`Two hills with a 50 m contour interval, and the cross-section (profile) along A–B.`)}
 ${Key(T`<p><b>Reading contours.</b> Lines close together mean a steep slope; far apart, a gentle slope. Closed rings with rising values are a hill; contours never cross or split. Where contours form a V, the V points <b>upstream</b> in a valley and <b>downhill</b> along a ridge.</p>`)}
+${FigW(contourSpacingSvg(), T`The spacing of contours shows the slope: the same 200 m climb over a short distance is steep, over a long distance gentle.`)}
 <p>A common rule for the contour interval of a map is</p>
 ${Fm(T`\text{CI} = \frac{\text{scale denominator}}{2000}\ \text{metres}`)}
 <p>so a $1 : 50\,000$ map has contours every $25\,\mathrm{m}$.</p>
@@ -2193,6 +2689,7 @@ ${FigW(earthLayersSvg({ names: [T`Crust`, T`Mantle`, T`Outer core`, T`Inner core
 ${Tbl([T`Layer`, T`Depth`, T`State and make-up`], [[T`Crust`, T`0 to 5–70 km`, T`solid rock; thin oceanic crust (basalt, "SIMA") and thicker continental crust (granite, "SIAL")`], [T`Mantle`, T`to 2 900 km`, T`hot silicate rock; solid, but it flows slowly over millions of years`], [T`Outer core`, T`2 900–5 150 km`, T`liquid iron and nickel; its currents make the Earth's magnetic field`], [T`Inner core`, T`5 150–6 371 km`, T`solid iron and nickel, about 5 000 °C, solid because of the huge pressure`]])}
 <p>The boundaries between layers are called <b>discontinuities</b>: the <b>Mohorovičić</b> (Moho) between crust and mantle, the <b>Gutenberg</b> between mantle and core, and the <b>Lehmann</b> between outer and inner core.</p>
 ${Key(T`<p>For plate tectonics what matters is stiffness, not composition. The <b>lithosphere</b> (the crust plus the rigid top of the mantle, about 100 km thick) is broken into plates that ride on the <b>asthenosphere</b>, a hot, weak layer of the upper mantle that can flow.</p>`)}
+${Fig(planeSvg({ W: 380, H: 230, x: [0, 6500], y: [0, 15], step: [1000, 2.5], tickX: 2000, tickY: 5, fmtX: v => F(v), xl: T`depth (km)`, yl: 'km/s', extra: (X, Y, D = [[0, 5.8, 3.2], [35, 5.8, 3.2], [35, 8.0, 4.4], [220, 8.0, 4.4], [400, 8.9, 4.8], [670, 10.2, 5.6], [1000, 11.1, 6.2], [2000, 12.5, 6.8], [2891, 13.7, 7.3], [2891, 8.0, 0], [4000, 9.4, 0], [5150, 10.3, 0], [5150, 11.0, 3.5], [6371, 11.3, 3.7]]) => sPline(D.map(([d, p]) => [X(d), Y(p)]), 'mf-c1', ' fill="none" stroke-width="2.2"') + sPline(D.map(([d, , v]) => [X(d), Y(v)]), 'mf-c2', ' fill="none" stroke-width="2.2"') + [2891, 5150].map(d => sL(X(d), Y(0), X(d), Y(15), 'mf-grid', ' stroke-dasharray="4 3"')).join('') + sT(X(1500), Y(12.6), T`P waves`, 'mf-small') + sT(X(1500), Y(7.2), T`S waves`, 'mf-small') + sT(X(4000), Y(2.2), T`no S waves in the liquid outer core`, 'mf-small') + sT(X(1450), Y(14.4), T`mantle`, 'mf-small') + sT(X(4020), Y(14.4), T`outer core`, 'mf-small') + sT(X(5760), Y(14.4), T`inner core`, 'mf-small'), label: T`Speeds of P and S earthquake waves with depth; S waves vanish in the liquid outer core` }), T`Earthquake wave speeds with depth (after the PREM Earth model, Dziewonski and Anderson 1981). S waves cannot cross liquid, so their disappearance at $2\,891\,\mathrm{km}$ shows the outer core is molten.`)}
 <p>Temperature rises with depth. In the crust the <b>geothermal gradient</b> is typically about $25$–$30\,^\circ\mathrm{C}$ per kilometre, which is why deep mines are hot and why geothermal energy can be tapped.</p>
 ${Tip(T`<p>Do not confuse the lithosphere (rigid, includes the crust) with the crust itself: the crust is only the top part of the lithosphere.</p>`)}`,
   gens: [
@@ -2273,6 +2770,7 @@ ${Tbl([T`Rock type`, T`How it forms`, T`Examples`], [
   [T`Sedimentary`, T`fragments, shells or dissolved minerals are deposited in layers, then compacted and cemented`, T`sandstone, conglomerate, shale, limestone, coal, rock salt`],
   [T`Metamorphic`, T`an existing rock is changed by heat and pressure without melting`, T`marble (from limestone), slate (from shale), quartzite (from sandstone), gneiss (from granite)`]])}
 ${FigW(cycleSvg([T`Magma`, T`Igneous rock`, T`Sediment`, T`Sedimentary rock`, T`Metamorphic rock`], { center: T`Rock cycle`, label: T`The rock cycle: magma cools into igneous rock, which weathers into sediment, which becomes sedimentary rock, then metamorphic rock, which can melt back into magma` }), T`The rock cycle. Any rock can also be uplifted and weathered, or buried and melted, so there are many shortcuts.`)}
+${FigW(rockSettingsSvg(), T`Where each rock type forms: lava cooling fast at the surface (extrusive igneous), magma cooling slowly underground (intrusive), layers of sediment in the sea (sedimentary) and rock baked next to hot magma (metamorphic).`)}
 ${Key(T`<p><b>Processes in the rock cycle.</b> Cooling and crystallisation turn magma into igneous rock. Weathering, erosion and deposition turn any rock into sediment. Compaction and cementation (lithification) turn sediment into sedimentary rock. Heat and pressure make metamorphic rock. Melting turns rock back into magma.</p>`)}
 ${Tip(T`<p>Indonesia is rich in andesite and basalt from its volcanoes, limestone from ancient coral reefs (e.g. Gunung Kidul and the Maros karst), and coal in Kalimantan and Sumatra.</p>`)}`,
   gens: [
@@ -2310,6 +2808,7 @@ ${Tip(T`<p>Indonesia is rich in andesite and basalt from its volcanoes, limeston
 ${FigW(volcanoSvg('strato', { names: { chamber: T`Magma chamber`, vent: T`Vent`, crater: T`Crater`, layers: T`Layers of lava and ash` }, label: T`Cross-section of a stratovolcano with its magma chamber, vent, crater and alternating layers` }), T`A stratovolcano, like Merapi or Semeru, is built of alternating layers of lava and ash.`)}
 ${Tbl([T`Type`, T`Shape and eruption`, T`Example`], [[T`Stratovolcano (composite)`, T`steep cone of lava and ash layers; sticky magma, explosive eruptions`, T`Merapi, Semeru, Fuji`], [T`Shield volcano`, T`broad, gentle slopes; runny basalt lava flows far`, T`Mauna Loa (Hawaii)`], [T`Cinder cone`, T`small, steep cone of loose fragments`, T`Anak Krakatau in its early years`], [T`Caldera`, T`a huge basin left when a volcano collapses after emptying its magma chamber`, T`Toba, Tengger (Bromo)`]])}
 ${Key(T`<p><b>Explosive or effusive?</b> Sticky, gas-rich, silica-rich magma (andesite, rhyolite) traps gas and explodes; runny, silica-poor basalt lets gas escape and flows quietly. The <b>Volcanic Explosivity Index</b> (VEI) runs from 0 to 8, and each step means about ten times more erupted material. Tambora (1815) was VEI 7.</p>`)}
+${FigW(numberLineSvg({ min: 0, max: 8, step: 1, W: 560, H: 116, marks: [{ v: 1, label: T`Kilauea`, cls: 'mf-s2', below: true }, { v: 4, label: T`Merapi 2010` }, { v: 6, label: T`Krakatau 1883`, below: true, cls: 'mf-s4' }, { v: 7, label: T`Tambora 1815`, cls: 'mf-s4' }, { v: 8, label: T`Toba ~74 000 yr ago`, below: true, cls: 'mf-s4' }], label: T`Volcanic Explosivity Index scale from 0 to 8 with Indonesian eruptions marked` }), T`The Volcanic Explosivity Index: each step is about 10 times more erupted material. Indonesia holds some of the largest eruptions known (VEI values from the Smithsonian Global Volcanism Program).`)}
 <h3>Hazards and benefits</h3>
 <p>Dangers include <b>pyroclastic flows</b> (glowing avalanches of hot gas and ash, "wedhus gembel"), <b>lahars</b> (volcanic mudflows, often after heavy rain), ash fall, lava flows, toxic gases and tsunamis. Benefits include fertile soils, geothermal energy, building sand and stone, minerals and tourism.</p>
 ${Tip(T`<p>Indonesia's volcano alert levels, from low to high: <b>Normal</b> (level I), <b>Waspada</b> (II, watch), <b>Siaga</b> (III, alert) and <b>Awas</b> (IV, warning: evacuate the danger zone).</p>`)}`,
@@ -2388,8 +2887,10 @@ ${Tip(T`<p>A shallow earthquake under the sea at a subduction zone can lift the 
 <p>Forces from inside the Earth (<b>endogenic</b>) build up the land; forces at the surface (<b>exogenic</b>) wear it down. The exogenic processes are weathering, mass movement, erosion and deposition.</p>
 ${Tbl([T`Weathering`, T`How it works`, T`Examples`], [[T`Physical (mechanical)`, T`rock breaks into pieces without changing its minerals`, T`heating and cooling (exfoliation), frost wedging, salt crystals, release of pressure`], [T`Chemical`, T`minerals react with water, oxygen or acids and change`, T`hydrolysis of feldspar to clay, oxidation (rust), carbonation dissolving limestone`], [T`Biological (organic)`, T`living things break or dissolve rock`, T`roots in cracks, burrowing animals, acids from lichens`]])}
 ${Key(T`<p>In hot, wet climates such as Indonesia's, <b>chemical weathering</b> dominates: it is fastest where it is warm and there is plenty of water. That is why tropical soils are deep and red, and why limestone dissolves into caves and karst.</p>`)}
+${FigW(stepsSvg([T`weathering`, T`mass movement`, T`erosion`, T`transport`, T`deposition`], { W: 640, label: T`The chain of exogenic processes from weathering to deposition` }), T`Exogenic processes work as a chain: rock is broken up where it lies, moved downhill by gravity, carried away by water, wind or ice, and finally laid down.`)}
 <h3>Mass movement</h3>
 <p><b>Mass movement</b> is the movement of weathered material down a slope under gravity: <b>rockfalls</b>, <b>landslides</b> (a mass sliding on a slip surface), <b>mudflows</b> and slow <b>soil creep</b> (shown by tilted trees and fences). It is most likely on steep slopes, after heavy rain, where vegetation has been cleared and where earthquakes shake the ground.</p>
+${FigW(massMovementSvg(), T`Mass movement from fast to slow: rockfall (free fall from a cliff), landslide (a block sliding on a slip surface), mudflow (wet debris flowing like a liquid) and creep (slow, shown by tilted posts and trees).`)}
 <h3>Erosion and deposition</h3>
 <p><b>Erosion</b> is the removal and transport of material by running water, wind, waves and glaciers. When the agent slows down it drops its load: <b>deposition</b>. Soil erosion by rain on bare, sloping farmland is a serious problem; it is reduced by terracing, contour ploughing, cover crops and reforestation.</p>
 ${Tip(T`<p>Soil loss is often given as a mass per area, such as tonnes per hectare per year. To turn it into a depth, divide by the soil's density and the area: $\text{depth} = \frac{\text{mass}}{\rho \times A}$.</p>`)}`,
@@ -2565,6 +3066,7 @@ ${Tbl([T`Element`, T`Instrument`, T`Unit`], [[T`Air temperature`, T`thermometer 
 ${Key(T`<p>$$T = 26.3 - 0.6 \times \frac{h}{100}$$</p><p>where $T$ is the mean annual temperature in °C, $26.3$ °C is the mean at sea level in Indonesia and $h$ is the height in metres. Between two places: $T_B = T_A - 0.6 \times \frac{h_B - h_A}{100}$.</p>`)}
 ${FigW(mountainTempSvg({ peak: 3200, zones: true, marks: [[0], [1000], [2500]], names: { z1: T`Hot (0–700 m)`, z2: T`Temperate (700–1 500 m)`, z3: T`Cool (1 500–2 500 m)`, z4: T`Cold (above 2 500 m)` }, label: T`A mountain with Junghuhn's four climate zones and temperatures at 0, 1 000 and 2 500 metres from Braak's formula` }), T`Junghuhn's zones and Braak's temperatures up a mountain.`)}
 ${Tbl([T`Junghuhn zone`, T`Height`, T`Typical plants`], [[T`Hot`, T`0–700 m`, T`rice, coconut, sugar cane, maize, cocoa`], [T`Temperate`, T`700–1 500 m`, T`tea, coffee, tobacco, rubber`], [T`Cool`, T`1 500–2 500 m`, T`vegetables, cinchona (quinine), pine`], [T`Cold`, T`above 2 500 m`, T`mosses, lichens, no crops`]])}
+${Fig(planeSvg({ W: 360, H: 230, x: [0, 42], y: [0, 55], step: [5, 10], tickX: 10, xl: 'T (°C)', yl: 'g/m³', extra: (X, Y, D = [[0, 4.85], [5, 6.8], [10, 9.4], [15, 12.8], [20, 17.3], [25, 23.0], [30, 30.4], [35, 39.6], [40, 51.1]]) => sPline(D.map(([t, v]) => [X(t), Y(v)]), 'mf-c1', ' fill="none" stroke-width="2.2"') + sL(X(30), Y(0), X(30), Y(30.4), 'mf-grid', ' stroke-dasharray="4 3"'), pts: [[30, 30.4, T`saturated: 30.4`, 'end', false, 8, -6], [30, 21.3, T`actual: 21.3 → RH 70%`, 'end', false, 8, 22]], label: T`Maximum water vapour air can hold rising steeply with temperature; at 30 degrees air holding 21.3 grams per cubic metre has a relative humidity of 70 percent` }), T`Warm air can hold much more water vapour. At $30\,^\circ\mathrm{C}$ the maximum is about $30\,\mathrm{g/m^3}$, so air holding $21.3\,\mathrm{g/m^3}$ has $RH = 70\%$. Cool that air and $RH$ rises until dew forms.`)}
 <h3>Humidity</h3>
 <p><b>Absolute humidity</b> is the mass of water vapour in a cubic metre of air (g/m³). <b>Relative humidity</b> compares it with the most the air could hold at that temperature:</p>
 ${Key(T`<p>$$RH = \frac{\text{actual water vapour}}{\text{maximum water vapour}} \times 100\%$$</p><p>At 100% the air is saturated and water condenses into dew, fog or cloud. Warm air can hold more vapour than cold air.</p>`)}
@@ -2950,6 +3452,7 @@ ${Tip(T`<p>The <b>river regime</b> is how the discharge changes through the year
 ${FigW(aquiferSvg({ names: { wt: T`water table`, well: T`dug well`, spring: T`spring`, art: T`artesian well`, rain: T`rain soaks in`, unconf: T`Unconfined aquifer`, imp: T`Impermeable layer`, conf: T`Confined aquifer` }, label: T`A cross-section of groundwater: an unconfined aquifer with the water table and a dug well, a spring where the water table meets a valley, and a confined aquifer between impermeable layers tapped by an artesian well` }), T`Unconfined and confined groundwater.`)}
 ${Tbl([T`Type`, T`Description`], [[T`Unconfined (free) groundwater`, T`lies above the first impermeable layer and its top is the water table; tapped by shallow dug wells; rises and falls with the seasons`], [T`Confined groundwater`, T`trapped between two impermeable layers and under pressure; tapped by deep wells`], [T`Artesian water`, T`confined water whose pressure pushes it up the well, sometimes to overflow at the surface`], [T`Spring`, T`a place where groundwater flows out naturally, where the water table meets the surface`]])}
 ${Key(T`<p><b>Porosity</b> is the share of a rock's volume that is empty space:</p><p>$$\text{porosity} = \frac{\text{volume of pores}}{\text{total volume}} \times 100\%$$</p><p>A saturated aquifer holds (volume × porosity) of water. <b>Permeability</b> is how easily water moves through the rock; clay has high porosity but very low permeability.</p>`)}
+${Fig(barsSvg([[T`clay`, 45, 'mf-s4'], [T`sand`, 35, 'mf-s1'], [T`gravel`, 25, 'mf-s1'], [T`sandstone`, 15, 'mf-s2'], [T`granite`, 1, 'mf-s3']], { W: 380, H: 220, yMax: 50, step: 10, yl: T`porosity (%)`, label: T`Typical porosity: clay 45 percent, sand 35, gravel 25, sandstone 15, unfractured granite about 1` }), T`Typical porosities. Clay holds the most water but its pores are tiny and poorly connected, so water hardly moves through it: good aquifers need high <i>permeability</i> as well (sand, gravel).`)}
 <h3>Problems</h3>
 <p>Pumping more groundwater than rain can refill lowers the water table and dries up wells. In clay-rich coastal cities it also makes the ground compact and <b>sink</b> (land subsidence): parts of north Jakarta have sunk several metres. Near the coast, sea water can seep into the aquifer (<b>seawater intrusion</b>), making wells salty.</p>
 <h3>Lakes and wetlands</h3>
@@ -3002,6 +3505,7 @@ ${Tbl([T`Feature`, T`Description`, T`In and around Indonesia`], [[T`Continental 
 <h3>Depth zones</h3>
 <p>The sea bed is also divided by depth: the <b>littoral</b> zone (between high and low tide), the <b>neritic</b> zone (to 200 m, sunlit and rich in fish), the <b>bathyal</b> zone (200–2 000 m) and the <b>abyssal</b> zone (below 2 000 m, dark and cold).</p>
 ${Key(T`<p><b>Salinity</b> is the mass of dissolved salts in a kilogram of sea water, given in parts per thousand (‰). The average is about 35‰:</p><p>$$\text{salinity} = \frac{\text{mass of salt (g)}}{\text{mass of sea water (kg)}}$$</p><p>It is higher where evaporation is strong and rain is scarce (the Red Sea, about 40‰) and lower where rivers and rain add fresh water or ice melts (the Baltic Sea).</p>`)}
+${Fig(planeSvg({ W: 340, H: 240, x: [0, 32], y: [-1000, 0], step: [5, 125], tickX: 10, tickY: 250, fmtY: v => (v <= -1000 ? '' : F(-v)), xl: ' ', yl: T`depth (m)`, extra: (X, Y) => sPline([[29, 0], [28.5, -60], [20, -150], [12, -300], [8, -500], [5, -1000]].map(([t, d]) => [X(t), Y(d)]), 'mf-c1', ' fill="none" stroke-width="2.2"') + sR(X(0), Y(-60), X(32) - X(0), Y(-300) - Y(-60), 'mf-f4') + sT(X(22), Y(-190), T`thermocline`, 'mf-lab-b') + sT(X(18), Y(-750), T`cold deep water`, 'mf-small') + sT(X(31), Y(-960), 'T (°C)', 'mf-var', 'end'), label: T`Typical tropical sea temperature profile: warm mixed layer, a thermocline where it drops fast, then cold deep water` }), T`A typical tropical ocean profile: a warm, well-mixed surface layer, a thermocline where the temperature falls quickly, and cold water below about 1 000 m.`)}
 <h3>Temperature and currents</h3>
 <p>Sea water is warmest at the surface. Below a mixed layer the temperature drops quickly through the <b>thermocline</b>, then stays cold (about 2–4 °C) in the deep. <b>Ocean currents</b> are driven by winds and by differences in temperature and salinity. <b>Warm currents</b> flow from the equator towards the poles, and <b>cold currents</b> flow towards the equator (the Humboldt current off Peru), bringing up nutrients and rich fishing grounds.</p>
 ${Tip(T`<p>The <b>Indonesian Throughflow</b> (Arus Lintas Indonesia, ARLINDO) carries warm Pacific water through the Makassar Strait and the Banda Sea into the Indian Ocean: an important link in the global ocean circulation. Pressure in the sea rises by about 1 atmosphere for every 10 m of depth.</p>`)}`,
@@ -3199,6 +3703,7 @@ ${Tip(T`<p>The <b>10% rule</b>: at each step of a food chain most energy is used
 <p><b>Biodiversity</b> is the variety of life. It exists at three levels: <b>genetic</b> diversity (differences within a species, such as the many varieties of rice), <b>species</b> diversity (the number of different species) and <b>ecosystem</b> diversity (the variety of habitats, from coral reefs to mountain forests).</p>
 <p>Indonesia is one of the world's <b>megadiverse</b> countries: it covers about 1.3% of the Earth's land yet holds around 10% of its flowering plants, 12% of its mammals and 17% of its birds. Its position between two continents, its thousands of islands and its tropical climate all add to this richness.</p>
 ${Fig(hbarSvg([{ label: T`Habitat loss`, value: 5, show: '' }, { label: T`Overexploitation`, value: 4, show: '' }, { label: T`Invasive species`, value: 3, show: '' }, { label: T`Pollution`, value: 2.5, show: '' }, { label: T`Climate change`, value: 2.5, show: '' }], { label: T`The main threats to biodiversity: habitat loss, overexploitation, invasive species, pollution and climate change`, max: 5 }), T`The main threats to biodiversity. Habitat loss, such as clearing forest for plantations and mines, is by far the largest.`)}
+${Fig(barsSvg([[T`land area`, 1.3, 'mf-s3'], [T`flowering plants`, 10, 'mf-s2'], [T`mammals`, 12, 'mf-s1'], [T`birds`, 17, 'mf-s4']], { W: 380, H: 220, yMax: 20, step: 5, yl: T`% of world total`, label: T`Indonesia's share of the world: 1.3 percent of the land, but about 10 percent of flowering plants, 12 percent of mammals and 17 percent of birds` }), T`Indonesia's share of the world: little land, but a very large share of its species — the mark of a megadiverse country.`)}
 <h3>The IUCN Red List</h3>
 ${Tbl([T`Category`, T`Meaning`, T`Indonesian example`], [[T`Extinct (EX)`, T`no individuals left`, T`Javan tiger`], [T`Critically endangered (CR)`, T`extremely high risk of extinction`, T`Javan rhino, Sumatran orangutan, Tapanuli orangutan`], [T`Endangered (EN)`, T`very high risk`, T`Sumatran elephant, proboscis monkey, anoa`], [T`Vulnerable (VU)`, T`high risk`, T`Komodo dragon (now EN), babirusa`], [T`Least concern (LC)`, T`not currently threatened`, T`common species`]])}
 ${Key(T`<p><b>Measuring diversity.</b> Counting species (species richness) ignores how common each one is. <b>Simpson's index of diversity</b> uses the number of individuals $n$ of each species and the total $N$:</p><p>$$D = 1 - \frac{\sum n(n-1)}{N(N-1)}$$</p><p>It ranges from 0 (one species only) towards 1 (many species, evenly spread). It is the chance that two individuals picked at random belong to different species.</p>`)}
@@ -3306,6 +3811,7 @@ ${Tip(T`<p><b>Arithmetic density</b> = population ÷ total area. <b>Physiologica
 <p>The <b>structure</b> of a population is how it is divided by age, sex, work, education and other features. The quickest picture is a <b>population pyramid</b>: bars for each five-year age group, males on the left and females on the right.</p>
 ${FigW(pyramidSvg(['0–4', '5–9', '10–14', '15–19', '20–24', '25–29', '30–34', '35–39', '40–44', '45–49', '50–54', '55–59', '60–64', '65–69', '70–74', '75+'], [4.3, 4.4, 4.4, 4.3, 4.2, 4.0, 3.9, 3.8, 3.6, 3.3, 2.9, 2.5, 2.0, 1.5, 1.0, 0.8], [4.1, 4.2, 4.2, 4.1, 4.0, 3.9, 3.8, 3.8, 3.6, 3.3, 3.0, 2.6, 2.1, 1.6, 1.2, 1.1], { mLabel: T`Male`, fLabel: T`Female`, label: T`A population pyramid of Indonesia around 2020: wide at the young and working ages, narrowing steadily above age 50` }), T`Indonesia's population pyramid around 2020 (approximate, % of total). The base is no longer widening: births have fallen.`)}
 ${Tbl([T`Shape`, T`Also called`, T`What it shows`, T`Example`], [[T`Wide base, narrow top`, T`expansive (young)`, T`high births, many children, short lives`, T`Niger, Papua in the past`], [T`Straight sides`, T`stationary`, T`births and deaths both low and balanced`, T`Sweden`], [T`Narrow base, wider middle`, T`constrictive (old)`, T`very low births, an ageing population`, T`Japan`]])}
+${FigW(pyramidShapesSvg(), T`The three basic pyramid shapes: expansive (many births, young population), stationary (births and deaths both low and steady) and constrictive (fewer births than before, ageing).`)}
 ${Key(T`<p><b>Sex ratio</b> = number of males per 100 females:</p><p>$$SR = \frac{M}{F} \times 100$$</p><p><b>Dependency ratio</b> = how many young and old people each 100 people of working age must support:</p><p>$$DR = \frac{P_{0\text{–}14} + P_{65+}}{P_{15\text{–}64}} \times 100$$</p>`)}
 ${Tip(T`<p>When the dependency ratio falls below about 50, a country has a <b>demographic bonus</b>: many workers and relatively few dependants. Indonesia is in this window roughly from 2012 to 2035. It becomes a benefit only if the workers are healthy, educated and have jobs.</p>`)}`,
   gens: [
@@ -3349,6 +3855,7 @@ ${Tbl([T`Push factors (at the origin)`, T`Pull factors (at the destination)`], [
 <h3>Migration in Indonesia</h3>
 ${Tbl([T`Type`, T`Meaning`], [[T`Urbanisation`, T`moving from villages to cities; also the growth of the urban share of the population`], [T`Transmigration`, T`a government programme moving people from crowded Java, Bali and Madura to less populated islands`], [T`Ruralisation`, T`moving from cities back to villages`], [T`Emigration of workers`, T`Indonesian migrant workers (PMI) going abroad, for example to Malaysia, Saudi Arabia and Taiwan`]])}
 ${Key(T`<p><b>Net migration</b> = immigrants − emigrants. The <b>net migration rate</b> is per 1 000 people:</p><p>$$\text{NMR} = \frac{I - E}{P} \times 1000$$</p><p>The <b>level of urbanisation</b> is the urban population as a percentage of the total; for Indonesia it passed 50% around 2010 and is about 57% today.</p>`)}
+${Fig(planeSvg({ W: 360, H: 220, x: [1965, 2025], y: [0, 65], step: [10, 10], tickX: 10, fmtX: v => String(v), xl: T`year`, yl: '%', extra: (X, Y) => sPline([[1971, 17.3], [1980, 22.3], [1990, 30.9], [2000, 42.0], [2010, 49.8], [2020, 56.7]].map(([a, b]) => [X(a), Y(b)]), 'mf-c1', ' fill="none" stroke-width="2.2"'), pts: [[1971, 17.3, F(17.3), 'start', false, 8, 14], [1990, 30.9], [2000, 42.0], [2010, 49.8], [1980, 22.3], [2020, 56.7, F(56.7), 'end', false, 8, -6]], label: T`Share of Indonesians living in urban areas rising from 17 percent in 1971 to 57 percent in 2020` }), T`Urbanisation in Indonesia: the urban share of the population by census year (BPS), from 17% in 1971 to 57% in 2020.`)}
 ${Tip(T`<p>Urbanisation brings jobs and services but, when it is too fast, also slums, traffic jams, pollution, floods and a shortage of housing and clean water. Rural areas can lose their young workers. Developing small towns and villages spreads growth more evenly.</p>`)}`,
   gens: [
     () => {
@@ -3394,6 +3901,7 @@ ${Tbl([T`Stage`, T`Birth rate`, T`Death rate`, T`Growth`, T`Why`], [
   [T`4. Low stationary`, T`low`, T`low`, T`very slow`, T`small families by choice`],
   [T`5. Declining`, T`very low`, T`low, rising slightly`, T`shrinking`, T`an ageing population, costly child raising`]])}
 ${Key(T`<p><b>Natural increase</b> in percent is $\frac{\text{CBR} - \text{CDR}}{10}$, with both rates per 1 000. Indonesia (CBR about 16, CDR about 7) is late in <b>stage 3</b>. Japan and Italy are in stage 5; Niger and Chad are still in stage 2.</p>`)}
+${Fig(planeSvg({ W: 360, H: 220, x: [1965, 2025], y: [0, 6.5], step: [10, 1], tickX: 10, fmtX: v => String(v), xl: T`year`, yl: 'TFR', extra: (X, Y) => sPline([[1971, 5.61], [1980, 4.68], [1990, 3.33], [2000, 2.34], [2010, 2.41], [2020, 2.18]].map(([a, b]) => [X(a), Y(b)]), 'mf-c1', ' fill="none" stroke-width="2.2"') + sL(X(1965), Y(2.1), X(2025), Y(2.1), 'mf-c2', ' stroke-dasharray="5 4"') + sT(X(2024), Y(2.1) + 16, T`replacement level 2.1`, 'mf-small', 'end'), pts: [[1971, 5.61, F(5.61), 'start', false, 8, -4], [1980, 4.68], [1990, 3.33], [2000, 2.34], [2010, 2.41], [2020, 2.18, F(2.18), 'end', false, 8, -8]], label: T`Total fertility rate of Indonesia falling from 5.6 children per woman in 1971 to 2.2 in 2020` }), T`Indonesia's total fertility rate by census (BPS): from 5.6 children per woman in 1971 to 2.2 in 2020, close to the replacement level of about 2.1.`)}
 ${Tip(T`<p><b>Population policy.</b> Indonesia's family-planning programme (<i>Keluarga Berencana</i>, KB, run by BKKBN since 1970) cut the average number of children per woman (the <b>total fertility rate</b>) from about 5.6 to about 2.2. Countries in stage 5, such as Japan and South Korea, now pay families to have more children.</p>`)}`,
   gens: [
     () => {
@@ -3429,6 +3937,7 @@ ${Tip(T`<p><b>Population policy.</b> Indonesia's family-planning programme (<i>K
   lesson: () => T`
 <p>The <b>quality</b> of a population is how healthy, educated and prosperous its people are. It is measured with indicators such as life expectancy, infant mortality, literacy, years of schooling, income per person and the share of people living in poverty.</p>
 ${Key(T`<p><b>The Human Development Index</b> (HDI, <i>Indeks Pembangunan Manusia</i>) combines three dimensions. Each is turned into an index between 0 and 1:</p><p>$$\text{index} = \frac{\text{actual value} - \text{minimum}}{\text{maximum} - \text{minimum}}$$</p><p>For life expectancy the minimum is 20 years and the maximum 85. The HDI is the geometric mean of the three indices:</p><p>$$\text{HDI} = \sqrt[3]{I_{\text{health}} \times I_{\text{education}} \times I_{\text{income}}}$$</p>`)}
+${FigW(hdiSvg(), T`The HDI combines three dimension indices by their geometric mean, so a very low score in one dimension cannot be fully made up by the others.`)}
 ${Tbl([T`Dimension`, T`Indicator`], [[T`A long and healthy life`, T`life expectancy at birth`], [T`Knowledge`, T`expected years of schooling and mean years of schooling`], [T`A decent standard of living`, T`income (spending) per person`]])}
 ${Fig(hbarSvg([{ label: T`DKI Jakarta`, value: 83, show: NUM(0.83) }, { label: T`DI Yogyakarta`, value: 81, show: NUM(0.81) }, { label: T`Indonesia`, value: 75, show: NUM(0.75) }, { label: T`Nusa Tenggara Timur`, value: 67, show: NUM(0.67) }, { label: T`Papua`, value: 63, show: NUM(0.63) }], { max: 100, label: T`A bar chart of HDI in 2023 (Indonesian method): Jakarta about 0.83, Yogyakarta 0.81, Indonesia 0.75, East Nusa Tenggara 0.67, Papua 0.63` }), T`HDI of some provinces around 2023 (BPS method, shown on a 0–1 scale). Differences between regions are still large.`)}
 ${Tbl([T`HDI`, T`Category`], [[T`0.80 and above`, T`very high`], [T`0.70 – 0.80`, T`high`], [T`0.60 – 0.70`, T`medium`], [T`below 0.60`, T`low`]].map(([a, b]) => [a.replace(/0\.(\d\d)/g, (m, d) => NUM(+('0.' + d))), b]))}
@@ -3485,6 +3994,7 @@ ${Tbl([T`Type`, T`Description`, T`Examples`], [[T`Renewable`, T`restored natural
 ${Fig(donutSvg([{ label: T`Coal`, value: 40, show: '40%', cls: 'g-s6' }, { label: T`Oil`, value: 30, show: '30%', cls: 'g-s2' }, { label: T`Natural gas`, value: 16, show: '16%', cls: 'g-s4' }, { label: T`Renewables`, value: 14, show: '14%', cls: 'g-s3' }], { center: T`energy`, label: T`A donut chart of Indonesia's primary energy mix around 2023: coal about 40 percent, oil 30 percent, natural gas 16 percent and renewables 14 percent` }), T`Indonesia's primary energy mix around 2023 (approximate). The target is 23% renewables.`)}
 ${Tbl([T`Resource`, T`Where in Indonesia`], [[T`Oil and gas`, T`Riau, East Kalimantan, Natuna, the Java Sea, Papua (Tangguh)`], [T`Coal`, T`East and South Kalimantan, South Sumatra`], [T`Nickel`, T`Sulawesi (Morowali, Sorowako), North Maluku`], [T`Tin`, T`Bangka and Belitung`], [T`Copper and gold`, T`Papua (Grasberg), Sumbawa (Batu Hijau)`], [T`Bauxite`, T`Riau Islands, West Kalimantan`], [T`Geothermal`, T`along the volcanic arc: Kamojang, Dieng, Sarulla`]])}
 ${Key(T`<p><b>How long will it last?</b> For a non-renewable resource,</p><p>$$\text{years left} = \frac{\text{reserves}}{\text{production per year}}$$</p><p>This <b>reserve-to-production ratio</b> assumes production stays the same; new discoveries make it longer and rising demand shorter.</p>`)}
+${Fig(planeSvg({ W: 340, H: 210, x: [0, 42], y: [0, 110], step: [5, 25], tickX: 10, xl: T`years`, yl: T`reserves`, fns: [{ f: t => 100 - 5 * t, to: 20, label: T`5/yr → 20 yr`, at: 12, dx: 10, dy: 4 }, { f: t => 100 - 2.5 * t, to: 40, cls: 'mf-c2', label: T`2.5/yr → 40 yr`, at: 26, dx: 8, dy: -4 }], label: T`Reserves of 100 units running out in 20 years at 5 units a year, or in 40 years at 2.5 units a year` }), T`The reserve-to-production ratio: 100 units last 20 years at 5 a year, but 40 years if production is halved (and longer still if new reserves are found).`)}
 ${Tip(T`<p><b>Sustainable use</b> means taking no more than nature can renew, saving and recycling non-renewables, and adding value at home: Indonesia now requires nickel ore to be processed into metal and battery materials in the country (downstreaming, <i>hilirisasi</i>) instead of being exported raw.</p>`)}`,
   gens: [
     () => {
@@ -3519,6 +4029,7 @@ ${Tip(T`<p><b>Sustainable use</b> means taking no more than nature can renew, sa
   lesson: () => T`
 <p><b>Agriculture</b> in the broad sense includes growing crops, raising livestock, fisheries and forestry. Farming systems differ by purpose (<b>subsistence</b> for the family or <b>commercial</b> for sale) and by how intensively the land is used.</p>
 ${Tbl([T`Type`, T`Description`, T`Indonesian example`], [[T`Wet-rice (sawah)`, T`irrigated, flooded terraces; very intensive`, T`Java, Bali (subak), North Sumatra`], [T`Dry fields (tegalan, ladang)`, T`rain-fed crops such as maize and cassava`, T`Nusa Tenggara, uplands of Java`], [T`Shifting cultivation`, T`clearing a plot, farming it a few years, then moving on`, T`parts of Kalimantan and Papua`], [T`Plantations`, T`large estates of one cash crop for export`, T`oil palm (Sumatra, Kalimantan), rubber, tea, coffee, sugar cane`], [T`Mixed gardens (pekarangan)`, T`many plants and animals around the house`, T`across Java`]])}
+${FigW(terraceSvg(), T`<i>Sawah</i> terraces turn a steep slope into flat, flooded steps. They hold water and soil, cut erosion and let rice grow on hillsides, as in Bali's <i>subak</i> system.`)}
 <h3>Von Thünen's model</h3>
 ${FigW(vonThunenSvg({ names: { z1: T`dairy and vegetables`, z2: T`forestry`, z3: T`grain`, z4: T`ranching`, city: T`city`, rent: T`land rent`, dist: T`distance from the city →` }, label: T`Von Thünen's rings around a city, with a graph of land rent against distance for each land use: the steepest line for perishable crops near the city, flatter lines for land uses further away` }), T`Von Thünen's rings. Each land use can pay the most rent in its own ring.`)}
 ${Key(T`<p>Johann Heinrich von Thünen (1826) imagined an isolated city on a flat, even plain. Farmers pay to carry goods to market, so the <b>land rent</b> a crop can pay falls with distance:</p><p>$$R = Y(p - c) - Y f d$$</p><p>with $Y$ the yield per hectare, $p$ the market price, $c$ the production cost, $f$ the transport cost per tonne per km and $d$ the distance. Perishable or bulky goods (milk, vegetables, and in his day firewood) are produced near the city; grain and livestock further out.</p>`)}
@@ -3564,6 +4075,7 @@ ${Tbl([T`Size (BPS)`, T`Workers`], [[T`Household industry`, '1–4'], [T`Small i
 <p>The main factors are raw materials, the market, labour, transport, energy and water, capital, government policy and <b>agglomeration</b> (firms clustering to share suppliers, workers and services).</p>
 ${FigW(weberSvg({ names: { m1: T`Raw material 1`, m2: T`Raw material 2`, k: T`Market`, p: T`least-cost location` }, label: T`Weber's location triangle with two raw-material sources and a market at the corners and the least-cost location inside, pulled towards the heavier raw material` }), T`Weber's triangle. The factory is pulled towards whichever corner costs most to transport from.`)}
 ${Key(T`<p><b>Weber's least-cost theory</b> (1909): a factory is located where the total cost of transport (of raw materials in and products out) is lowest. The <b>material index</b> decides the pull:</p><p>$$MI = \frac{\text{weight of localised raw materials}}{\text{weight of the finished product}}$$</p><p>If $MI > 1$ the materials lose weight in processing (cement, smelting, sugar), so the industry is <b>raw-material oriented</b>. If $MI < 1$ the product gains weight or is fragile (drinks, bread), so it is <b>market oriented</b>. If $MI = 1$ it is <b>footloose</b>: it can locate anywhere.</p>`)}
+${FigW(materialIndexSvg(), T`The material index (weight of raw materials ÷ weight of product) decides the pull: above 1 the factory moves towards the raw material (R), below 1 towards the market (M).`)}
 ${Tip(T`<p>The <b>location quotient</b> shows whether a region specialises in an industry: $LQ = \frac{e_i / e}{E_i / E}$, where $e_i$ and $e$ are the region's jobs in that industry and in total, and $E_i$ and $E$ the same for the country. $LQ > 1$ means the region has more than its share: a basic, exporting sector. Indonesia's industrial estates include Cikarang and Karawang (West Java), Batam, and the Morowali nickel park.</p>`)}`,
   gens: [
     () => {
@@ -3603,6 +4115,7 @@ ${Tip(T`<p>The <b>location quotient</b> shows whether a region specialises in an
 <p>A <b>central place</b> is a settlement that provides goods and services to the people around it. Walter Christaller (1933), studying southern Germany, asked why towns are the sizes they are and spaced as they are.</p>
 ${Key(T`<p><b>Threshold</b>: the minimum number of customers a service needs to survive. <b>Range</b>: the maximum distance people will travel to use it. A service can exist only where its range covers at least its threshold. Everyday <b>low-order</b> goods (a small shop, a primary school) have a low threshold and short range; <b>high-order</b> goods (a university, a specialist hospital, a shopping mall) have a high threshold and long range.</p>`)}
 ${FigW(christallerSvg({ names: { city: T`city (high order)`, town: T`town (middle order)`, village: T`village (low order)` }, label: T`Christaller's model: small hexagonal market areas around many villages, larger hexagons around six towns, and the largest hexagon around one city` }), T`Christaller's hexagonal market areas (k = 3). Hexagons fill the plain without gaps or overlaps.`)}
+${FigW(thresholdRangeSvg(), T`A service survives only if its range (how far people will travel) reaches enough people to meet its threshold.`)}
 <p>Each town serves the equivalent of three village areas, and each city three town areas: this is the <b>marketing principle</b>, $k = 3$. So there are always more small places than big ones. Christaller also described $k = 4$ (the transport principle, places along roads) and $k = 7$ (the administrative principle).</p>
 ${Tip(T`<p>The <b>rank-size rule</b> says the $n$th largest city has about $\frac{1}{n}$ of the population of the largest: $P_n = \frac{P_1}{n}$. When the largest city is far bigger than this, it is a <b>primate city</b>, like Jakarta or Bangkok. The <b>primacy index</b> is $\frac{P_1}{P_2}$.</p>`)}`,
   gens: [
@@ -3644,6 +4157,7 @@ ${Tip(T`<p>The <b>rank-size rule</b> says the $n$th largest city has about $\fra
 <p><b>Spatial interaction</b> is the movement of people, goods, money and information between places: commuting, trade, phone calls, tourism. Edward Ullman named three conditions that make it happen.</p>
 ${Tbl([T`Condition`, T`Meaning`, T`Example`], [[T`Complementarity`, T`one place has what another needs`, T`vegetables from the highlands, factory goods from the city`], [T`Intervening opportunity`, T`a closer place that offers the same thing reduces interaction`, T`a new market town between a village and the city`], [T`Transferability`, T`goods and people can actually be moved at a reasonable cost`, T`a new toll road or bridge`]])}
 ${Key(T`<p><b>The gravity model</b>: interaction grows with the size of the two places and falls with the square of the distance between them,</p><p>$$I_{AB} = k\,\frac{P_A\,P_B}{d_{AB}^{\,2}}$$</p><p><b>Reilly's breaking point</b> is where the pull of two towns is equal. Measured from town B,</p><p>$$BP = \frac{d_{AB}}{1 + \sqrt{P_A / P_B}}$$</p><p>so the breaking point lies closer to the smaller town.</p>`)}
+${Fig(planeSvg({ W: 340, H: 210, x: [0, 5.2], y: [0, 1.1], step: [1, 0.25], tickY: 0.5, fmtY: v => (v === 1 ? 'I' : ''), xl: 'd', yl: 'I', fns: [{ f: d => 1 / (d * d), from: 0.96 }], pts: [[1, 1, 'I', 'start', false, 8, -4], [2, 0.25, 'I/4', 'start', false, 8, -6], [4, 1 / 16, 'I/16', 'start', false, 8, -8]], label: T`Interaction falling with the square of distance: a quarter at twice the distance, a sixteenth at four times` }), T`The gravity model: double the distance and interaction falls to a quarter; four times the distance, to a sixteenth.`)}
 ${FigW(breakingPointSvg({ pa: 400000, pb: 100000, d: 90, names: { bp: T`breaking point`, a: 'A', b: 'B' }, label: T`Two towns 90 km apart, A with 400 000 people and B with 100 000; the breaking point lies 30 km from B` }), T`With 4 times as many people, A's pull reaches twice as far: the breaking point is 30 km from B and 60 km from A.`)}
 ${Tip(T`<p><b>Network connectivity</b> is measured with the <b>beta index</b> $\beta = \frac{e}{v}$ (edges, i.e. roads, divided by vertices, i.e. places). Below 1 the network is a tree or a simple chain; above 1 it has circuits and many alternative routes. Interaction brings trade, jobs and ideas, but also traffic, the spread of disease and a brain drain from villages.</p>`)}`,
   gens: [
@@ -3880,6 +4394,7 @@ ${Tbl([T`Position`, T`Description`, T`What it means`], [
   [T`Astronomical`, T`about 6° N – 11° S and 95° E – 141° E`, T`tropical climate with rain all year, a small range of temperature; three time zones`],
   [T`Geographical`, T`between two continents (Asia and Australia) and two oceans (Pacific and Indian)`, T`monsoon winds, a crossroads of world trade and culture, rich biodiversity`],
   [T`Geological`, T`where the Eurasian, Indo-Australian and Pacific plates meet`, T`volcanoes, fertile soils and minerals, but also earthquakes and tsunamis`]])}
+${FigW(indonesiaSvg({ grid: false, names: [[100, 6, T`ASIA`], [136, -11, T`AUSTRALIA`], [102, -10, T`Indian Ocean`], [134, 5, T`Pacific Ocean`]], label: T`Indonesia between the continents of Asia and Australia and between the Indian and Pacific Oceans` }), T`Indonesia's geographical position: a crossroads between two continents and two oceans.`)}
 ${Key(T`<p>The span of longitude sets the difference in <b>solar time</b>: the Earth turns 15° an hour, so</p><p>$$\Delta t = \frac{\Delta\lambda}{15^\circ} \text{ hours}$$</p><p>Indonesia's 46° of longitude make just over 3 hours, which is why it has three time zones. One degree of latitude is about 111 km, so Indonesia's 17° of latitude span about 1 900 km from north to south.</p>`)}
 ${Tip(T`<p>The <b>Strait of Malacca</b>, between Sumatra and Malaysia, is one of the busiest shipping lanes in the world. Indonesia's three <b>archipelagic sea lanes</b> (ALKI) guarantee ships a route through its waters.</p>`)}`,
   gens: [
@@ -3923,6 +4438,7 @@ ${Tip(T`<p>The <b>Strait of Malacca</b>, between Sumatra and Malaysia, is one of
 <p>Under colonial law each island had only a 3-mile strip of sea; the waters between islands were international. The <b>Djuanda Declaration</b> (13 December 1957) claimed all waters between Indonesia's islands as national waters, measured from straight baselines joining the outermost islands. This was finally recognised by the <b>United Nations Convention on the Law of the Sea (UNCLOS)</b> in 1982, which accepts Indonesia as an <b>archipelagic state</b>. 13 December is now National Nusantara Day.</p>
 ${FigW(maritimeSvg({ names: { inner: T`archipelagic waters`, terr: T`territorial sea`, cont: T`contiguous zone`, eez: T`exclusive economic zone (EEZ)`, high: T`high seas`, base: T`baseline`, nm: T`nm`, eezNote: T`sovereign rights to fish, oil and gas`, sov: T`← full sovereignty →` }, label: T`Maritime zones measured from the baseline: territorial sea to 12 nautical miles, contiguous zone to 24, exclusive economic zone to 200, then the high seas` }), T`Maritime zones under UNCLOS, measured from the baseline (1 nautical mile = 1.852 km).`)}
 ${Tbl([T`Zone`, T`Width from the baseline`, T`Rights`], [[T`Archipelagic and internal waters`, T`inside the baselines`, T`full sovereignty (ships have the right of passage along sea lanes)`], [T`Territorial sea`, T`12 nm`, T`full sovereignty over the water, sea bed and air`], [T`Contiguous zone`, T`24 nm`, T`control of customs, immigration, health and taxes`], [T`Exclusive economic zone`, T`200 nm`, T`sovereign rights to fish and to use the sea bed and its oil, gas and minerals`], [T`Continental shelf`, T`at least 200 nm, up to 350 nm`, T`rights to the sea-bed resources`]])}
+${Fig(donutSvg([{ label: T`Land`, value: 1.9, show: `${F(1.9)} ${T`million km²`}`, cls: 'g-s6' }, { label: T`Sea (incl. EEZ)`, value: 6.4, show: `${F(6.4)} ${T`million km²`}`, cls: 'g-s1' }], { W: 540, center: T`Indonesia`, label: T`Indonesia's area: about 1.9 million square kilometres of land and 6.4 million of sea including the exclusive economic zone` }), T`Most of Indonesia is sea: about 1.9 million km² of land and 6.4 million km² of waters including the EEZ (figures used by the Geospatial Information Agency, BIG).`)}
 ${Key(T`<p><b>Borders.</b> Indonesia has land borders with <b>Malaysia</b> (on Borneo), <b>Papua New Guinea</b> (on New Guinea) and <b>Timor-Leste</b> (on Timor), and sea borders with ten countries including India, Thailand, Singapore, Vietnam, the Philippines, Palau and Australia. It has 111 <b>outermost small islands</b> that mark its baselines, such as Miangas, Rondo and Sekatung.</p>`)}
 ${Tip(T`<p>Border disputes are settled by negotiation and international law. In 2002 the International Court of Justice gave the islands of Sipadan and Ligitan to Malaysia because Malaysia had administered them effectively. Guarding and developing outermost islands is part of keeping the nation's territory.</p>`)}`,
   gens: [
@@ -3958,6 +4474,7 @@ ${Tip(T`<p>Border disputes are settled by negotiation and international law. In 
   lesson: () => T`
 <p>Countries are often grouped as <b>developed</b> (such as Japan, Germany and Australia) or <b>developing</b> (such as Indonesia, India and Nigeria). There is no single dividing line; geographers compare many indicators.</p>
 ${Tbl([T`Indicator`, T`Developed countries`, T`Developing countries`], [[T`Income per person`, T`high`, T`low to middle`], [T`Main jobs`, T`services and industry`, T`farming and informal work, shifting to industry and services`], [T`Population growth`, T`slow or falling; ageing`, T`faster; young population`], [T`Life expectancy and literacy`, T`high`, T`lower`], [T`Technology and infrastructure`, T`advanced`, T`uneven`], [T`HDI`, T`very high`, T`medium to high`]])}
+${FigW(incomeBandsSvg(), T`World Bank income groups by GNI per person (Atlas method, thresholds for 2024–25). Indonesia, at about US$4 870 in 2023, moved up to <b>upper-middle income</b>.`)}
 ${Key(T`<p><b>Gross national income per capita</b> is the total income of a country's people and firms divided by its population:</p><p>$$\text{GNI per capita} = \frac{\text{GNI}}{\text{population}}$$</p><p>The World Bank groups countries by it (in US dollars, 2024): <b>low income</b> up to 1 145, <b>lower-middle</b> 1 146 – 4 515, <b>upper-middle</b> 4 516 – 14 005 and <b>high income</b> above 14 005. Indonesia is <b>upper-middle income</b>, with about 4 900 dollars per person.</p>`)}
 ${FigW(barChartSvg([{ label: T`Agriculture`, value: 29, cls: 'g-s3', show: '29%' }, { label: T`Industry`, value: 22, cls: 'g-s2', show: '22%' }, { label: T`Services`, value: 49, cls: 'g-s1', show: '49%' }], { yMax: 60, yStep: 20, yl: T`% of workers`, label: T`A bar chart of Indonesia's workforce by sector: about 29 percent in agriculture, 22 percent in industry and 49 percent in services` }), T`Indonesia's workers by sector (about 2023). In developed countries farming employs only 1–5% and services 70–80%.`)}
 ${Tip(T`<p>As a country develops, workers move from <b>primary</b> activities (farming, fishing, mining) to <b>secondary</b> (manufacturing) and then <b>tertiary</b> (services) activities. Indonesia aims to become a developed, high-income country by 2045, the centenary of independence (<i>Indonesia Emas 2045</i>).</p>`)}`,
@@ -4045,6 +4562,7 @@ level({
 <p><b>Spatial analysis</b> uses the location of things, not only their attributes, to find patterns and explain them. Its first question is often whether points (shops, wells, earthquake epicentres, cases of a disease) are <b>clustered</b>, <b>random</b> or <b>regular</b>.</p>
 ${FigW(`<div class="g-row">${[['clustered', T`Clustered: R near 0`], ['random', T`Random: R near 1`], ['regular', T`Regular: R up to 2.15`]].map(([k, t]) => `<div>${pointPatternSvg(k, { label: t })}<div class="g-cap">${t}</div></div>`).join('')}</div>`, T`Three point patterns and their nearest-neighbour index R.`)}
 ${Key(T`<p><b>Nearest-neighbour analysis</b> (Clark and Evans, 1954) compares the observed mean distance from each point to its nearest neighbour, $\bar d$, with the mean expected if the points were random:</p><p>$$R = \frac{\bar d}{\bar d_E}, \qquad \bar d_E = \frac{1}{2\sqrt{n / A}}$$</p><p>with $n$ points in an area $A$. $R = 0$ means all points at one place, $R \approx 1$ random, and $R = 2.15$ perfectly regular (a hexagonal lattice).</p>`)}
+${Fig(bufferSvg(), T`<b>Buffers</b> are zones of equal distance around features: here 100 m along a river and around two wells. Overlaying them with the houses shows which homes are at risk of flooding or depend on each well.`)}
 <h3>Other tools</h3>
 ${Tbl([T`Tool`, T`What it does`, T`Example`], [[T`Mean centre`, T`the average of the x and y coordinates of all points`, T`the centre of a country's population, and how it moves`], [T`Buffer`, T`a zone within a fixed distance of a feature`, T`the area within 500 m of a river or 1 km of a school`], [T`Overlay`, T`combining map layers to find places that meet several conditions`, T`land that is flat, not forest and not flood-prone`], [T`Distance decay`, T`interaction falls as distance grows`, T`fewer customers from further away`], [T`Spatial autocorrelation`, T`nearby places tend to have similar values (Tobler's first law)`, T`neighbouring districts with similar poverty rates`]])}
 ${Tip(T`<p><b>Tobler's first law of geography</b> (1970): "everything is related to everything else, but near things are more related than distant things." Moran's I measures it: positive when similar values cluster, near 0 when values are spread at random.</p>`)}`,
@@ -4087,6 +4605,7 @@ ${Tip(T`<p><b>Tobler's first law of geography</b> (1970): "everything is related
 ${FigW(slopeSvg(30, 200, { names: { run: T`horizontal distance`, rise: T`height difference` }, label: T`A right triangle showing a slope: a horizontal distance of 200 metres and a height difference of 30 metres, with the slope angle theta at the bottom` }), T`Slope is the rise over the run.`)}
 ${Key(T`<p>$$\text{slope (\%)} = \frac{\Delta h}{d} \times 100, \qquad \theta = \tan^{-1}\frac{\Delta h}{d}$$</p><p>with $\Delta h$ the height difference and $d$ the horizontal distance. A 100% slope is 45°. On a topographic map, $\Delta h$ = (number of contour intervals) × (contour interval), and $d$ = map distance × scale.</p>`)}
 ${Tbl([T`Slope (%)`, T`Class (Van Zuidam)`, T`Suitable use`], [['0–2', T`flat`, T`wet rice, towns`], ['2–7', T`gently sloping`, T`farming, settlement`], ['7–15', T`sloping`, T`farming with conservation`], ['15–30', T`moderately steep`, T`plantations, terraces`], ['30–70', T`steep`, T`forest; high landslide risk`], ['70–140', T`very steep`, T`protected forest`], [T`over 140`, T`extremely steep`, T`protected; cliffs`]])}
+${Fig(planeSvg({ W: 340, H: 230, x: [0, 1.05], y: [0, 1.05], equal: true, step: [0.25, 0.25], tickX: 0.5, tickY: 0.5, xl: 'a/A', yl: 'h/H', fns: [{ f: x => 1 - x ** 3, to: 1, label: 'HI 0.75', at: 0.72, dx: 6, dy: -4 }, { f: x => 1 - x, to: 1, cls: 'mf-c2', label: 'HI 0.5', at: 0.52, dx: 6, dy: -2 }, { f: x => (1 - x) ** 3, to: 1, cls: 'mf-c3', label: 'HI 0.25', at: 0.3, dx: 6, dy: -2 }], label: T`Hypsometric curves: convex for a young landscape, straight for a mature one and concave for an old, worn-down one` }), T`Hypsometric curves (relative height against relative area above it). The area under each curve is the hypsometric integral: high for young, little-eroded land, low for old, worn-down land.`)}
 ${Tip(T`<p><b>Relative relief</b> is the difference between the highest and lowest points in an area. The <b>hypsometric integral</b>, $HI = \frac{\bar h - h_{\min}}{h_{\max} - h_{\min}}$, shows how much of a basin is still high ground: above about 0.6 a young, little-eroded landscape; below about 0.35 an old, worn-down one.</p>`)}`,
   gens: [
     () => {
@@ -4171,6 +4690,7 @@ ${Tip(T`<p>The <b>Thiessen</b> average weights each gauge by the area of its pol
 ${Tbl([T`Visual variable (Bertin)`, T`Best for`], [[T`Position`, T`where things are`], [T`Size`, T`quantities (bigger = more)`], [T`Value (lightness)`, T`ordered data such as rates (darker = more)`], [T`Hue (colour)`, T`categories such as land-use types`], [T`Shape`, T`categories of point features`], [T`Orientation and texture`, T`extra categories, direction`]])}
 ${FigW(choroplethSvg([120, 340, 560, 80, 900, 450, 230, 610, 150, 380, 700], { breaks: [200, 400, 600, 1000], label: T`A choropleth map of eleven districts shaded in four classes of population density, darker for higher density, with a legend` }), T`A choropleth map of population density (people per km²) in four classes.`)}
 ${Key(T`<p><b>Choropleth maps</b> must show <b>rates or densities</b>, not raw counts: a large district would look important just because it is large. Data are grouped into classes, often 4–7. The number of classes can be estimated with <b>Sturges' rule</b>, $k = 1 + 3.322 \log_{10} n$.</p><p><b>Equal interval</b>: each class has the same width, $w = \frac{\max - \min}{k}$. <b>Quantile</b>: each class holds the same number of areas. <b>Natural breaks</b> (Jenks): class limits placed at gaps in the data.</p>`)}
+${Fig(propCirclesSvg(), T`Proportional circles: a value 9 times larger gets a circle with 9 times the area but only 3 times the radius.`)}
 ${Tip(T`<p><b>Proportional symbols</b> show counts: the <i>area</i> of each circle is proportional to the value, so the radius grows with the square root, $r \propto \sqrt{v}$. A value four times larger needs a circle only twice as wide. <b>Generalisation</b> (selecting, simplifying, smoothing and exaggerating features) keeps a small-scale map readable.</p>`)}`,
   gens: [
     () => {
@@ -4209,6 +4729,7 @@ ${Tip(T`<p><b>Proportional symbols</b> show counts: the <i>area</i> of each circ
   lesson: () => T`
 <p>Geographic research follows a cycle: choose a <b>problem</b>, review what is known, form <b>questions or hypotheses</b>, collect and analyse <b>data</b>, and draw <b>conclusions</b>. <b>Quantitative</b> research measures and tests with numbers; <b>qualitative</b> research seeks meanings and experiences through interviews and observation. Many studies use both (<b>mixed methods</b>).</p>
 ${Tbl([T`Data`, T`Source`, T`Examples`], [[T`Primary`, T`collected by the researcher`, T`questionnaires, interviews, field measurements, observation, drone photos`], [T`Secondary`, T`collected by others`, T`census and BPS statistics, maps, satellite images, reports`]])}
+${FigW(cycleSvg([T`Problem`, T`Literature`, T`Hypothesis`, T`Data`, T`Analysis`, T`Conclusion`], { center: T`Research cycle`, label: T`The research cycle: problem, literature review, hypothesis, data collection, analysis and conclusion, leading to new problems` }), T`Research is a cycle: conclusions raise new problems to study.`)}
 <h3>Sampling</h3>
 ${FigW(`<div class="g-row">${[['random', T`Simple random`], ['systematic', T`Systematic: every k-th`], ['stratified', T`Stratified: from each group`]].map(([k, t]) => `<div>${samplingSvg(k, { label: t })}<div class="g-cap">${t}</div></div>`).join('')}</div>`, T`Three sampling designs among the households of a village (chosen households are larger).`)}
 ${Key(T`<p>A <b>sample</b> is a part of the <b>population</b> studied. <b>Slovin's formula</b> estimates the sample size for a population $N$ and margin of error $e$:</p><p>$$n = \frac{N}{1 + N e^2}$$</p><p>In <b>systematic</b> sampling the interval is $k = \frac{N}{n}$. In <b>proportional stratified</b> sampling each group gets a share of the sample equal to its share of the population: $n_i = \frac{N_i}{N} \times n$.</p>`)}

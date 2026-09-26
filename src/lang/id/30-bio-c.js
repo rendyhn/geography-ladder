@@ -1,15 +1,5 @@
 /* Bahasa Indonesia — 30-bio-c */
 addT('id', {
-  'k34v32vsys': R`
-<p><b>Keanekaragaman hayati</b> (biodiversitas) adalah keberagaman makhluk hidup. Keanekaragaman ini ada pada tiga tingkat: keanekaragaman <b>gen</b> (perbedaan di dalam satu spesies, seperti banyaknya varietas padi), keanekaragaman <b>spesies</b> (jumlah spesies yang berbeda) dan keanekaragaman <b>ekosistem</b> (keberagaman habitat, dari terumbu karang sampai hutan pegunungan).</p>
-<p>Indonesia termasuk negara <b>megabiodiversitas</b> di dunia: luasnya hanya sekitar 1,3% daratan Bumi, tetapi memiliki sekitar 10% tumbuhan berbunga, 12% mamalia dan 17% burung di dunia. Letaknya di antara dua benua, ribuan pulaunya dan iklim tropisnya menambah kekayaan ini.</p>
-⟦0⟧
-<h3>Daftar Merah IUCN</h3>
-⟦1⟧
-⟦2⟧
-<h3>Konservasi</h3>
-⟦3⟧
-⟦4⟧`,
   '1l14ygskxz3': R`Hilangnya habitat`,
   '200gx5jte99': R`Eksploitasi berlebihan`,
   '16dj9d8o52o': R`Spesies invasif`,

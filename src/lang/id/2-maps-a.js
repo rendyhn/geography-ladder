@@ -1,14 +1,5 @@
 /* Bahasa Indonesia — 2-maps-a */
 addT('id', {
-  'zbb7dz97pb': R`
-<p><b>Geografi</b> mempelajari persamaan dan perbedaan fenomena di permukaan Bumi (geosfer) dengan sudut pandang keruangan, kelingkungan, atau kewilayahan. Seorang ahli geografi selalu mengajukan tiga pertanyaan: <i>di mana</i> letaknya, <i>mengapa</i> ada di sana, dan <i>apa artinya</i> bagi manusia dan lingkungan?</p>
-<h3>Objek geografi</h3>
-⟦0⟧
-<h3>Sepuluh konsep esensial</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   'd5yammh8qw': R`Objek`,
   '1b00t4z3zq2': R`Pengertian`,
   '1j1ms4p35q': R`Contoh`,
@@ -118,16 +109,6 @@ addT('id', {
   's3zebmcp4d': R`Ahli geografi mengajukan tiga pertanyaan dasar: <i>Di mana?</i>, <i>Mengapa di sana?</i>, dan <i>Apa artinya?</i> Pertanyaan manakah yang terutama diajukan di sini? <i>⟦0⟧</i>`,
   '1iv93cqfjb0': R`Kapan`,
   '13flq2vt94q': R`Di mana menggambarkan letak dan persebaran; mengapa menjelaskan penyebabnya; apa artinya melihat akibatnya bagi manusia dan lingkungan.`,
-  '1ls4j68i65u': R`
-<p><b>Peta</b> adalah gambaran sebagian atau seluruh permukaan Bumi pada bidang datar, yang diperkecil dengan skala dan disederhanakan dengan simbol. Peta dibedakan menjadi <b>peta umum</b> (menampilkan banyak unsur, seperti peta topografi atau atlas) dan <b>peta tematik</b> (menampilkan satu tema, seperti curah hujan atau kepadatan penduduk).</p>
-⟦0⟧
-⟦1⟧
-<h3>Skala</h3>
-<p><b>Skala angka</b> seperti $1 : 50\,000$ berarti 1 satuan di peta sama dengan 50 000 satuan yang sama di lapangan. <b>Skala verbal</b> menyatakannya dengan kata-kata ("1 cm mewakili 500 m"), dan <b>skala grafis</b> berupa batang, yang tetap benar jika peta diperbesar atau diperkecil.</p>
-⟦2⟧
-⟦3⟧
-<p>Peta <b>skala besar</b> (misalnya $1 : 5\,000$) menampilkan wilayah sempit dengan sangat rinci; peta <b>skala kecil</b> (misalnya $1 : 1\,000\,000$) menampilkan wilayah luas dengan sedikit rincian. Makin besar penyebutnya, makin kecil skalanya.</p>
-⟦4⟧`,
   '28smpy8bvgs': R`Penggunaan Lahan Pulau Sukamaju`,
   '1mdxc4hikdp': R`Laut`,
   '1ikfmkgi8xi': R`Dataran rendah`,

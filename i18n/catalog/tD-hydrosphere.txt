@@ -355,17 +355,18 @@ Citarum
 The Kapuas in West Kalimantan is about 1 143 km long.
 
 ##### groundwater
-@24bwmq6k8d  ; 0=FigW(aquiferSvg({ names: { wt: T`water t | 1=Tbl([T`Type`, T`Description`], [[T`Uncon | 2=Key(T`<p><b>Porosity</b> is the share of | 3=Tbl([T`Kind of lake`, T`How it forms`, T | 4=Tip(T`<p><b>Wetlands</b> such as swamps,
+@1zui2meqp2u  ; 0=FigW(aquiferSvg({ names: { wt: T`water t | 1=Tbl([T`Type`, T`Description`], [[T`Uncon | 2=Key(T`<p><b>Porosity</b> is the share of | 3=Fig(barsSvg([[T`clay`, 45, 'mf-s4'], [T` | 4=Tbl([T`Kind of lake`, T`How it forms`, T | 5=Tip(T`<p><b>Wetlands</b> such as swamps,
 
 <p><b>Groundwater</b> is water that fills the pores and cracks in soil and rock below the surface. Rain soaks in (infiltration) and seeps down (percolation) until it reaches the <b>zone of saturation</b>, where every pore is full. The top of this zone is the <b>water table</b>. A layer that holds and lets through plenty of water is an <b>aquifer</b> (sand, gravel, porous limestone); a layer that hardly lets water through, such as clay, is an <b>aquiclude</b>.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
+⟦3⟧
 <h3>Problems</h3>
 <p>Pumping more groundwater than rain can refill lowers the water table and dries up wells. In clay-rich coastal cities it also makes the ground compact and <b>sink</b> (land subsidence): parts of north Jakarta have sunk several metres. Near the coast, sea water can seep into the aquifer (<b>seawater intrusion</b>), making wells salty.</p>
 <h3>Lakes and wetlands</h3>
-⟦3⟧
 ⟦4⟧
+⟦5⟧
 @1kjryrtcwk3
 water table
 @1q4ghhldn8e
@@ -404,6 +405,14 @@ Spring
 a place where groundwater flows out naturally, where the water table meets the surface
 @1t5dupzvvuz
 <p><b>Porosity</b> is the share of a rock's volume that is empty space:</p><p>$$\text{porosity} = \frac{\text{volume of pores}}{\text{total volume}} \times 100\%$$</p><p>A saturated aquifer holds (volume × porosity) of water. <b>Permeability</b> is how easily water moves through the rock; clay has high porosity but very low permeability.</p>
+@1qpaq8txjpp
+gravel
+@9csjqioror
+porosity (%)
+@2e3e2whbdlo
+Typical porosity: clay 45 percent, sand 35, gravel 25, sandstone 15, unfractured granite about 1
+@2crq02j559n
+Typical porosities. Clay holds the most water but its pores are tiny and poorly connected, so water hardly moves through it: good aquifers need high <i>permeability</i> as well (sand, gravel).
 @gmf3ktrf1
 Kind of lake
 @14src75imt8
@@ -540,7 +549,7 @@ They make the soil salty
 Wetlands soak up water like sponges, clean it, and shelter many species.
 
 ##### oceans
-@2ezh6o198pf  ; 0=FigW(seaFloorSvg({ names: { shelf: T`con | 1=Tbl([T`Feature`, T`Description`, T`In an | 2=Key(T`<p><b>Salinity</b> is the mass of  | 3=Tip(T`<p>The <b>Indonesian Throughflow</
+@v1vd9znq2w  ; 0=FigW(seaFloorSvg({ names: { shelf: T`con | 1=Tbl([T`Feature`, T`Description`, T`In an | 2=Key(T`<p><b>Salinity</b> is the mass of  | 3=Fig(planeSvg({ W: 340, H: 240, x: [0, 32 | 4=Tip(T`<p>The <b>Indonesian Throughflow</
 
 <p>Oceans cover about <b>71%</b> of the Earth's surface. The science of the oceans is <b>oceanography</b>. Seas are classified by how they formed: <b>transgression seas</b> formed when rising sea level flooded low land after the ice age (shallow, such as the Java Sea); <b>ingression seas</b> lie in sinking parts of the crust (deep, such as the Banda Sea); and <b>regression seas</b> are shrinking.</p>
 ⟦0⟧
@@ -548,9 +557,10 @@ Wetlands soak up water like sponges, clean it, and shelter many species.
 <h3>Depth zones</h3>
 <p>The sea bed is also divided by depth: the <b>littoral</b> zone (between high and low tide), the <b>neritic</b> zone (to 200 m, sunlit and rich in fish), the <b>bathyal</b> zone (200–2 000 m) and the <b>abyssal</b> zone (below 2 000 m, dark and cold).</p>
 ⟦2⟧
+⟦3⟧
 <h3>Temperature and currents</h3>
 <p>Sea water is warmest at the surface. Below a mixed layer the temperature drops quickly through the <b>thermocline</b>, then stays cold (about 2–4 °C) in the deep. <b>Ocean currents</b> are driven by winds and by differences in temperature and salinity. <b>Warm currents</b> flow from the equator towards the poles, and <b>cold currents</b> flow towards the equator (the Humboldt current off Peru), bringing up nutrients and rich fishing grounds.</p>
-⟦3⟧
+⟦4⟧
 @olmqr7h0t5
 continental shelf
 @13ubpm66igi
@@ -603,6 +613,16 @@ isolated underwater volcano
 many in the Banda and Pacific seas
 @1u0sxk54pub
 <p><b>Salinity</b> is the mass of dissolved salts in a kilogram of sea water, given in parts per thousand (‰). The average is about 35‰:</p><p>$$\text{salinity} = \frac{\text{mass of salt (g)}}{\text{mass of sea water (kg)}}$$</p><p>It is higher where evaporation is strong and rain is scarce (the Red Sea, about 40‰) and lower where rivers and rain add fresh water or ice melts (the Baltic Sea).</p>
+@7uoliw3a2p
+depth (m)
+@7f6eifze6b
+thermocline
+@ih6tldawdw
+cold deep water
+@rry1fv5t0b
+Typical tropical sea temperature profile: warm mixed layer, a thermocline where it drops fast, then cold deep water
+@2sa64ant6d
+A typical tropical ocean profile: a warm, well-mixed surface layer, a thermocline where the temperature falls quickly, and cold water below about 1 000 m.
 @l6l5iaadks
 <p>The <b>Indonesian Throughflow</b> (Arus Lintas Indonesia, ARLINDO) carries warm Pacific water through the Makassar Strait and the Banda Sea into the Indian Ocean: an important link in the global ocean circulation. Pressure in the sea rises by about 1 atmosphere for every 10 m of depth.</p>
 @2dvrj0uj0c0  ; 0=Q(kg, 'kg') | 1=Q(g, 'g')

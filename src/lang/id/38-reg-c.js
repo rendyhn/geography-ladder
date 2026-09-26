@@ -1,11 +1,5 @@
 /* Bahasa Indonesia — 38-reg-c */
 addT('id', {
-  '11r4zpodwvm': R`
-<p><b>Interaksi keruangan</b> adalah pergerakan orang, barang, uang dan informasi antartempat: ulang-alik, perdagangan, telepon, pariwisata. Edward Ullman menyebut tiga syarat terjadinya interaksi.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'xta2o34gih': R`Syarat`,
   '172i6n01dsv': R`Saling melengkapi (complementarity)`,
   '1z0g10xlh9p': R`satu tempat memiliki apa yang dibutuhkan tempat lain`,

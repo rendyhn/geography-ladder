@@ -1,15 +1,5 @@
 /* Bahasa Indonesia — 25-hydro-b */
 addT('id', {
-  '24bwmq6k8d': R`
-<p><b>Air tanah</b> adalah air yang mengisi pori-pori dan retakan tanah serta batuan di bawah permukaan. Air hujan meresap (infiltrasi) dan merembes ke bawah (perkolasi) sampai mencapai <b>zona jenuh</b>, tempat semua pori terisi air. Batas atas zona ini disebut <b>muka air tanah</b>. Lapisan yang dapat menyimpan dan meloloskan banyak air disebut <b>akuifer</b> (pasir, kerikil, batu gamping berpori); lapisan yang hampir tidak meloloskan air, seperti lempung, disebut <b>akuiklud</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-<h3>Masalah</h3>
-<p>Memompa air tanah melebihi kemampuan hujan untuk mengisinya kembali menurunkan muka air tanah dan membuat sumur kering. Di kota pesisir yang tanahnya banyak mengandung lempung, hal ini juga membuat tanah memadat dan <b>turun</b> (penurunan muka tanah): sebagian Jakarta Utara sudah turun beberapa meter. Di dekat pantai, air laut dapat merembes ke dalam akuifer (<b>intrusi air laut</b>), sehingga air sumur menjadi asin.</p>
-<h3>Danau dan lahan basah</h3>
-⟦3⟧
-⟦4⟧`,
   '1kjryrtcwk3': R`muka air tanah`,
   '1q4ghhldn8e': R`sumur gali`,
   '1nkh530bb0h': R`mata air`,

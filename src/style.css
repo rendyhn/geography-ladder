@@ -186,6 +186,39 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .fig-dot { fill: var(--ink); }
 .fig-text { fill: var(--ink); font: italic 600 15px var(--f-body); }
 .fig-small { fill: var(--ink-2); font: 12px var(--f-body); }
+.fig.fig-wide > svg { max-width: 680px; }
+.fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; max-width: 680px; }
+.fig-row svg { width: 100%; height: auto; display: block; }
+.fig-row .cap { font-size: 0.8rem; color: var(--ink-3); text-align: center; margin-top: 4px; }
+/* figure library (src/fig.js) */
+.mf-grid { stroke: var(--rule-soft); stroke-width: 1; }
+.mf-axis { stroke: var(--ink-3); stroke-width: 1.4; fill: none; }
+.mf-line { stroke: var(--ink-2); stroke-width: 1.6; fill: none; }
+.mf-thin { stroke: var(--ink-3); stroke-width: 0.8; fill: none; }
+.mf-ink { fill: var(--ink-2); } .mf-ink3 { fill: var(--ink-3); }
+.mf-c1, .mf-c2, .mf-c3, .mf-c4 { fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.mf-c1 { stroke: var(--accent); } .mf-c2 { stroke: var(--lv1); } .mf-c3 { stroke: var(--lv2); } .mf-c4 { stroke: var(--lv4); }
+.mf-s1 { fill: var(--accent); } .mf-s2 { fill: var(--lv1); } .mf-s3 { fill: var(--lv2); } .mf-s4 { fill: var(--lv4); }
+.mf-f1 { fill: var(--accent); fill-opacity: 0.18; } .mf-f2 { fill: var(--lv1); fill-opacity: 0.22; } .mf-f3 { fill: var(--lv2); fill-opacity: 0.22; } .mf-f4 { fill: var(--lv4); fill-opacity: 0.2; }
+.mf-s1l, .mf-s2l, .mf-s3l, .mf-s4l { stroke: var(--ink-2); }
+.mf-s1l { fill: color-mix(in srgb, var(--accent) 26%, var(--paper)); } .mf-s2l { fill: color-mix(in srgb, var(--lv1) 26%, var(--paper)); }
+.mf-s3l { fill: color-mix(in srgb, var(--lv2) 26%, var(--paper)); } .mf-s4l { fill: color-mix(in srgb, var(--lv4) 24%, var(--paper)); }
+.mf-shape { fill: var(--accent-soft); stroke: var(--ink-2); stroke-width: 1.6; }
+.mf-cell { fill: var(--paper); stroke: var(--ink-3); }
+.mf-cellc { fill: var(--sunken); stroke: var(--rule); }
+.mf-frame, .mf-ring { fill: none; stroke: var(--ink-2); stroke-width: 1.8; }
+.mf-paper { fill: var(--paper); }
+.mf-dot { fill: var(--ink); } .mf-open { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
+.mf-open-c { fill: var(--paper); stroke: var(--accent); stroke-width: 2.6; }
+.mf-prime { fill: color-mix(in srgb, var(--lv1) 24%, var(--paper)); stroke: var(--lv1); stroke-width: 2; }
+.mf-node-c { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 2; }
+.mf-lab, .mf-lab-b, .mf-small, .mf-var, .mf-node { paint-order: stroke; stroke: var(--paper); stroke-width: 3.5px; stroke-linejoin: round; }
+.mf-lab { fill: var(--ink); font: 13px var(--f-body); } .mf-lab-b { fill: var(--ink); font: 700 13px var(--f-body); }
+.mf-small { fill: var(--ink-2); font: 11.5px var(--f-body); }
+.mf-var { fill: var(--ink); font: italic 600 15px 'Times New Roman', Georgia, serif; }
+.mf-node { fill: var(--ink); font: 700 15px var(--f-body); }
+.mf-node-a { fill: var(--accent); font: 700 15px var(--f-body); paint-order: stroke; stroke: var(--paper); stroke-width: 3.5px; }
+.mf-carry { fill: var(--lv4, var(--accent)); font: 700 12px var(--f-body); }
 .lesson-foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); display: grid; gap: 20px; }
 .lesson-foot > .btn { justify-self: start; }
 .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

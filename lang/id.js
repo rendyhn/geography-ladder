@@ -210,14 +210,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 10-litho-a */
 addT('id', {
-  'zzzcxsjjyo': R`
-<p>Belum ada yang pernah mengebor lebih dalam dari sekitar $12\,\mathrm{km}$, tetapi kita mengenal bagian dalam Bumi dengan baik. Gelombang gempa menjadi lebih cepat, lebih lambat, dan membelok ketika melewati lapisan-lapisan yang berbeda massa jenisnya, dan <b>gelombang S tidak dapat merambat melalui zat cair</b>, yang menunjukkan bahwa inti luar berupa cairan.</p>
-⟦0⟧
-⟦1⟧
-<p>Batas antarlapisan disebut <b>diskontinuitas</b>: <b>Mohorovičić</b> (Moho) antara kerak dan mantel, <b>Gutenberg</b> antara mantel dan inti, serta <b>Lehmann</b> antara inti luar dan inti dalam.</p>
-⟦2⟧
-<p>Suhu naik seiring kedalaman. Di kerak Bumi, <b>gradien geotermal</b> biasanya sekitar $25$–$30\,^\circ\mathrm{C}$ per kilometer; itulah sebabnya tambang yang dalam terasa panas dan energi panas bumi dapat dimanfaatkan.</p>
-⟦3⟧`,
   '1gdxarqvuzu': R`Kerak`,
   '2es7sswmry5': R`Mantel`,
   'jpxr03gkgo': R`Inti luar`,
@@ -363,12 +355,6 @@ addT('id', {
   'm4x5nh31f7': R`Panas dari dalam Bumi menggerakkan konveksi yang lambat di mantel; lempeng yang dingin dan rapat yang tenggelam di palung juga menarik bagian lempeng lainnya.`,
   '122jcovabre': R`Di batas jenis apakah kerak samudra baru terbentuk?`,
   '1njwt3rz3lo': R`Di punggungan tengah samudra, magma naik di antara lempeng yang saling menjauh lalu membeku menjadi kerak baru.`,
-  '1xkrarijuro': R`
-<p><b>Mineral</b> adalah zat padat alami dengan susunan kimia dan struktur kristal tertentu, seperti kuarsa atau feldspar. <b>Batuan</b> adalah campuran satu mineral atau lebih. Mineral dikenali dari warna, cerat, kilap, belahan, dan <b>kekerasannya</b>, yang diukur dengan skala Mohs dari 1 (talk) sampai 10 (intan): mineral yang lebih keras dapat menggores mineral yang lebih lunak.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1cpmmpm9ypr': R`Jenis batuan`,
   '1yhdbf5ipkl': R`Cara terbentuk`,
   '281mw74j04l': R`Beku`,
@@ -465,14 +451,6 @@ addT('id', {
   '1zpab250qra': R`Apa saja yang digali dari dalam tanah`,
   '2f3x477yk3g': R`Batuan yang terbentuk dari cangkang`,
   '6urlzqbdk1': R`Mineral seperti kuarsa memiliki rumus kimia yang tetap dan struktur kristal yang teratur; batuan tersusun atas mineral-mineral.`,
-  '4k11rt9sl2': R`
-<p><b>Vulkanisme</b> mencakup semua peristiwa naiknya magma, batuan cair dari dalam Bumi. Magma yang membeku di bawah permukaan membentuk <b>intrusi</b>: <b>batolit</b> yang sangat besar, <b>lakolit</b> yang berbentuk lensa, <b>sill</b> yang mendatar di antara lapisan batuan, dan <b>gang</b> (dike) yang tegak memotong lapisan. Magma yang mencapai permukaan keluar sebagai <b>lava</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-<h3>Bahaya dan manfaat</h3>
-<p>Bahayanya antara lain <b>awan panas</b> (aliran piroklastik, "wedhus gembel"), <b>lahar</b> (aliran lumpur vulkanik, sering setelah hujan lebat), hujan abu, aliran lava, gas beracun, dan tsunami. Manfaatnya antara lain tanah yang subur, energi panas bumi, pasir dan batu bangunan, bahan tambang, dan pariwisata.</p>
-⟦3⟧`,
   '2bxasx78q6n': R`Dapur magma`,
   '1wn04dhyacx': R`Diatrema (pipa kepundan)`,
   '1pd5obyd4ya': R`Kawah`,
@@ -625,15 +603,6 @@ addT('id', {
   '110sn23wjt': R`Berdiri di dekat jendela`,
   'zb786tinxl': R`Memakai lift untuk keluar dari gedung`,
   'sdxcetovdb': R`Merunduk, berlindung, dan berpegangan melindungimu dari benda yang jatuh. Keluarlah hanya setelah guncangan berhenti, dan jangan memakai lift.`,
-  '1a5d92jqmzq': R`
-<p>Tenaga dari dalam Bumi (<b>endogen</b>) membangun daratan; tenaga dari permukaan (<b>eksogen</b>) mengikisnya. Proses eksogen meliputi pelapukan, gerakan massa, erosi, dan pengendapan.</p>
-⟦0⟧
-⟦1⟧
-<h3>Gerakan massa</h3>
-<p><b>Gerakan massa</b> adalah perpindahan material hasil pelapukan menuruni lereng karena gaya gravitasi: <b>runtuhan batu</b>, <b>tanah longsor</b> (massa yang meluncur di atas bidang gelincir), <b>aliran lumpur</b>, dan <b>rayapan tanah</b> yang lambat (ditandai pohon dan pagar yang miring). Gerakan massa paling mungkin terjadi di lereng terjal, setelah hujan lebat, di tempat yang vegetasinya telah dibabat, dan di tempat yang diguncang gempa.</p>
-<h3>Erosi dan pengendapan</h3>
-<p><b>Erosi</b> adalah pengikisan dan pengangkutan material oleh air mengalir, angin, gelombang, dan gletser. Ketika tenaga pengangkutnya melemah, muatannya diendapkan: <b>sedimentasi</b>. Erosi tanah oleh hujan di lahan pertanian miring yang terbuka merupakan masalah serius; erosi dapat dikurangi dengan terasering, pembajakan menurut kontur, tanaman penutup tanah, dan reboisasi.</p>
-⟦2⟧`,
   '1uexx2zh8cp': R`Pelapukan`,
   '13vl8cid5at': R`Cara kerja`,
   '1q9wj278yrc': R`Fisik (mekanis)`,
@@ -927,15 +896,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 2-maps-a */
 addT('id', {
-  'zbb7dz97pb': R`
-<p><b>Geografi</b> mempelajari persamaan dan perbedaan fenomena di permukaan Bumi (geosfer) dengan sudut pandang keruangan, kelingkungan, atau kewilayahan. Seorang ahli geografi selalu mengajukan tiga pertanyaan: <i>di mana</i> letaknya, <i>mengapa</i> ada di sana, dan <i>apa artinya</i> bagi manusia dan lingkungan?</p>
-<h3>Objek geografi</h3>
-⟦0⟧
-<h3>Sepuluh konsep esensial</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   'd5yammh8qw': R`Objek`,
   '1b00t4z3zq2': R`Pengertian`,
   '1j1ms4p35q': R`Contoh`,
@@ -1045,16 +1005,6 @@ addT('id', {
   's3zebmcp4d': R`Ahli geografi mengajukan tiga pertanyaan dasar: <i>Di mana?</i>, <i>Mengapa di sana?</i>, dan <i>Apa artinya?</i> Pertanyaan manakah yang terutama diajukan di sini? <i>⟦0⟧</i>`,
   '1iv93cqfjb0': R`Kapan`,
   '13flq2vt94q': R`Di mana menggambarkan letak dan persebaran; mengapa menjelaskan penyebabnya; apa artinya melihat akibatnya bagi manusia dan lingkungan.`,
-  '1ls4j68i65u': R`
-<p><b>Peta</b> adalah gambaran sebagian atau seluruh permukaan Bumi pada bidang datar, yang diperkecil dengan skala dan disederhanakan dengan simbol. Peta dibedakan menjadi <b>peta umum</b> (menampilkan banyak unsur, seperti peta topografi atau atlas) dan <b>peta tematik</b> (menampilkan satu tema, seperti curah hujan atau kepadatan penduduk).</p>
-⟦0⟧
-⟦1⟧
-<h3>Skala</h3>
-<p><b>Skala angka</b> seperti $1 : 50\,000$ berarti 1 satuan di peta sama dengan 50 000 satuan yang sama di lapangan. <b>Skala verbal</b> menyatakannya dengan kata-kata ("1 cm mewakili 500 m"), dan <b>skala grafis</b> berupa batang, yang tetap benar jika peta diperbesar atau diperkecil.</p>
-⟦2⟧
-⟦3⟧
-<p>Peta <b>skala besar</b> (misalnya $1 : 5\,000$) menampilkan wilayah sempit dengan sangat rinci; peta <b>skala kecil</b> (misalnya $1 : 1\,000\,000$) menampilkan wilayah luas dengan sedikit rincian. Makin besar penyebutnya, makin kecil skalanya.</p>
-⟦4⟧`,
   '28smpy8bvgs': R`Penggunaan Lahan Pulau Sukamaju`,
   '1mdxc4hikdp': R`Laut`,
   '1ikfmkgi8xi': R`Dataran rendah`,
@@ -1220,18 +1170,6 @@ addT('id', {
   '1sej6y160ig': R`Ozon mendinginkan udara`,
   'ey57ijww7d': R`Awan menyerap semua panas`,
   '10qpspkt0we': R`Sinar matahari memanaskan tanah, lalu tanah memanaskan udara di atasnya; makin jauh dari tanah, makin sedikit panas yang sampai ke udara.`,
-  'mq13pdkuzv': R`
-<p><b>Cuaca</b> adalah keadaan atmosfer di suatu tempat dalam waktu singkat (beberapa jam atau hari). <b>Iklim</b> adalah rata-rata cuaca di wilayah yang luas dalam waktu lama, minimal 30 tahun. Keduanya dijelaskan dengan unsur-unsur yang sama, yang diukur di stasiun cuaca (di Indonesia oleh BMKG).</p>
-⟦0⟧
-<h3>Suhu dan ketinggian</h3>
-<p>Indonesia terletak di khatulistiwa, sehingga suhunya hampir tidak berubah sepanjang tahun; perbedaan terbesar justru disebabkan oleh <b>ketinggian</b>. Braak menemukan bahwa suhu turun sekitar 0,6 °C setiap naik 100 m:</p>
-⟦1⟧
-⟦2⟧
-⟦3⟧
-<h3>Kelembapan udara</h3>
-<p><b>Kelembapan mutlak</b> adalah massa uap air dalam satu meter kubik udara (g/m³). <b>Kelembapan relatif</b> membandingkannya dengan jumlah uap air terbanyak yang dapat ditampung udara pada suhu tersebut:</p>
-⟦4⟧
-⟦5⟧`,
   '1xj75jkwd2x': R`Unsur`,
   '1n4tjiq7o59': R`Alat ukur`,
   '232n0low5z0': R`Satuan`,
@@ -1988,16 +1926,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 25-hydro-b */
 addT('id', {
-  '24bwmq6k8d': R`
-<p><b>Air tanah</b> adalah air yang mengisi pori-pori dan retakan tanah serta batuan di bawah permukaan. Air hujan meresap (infiltrasi) dan merembes ke bawah (perkolasi) sampai mencapai <b>zona jenuh</b>, tempat semua pori terisi air. Batas atas zona ini disebut <b>muka air tanah</b>. Lapisan yang dapat menyimpan dan meloloskan banyak air disebut <b>akuifer</b> (pasir, kerikil, batu gamping berpori); lapisan yang hampir tidak meloloskan air, seperti lempung, disebut <b>akuiklud</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-<h3>Masalah</h3>
-<p>Memompa air tanah melebihi kemampuan hujan untuk mengisinya kembali menurunkan muka air tanah dan membuat sumur kering. Di kota pesisir yang tanahnya banyak mengandung lempung, hal ini juga membuat tanah memadat dan <b>turun</b> (penurunan muka tanah): sebagian Jakarta Utara sudah turun beberapa meter. Di dekat pantai, air laut dapat merembes ke dalam akuifer (<b>intrusi air laut</b>), sehingga air sumur menjadi asin.</p>
-<h3>Danau dan lahan basah</h3>
-⟦3⟧
-⟦4⟧`,
   '1kjryrtcwk3': R`muka air tanah`,
   '1q4ghhldn8e': R`sumur gali`,
   '1nkh530bb0h': R`mata air`,
@@ -2088,16 +2016,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 26-hydro-c */
 addT('id', {
-  '2ezh6o198pf': R`
-<p>Lautan menutupi sekitar <b>71%</b> permukaan Bumi. Ilmu yang mempelajari lautan disebut <b>oseanografi</b>. Menurut proses terjadinya, laut dibedakan menjadi <b>laut transgresi</b> yang terbentuk ketika naiknya muka air laut setelah zaman es menggenangi dataran rendah (dangkal, seperti Laut Jawa); <b>laut ingresi</b> yang terletak di bagian kerak yang turun (dalam, seperti Laut Banda); dan <b>laut regresi</b> yang menyempit.</p>
-⟦0⟧
-⟦1⟧
-<h3>Zona kedalaman</h3>
-<p>Dasar laut juga dibagi menurut kedalamannya: zona <b>litoral</b> (antara pasang naik dan pasang surut), zona <b>neritik</b> (sampai 200 m, terkena cahaya matahari dan kaya ikan), zona <b>batial</b> (200–2.000 m) dan zona <b>abisal</b> (di bawah 2.000 m, gelap dan dingin).</p>
-⟦2⟧
-<h3>Suhu dan arus</h3>
-<p>Air laut paling hangat di permukaan. Di bawah lapisan campuran, suhu turun cepat melalui <b>termoklin</b>, lalu tetap dingin (sekitar 2–4 °C) di laut dalam. <b>Arus laut</b> digerakkan oleh angin serta perbedaan suhu dan salinitas. <b>Arus panas</b> mengalir dari khatulistiwa ke arah kutub, dan <b>arus dingin</b> mengalir ke arah khatulistiwa (seperti arus Humboldt di lepas pantai Peru), membawa zat hara ke atas sehingga menjadi daerah perikanan yang kaya.</p>
-⟦3⟧`,
   'olmqr7h0t5': R`paparan benua`,
   '13ubpm66igi': R`lereng`,
   '15ftw66eoxg': R`dataran abisal`,
@@ -2523,14 +2441,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 3-maps-b */
 addT('id', {
-  '143h5zc7enc': R`
-<p>Setiap tempat di Bumi dapat ditentukan letaknya dengan dua sudut yang diukur dari pusat Bumi.</p>
-⟦0⟧
-⟦1⟧
-<p>Setiap derajat dibagi menjadi 60 menit ($'$) dan setiap menit menjadi 60 detik ($''$), jadi $6^\circ 30' = 6{,}5^\circ$. Letak ditulis dengan lintang lebih dahulu: Jakarta terletak di sekitar $6^\circ 12'\,\mathrm{LS},\ 106^\circ 49'\,\mathrm{BT}$.</p>
-⟦2⟧
-<p>Khatulistiwa dan meridian-meridian adalah <b>lingkaran besar</b>: lingkaran yang pusatnya berimpit dengan pusat Bumi. Rute terpendek antara dua tempat mengikuti lingkaran besar; itulah sebabnya jalur penerbangan jauh tampak melengkung pada peta datar.</p>
-⟦3⟧`,
   '9q6nkst6t': R`Globe dengan garis lintang dan bujur; khatulistiwa, meridian utama, dan garis-garis yang melalui Bandung ditonjolkan`,
   'l98q7xe428': R`Bandung terletak di sekitar 6,9° LS dan 107,6° BT. Garis merah adalah khatulistiwa dan garis biru meridian utama.`,
   '1eggnk8ah0d': R`Lintang`,
@@ -2662,16 +2572,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 30-bio-c */
 addT('id', {
-  'k34v32vsys': R`
-<p><b>Keanekaragaman hayati</b> (biodiversitas) adalah keberagaman makhluk hidup. Keanekaragaman ini ada pada tiga tingkat: keanekaragaman <b>gen</b> (perbedaan di dalam satu spesies, seperti banyaknya varietas padi), keanekaragaman <b>spesies</b> (jumlah spesies yang berbeda) dan keanekaragaman <b>ekosistem</b> (keberagaman habitat, dari terumbu karang sampai hutan pegunungan).</p>
-<p>Indonesia termasuk negara <b>megabiodiversitas</b> di dunia: luasnya hanya sekitar 1,3% daratan Bumi, tetapi memiliki sekitar 10% tumbuhan berbunga, 12% mamalia dan 17% burung di dunia. Letaknya di antara dua benua, ribuan pulaunya dan iklim tropisnya menambah kekayaan ini.</p>
-⟦0⟧
-<h3>Daftar Merah IUCN</h3>
-⟦1⟧
-⟦2⟧
-<h3>Konservasi</h3>
-⟦3⟧
-⟦4⟧`,
   '1l14ygskxz3': R`Hilangnya habitat`,
   '200gx5jte99': R`Eksploitasi berlebihan`,
   '16dj9d8o52o': R`Spesies invasif`,
@@ -2832,12 +2732,6 @@ addT('id', {
   'k8yo406pnp': R`Sebagian besar penduduk tinggal di kota`,
   'rdfjd4a7qc': R`Lahan pertaniannya sangat luas`,
   'v1fiof5bmk': R`Kepadatan agraris adalah jumlah petani per satuan luas lahan pertanian; jika tinggi, lahan garapan sempit dan tekanan terhadap lahan besar.`,
-  'rkjjufrpop': R`
-<p><b>Komposisi</b> penduduk adalah pengelompokan penduduk menurut umur, jenis kelamin, pekerjaan, pendidikan dan ciri lainnya. Gambaran tercepatnya adalah <b>piramida penduduk</b>: batang untuk setiap kelompok umur lima tahunan, laki-laki di kiri dan perempuan di kanan.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1jm3frsj76t': R`Laki-laki`,
   '1320sbrt6z3': R`Perempuan`,
   '1w9pbmh31fm': R`Piramida penduduk Indonesia sekitar 2020: lebar pada usia muda dan usia kerja, lalu menyempit terus di atas usia 50`,
@@ -2897,14 +2791,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 33-pop-b */
 addT('id', {
-  '1vt5180cnam': R`
-<p><b>Migrasi</b> adalah perpindahan penduduk dari satu tempat ke tempat lain untuk menetap. Migrasi dapat bersifat <b>internasional</b> (emigrasi dan imigrasi) atau <b>internal</b>, di dalam satu negara. Perpindahan singkat dan berulang tanpa pindah tempat tinggal disebut <b>mobilitas sirkuler</b>: <b>ulang-alik</b> (<i>nglaju</i>, pergi bekerja dan pulang setiap hari) dan perpindahan <b>musiman</b> (<i>mondok</i>, tinggal di tempat lain selama beberapa minggu atau bulan).</p>
-⟦0⟧
-⟦1⟧
-<h3>Migrasi di Indonesia</h3>
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   '1rdth9k3f2q': R`Daerah asal`,
   '98fdpeq4m8': R`Daerah tujuan`,
   'e2gv14adjg': R`migrasi`,
@@ -2979,12 +2865,6 @@ addT('id', {
   '1tmyrx9t0d4': R`Desa mendapat pabrik baru`,
   'vk12xhmm4s': R`Angka kelahiran desa naik`,
   '1i6kcdegdyj': R`Orang dewasa muda yang pertama pergi, sehingga desa bisa hanya tersisa anak-anak dan orang tua.`,
-  'pi8a8ov0hi': R`
-<p><b>Model transisi demografi</b> menggambarkan perubahan angka kelahiran dan kematian ketika suatu negara berkembang, serta akibatnya bagi jumlah penduduk.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'bf6ghejsin': R`Tahap`,
   '1b2u13c6lk4': R`angka kelahiran`,
   '76v44jffbu': R`angka kematian`,
@@ -3065,13 +2945,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 34-pop-c */
 addT('id', {
-  '1ng3pxt2c92': R`
-<p><b>Kualitas</b> penduduk adalah seberapa sehat, terdidik dan sejahtera penduduknya. Kualitas ini diukur dengan indikator seperti angka harapan hidup, angka kematian bayi, angka melek huruf, lama sekolah, pendapatan per kapita dan persentase penduduk miskin.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   '1f6rnzfxh58': R`<p><b>Indeks Pembangunan Manusia</b> (IPM, <i>Human Development Index</i>) menggabungkan tiga dimensi. Masing-masing diubah menjadi indeks antara 0 dan 1:</p><p>$$\text{indeks} = \frac{\text{nilai sebenarnya} - \text{minimum}}{\text{maksimum} - \text{minimum}}$$</p><p>Untuk angka harapan hidup, minimumnya 20 tahun dan maksimumnya 85. IPM adalah rata-rata geometri dari ketiga indeks:</p><p>$$\text{IPM} = \sqrt[3]{I_{\text{kesehatan}} \times I_{\text{pendidikan}} \times I_{\text{pengeluaran}}}$$</p>`,
   '10ucth3ln7a': R`Dimensi`,
   'roij4a19zo': R`Indikator`,
@@ -3148,13 +3021,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 36-reg-a */
 addT('id', {
-  '2fns9dhjqvs': R`
-<p><b>Sumber daya alam</b> adalah segala sesuatu dari alam yang dimanfaatkan manusia untuk memenuhi kebutuhannya. Sumber daya alam dikelompokkan menurut <b>asalnya</b> (hayati dari makhluk hidup, nonhayati dari benda mati), menurut <b>sifat pembaruannya</b> dan menurut <b>kegunaannya</b> (energi, bahan baku, pangan, ruang, pemandangan).</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   'k2zmn2hzdh': R`Terbarukan`,
   '26g8us0bzbt': R`pulih secara alami dalam rentang hidup manusia jika dimanfaatkan dengan bijak`,
   'aqc4gsmj7l': R`hutan, ikan, tanah, air, sinar matahari, angin`,
@@ -3234,13 +3100,6 @@ addT('id', {
   '48i02ijfco': R`Pasir dan kerikil`,
   '2097jl3iy8a': R`Angin dan sinar matahari`,
   '1kjvrhm57k6': R`Sumber daya hayati berasal dari makhluk hidup; minyak bumi dan batu bara terbentuk dari sisa makhluk hidup purba tetapi digolongkan sebagai mineral nonhayati.`,
-  'f2dbmmhjim': R`
-<p><b>Pertanian</b> dalam arti luas meliputi bercocok tanam, peternakan, perikanan dan kehutanan. Sistem pertanian dibedakan menurut tujuannya (<b>subsisten</b> untuk keluarga atau <b>komersial</b> untuk dijual) dan menurut seberapa intensif lahan dimanfaatkan.</p>
-⟦0⟧
-<h3>Model von Thünen</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1ocjpi0c5dk': R`Sawah`,
   'usma27jyqn': R`teras berpengairan yang digenangi; sangat intensif`,
   '1puky6qemiy': R`Jawa, Bali (subak), Sumatra Utara`,
@@ -3312,14 +3171,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 37-reg-b */
 addT('id', {
-  '1w2a5duxgo3': R`
-<p><b>Industri</b> mengolah bahan mentah atau komponen menjadi barang yang nilainya lebih tinggi. Industri digolongkan menurut bahan bakunya (pertanian, pertambangan, kehutanan), menurut produknya (ringan atau berat), menurut ukurannya (jumlah tenaga kerja) dan menurut tahapannya (industri <b>hulu</b> membuat bahan dasar seperti baja atau semen; industri <b>hilir</b> membuat barang jadi).</p>
-⟦0⟧
-<h3>Lokasi industri</h3>
-<p>Faktor utamanya adalah bahan baku, pasar, tenaga kerja, transportasi, energi dan air, modal, kebijakan pemerintah serta <b>aglomerasi</b> (perusahaan-perusahaan mengelompok untuk berbagi pemasok, tenaga kerja dan layanan).</p>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1sf8skfr22y': R`Ukuran (BPS)`,
   'es2l43hvah': R`Tenaga kerja`,
   '2cs4mefzc1x': R`Industri rumah tangga`,
@@ -3378,12 +3229,6 @@ addT('id', {
   '1220v26619u': R`Tidak ada persaingan`,
   '21ok69sbdxf': R`Bebas dari semua pajak`,
   '2f92yhmsw5c': R`Mengelompok menekan biaya: pemasok, tenaga kerja, bank dan infrastruktur semuanya dekat.`,
-  '1qhye0xtlzl': R`
-<p><b>Tempat sentral</b> adalah permukiman yang menyediakan barang dan jasa bagi penduduk di sekitarnya. Walter Christaller (1933), yang meneliti Jerman selatan, mempertanyakan mengapa kota memiliki ukuran dan jarak seperti yang ada.</p>
-⟦0⟧
-⟦1⟧
-<p>Setiap kota kecil melayani setara tiga wilayah desa, dan setiap kota besar melayani setara tiga wilayah kota kecil: inilah <b>prinsip pasar</b>, $k = 3$. Karena itu, tempat kecil selalu lebih banyak daripada tempat besar. Christaller juga menjelaskan $k = 4$ (prinsip transportasi, tempat-tempat di sepanjang jalan) dan $k = 7$ (prinsip administrasi).</p>
-⟦2⟧`,
   '1xpqx8aw9l2': R`<p><b>Ambang</b> (threshold): jumlah minimum pelanggan yang dibutuhkan suatu layanan agar bertahan. <b>Jangkauan</b> (range): jarak terjauh yang mau ditempuh orang untuk menggunakannya. Suatu layanan hanya dapat ada jika jangkauannya mencakup setidaknya ambangnya. Barang <b>berorde rendah</b> sehari-hari (warung, sekolah dasar) memiliki ambang rendah dan jangkauan pendek; barang <b>berorde tinggi</b> (universitas, rumah sakit spesialis, pusat perbelanjaan) memiliki ambang tinggi dan jangkauan jauh.</p>`,
   '2ggrucowhou': R`kota besar (orde tinggi)`,
   '1bwntu8ig53': R`kota kecil (orde menengah)`,
@@ -3437,12 +3282,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 38-reg-c */
 addT('id', {
-  '11r4zpodwvm': R`
-<p><b>Interaksi keruangan</b> adalah pergerakan orang, barang, uang dan informasi antartempat: ulang-alik, perdagangan, telepon, pariwisata. Edward Ullman menyebut tiga syarat terjadinya interaksi.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'xta2o34gih': R`Syarat`,
   '172i6n01dsv': R`Saling melengkapi (complementarity)`,
   '1z0g10xlh9p': R`satu tempat memiliki apa yang dibutuhkan tempat lain`,
@@ -3744,17 +3583,6 @@ addT('id', {
   '1lxl0i1zye': R`Bidang proyeksi dan jaring-jaring yang dihasilkannya`,
   '22dzopi8dlz': R`Globe`,
   '8huuh9ywov': R`Jaring-jaring itu dihasilkan oleh proyeksi ⟦0⟧.`,
-  'n7hkpn7lfw': R`
-<p>Peta topografi menampilkan ketinggian lahan dengan <b>garis kontur</b>: garis yang menghubungkan titik-titik yang sama tingginya dari permukaan laut rata-rata. Selisih tinggi antara dua kontur yang berdekatan disebut <b>interval kontur</b>; setiap garis kelima (kontur indeks) biasanya digambar lebih tebal.</p>
-⟦0⟧
-⟦1⟧
-<p>Aturan yang umum dipakai untuk interval kontur suatu peta adalah</p>
-⟦2⟧
-<p>sehingga peta $1 : 50\,000$ memiliki kontur setiap $25\,\mathrm{m}$.</p>
-<h3>Gradien dan kemiringan lereng</h3>
-⟦3⟧
-<p>Kedua jarak harus dalam satuan yang sama. Kenaikan $100\,\mathrm{m}$ sejauh $2\,\mathrm{km}$ sama dengan $\frac{100}{2000} = \frac{1}{20}$, yaitu $5\%$ atau sekitar $2{,}9^\circ$.</p>
-⟦4⟧`,
   'jufsfm0bpa': R`Peta kontur dua bukit dengan garis A–B dan penampang melintang di sepanjang garis itu`,
   'ihtflrcq58': R`Dua bukit dengan interval kontur 50 m, dan penampang melintang (profil) di sepanjang A–B.`,
   'lf52yutvlj': R`<p><b>Membaca kontur.</b> Garis yang rapat berarti lereng curam; garis yang renggang berarti lereng landai. Lingkaran tertutup dengan nilai yang makin tinggi ke dalam adalah bukit; kontur tidak pernah berpotongan atau bercabang. Jika kontur membentuk huruf V, ujung V mengarah ke <b>hulu</b> pada lembah dan ke <b>bawah</b> pada punggungan.</p>`,
@@ -3964,11 +3792,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 42-indo-a */
 addT('id', {
-  '1lzilh8npja': R`<p>Indonesia adalah negara kepulauan terbesar di dunia: sekitar 17.000 pulau yang tersebar lebih dari 5.000 km dari barat ke timur, dengan luas daratan sekitar 1,9 juta km² dan lautan yang jauh lebih luas.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '248ukhlaam3': R`Peta Indonesia dengan jaring garis lintang dan bujur serta titik-titik terluarnya: Sabang di barat, Merauke di timur, Miangas di utara dan Rote di selatan`,
   '1l78ftvtgy4': R`Titik-titik terluar Indonesia: sekitar 6° LU sampai 11° LS dan 95° BT sampai 141° BT.`,
   '2e6w9jlixlo': R`Letak`,
@@ -4026,13 +3849,6 @@ addT('id', {
   '2db3har2tkf': R`Indonesia memiliki tiga agama utama`,
   '2107ukckpz1': R`Indonesia dibelah oleh khatulistiwa`,
   '1ec0c02eal6': R`Setiap 15° bujur sama dengan satu jam; 46° sekitar 3 jam, sehingga digunakan WIB, WITA dan WIT.`,
-  'iyor426eqr': R`<p><b>Geopolitik</b> mempelajari bagaimana geografi (letak, luas, sumber daya, batas wilayah) membentuk politik dan keamanan suatu negara. Cara pandang geopolitik Indonesia adalah <b>Wawasan Nusantara</b>: pulau-pulau, laut di antaranya dan udara di atasnya merupakan satu kesatuan yang utuh, secara politik, ekonomi, sosial budaya dan pertahanan keamanan.</p>
-<h3>Dari Djuanda ke UNCLOS</h3>
-<p>Menurut hukum kolonial, setiap pulau hanya memiliki laut selebar 3 mil; perairan di antara pulau-pulau adalah perairan internasional. <b>Deklarasi Djuanda</b> (13 Desember 1957) menyatakan seluruh perairan di antara pulau-pulau Indonesia sebagai perairan nasional, diukur dari garis pangkal lurus yang menghubungkan pulau-pulau terluar. Hal ini akhirnya diakui oleh <b>Konvensi PBB tentang Hukum Laut (UNCLOS)</b> pada 1982, yang menerima Indonesia sebagai <b>negara kepulauan</b>. Tanggal 13 Desember kini diperingati sebagai Hari Nusantara.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'v1vi6oacy4': R`perairan kepulauan`,
   '1dra3qe9lye': R`laut teritorial`,
   '1yg34av748y': R`zona tambahan`,
@@ -4112,11 +3928,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 43-indo-b */
 addT('id', {
-  '1xbdp4s8b6c': R`<p>Negara-negara sering dikelompokkan menjadi negara <b>maju</b> (seperti Jepang, Jerman dan Australia) dan negara <b>berkembang</b> (seperti Indonesia, India dan Nigeria). Tidak ada satu garis pemisah yang pasti; ahli geografi membandingkan banyak indikator.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1q0ug9c6fjw': R`Negara maju`,
   'i3tbjmy02u': R`Negara berkembang`,
   '2efejph4wtc': R`Pendapatan per kapita`,
@@ -4279,12 +4090,6 @@ addT('id', {
 
 /* Bahasa Indonesia — 45-uni-a */
 addT('id', {
-  '8gqmniusum': R`<p><b>Analisis keruangan</b> memakai letak suatu objek, bukan hanya atributnya, untuk menemukan dan menjelaskan pola. Pertanyaan pertamanya sering kali apakah titik-titik (toko, sumur, episentrum gempa, kasus penyakit) <b>mengelompok</b>, <b>acak</b> atau <b>teratur</b>.</p>
-⟦0⟧
-⟦1⟧
-<h3>Alat lainnya</h3>
-⟦2⟧
-⟦3⟧`,
   '24zy1926bb5': R`Mengelompok: R mendekati 0`,
   'j7ci0kw21m': R`Acak: R mendekati 1`,
   '2284gti84o1': R`Teratur: R sampai 2,15`,
@@ -4333,11 +4138,6 @@ addT('id', {
   '2armoawp30e': R`Tetangga memiliki nilai yang berlawanan`,
   'wijpfsb566': R`Tidak ada data`,
   'canqrjp3m5': R`Autokorelasi spasial positif: nilai tinggi berdekatan dengan nilai tinggi dan nilai rendah dengan nilai rendah.`,
-  '2c8uwh68jpx': R`<p><b>Geomorfometri</b> mengukur bentuk permukaan lahan agar bentuk-bentuk lahan dapat dibandingkan, dipetakan dan dipakai dalam perencanaan (pertanian, jalan, risiko longsor). Ukurannya yang paling dasar adalah <b>kemiringan lereng</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'ba63wg5jws': R`jarak mendatar`,
   '1mjafrhhqeb': R`beda tinggi`,
   '16iqbwyov6m': R`Segitiga siku-siku yang menunjukkan lereng: jarak mendatar 200 meter dan beda tinggi 30 meter, dengan sudut lereng theta di bawah`,
@@ -4440,11 +4240,6 @@ addT('id', {
   'dfy060kmi6': R`Antara 10 dan 20`,
   '85tqnu9bnj': R`Kurang dari 1`,
   '1cbqlouorit': R`Nilai 3–5 adalah normal; nilai yang jauh lebih tinggi menunjukkan pengaruh geologi yang kuat, seperti punggungan sejajar yang panjang.`,
-  'ew3ue94vdt': R`<p><b>Peta tematik</b> menunjukkan pola satu tema: kepadatan penduduk, curah hujan, perolehan suara, penyakit. Kartografer harus memilih cara mengubah angka menjadi simbol, dan pilihan itu mengubah apa yang dilihat pembaca.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1nvwzyg99wa': R`Variabel visual (Bertin)`,
   '1r81glgomik': R`Paling cocok untuk`,
   '1g1tzt8ckx9': R`letak suatu objek`,
@@ -4491,12 +4286,6 @@ addT('id', {
   'ghutt6k0bd': R`Mengganti proyeksi peta`,
   '1pso7wsu1lw': R`Mencetak peta berwarna`,
   'yeo02rcri3': R`Makin kecil skalanya, sungai dihaluskan, kota kecil dihilangkan dan jalan dipertebal agar tetap terlihat.`,
-  '14o0e5trjll': R`<p>Penelitian geografi mengikuti sebuah siklus: memilih <b>masalah</b>, menelaah apa yang sudah diketahui, merumuskan <b>pertanyaan atau hipotesis</b>, mengumpulkan dan menganalisis <b>data</b>, lalu menarik <b>kesimpulan</b>. Penelitian <b>kuantitatif</b> mengukur dan menguji dengan angka; penelitian <b>kualitatif</b> mencari makna dan pengalaman melalui wawancara dan pengamatan. Banyak penelitian memakai keduanya (<b>metode campuran</b>).</p>
-⟦0⟧
-<h3>Pengambilan sampel</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1z3udzc4a88': R`Data`,
   '1aq85zj3zgw': R`dikumpulkan sendiri oleh peneliti`,
   '1bf4a8wi5qo': R`kuesioner, wawancara, pengukuran lapangan, pengamatan, foto drone`,
@@ -4720,6 +4509,403 @@ addT('id', {
   '286ixyv1jw4': R`Perangkat lunak`,
   '2cuagleuhom': R`Manusia`,
   '3ghz02ofn8': R`Komponennya adalah perangkat keras, perangkat lunak, data, manusia, dan metode.`,
+});
+
+/* Bahasa Indonesia — 9-figcaps */
+addT('id', {
+  'vv2m2qmtti': R`Skala grafis dari 0 sampai 4 kilometer untuk peta 1 : 50 000, dengan 2 sentimeter mewakili 1 kilometer`,
+  '1jpuf8hhwaq': R`2 cm di peta`,
+  '15ljy5iwmi0': R`Garis kontur yang rapat menghasilkan profil yang curam; garis kontur yang renggang menghasilkan profil yang landai`,
+  '32gvew7scy': R`rapat: curam`,
+  '19f7o9e3ts2': R`renggang: landai`,
+  '1xwas6wxrwz': R`Tempat batuan terbentuk: lava membeku di permukaan menjadi batuan beku luar, magma membeku di bawah tanah menjadi batuan beku dalam, sedimen mengendap berlapis di laut, dan batuan di dekat magma panas berubah menjadi batuan metamorf`,
+  '115tiui7w2h': R`lava: beku luar`,
+  '1yqq3j2hnur': R`beku dalam (batolit)`,
+  '1vp0w44xxnh': R`lapisan sedimen`,
+  '27x91rsinyd': R`zona metamorf`,
+  '2gfincn1mea': R`Empat jenis gerakan massa: runtuhan batu, tanah longsor, aliran lumpur, dan rayapan tanah`,
+  '28522cx3x23': R`runtuhan batu`,
+  'qduovwweri': R`tanah longsor`,
+  '1w9iokto80y': R`aliran lumpur`,
+  '6yzymqosws': R`rayapan`,
+  'ucrwplcj3q': R`ekspansif`,
+  '1f3fgc0h1co': R`konstriktif`,
+  '10o0pxffkwx': R`Tiga bentuk piramida: ekspansif dengan alas lebar, stasioner dengan sisi tegak, dan konstriktif dengan alas sempit`,
+  'oqup2btnyx': R`Indeks Pembangunan Manusia menggabungkan tiga indeks, yaitu kesehatan, pengetahuan, dan standar hidup, dengan rata-rata geometrik`,
+  '1oxk24hgji4': R`angka harapan hidup`,
+  '1pkbf0t8619': R`lama sekolah`,
+  'zzxurywosv': R`Standar hidup`,
+  'm9qqu6v93w': R`pendapatan per orang`,
+  '13tyuptg6c': R`pabrik`,
+  'l23vkkd6tx': R`Industri yang kehilangan berat berlokasi dekat bahan baku; industri yang bertambah berat berlokasi dekat pasar`,
+  '6fwjef018g': R`kehilangan berat (IM > 1)`,
+  'kia6czy7ya': R`mis. pabrik gula, semen: dekat bahan baku`,
+  '3nu3tscdwe': R`bertambah berat (IM < 1)`,
+  '1k02zwyzf7s': R`mis. minuman kemasan, roti: dekat pasar`,
+  '1tg80qf5pt7': R`Kiri: jangkauan lebih besar daripada wilayah ambang, sehingga layanan bertahan. Kanan: jangkauan lebih kecil daripada ambang, sehingga layanan gagal`,
+  '10z7bfqpbx': R`jangkauan > ambang: layak`,
+  '15gfz4if7ob': R`jangkauan < ambang: gagal`,
+  '1jt8nnu95mj': R`jangkauan`,
+  '1vse033vxvl': R`ambang`,
+  '1he9o4kyr83': R`Buffer selebar sama di sepanjang sungai dan buffer lingkaran di sekitar dua sumur, dipakai untuk mencari rumah yang letaknya dekat`,
+  'yqt0iydhhe': R`buffer sungai`,
+  '2f5xlpgdaa4': R`buffer sumur`,
+  '2cxd3v3tdmw': R`Lingkaran proporsional untuk nilai 1, 4, dan 9: luasnya sebanding dengan nilainya, sehingga jari-jarinya 1, 2, dan 3`,
+  '1mdffcjq3d': R`Terasering sawah di lereng bukit: petak-petak datar yang tergenang dan ditahan pematang, dengan air mengalir dari satu petak ke petak berikutnya`,
+  '1h4l6ar0soc': R`air irigasi`,
+  '16p3p6fnn0j': R`menengah bawah`,
+  '1m5c8ngnamt': R`menengah atas`,
+  '1fdw3fz0oly': R`tinggi →`,
+  '7f8880c2j': R`Kelompok pendapatan Bank Dunia menurut GNI per orang, dengan Indonesia sekitar 4 870 dolar AS pada kelompok menengah atas`,
+  '1dghvnhjn0y': R`Indonesia ≈ 4 870`,
+  '2eh0mc91ez9': R`GNI per orang (US$)`,
+  '15if5a2mg9e': R`Kelingkungan`,
+  '29syuxo4y28': R`Kompleks wilayah`,
+  '1s4fqicypq6': R`Tiga lingkaran bertumpang tindih untuk pendekatan keruangan, kelingkungan, dan kompleks wilayah`,
+  '1398smj0x75': R`Tiga pendekatan geografi saling bertumpang tindih: <i>keruangan</i> (di mana dan mengapa di sana), <i>kelingkungan</i> (manusia dan lingkungan), dan <i>kompleks wilayah</i> (keduanya sekaligus, untuk satu wilayah utuh).`,
+  '1cite4yhgp1': R`Skala grafis untuk $1 : 50\,000$: setiap blok 2 cm di peta mewakili 1 km. Skala ini tetap benar walaupun peta diperbesar atau diperkecil.`,
+  '12mh53xgt6w': R`lintang`,
+  'd4tfrutcju': R`Panjang satu derajat bujur yang berkurang dari 111 kilometer di khatulistiwa sampai nol di kutub`,
+  'nw1dgxj4we': R`Satu derajat bujur panjangnya $111\,\mathrm{km} \times \cos(\text{lintang})$: 111 km di khatulistiwa, sekitar 56 km pada $60^\circ$, dan nol di kutub.`,
+  'gkoqtoggdl': R`Jarak antarkontur menunjukkan kemiringan: kenaikan 200 m yang sama dalam jarak pendek terasa curam, dalam jarak panjang terasa landai.`,
+  '14tqkxqfkgt': R`kedalaman (km)`,
+  '1pl5lrd5u0c': R`tidak ada gelombang S di inti luar yang cair`,
+  'l6gbisn8es': R`mantel`,
+  '2domjsdsm2g': R`inti luar`,
+  '106rx7snjbe': R`inti dalam`,
+  '1x2taa196ev': R`Kecepatan gelombang gempa P dan S terhadap kedalaman; gelombang S lenyap di inti luar yang cair`,
+  '1wwq6lgxu57': R`Kecepatan gelombang gempa terhadap kedalaman (berdasarkan model Bumi PREM, Dziewonski dan Anderson 1981). Gelombang S tidak dapat melewati zat cair, sehingga hilangnya gelombang ini pada kedalaman $2\,891\,\mathrm{km}$ menunjukkan bahwa inti luar berupa cairan.`,
+  '1lr140bzgw2': R`Tempat terbentuknya setiap jenis batuan: lava yang membeku cepat di permukaan (batuan beku luar), magma yang membeku perlahan di bawah tanah (batuan beku dalam), lapisan sedimen di laut (batuan sedimen), dan batuan yang terpanggang di dekat magma panas (batuan metamorf).`,
+  'm6wqlkbmlw': R`Kilauea`,
+  'le8cmn4220': R`Merapi 2010`,
+  'wbd81013zh': R`Krakatau 1883`,
+  '1eq8sycf6l3': R`Tambora 1815`,
+  'l4ba4k57xx': R`Toba ~74 000 tahun lalu`,
+  '20ftlsazcfq': R`Skala Indeks Letusan Gunung Api (VEI) dari 0 sampai 8 dengan letusan-letusan di Indonesia`,
+  '25g3x7eufb5': R`Indeks Letusan Gunung Api (VEI): setiap tingkat berarti material letusan sekitar 10 kali lebih banyak. Indonesia memiliki beberapa letusan terbesar yang diketahui (nilai VEI dari Smithsonian Global Volcanism Program).`,
+  '2c91qwsoplt': R`pelapukan`,
+  '20wdtjbupp5': R`gerakan massa`,
+  '1z0cxgtgzsh': R`erosi`,
+  'ntbcul38rx': R`pengangkutan`,
+  'rdv2tvs75e': R`pengendapan`,
+  '23eega173ny': R`Rangkaian proses eksogen dari pelapukan sampai pengendapan`,
+  '265oe1i9jdh': R`Proses eksogen bekerja berantai: batuan dihancurkan di tempatnya, dipindahkan menuruni lereng oleh gravitasi, diangkut oleh air, angin, atau es, lalu akhirnya diendapkan.`,
+  'sqiie57xli': R`Gerakan massa dari yang cepat sampai yang lambat: runtuhan batu (jatuh bebas dari tebing), tanah longsor (massa yang meluncur di atas bidang gelincir), aliran lumpur (rombakan basah yang mengalir seperti cairan), dan rayapan (lambat, terlihat dari tiang dan pohon yang miring).`,
+  'vb22m3z8cw': R`jenuh: 30,4`,
+  'vjs9ryfxqv': R`aktual: 21,3 → RH 70%`,
+  '2572n0rz2tn': R`Uap air maksimum yang dapat ditampung udara naik tajam seiring suhu; pada 30 derajat, udara berisi 21,3 gram per meter kubik memiliki kelembapan relatif 70 persen`,
+  '21au4dexo0r': R`Udara hangat dapat menampung uap air jauh lebih banyak. Pada $30\,^\circ\mathrm{C}$ batas maksimumnya sekitar $30\,\mathrm{g/m^3}$, sehingga udara yang berisi $21{,}3\,\mathrm{g/m^3}$ memiliki $RH = 70\%$. Jika udara itu didinginkan, $RH$ naik sampai terbentuk embun.`,
+  '1qpaq8txjpp': R`kerikil`,
+  '9csjqioror': R`porositas (%)`,
+  '2e3e2whbdlo': R`Porositas pada umumnya: lempung 45 persen, pasir 35, kerikil 25, batu pasir 15, granit tanpa retakan sekitar 1`,
+  '2crq02j559n': R`Porositas pada umumnya. Lempung menyimpan air paling banyak, tetapi porinya sangat kecil dan kurang terhubung sehingga air sulit mengalir: akuifer yang baik juga memerlukan <i>permeabilitas</i> tinggi (pasir, kerikil).`,
+  '7uoliw3a2p': R`kedalaman (m)`,
+  '7f6eifze6b': R`termoklin`,
+  'ih6tldawdw': R`air dalam yang dingin`,
+  'rry1fv5t0b': R`Profil suhu laut tropis pada umumnya: lapisan campuran yang hangat, termoklin tempat suhu turun cepat, lalu air dalam yang dingin`,
+  '2sa64ant6d': R`Profil laut tropis pada umumnya: lapisan permukaan yang hangat dan tercampur baik, termoklin tempat suhu turun dengan cepat, dan air dingin di bawah kedalaman sekitar 1 000 m.`,
+  'kznuusng6s': R`luas daratan`,
+  '8sv1fmveeh': R`tumbuhan berbunga`,
+  'waj1lxpe6m': R`mamalia`,
+  '4akefam9wo': R`burung`,
+  '2f0fjbgecr9': R`% dari total dunia`,
+  '3n4i17v3lr': R`Bagian Indonesia di dunia: 1,3 persen daratan, tetapi sekitar 10 persen tumbuhan berbunga, 12 persen mamalia, dan 17 persen burung`,
+  'c44r33ugqd': R`Bagian Indonesia di dunia: daratannya kecil, tetapi bagian spesiesnya sangat besar — ciri negara megabiodiversitas.`,
+  '11qf6fcz1es': R`Tiga bentuk dasar piramida penduduk: ekspansif (banyak kelahiran, penduduk muda), stasioner (kelahiran dan kematian sama-sama rendah dan stabil), dan konstriktif (kelahiran lebih sedikit daripada sebelumnya, menua).`,
+  '22vbmo6alj7': R`Persentase penduduk Indonesia yang tinggal di perkotaan naik dari 17 persen pada 1971 menjadi 57 persen pada 2020`,
+  '1hg7undpn28': R`Urbanisasi di Indonesia: persentase penduduk perkotaan menurut tahun sensus (BPS), dari 17% pada 1971 menjadi 57% pada 2020.`,
+  'cp5rr28u5g': R`tingkat penggantian 2,1`,
+  '21s5o7jisto': R`Angka kelahiran total Indonesia turun dari 5,6 anak per perempuan pada 1971 menjadi 2,2 pada 2020`,
+  'fwfondiwui': R`Angka kelahiran total (TFR) Indonesia menurut sensus (BPS): dari 5,6 anak per perempuan pada 1971 menjadi 2,2 pada 2020, mendekati tingkat penggantian sekitar 2,1.`,
+  'fhugsbca1o': R`IPM menggabungkan tiga indeks dimensi dengan rata-rata geometriknya, sehingga nilai yang sangat rendah pada satu dimensi tidak dapat sepenuhnya ditutup oleh dimensi lainnya.`,
+  'f8jx88zlhe': R`cadangan`,
+  '1vxbd9j46c5': R`5/th → 20 th`,
+  '4miiemtnc7': R`2,5/th → 40 th`,
+  'pzovouip2n': R`Cadangan 100 satuan habis dalam 20 tahun dengan 5 satuan per tahun, atau dalam 40 tahun dengan 2,5 satuan per tahun`,
+  'd0spqas3f1': R`Rasio cadangan terhadap produksi: 100 satuan bertahan 20 tahun dengan 5 per tahun, tetapi 40 tahun jika produksi dikurangi separuhnya (dan lebih lama lagi jika ditemukan cadangan baru).`,
+  '20s359x2sny': R`Terasering <i>sawah</i> mengubah lereng curam menjadi petak-petak datar yang tergenang. Terasering menahan air dan tanah, mengurangi erosi, dan memungkinkan padi tumbuh di lereng bukit, seperti pada sistem <i>subak</i> di Bali.`,
+  '3o5ubje2ra': R`Indeks material (berat bahan baku ÷ berat produk) menentukan tarikannya: di atas 1 pabrik mendekat ke bahan baku (R), di bawah 1 mendekat ke pasar (M).`,
+  '1dea5va1lpo': R`Sebuah layanan hanya bertahan jika jangkauannya (seberapa jauh orang mau datang) mencakup cukup banyak orang untuk memenuhi ambangnya.`,
+  'j0v8612u3s': R`Interaksi yang berkurang sebanding kuadrat jarak: seperempatnya pada jarak dua kali, seperenambelasnya pada jarak empat kali`,
+  '5mrh4yrn3k': R`Model gravitasi: jika jarak dijadikan dua kali, interaksi menjadi seperempatnya; jika empat kali, menjadi seperenambelasnya.`,
+  'm1ngvb72r4': R`ASIA`,
+  '1lrmdkc7rin': R`AUSTRALIA`,
+  '6r86hg7v2q': R`Samudra Hindia`,
+  'upsd0cqqvp': R`Samudra Pasifik`,
+  '25edas5936': R`Indonesia di antara Benua Asia dan Australia serta di antara Samudra Hindia dan Pasifik`,
+  '1dliz1rpbr9': R`Letak geografis Indonesia: persilangan antara dua benua dan dua samudra.`,
+  '8pd5baplmd': R`juta km²`,
+  'c2yl5blc8u': R`Laut (termasuk ZEE)`,
+  '1xlxyvyd7sw': R`Luas Indonesia: sekitar 1,9 juta kilometer persegi daratan dan 6,4 juta lautan termasuk zona ekonomi eksklusif`,
+  '2da22gm9rqp': R`Sebagian besar wilayah Indonesia adalah laut: sekitar 1,9 juta km² daratan dan 6,4 juta km² perairan termasuk ZEE (angka yang dipakai Badan Informasi Geospasial, BIG).`,
+  'k5gz4f3nip': R`Kelompok pendapatan Bank Dunia menurut GNI per orang (metode Atlas, batas untuk 2024–25). Indonesia, dengan sekitar US$4 870 pada 2023, naik menjadi <b>negara berpendapatan menengah atas</b>.`,
+  '2c2awlalg46': R`<b>Buffer</b> adalah zona berjarak sama di sekitar suatu objek: di sini 100 m di sepanjang sungai dan di sekitar dua sumur. Dengan menumpangsusunkannya dengan data rumah, terlihat rumah mana yang berisiko banjir atau bergantung pada setiap sumur.`,
+  '1vj8u46jwox': R`Kurva hipsometrik: cembung untuk bentang lahan muda, lurus untuk yang dewasa, dan cekung untuk yang tua dan telah terkikis`,
+  '16407tf58on': R`Kurva hipsometrik (tinggi relatif terhadap luas relatif di atasnya). Luas di bawah setiap kurva adalah integral hipsometrik: tinggi untuk lahan muda yang sedikit tererosi, rendah untuk lahan tua yang sudah banyak terkikis.`,
+  '1a4br1ahqbb': R`Lingkaran proporsional: nilai 9 kali lebih besar mendapat lingkaran dengan luas 9 kali, tetapi jari-jarinya hanya 3 kali.`,
+  '2d275xbgxek': R`Kajian pustaka`,
+  'se9hwu8nma': R`Hipotesis`,
+  '1n5s9f74vvp': R`Analisis`,
+  '224y93iq4io': R`Siklus penelitian`,
+  'ea6xyakeua': R`Siklus penelitian: masalah, kajian pustaka, hipotesis, pengumpulan data, analisis, dan kesimpulan, yang memunculkan masalah baru`,
+  '1ulsd3t49pt': R`Penelitian adalah sebuah siklus: kesimpulan memunculkan masalah baru untuk dikaji.`,
+});
+
+/* id — lessons with figures */
+addT('id', {
+  'ltvz4x899f': R`
+<p><b>Geografi</b> mempelajari persamaan dan perbedaan fenomena di permukaan Bumi (geosfer) dengan sudut pandang keruangan, kelingkungan, atau kewilayahan. Seorang ahli geografi selalu mengajukan tiga pertanyaan: <i>di mana</i> letaknya, <i>mengapa</i> ada di sana, dan <i>apa artinya</i> bagi manusia dan lingkungan?</p>
+<h3>Objek geografi</h3>
+⟦0⟧
+<h3>Sepuluh konsep esensial</h3>
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧`,
+  's0be74r35h': R`
+<p><b>Peta</b> adalah gambaran sebagian atau seluruh permukaan Bumi pada bidang datar, yang diperkecil dengan skala dan disederhanakan dengan simbol. Peta dibedakan menjadi <b>peta umum</b> (menampilkan banyak unsur, seperti peta topografi atau atlas) dan <b>peta tematik</b> (menampilkan satu tema, seperti curah hujan atau kepadatan penduduk).</p>
+⟦0⟧
+⟦1⟧
+<h3>Skala</h3>
+<p><b>Skala angka</b> seperti $1 : 50\,000$ berarti 1 satuan di peta sama dengan 50 000 satuan yang sama di lapangan. <b>Skala verbal</b> menyatakannya dengan kata-kata ("1 cm mewakili 500 m"), dan <b>skala grafis</b> berupa batang, yang tetap benar jika peta diperbesar atau diperkecil.</p>
+⟦2⟧
+⟦3⟧
+⟦4⟧
+<p>Peta <b>skala besar</b> (misalnya $1 : 5\,000$) menampilkan wilayah sempit dengan sangat rinci; peta <b>skala kecil</b> (misalnya $1 : 1\,000\,000$) menampilkan wilayah luas dengan sedikit rincian. Makin besar penyebutnya, makin kecil skalanya.</p>
+⟦5⟧`,
+  '29tjjz7ls0x': R`
+<p>Setiap tempat di Bumi dapat ditentukan letaknya dengan dua sudut yang diukur dari pusat Bumi.</p>
+⟦0⟧
+⟦1⟧
+<p>Setiap derajat dibagi menjadi 60 menit ($'$) dan setiap menit menjadi 60 detik ($''$), jadi $6^\circ 30' = 6{,}5^\circ$. Letak ditulis dengan lintang lebih dahulu: Jakarta terletak di sekitar $6^\circ 12'\,\mathrm{LS},\ 106^\circ 49'\,\mathrm{BT}$.</p>
+⟦2⟧
+⟦3⟧
+<p>Khatulistiwa dan meridian-meridian adalah <b>lingkaran besar</b>: lingkaran yang pusatnya berimpit dengan pusat Bumi. Rute terpendek antara dua tempat mengikuti lingkaran besar; itulah sebabnya jalur penerbangan jauh tampak melengkung pada peta datar.</p>
+⟦4⟧`,
+  '10i8o0cvebf': R`
+<p>Peta topografi menampilkan ketinggian lahan dengan <b>garis kontur</b>: garis yang menghubungkan titik-titik yang sama tingginya dari permukaan laut rata-rata. Selisih tinggi antara dua kontur yang berdekatan disebut <b>interval kontur</b>; setiap garis kelima (kontur indeks) biasanya digambar lebih tebal.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+<p>Aturan yang umum dipakai untuk interval kontur suatu peta adalah</p>
+⟦3⟧
+<p>sehingga peta $1 : 50\,000$ memiliki kontur setiap $25\,\mathrm{m}$.</p>
+<h3>Gradien dan kemiringan lereng</h3>
+⟦4⟧
+<p>Kedua jarak harus dalam satuan yang sama. Kenaikan $100\,\mathrm{m}$ sejauh $2\,\mathrm{km}$ sama dengan $\frac{100}{2000} = \frac{1}{20}$, yaitu $5\%$ atau sekitar $2{,}9^\circ$.</p>
+⟦5⟧`,
+  '1nfx32if32s': R`
+<p>Belum ada yang pernah mengebor lebih dalam dari sekitar $12\,\mathrm{km}$, tetapi kita mengenal bagian dalam Bumi dengan baik. Gelombang gempa menjadi lebih cepat, lebih lambat, dan membelok ketika melewati lapisan-lapisan yang berbeda massa jenisnya, dan <b>gelombang S tidak dapat merambat melalui zat cair</b>, yang menunjukkan bahwa inti luar berupa cairan.</p>
+⟦0⟧
+⟦1⟧
+<p>Batas antarlapisan disebut <b>diskontinuitas</b>: <b>Mohorovičić</b> (Moho) antara kerak dan mantel, <b>Gutenberg</b> antara mantel dan inti, serta <b>Lehmann</b> antara inti luar dan inti dalam.</p>
+⟦2⟧
+⟦3⟧
+<p>Suhu naik seiring kedalaman. Di kerak Bumi, <b>gradien geotermal</b> biasanya sekitar $25$–$30\,^\circ\mathrm{C}$ per kilometer; itulah sebabnya tambang yang dalam terasa panas dan energi panas bumi dapat dimanfaatkan.</p>
+⟦4⟧`,
+  '14g05hzkt9j': R`
+<p><b>Mineral</b> adalah zat padat alami dengan susunan kimia dan struktur kristal tertentu, seperti kuarsa atau feldspar. <b>Batuan</b> adalah campuran satu mineral atau lebih. Mineral dikenali dari warna, cerat, kilap, belahan, dan <b>kekerasannya</b>, yang diukur dengan skala Mohs dari 1 (talk) sampai 10 (intan): mineral yang lebih keras dapat menggores mineral yang lebih lunak.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1evditldvaa': R`
+<p><b>Vulkanisme</b> mencakup semua peristiwa naiknya magma, batuan cair dari dalam Bumi. Magma yang membeku di bawah permukaan membentuk <b>intrusi</b>: <b>batolit</b> yang sangat besar, <b>lakolit</b> yang berbentuk lensa, <b>sill</b> yang mendatar di antara lapisan batuan, dan <b>gang</b> (dike) yang tegak memotong lapisan. Magma yang mencapai permukaan keluar sebagai <b>lava</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+<h3>Bahaya dan manfaat</h3>
+<p>Bahayanya antara lain <b>awan panas</b> (aliran piroklastik, "wedhus gembel"), <b>lahar</b> (aliran lumpur vulkanik, sering setelah hujan lebat), hujan abu, aliran lava, gas beracun, dan tsunami. Manfaatnya antara lain tanah yang subur, energi panas bumi, pasir dan batu bangunan, bahan tambang, dan pariwisata.</p>
+⟦4⟧`,
+  'gs3st68dy': R`
+<p><b>Cuaca</b> adalah keadaan atmosfer di suatu tempat dalam waktu singkat (beberapa jam atau hari). <b>Iklim</b> adalah rata-rata cuaca di wilayah yang luas dalam waktu lama, minimal 30 tahun. Keduanya dijelaskan dengan unsur-unsur yang sama, yang diukur di stasiun cuaca (di Indonesia oleh BMKG).</p>
+⟦0⟧
+<h3>Suhu dan ketinggian</h3>
+<p>Indonesia terletak di khatulistiwa, sehingga suhunya hampir tidak berubah sepanjang tahun; perbedaan terbesar justru disebabkan oleh <b>ketinggian</b>. Braak menemukan bahwa suhu turun sekitar 0,6 °C setiap naik 100 m:</p>
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+<h3>Kelembapan udara</h3>
+<p><b>Kelembapan mutlak</b> adalah massa uap air dalam satu meter kubik udara (g/m³). <b>Kelembapan relatif</b> membandingkannya dengan jumlah uap air terbanyak yang dapat ditampung udara pada suhu tersebut:</p>
+⟦5⟧
+⟦6⟧`,
+  '1zui2meqp2u': R`
+<p><b>Air tanah</b> adalah air yang mengisi pori-pori dan retakan tanah serta batuan di bawah permukaan. Air hujan meresap (infiltrasi) dan merembes ke bawah (perkolasi) sampai mencapai <b>zona jenuh</b>, tempat semua pori terisi air. Batas atas zona ini disebut <b>muka air tanah</b>. Lapisan yang dapat menyimpan dan meloloskan banyak air disebut <b>akuifer</b> (pasir, kerikil, batu gamping berpori); lapisan yang hampir tidak meloloskan air, seperti lempung, disebut <b>akuiklud</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+<h3>Masalah</h3>
+<p>Memompa air tanah melebihi kemampuan hujan untuk mengisinya kembali menurunkan muka air tanah dan membuat sumur kering. Di kota pesisir yang tanahnya banyak mengandung lempung, hal ini juga membuat tanah memadat dan <b>turun</b> (penurunan muka tanah): sebagian Jakarta Utara sudah turun beberapa meter. Di dekat pantai, air laut dapat merembes ke dalam akuifer (<b>intrusi air laut</b>), sehingga air sumur menjadi asin.</p>
+<h3>Danau dan lahan basah</h3>
+⟦4⟧
+⟦5⟧`,
+  'v1vd9znq2w': R`
+<p>Lautan menutupi sekitar <b>71%</b> permukaan Bumi. Ilmu yang mempelajari lautan disebut <b>oseanografi</b>. Menurut proses terjadinya, laut dibedakan menjadi <b>laut transgresi</b> yang terbentuk ketika naiknya muka air laut setelah zaman es menggenangi dataran rendah (dangkal, seperti Laut Jawa); <b>laut ingresi</b> yang terletak di bagian kerak yang turun (dalam, seperti Laut Banda); dan <b>laut regresi</b> yang menyempit.</p>
+⟦0⟧
+⟦1⟧
+<h3>Zona kedalaman</h3>
+<p>Dasar laut juga dibagi menurut kedalamannya: zona <b>litoral</b> (antara pasang naik dan pasang surut), zona <b>neritik</b> (sampai 200 m, terkena cahaya matahari dan kaya ikan), zona <b>batial</b> (200–2.000 m) dan zona <b>abisal</b> (di bawah 2.000 m, gelap dan dingin).</p>
+⟦2⟧
+⟦3⟧
+<h3>Suhu dan arus</h3>
+<p>Air laut paling hangat di permukaan. Di bawah lapisan campuran, suhu turun cepat melalui <b>termoklin</b>, lalu tetap dingin (sekitar 2–4 °C) di laut dalam. <b>Arus laut</b> digerakkan oleh angin serta perbedaan suhu dan salinitas. <b>Arus panas</b> mengalir dari khatulistiwa ke arah kutub, dan <b>arus dingin</b> mengalir ke arah khatulistiwa (seperti arus Humboldt di lepas pantai Peru), membawa zat hara ke atas sehingga menjadi daerah perikanan yang kaya.</p>
+⟦4⟧`,
+  '4h8qjnhvp5': R`
+<p><b>Keanekaragaman hayati</b> (biodiversitas) adalah keberagaman makhluk hidup. Keanekaragaman ini ada pada tiga tingkat: keanekaragaman <b>gen</b> (perbedaan di dalam satu spesies, seperti banyaknya varietas padi), keanekaragaman <b>spesies</b> (jumlah spesies yang berbeda) dan keanekaragaman <b>ekosistem</b> (keberagaman habitat, dari terumbu karang sampai hutan pegunungan).</p>
+<p>Indonesia termasuk negara <b>megabiodiversitas</b> di dunia: luasnya hanya sekitar 1,3% daratan Bumi, tetapi memiliki sekitar 10% tumbuhan berbunga, 12% mamalia dan 17% burung di dunia. Letaknya di antara dua benua, ribuan pulaunya dan iklim tropisnya menambah kekayaan ini.</p>
+⟦0⟧
+⟦1⟧
+<h3>Daftar Merah IUCN</h3>
+⟦2⟧
+⟦3⟧
+<h3>Konservasi</h3>
+⟦4⟧
+⟦5⟧`,
+  '2fwbh70042v': R`
+<p><b>Komposisi</b> penduduk adalah pengelompokan penduduk menurut umur, jenis kelamin, pekerjaan, pendidikan dan ciri lainnya. Gambaran tercepatnya adalah <b>piramida penduduk</b>: batang untuk setiap kelompok umur lima tahunan, laki-laki di kiri dan perempuan di kanan.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '2b11d77v42l': R`
+<p><b>Migrasi</b> adalah perpindahan penduduk dari satu tempat ke tempat lain untuk menetap. Migrasi dapat bersifat <b>internasional</b> (emigrasi dan imigrasi) atau <b>internal</b>, di dalam satu negara. Perpindahan singkat dan berulang tanpa pindah tempat tinggal disebut <b>mobilitas sirkuler</b>: <b>ulang-alik</b> (<i>nglaju</i>, pergi bekerja dan pulang setiap hari) dan perpindahan <b>musiman</b> (<i>mondok</i>, tinggal di tempat lain selama beberapa minggu atau bulan).</p>
+⟦0⟧
+⟦1⟧
+<h3>Migrasi di Indonesia</h3>
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧`,
+  '108finagil3': R`
+<p><b>Model transisi demografi</b> menggambarkan perubahan angka kelahiran dan kematian ketika suatu negara berkembang, serta akibatnya bagi jumlah penduduk.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  'g18hws493i': R`
+<p><b>Kualitas</b> penduduk adalah seberapa sehat, terdidik dan sejahtera penduduknya. Kualitas ini diukur dengan indikator seperti angka harapan hidup, angka kematian bayi, angka melek huruf, lama sekolah, pendapatan per kapita dan persentase penduduk miskin.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧`,
+  '22mng2rxru8': R`
+<p><b>Sumber daya alam</b> adalah segala sesuatu dari alam yang dimanfaatkan manusia untuk memenuhi kebutuhannya. Sumber daya alam dikelompokkan menurut <b>asalnya</b> (hayati dari makhluk hidup, nonhayati dari benda mati), menurut <b>sifat pembaruannya</b> dan menurut <b>kegunaannya</b> (energi, bahan baku, pangan, ruang, pemandangan).</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧
+⟦5⟧`,
+  '29slhhoxd2j': R`
+<p><b>Pertanian</b> dalam arti luas meliputi bercocok tanam, peternakan, perikanan dan kehutanan. Sistem pertanian dibedakan menurut tujuannya (<b>subsisten</b> untuk keluarga atau <b>komersial</b> untuk dijual) dan menurut seberapa intensif lahan dimanfaatkan.</p>
+⟦0⟧
+⟦1⟧
+<h3>Model von Thünen</h3>
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '28icy2coqey': R`
+<p><b>Industri</b> mengolah bahan mentah atau komponen menjadi barang yang nilainya lebih tinggi. Industri digolongkan menurut bahan bakunya (pertanian, pertambangan, kehutanan), menurut produknya (ringan atau berat), menurut ukurannya (jumlah tenaga kerja) dan menurut tahapannya (industri <b>hulu</b> membuat bahan dasar seperti baja atau semen; industri <b>hilir</b> membuat barang jadi).</p>
+⟦0⟧
+<h3>Lokasi industri</h3>
+<p>Faktor utamanya adalah bahan baku, pasar, tenaga kerja, transportasi, energi dan air, modal, kebijakan pemerintah serta <b>aglomerasi</b> (perusahaan-perusahaan mengelompok untuk berbagi pemasok, tenaga kerja dan layanan).</p>
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '23yteabn8u0': R`
+<p><b>Tempat sentral</b> adalah permukiman yang menyediakan barang dan jasa bagi penduduk di sekitarnya. Walter Christaller (1933), yang meneliti Jerman selatan, mempertanyakan mengapa kota memiliki ukuran dan jarak seperti yang ada.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+<p>Setiap kota kecil melayani setara tiga wilayah desa, dan setiap kota besar melayani setara tiga wilayah kota kecil: inilah <b>prinsip pasar</b>, $k = 3$. Karena itu, tempat kecil selalu lebih banyak daripada tempat besar. Christaller juga menjelaskan $k = 4$ (prinsip transportasi, tempat-tempat di sepanjang jalan) dan $k = 7$ (prinsip administrasi).</p>
+⟦3⟧`,
+  '27ufv30g3st': R`
+<p><b>Interaksi keruangan</b> adalah pergerakan orang, barang, uang dan informasi antartempat: ulang-alik, perdagangan, telepon, pariwisata. Edward Ullman menyebut tiga syarat terjadinya interaksi.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1x986nb032c': R`<p>Indonesia adalah negara kepulauan terbesar di dunia: sekitar 17.000 pulau yang tersebar lebih dari 5.000 km dari barat ke timur, dengan luas daratan sekitar 1,9 juta km² dan lautan yang jauh lebih luas.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '88upmoey46': R`<p><b>Geopolitik</b> mempelajari bagaimana geografi (letak, luas, sumber daya, batas wilayah) membentuk politik dan keamanan suatu negara. Cara pandang geopolitik Indonesia adalah <b>Wawasan Nusantara</b>: pulau-pulau, laut di antaranya dan udara di atasnya merupakan satu kesatuan yang utuh, secara politik, ekonomi, sosial budaya dan pertahanan keamanan.</p>
+<h3>Dari Djuanda ke UNCLOS</h3>
+<p>Menurut hukum kolonial, setiap pulau hanya memiliki laut selebar 3 mil; perairan di antara pulau-pulau adalah perairan internasional. <b>Deklarasi Djuanda</b> (13 Desember 1957) menyatakan seluruh perairan di antara pulau-pulau Indonesia sebagai perairan nasional, diukur dari garis pangkal lurus yang menghubungkan pulau-pulau terluar. Hal ini akhirnya diakui oleh <b>Konvensi PBB tentang Hukum Laut (UNCLOS)</b> pada 1982, yang menerima Indonesia sebagai <b>negara kepulauan</b>. Tanggal 13 Desember kini diperingati sebagai Hari Nusantara.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1gy4kzd88y8': R`<p>Negara-negara sering dikelompokkan menjadi negara <b>maju</b> (seperti Jepang, Jerman dan Australia) dan negara <b>berkembang</b> (seperti Indonesia, India dan Nigeria). Tidak ada satu garis pemisah yang pasti; ahli geografi membandingkan banyak indikator.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1pj7dr1h97a': R`<p><b>Analisis keruangan</b> memakai letak suatu objek, bukan hanya atributnya, untuk menemukan dan menjelaskan pola. Pertanyaan pertamanya sering kali apakah titik-titik (toko, sumur, episentrum gempa, kasus penyakit) <b>mengelompok</b>, <b>acak</b> atau <b>teratur</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+<h3>Alat lainnya</h3>
+⟦3⟧
+⟦4⟧`,
+  '1m99hbakvu1': R`<p><b>Geomorfometri</b> mengukur bentuk permukaan lahan agar bentuk-bentuk lahan dapat dibandingkan, dipetakan dan dipakai dalam perencanaan (pertanian, jalan, risiko longsor). Ukurannya yang paling dasar adalah <b>kemiringan lereng</b>.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1eqqicqn30j': R`<p><b>Peta tematik</b> menunjukkan pola satu tema: kepadatan penduduk, curah hujan, perolehan suara, penyakit. Kartografer harus memilih cara mengubah angka menjadi simbol, dan pilihan itu mengubah apa yang dilihat pembaca.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '713ttj8tcz': R`<p>Penelitian geografi mengikuti sebuah siklus: memilih <b>masalah</b>, menelaah apa yang sudah diketahui, merumuskan <b>pertanyaan atau hipotesis</b>, mengumpulkan dan menganalisis <b>data</b>, lalu menarik <b>kesimpulan</b>. Penelitian <b>kuantitatif</b> mengukur dan menguji dengan angka; penelitian <b>kualitatif</b> mencari makna dan pengalaman melalui wawancara dan pengamatan. Banyak penelitian memakai keduanya (<b>metode campuran</b>).</p>
+⟦0⟧
+⟦1⟧
+<h3>Pengambilan sampel</h3>
+⟦2⟧
+⟦3⟧
+⟦4⟧`,
+  '1seg9ke8lm9': R`
+<p>Tenaga dari dalam Bumi (<b>endogen</b>) membangun daratan; tenaga dari permukaan (<b>eksogen</b>) mengikisnya. Proses eksogen meliputi pelapukan, gerakan massa, erosi, dan pengendapan.</p>
+⟦0⟧
+⟦1⟧
+⟦2⟧
+<h3>Gerakan massa</h3>
+<p><b>Gerakan massa</b> adalah perpindahan material hasil pelapukan menuruni lereng karena gaya gravitasi: <b>runtuhan batu</b>, <b>tanah longsor</b> (massa yang meluncur di atas bidang gelincir), <b>aliran lumpur</b>, dan <b>rayapan tanah</b> yang lambat (ditandai pohon dan pagar yang miring). Gerakan massa paling mungkin terjadi di lereng terjal, setelah hujan lebat, di tempat yang vegetasinya telah dibabat, dan di tempat yang diguncang gempa.</p>
+⟦3⟧
+<h3>Erosi dan pengendapan</h3>
+<p><b>Erosi</b> adalah pengikisan dan pengangkutan material oleh air mengalir, angin, gelombang, dan gletser. Ketika tenaga pengangkutnya melemah, muatannya diendapkan: <b>sedimentasi</b>. Erosi tanah oleh hujan di lahan pertanian miring yang terbuka merupakan masalah serius; erosi dapat dikurangi dengan terasering, pembajakan menurut kontur, tanaman penutup tanah, dan reboisasi.</p>
+⟦4⟧`,
+});
+
+/* Bahasa Indonesia — 9-figshared */
+addT('id', {
+  '1ogbw8wz8eu': R`median`,
+  'glmqryi5du': R`atas`,
+  '133jc9ud4m8': R`depan`,
+  '1ha0sto9ww8': R`bawah`,
+  '3aovv25fmb': R`samping`,
+  '180lyt6tmu1': R`belakang`,
+  '1dnrupqfei6': R`tahun`,
+  '1rfj6s0td7l': R`Masalah`,
+  '1boy0ga8tbt': R`Kesimpulan`,
 });
 
 /* Bahasa Indonesia — 9-ladder-a */

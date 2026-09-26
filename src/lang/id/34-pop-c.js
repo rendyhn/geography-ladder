@@ -1,12 +1,5 @@
 /* Bahasa Indonesia — 34-pop-c */
 addT('id', {
-  '1ng3pxt2c92': R`
-<p><b>Kualitas</b> penduduk adalah seberapa sehat, terdidik dan sejahtera penduduknya. Kualitas ini diukur dengan indikator seperti angka harapan hidup, angka kematian bayi, angka melek huruf, lama sekolah, pendapatan per kapita dan persentase penduduk miskin.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   '1f6rnzfxh58': R`<p><b>Indeks Pembangunan Manusia</b> (IPM, <i>Human Development Index</i>) menggabungkan tiga dimensi. Masing-masing diubah menjadi indeks antara 0 dan 1:</p><p>$$\text{indeks} = \frac{\text{nilai sebenarnya} - \text{minimum}}{\text{maksimum} - \text{minimum}}$$</p><p>Untuk angka harapan hidup, minimumnya 20 tahun dan maksimumnya 85. IPM adalah rata-rata geometri dari ketiga indeks:</p><p>$$\text{IPM} = \sqrt[3]{I_{\text{kesehatan}} \times I_{\text{pendidikan}} \times I_{\text{pengeluaran}}}$$</p>`,
   '10ucth3ln7a': R`Dimensi`,
   'roij4a19zo': R`Indikator`,

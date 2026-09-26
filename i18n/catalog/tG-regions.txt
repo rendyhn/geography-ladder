@@ -1,5 +1,5 @@
 ##### resources
-@2fns9dhjqvs  ; 0=Tbl([T`Type`, T`Description`, T`Examples | 1=Fig(donutSvg([{ label: T`Coal`, value: 4 | 2=Tbl([T`Resource`, T`Where in Indonesia`] | 3=Key(T`<p><b>How long will it last?</b> F | 4=Tip(T`<p><b>Sustainable use</b> means ta
+@22mng2rxru8  ; 0=Tbl([T`Type`, T`Description`, T`Examples | 1=Fig(donutSvg([{ label: T`Coal`, value: 4 | 2=Tbl([T`Resource`, T`Where in Indonesia`] | 3=Key(T`<p><b>How long will it last?</b> F | 4=Fig(planeSvg({ W: 340, H: 210, x: [0, 42 | 5=Tip(T`<p><b>Sustainable use</b> means ta
 
 <p>A <b>natural resource</b> is anything from nature that people use to meet their needs. Resources are grouped by <b>origin</b> (biotic from living things, abiotic from non-living things), by <b>renewability</b> and by <b>use</b> (energy, raw materials, food, space, scenery).</p>
 ⟦0⟧
@@ -7,6 +7,7 @@
 ⟦2⟧
 ⟦3⟧
 ⟦4⟧
+⟦5⟧
 @k2zmn2hzdh
 Renewable
 @26g8us0bzbt
@@ -71,6 +72,16 @@ Geothermal
 along the volcanic arc: Kamojang, Dieng, Sarulla
 @1jy0nxko0hp
 <p><b>How long will it last?</b> For a non-renewable resource,</p><p>$$\text{years left} = \frac{\text{reserves}}{\text{production per year}}$$</p><p>This <b>reserve-to-production ratio</b> assumes production stays the same; new discoveries make it longer and rising demand shorter.</p>
+@f8jx88zlhe
+reserves
+@1vxbd9j46c5
+5/yr → 20 yr
+@4miiemtnc7
+2.5/yr → 40 yr
+@pzovouip2n
+Reserves of 100 units running out in 20 years at 5 units a year, or in 40 years at 2.5 units a year
+@d0spqas3f1
+The reserve-to-production ratio: 100 units last 20 years at 5 a year, but 40 years if production is halved (and longer still if new reserves are found).
 @843ifdjc4
 <p><b>Sustainable use</b> means taking no more than nature can renew, saving and recycling non-renewables, and adding value at home: Indonesia now requires nickel ore to be processed into metal and battery materials in the country (downstreaming, <i>hilirisasi</i>) instead of being exported raw.</p>
 @119ct2fa9xz  ; 0=F(R) | 1=F(p)
@@ -167,14 +178,15 @@ Wind and sunlight
 Biotic resources come from living things; oil and coal are formed from ancient life but are classed as abiotic minerals.
 
 ##### agriculture
-@f2dbmmhjim  ; 0=Tbl([T`Type`, T`Description`, T`Indonesi | 1=FigW(vonThunenSvg({ names: { z1: T`dairy | 2=Key(T`<p>Johann Heinrich von Thünen (182 | 3=Tip(T`<p><b>Productivity</b> = output ÷ 
+@29slhhoxd2j  ; 0=Tbl([T`Type`, T`Description`, T`Indonesi | 1=FigW(terraceSvg(), T`<i>Sawah</i> terrac | 2=FigW(vonThunenSvg({ names: { z1: T`dairy | 3=Key(T`<p>Johann Heinrich von Thünen (182 | 4=Tip(T`<p><b>Productivity</b> = output ÷ 
 
 <p><b>Agriculture</b> in the broad sense includes growing crops, raising livestock, fisheries and forestry. Farming systems differ by purpose (<b>subsistence</b> for the family or <b>commercial</b> for sale) and by how intensively the land is used.</p>
 ⟦0⟧
-<h3>Von Thünen's model</h3>
 ⟦1⟧
+<h3>Von Thünen's model</h3>
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @1ocjpi0c5dk
 Wet-rice (sawah)
 @usma27jyqn
@@ -205,6 +217,8 @@ Mixed gardens (pekarangan)
 many plants and animals around the house
 @2ezzahwmt3x
 across Java
+@20s359x2sny
+<i>Sawah</i> terraces turn a steep slope into flat, flooded steps. They hold water and soil, cut erosion and let rice grow on hillsides, as in Bali's <i>subak</i> system.
 @12v7o0fp007
 dairy and vegetables
 @wipqufck0v
@@ -311,7 +325,7 @@ They grow only in deserts
 Palm oil earns export income, but expansion has cleared forests and drained peatlands.
 
 ##### industry-location
-@1w2a5duxgo3  ; 0=Tbl([T`Size (BPS)`, T`Workers`], [[T`Hou | 1=FigW(weberSvg({ names: { m1: T`Raw mater | 2=Key(T`<p><b>Weber's least-cost theory</b | 3=Tip(T`<p>The <b>location quotient</b> sh
+@28icy2coqey  ; 0=Tbl([T`Size (BPS)`, T`Workers`], [[T`Hou | 1=FigW(weberSvg({ names: { m1: T`Raw mater | 2=Key(T`<p><b>Weber's least-cost theory</b | 3=FigW(materialIndexSvg(), T`The material  | 4=Tip(T`<p>The <b>location quotient</b> sh
 
 <p><b>Industry</b> turns raw materials or parts into goods of higher value. It is classified by raw material (agricultural, mining, forestry), by product (light or heavy), by size (by the number of workers) and by stage (<b>upstream</b> industries make basic materials such as steel or cement; <b>downstream</b> industries make finished goods).</p>
 ⟦0⟧
@@ -320,6 +334,7 @@ Palm oil earns export income, but expansion has cleared forests and drained peat
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @1sf8skfr22y
 Size (BPS)
 @es2l43hvah
@@ -348,6 +363,8 @@ Weber's location triangle with two raw-material sources and a market at the corn
 Weber's triangle. The factory is pulled towards whichever corner costs most to transport from.
 @10mg05glmv3
 <p><b>Weber's least-cost theory</b> (1909): a factory is located where the total cost of transport (of raw materials in and products out) is lowest. The <b>material index</b> decides the pull:</p><p>$$MI = \frac{\text{weight of localised raw materials}}{\text{weight of the finished product}}$$</p><p>If $MI > 1$ the materials lose weight in processing (cement, smelting, sugar), so the industry is <b>raw-material oriented</b>. If $MI < 1$ the product gains weight or is fragile (drinks, bread), so it is <b>market oriented</b>. If $MI = 1$ it is <b>footloose</b>: it can locate anywhere.</p>
+@3o5ubje2ra
+The material index (weight of raw materials ÷ weight of product) decides the pull: above 1 the factory moves towards the raw material (R), below 1 towards the market (M).
 @12q9tbjvkkv
 <p>The <b>location quotient</b> shows whether a region specialises in an industry: $LQ = \frac{e_i / e}{E_i / E}$, where $e_i$ and $e$ are the region's jobs in that industry and in total, and $E_i$ and $E$ the same for the country. $LQ > 1$ means the region has more than its share: a basic, exporting sector. Indonesia's industrial estates include Cikarang and Karawang (West Java), Batam, and the Morowali nickel park.</p>
 @262k56zjfw5
@@ -438,13 +455,14 @@ Freedom from all taxes
 Clustering lowers costs: suppliers, workers, banks and infrastructure are all close at hand.
 
 ##### central-places
-@1qhye0xtlzl  ; 0=Key(T`<p><b>Threshold</b>: the minimum n | 1=FigW(christallerSvg({ names: { city: T`c | 2=Tip(T`<p>The <b>rank-size rule</b> says 
+@23yteabn8u0  ; 0=Key(T`<p><b>Threshold</b>: the minimum n | 1=FigW(christallerSvg({ names: { city: T`c | 2=FigW(thresholdRangeSvg(), T`A service su | 3=Tip(T`<p>The <b>rank-size rule</b> says 
 
 <p>A <b>central place</b> is a settlement that provides goods and services to the people around it. Walter Christaller (1933), studying southern Germany, asked why towns are the sizes they are and spaced as they are.</p>
 ⟦0⟧
 ⟦1⟧
-<p>Each town serves the equivalent of three village areas, and each city three town areas: this is the <b>marketing principle</b>, $k = 3$. So there are always more small places than big ones. Christaller also described $k = 4$ (the transport principle, places along roads) and $k = 7$ (the administrative principle).</p>
 ⟦2⟧
+<p>Each town serves the equivalent of three village areas, and each city three town areas: this is the <b>marketing principle</b>, $k = 3$. So there are always more small places than big ones. Christaller also described $k = 4$ (the transport principle, places along roads) and $k = 7$ (the administrative principle).</p>
+⟦3⟧
 @1xpqx8aw9l2
 <p><b>Threshold</b>: the minimum number of customers a service needs to survive. <b>Range</b>: the maximum distance people will travel to use it. A service can exist only where its range covers at least its threshold. Everyday <b>low-order</b> goods (a small shop, a primary school) have a low threshold and short range; <b>high-order</b> goods (a university, a specialist hospital, a shopping mall) have a high threshold and long range.</p>
 @2ggrucowhou
@@ -457,6 +475,8 @@ village (low order)
 Christaller's model: small hexagonal market areas around many villages, larger hexagons around six towns, and the largest hexagon around one city
 @1fksbil577x
 Christaller's hexagonal market areas (k = 3). Hexagons fill the plain without gaps or overlaps.
+@1dea5va1lpo
+A service survives only if its range (how far people will travel) reaches enough people to meet its threshold.
 @1ji1qkfhnzh
 <p>The <b>rank-size rule</b> says the $n$th largest city has about $\frac{1}{n}$ of the population of the largest: $P_n = \frac{P_1}{n}$. When the largest city is far bigger than this, it is a <b>primate city</b>, like Jakarta or Bangkok. The <b>primacy index</b> is $\frac{P_1}{P_2}$.</p>
 @1vyh332sqjc  ; 0=n
@@ -545,13 +565,14 @@ People always shop at the furthest town
 His model assumed an isotropic plain, equal transport in all directions and people using the nearest centre.
 
 ##### spatial-interaction
-@11r4zpodwvm  ; 0=Tbl([T`Condition`, T`Meaning`, T`Example | 1=Key(T`<p><b>The gravity model</b>: inter | 2=FigW(breakingPointSvg({ pa: 400000, pb:  | 3=Tip(T`<p><b>Network connectivity</b> is 
+@27ufv30g3st  ; 0=Tbl([T`Condition`, T`Meaning`, T`Example | 1=Key(T`<p><b>The gravity model</b>: inter | 2=Fig(planeSvg({ W: 340, H: 210, x: [0, 5. | 3=FigW(breakingPointSvg({ pa: 400000, pb:  | 4=Tip(T`<p><b>Network connectivity</b> is 
 
 <p><b>Spatial interaction</b> is the movement of people, goods, money and information between places: commuting, trade, phone calls, tourism. Edward Ullman named three conditions that make it happen.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @xta2o34gih
 Condition
 @172i6n01dsv
@@ -574,6 +595,10 @@ goods and people can actually be moved at a reasonable cost
 a new toll road or bridge
 @2d2ixsfnfjc
 <p><b>The gravity model</b>: interaction grows with the size of the two places and falls with the square of the distance between them,</p><p>$$I_{AB} = k\,\frac{P_A\,P_B}{d_{AB}^{\,2}}$$</p><p><b>Reilly's breaking point</b> is where the pull of two towns is equal. Measured from town B,</p><p>$$BP = \frac{d_{AB}}{1 + \sqrt{P_A / P_B}}$$</p><p>so the breaking point lies closer to the smaller town.</p>
+@j0v8612u3s
+Interaction falling with the square of distance: a quarter at twice the distance, a sixteenth at four times
+@5mrh4yrn3k
+The gravity model: double the distance and interaction falls to a quarter; four times the distance, to a sixteenth.
 @ihlqe4b7xr
 breaking point
 @go0iw0pbcc

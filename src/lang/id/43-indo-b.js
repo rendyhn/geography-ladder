@@ -1,10 +1,5 @@
 /* Bahasa Indonesia — 43-indo-b */
 addT('id', {
-  '1xbdp4s8b6c': R`<p>Negara-negara sering dikelompokkan menjadi negara <b>maju</b> (seperti Jepang, Jerman dan Australia) dan negara <b>berkembang</b> (seperti Indonesia, India dan Nigeria). Tidak ada satu garis pemisah yang pasti; ahli geografi membandingkan banyak indikator.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1q0ug9c6fjw': R`Negara maju`,
   'i3tbjmy02u': R`Negara berkembang`,
   '2efejph4wtc': R`Pendapatan per kapita`,

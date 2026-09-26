@@ -95,18 +95,6 @@ addT('id', {
   '1sej6y160ig': R`Ozon mendinginkan udara`,
   'ey57ijww7d': R`Awan menyerap semua panas`,
   '10qpspkt0we': R`Sinar matahari memanaskan tanah, lalu tanah memanaskan udara di atasnya; makin jauh dari tanah, makin sedikit panas yang sampai ke udara.`,
-  'mq13pdkuzv': R`
-<p><b>Cuaca</b> adalah keadaan atmosfer di suatu tempat dalam waktu singkat (beberapa jam atau hari). <b>Iklim</b> adalah rata-rata cuaca di wilayah yang luas dalam waktu lama, minimal 30 tahun. Keduanya dijelaskan dengan unsur-unsur yang sama, yang diukur di stasiun cuaca (di Indonesia oleh BMKG).</p>
-⟦0⟧
-<h3>Suhu dan ketinggian</h3>
-<p>Indonesia terletak di khatulistiwa, sehingga suhunya hampir tidak berubah sepanjang tahun; perbedaan terbesar justru disebabkan oleh <b>ketinggian</b>. Braak menemukan bahwa suhu turun sekitar 0,6 °C setiap naik 100 m:</p>
-⟦1⟧
-⟦2⟧
-⟦3⟧
-<h3>Kelembapan udara</h3>
-<p><b>Kelembapan mutlak</b> adalah massa uap air dalam satu meter kubik udara (g/m³). <b>Kelembapan relatif</b> membandingkannya dengan jumlah uap air terbanyak yang dapat ditampung udara pada suhu tersebut:</p>
-⟦4⟧
-⟦5⟧`,
   '1xj75jkwd2x': R`Unsur`,
   '1n4tjiq7o59': R`Alat ukur`,
   '232n0low5z0': R`Satuan`,

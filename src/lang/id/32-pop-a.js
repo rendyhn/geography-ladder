@@ -54,12 +54,6 @@ addT('id', {
   'k8yo406pnp': R`Sebagian besar penduduk tinggal di kota`,
   'rdfjd4a7qc': R`Lahan pertaniannya sangat luas`,
   'v1fiof5bmk': R`Kepadatan agraris adalah jumlah petani per satuan luas lahan pertanian; jika tinggi, lahan garapan sempit dan tekanan terhadap lahan besar.`,
-  'rkjjufrpop': R`
-<p><b>Komposisi</b> penduduk adalah pengelompokan penduduk menurut umur, jenis kelamin, pekerjaan, pendidikan dan ciri lainnya. Gambaran tercepatnya adalah <b>piramida penduduk</b>: batang untuk setiap kelompok umur lima tahunan, laki-laki di kiri dan perempuan di kanan.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1jm3frsj76t': R`Laki-laki`,
   '1320sbrt6z3': R`Perempuan`,
   '1w9pbmh31fm': R`Piramida penduduk Indonesia sekitar 2020: lebar pada usia muda dan usia kerja, lalu menyempit terus di atas usia 50`,

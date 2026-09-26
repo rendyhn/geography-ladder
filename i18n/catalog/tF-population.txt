@@ -102,13 +102,14 @@ Farms are very large
 Agrarian density is farmers per unit of farmland; when it is high, farms are small and the land is under pressure.
 
 ##### population-structure
-@rkjjufrpop  ; 0=FigW(pyramidSvg(['0–4', '5–9', '10–14',  | 1=Tbl([T`Shape`, T`Also called`, T`What it | 2=Key(T`<p><b>Sex ratio</b> = number of ma | 3=Tip(T`<p>When the dependency ratio falls
+@2fwbh70042v  ; 0=FigW(pyramidSvg(['0–4', '5–9', '10–14',  | 1=Tbl([T`Shape`, T`Also called`, T`What it | 2=FigW(pyramidShapesSvg(), T`The three bas | 3=Key(T`<p><b>Sex ratio</b> = number of ma | 4=Tip(T`<p>When the dependency ratio falls
 
 <p>The <b>structure</b> of a population is how it is divided by age, sex, work, education and other features. The quickest picture is a <b>population pyramid</b>: bars for each five-year age group, males on the left and females on the right.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @1jm3frsj76t
 Male
 @1320sbrt6z3
@@ -131,8 +132,6 @@ high births, many children, short lives
 Niger, Papua in the past
 @1s94bmx7ihf
 Straight sides
-@18qnlpmx28m
-stationary
 @21tttolmw0u
 births and deaths both low and balanced
 @i7szdgf8c2
@@ -145,6 +144,8 @@ constrictive (old)
 very low births, an ageing population
 @1bmmzlqw7to
 Japan
+@11qf6fcz1es
+The three basic pyramid shapes: expansive (many births, young population), stationary (births and deaths both low and steady) and constrictive (fewer births than before, ageing).
 @1upccf2jec3
 <p><b>Sex ratio</b> = number of males per 100 females:</p><p>$$SR = \frac{M}{F} \times 100$$</p><p><b>Dependency ratio</b> = how many young and old people each 100 people of working age must support:</p><p>$$DR = \frac{P_{0\text{–}14} + P_{65+}}{P_{15\text{–}64}} \times 100$$</p>
 @1mz9gpxrd6p
@@ -221,7 +222,7 @@ It has many retired people
 Mining towns and industrial cities often attract male migrant workers, raising the sex ratio.
 
 ##### migration
-@1vt5180cnam  ; 0=FigW(pushPullSvg({ names: { origin: T`Or | 1=Tbl([T`Push factors (at the origin)`, T` | 2=Tbl([T`Type`, T`Meaning`], [[T`Urbanisat | 3=Key(T`<p><b>Net migration</b> = immigran | 4=Tip(T`<p>Urbanisation brings jobs and se
+@2b11d77v42l  ; 0=FigW(pushPullSvg({ names: { origin: T`Or | 1=Tbl([T`Push factors (at the origin)`, T` | 2=Tbl([T`Type`, T`Meaning`], [[T`Urbanisat | 3=Key(T`<p><b>Net migration</b> = immigran | 4=Fig(planeSvg({ W: 360, H: 220, x: [1965, | 5=Tip(T`<p>Urbanisation brings jobs and se
 
 <p><b>Migration</b> is the movement of people from one place to another to live. It can be <b>international</b> (emigration and immigration) or <b>internal</b>, within one country. Short, repeated moves without changing home are called <b>circulation</b>: <b>commuting</b> (<i>nglaju</i>, travelling to work and back each day) and <b>seasonal</b> moves (<i>mondok</i>, staying away for weeks or months).</p>
 ⟦0⟧
@@ -230,6 +231,7 @@ Mining towns and industrial cities often attract male migrant workers, raising t
 ⟦2⟧
 ⟦3⟧
 ⟦4⟧
+⟦5⟧
 @1rdth9k3f2q
 Origin
 @98fdpeq4m8
@@ -282,6 +284,12 @@ Emigration of workers
 Indonesian migrant workers (PMI) going abroad, for example to Malaysia, Saudi Arabia and Taiwan
 @1yvbs7rjs4b
 <p><b>Net migration</b> = immigrants − emigrants. The <b>net migration rate</b> is per 1 000 people:</p><p>$$\text{NMR} = \frac{I - E}{P} \times 1000$$</p><p>The <b>level of urbanisation</b> is the urban population as a percentage of the total; for Indonesia it passed 50% around 2010 and is about 57% today.</p>
+@1dnrupqfei6
+year
+@22vbmo6alj7
+Share of Indonesians living in urban areas rising from 17 percent in 1971 to 57 percent in 2020
+@1hg7undpn28
+Urbanisation in Indonesia: the urban share of the population by census year (BPS), from 17% in 1971 to 57% in 2020.
 @16td6953n3r
 <p>Urbanisation brings jobs and services but, when it is too fast, also slums, traffic jams, pollution, floods and a shortage of housing and clean water. Rural areas can lose their young workers. Developing small towns and villages spreads growth more evenly.</p>
 @h5oi6evizh  ; 0=F(I) | 1=F(E)
@@ -380,13 +388,14 @@ Their birth rate rises
 Young adults leave first, so villages may be left with children and elderly people.
 
 ##### demographic-transition
-@pi8a8ov0hi  ; 0=FigW(dtmSvg({ names: { stage: T`Stage`,  | 1=Tbl([T`Stage`, T`Birth rate`, T`Death ra | 2=Key(T`<p><b>Natural increase</b> in perc | 3=Tip(T`<p><b>Population policy.</b> Indon
+@108finagil3  ; 0=FigW(dtmSvg({ names: { stage: T`Stage`,  | 1=Tbl([T`Stage`, T`Birth rate`, T`Death ra | 2=Key(T`<p><b>Natural increase</b> in perc | 3=Fig(planeSvg({ W: 360, H: 220, x: [1965, | 4=Tip(T`<p><b>Population policy.</b> Indon
 
 <p>The <b>demographic transition model</b> (DTM) describes how birth and death rates change as a country develops, and what that does to its population.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @bf6ghejsin
 Stage
 @1b2u13c6lk4
@@ -449,6 +458,12 @@ shrinking
 an ageing population, costly child raising
 @1hhuyk67ef9
 <p><b>Natural increase</b> in percent is $\frac{\text{CBR} - \text{CDR}}{10}$, with both rates per 1 000. Indonesia (CBR about 16, CDR about 7) is late in <b>stage 3</b>. Japan and Italy are in stage 5; Niger and Chad are still in stage 2.</p>
+@cp5rr28u5g
+replacement level 2.1
+@21s5o7jisto
+Total fertility rate of Indonesia falling from 5.6 children per woman in 1971 to 2.2 in 2020
+@fwfondiwui
+Indonesia's total fertility rate by census (BPS): from 5.6 children per woman in 1971 to 2.2 in 2020, close to the replacement level of about 2.1.
 @2g4147u6qie
 <p><b>Population policy.</b> Indonesia's family-planning programme (<i>Keluarga Berencana</i>, KB, run by BKKBN since 1970) cut the average number of children per woman (the <b>total fertility rate</b>) from about 5.6 to about 2.2. Countries in stage 5, such as Japan and South Korea, now pay families to have more children.</p>
 @167qhyexnjd  ; 0=st
@@ -541,7 +556,7 @@ India
 Japan has had more deaths than births since the late 2000s and its population is falling.
 
 ##### human-development
-@1ng3pxt2c92  ; 0=Key(T`<p><b>The Human Development Index< | 1=Tbl([T`Dimension`, T`Indicator`], [[T`A  | 2=Fig(hbarSvg([{ label: T`DKI Jakarta`, va | 3=Tbl([T`HDI`, T`Category`], [[T`0.80 and  | 4=Tip(T`<p>Other measures: the <b>infant m
+@g18hws493i  ; 0=Key(T`<p><b>The Human Development Index< | 1=FigW(hdiSvg(), T`The HDI combines three  | 2=Tbl([T`Dimension`, T`Indicator`], [[T`A  | 3=Fig(hbarSvg([{ label: T`DKI Jakarta`, va | 4=Tbl([T`HDI`, T`Category`], [[T`0.80 and  | 5=Tip(T`<p>Other measures: the <b>infant m
 
 <p>The <b>quality</b> of a population is how healthy, educated and prosperous its people are. It is measured with indicators such as life expectancy, infant mortality, literacy, years of schooling, income per person and the share of people living in poverty.</p>
 ⟦0⟧
@@ -549,8 +564,11 @@ Japan has had more deaths than births since the late 2000s and its population is
 ⟦2⟧
 ⟦3⟧
 ⟦4⟧
+⟦5⟧
 @1f6rnzfxh58
 <p><b>The Human Development Index</b> (HDI, <i>Indeks Pembangunan Manusia</i>) combines three dimensions. Each is turned into an index between 0 and 1:</p><p>$$\text{index} = \frac{\text{actual value} - \text{minimum}}{\text{maximum} - \text{minimum}}$$</p><p>For life expectancy the minimum is 20 years and the maximum 85. The HDI is the geometric mean of the three indices:</p><p>$$\text{HDI} = \sqrt[3]{I_{\text{health}} \times I_{\text{education}} \times I_{\text{income}}}$$</p>
+@fhugsbca1o
+The HDI combines three dimension indices by their geometric mean, so a very low score in one dimension cannot be fully made up by the others.
 @10ucth3ln7a
 Dimension
 @roij4a19zo
@@ -559,8 +577,6 @@ Indicator
 A long and healthy life
 @peh2011bag
 life expectancy at birth
-@1y8o9w3ehhe
-Knowledge
 @2dpcooq7n1j
 expected years of schooling and mean years of schooling
 @1eiwwtnhfin
@@ -577,8 +593,6 @@ Nusa Tenggara Timur
 A bar chart of HDI in 2023 (Indonesian method): Jakarta about 0.83, Yogyakarta 0.81, Indonesia 0.75, East Nusa Tenggara 0.67, Papua 0.63
 @18jxd0820cr
 HDI of some provinces around 2023 (BPS method, shown on a 0–1 scale). Differences between regions are still large.
-@r13bfk09bo
-HDI
 @234zjvv6sv0
 0.80 and above
 @tjd4ylkr0t

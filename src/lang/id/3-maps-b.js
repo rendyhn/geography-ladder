@@ -1,13 +1,5 @@
 /* Bahasa Indonesia — 3-maps-b */
 addT('id', {
-  '143h5zc7enc': R`
-<p>Setiap tempat di Bumi dapat ditentukan letaknya dengan dua sudut yang diukur dari pusat Bumi.</p>
-⟦0⟧
-⟦1⟧
-<p>Setiap derajat dibagi menjadi 60 menit ($'$) dan setiap menit menjadi 60 detik ($''$), jadi $6^\circ 30' = 6{,}5^\circ$. Letak ditulis dengan lintang lebih dahulu: Jakarta terletak di sekitar $6^\circ 12'\,\mathrm{LS},\ 106^\circ 49'\,\mathrm{BT}$.</p>
-⟦2⟧
-<p>Khatulistiwa dan meridian-meridian adalah <b>lingkaran besar</b>: lingkaran yang pusatnya berimpit dengan pusat Bumi. Rute terpendek antara dua tempat mengikuti lingkaran besar; itulah sebabnya jalur penerbangan jauh tampak melengkung pada peta datar.</p>
-⟦3⟧`,
   '9q6nkst6t': R`Globe dengan garis lintang dan bujur; khatulistiwa, meridian utama, dan garis-garis yang melalui Bandung ditonjolkan`,
   'l98q7xe428': R`Bandung terletak di sekitar 6,9° LS dan 107,6° BT. Garis merah adalah khatulistiwa dan garis biru meridian utama.`,
   '1eggnk8ah0d': R`Lintang`,

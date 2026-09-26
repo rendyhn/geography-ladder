@@ -1,12 +1,5 @@
 /* Bahasa Indonesia — 36-reg-a */
 addT('id', {
-  '2fns9dhjqvs': R`
-<p><b>Sumber daya alam</b> adalah segala sesuatu dari alam yang dimanfaatkan manusia untuk memenuhi kebutuhannya. Sumber daya alam dikelompokkan menurut <b>asalnya</b> (hayati dari makhluk hidup, nonhayati dari benda mati), menurut <b>sifat pembaruannya</b> dan menurut <b>kegunaannya</b> (energi, bahan baku, pangan, ruang, pemandangan).</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   'k2zmn2hzdh': R`Terbarukan`,
   '26g8us0bzbt': R`pulih secara alami dalam rentang hidup manusia jika dimanfaatkan dengan bijak`,
   'aqc4gsmj7l': R`hutan, ikan, tanah, air, sinar matahari, angin`,
@@ -86,13 +79,6 @@ addT('id', {
   '48i02ijfco': R`Pasir dan kerikil`,
   '2097jl3iy8a': R`Angin dan sinar matahari`,
   '1kjvrhm57k6': R`Sumber daya hayati berasal dari makhluk hidup; minyak bumi dan batu bara terbentuk dari sisa makhluk hidup purba tetapi digolongkan sebagai mineral nonhayati.`,
-  'f2dbmmhjim': R`
-<p><b>Pertanian</b> dalam arti luas meliputi bercocok tanam, peternakan, perikanan dan kehutanan. Sistem pertanian dibedakan menurut tujuannya (<b>subsisten</b> untuk keluarga atau <b>komersial</b> untuk dijual) dan menurut seberapa intensif lahan dimanfaatkan.</p>
-⟦0⟧
-<h3>Model von Thünen</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1ocjpi0c5dk': R`Sawah`,
   'usma27jyqn': R`teras berpengairan yang digenangi; sangat intensif`,
   '1puky6qemiy': R`Jawa, Bali (subak), Sumatra Utara`,

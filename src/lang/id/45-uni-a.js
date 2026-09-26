@@ -1,11 +1,5 @@
 /* Bahasa Indonesia — 45-uni-a */
 addT('id', {
-  '8gqmniusum': R`<p><b>Analisis keruangan</b> memakai letak suatu objek, bukan hanya atributnya, untuk menemukan dan menjelaskan pola. Pertanyaan pertamanya sering kali apakah titik-titik (toko, sumur, episentrum gempa, kasus penyakit) <b>mengelompok</b>, <b>acak</b> atau <b>teratur</b>.</p>
-⟦0⟧
-⟦1⟧
-<h3>Alat lainnya</h3>
-⟦2⟧
-⟦3⟧`,
   '24zy1926bb5': R`Mengelompok: R mendekati 0`,
   'j7ci0kw21m': R`Acak: R mendekati 1`,
   '2284gti84o1': R`Teratur: R sampai 2,15`,
@@ -54,11 +48,6 @@ addT('id', {
   '2armoawp30e': R`Tetangga memiliki nilai yang berlawanan`,
   'wijpfsb566': R`Tidak ada data`,
   'canqrjp3m5': R`Autokorelasi spasial positif: nilai tinggi berdekatan dengan nilai tinggi dan nilai rendah dengan nilai rendah.`,
-  '2c8uwh68jpx': R`<p><b>Geomorfometri</b> mengukur bentuk permukaan lahan agar bentuk-bentuk lahan dapat dibandingkan, dipetakan dan dipakai dalam perencanaan (pertanian, jalan, risiko longsor). Ukurannya yang paling dasar adalah <b>kemiringan lereng</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'ba63wg5jws': R`jarak mendatar`,
   '1mjafrhhqeb': R`beda tinggi`,
   '16iqbwyov6m': R`Segitiga siku-siku yang menunjukkan lereng: jarak mendatar 200 meter dan beda tinggi 30 meter, dengan sudut lereng theta di bawah`,

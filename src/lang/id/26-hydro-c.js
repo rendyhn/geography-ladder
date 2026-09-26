@@ -1,15 +1,5 @@
 /* Bahasa Indonesia — 26-hydro-c */
 addT('id', {
-  '2ezh6o198pf': R`
-<p>Lautan menutupi sekitar <b>71%</b> permukaan Bumi. Ilmu yang mempelajari lautan disebut <b>oseanografi</b>. Menurut proses terjadinya, laut dibedakan menjadi <b>laut transgresi</b> yang terbentuk ketika naiknya muka air laut setelah zaman es menggenangi dataran rendah (dangkal, seperti Laut Jawa); <b>laut ingresi</b> yang terletak di bagian kerak yang turun (dalam, seperti Laut Banda); dan <b>laut regresi</b> yang menyempit.</p>
-⟦0⟧
-⟦1⟧
-<h3>Zona kedalaman</h3>
-<p>Dasar laut juga dibagi menurut kedalamannya: zona <b>litoral</b> (antara pasang naik dan pasang surut), zona <b>neritik</b> (sampai 200 m, terkena cahaya matahari dan kaya ikan), zona <b>batial</b> (200–2.000 m) dan zona <b>abisal</b> (di bawah 2.000 m, gelap dan dingin).</p>
-⟦2⟧
-<h3>Suhu dan arus</h3>
-<p>Air laut paling hangat di permukaan. Di bawah lapisan campuran, suhu turun cepat melalui <b>termoklin</b>, lalu tetap dingin (sekitar 2–4 °C) di laut dalam. <b>Arus laut</b> digerakkan oleh angin serta perbedaan suhu dan salinitas. <b>Arus panas</b> mengalir dari khatulistiwa ke arah kutub, dan <b>arus dingin</b> mengalir ke arah khatulistiwa (seperti arus Humboldt di lepas pantai Peru), membawa zat hara ke atas sehingga menjadi daerah perikanan yang kaya.</p>
-⟦3⟧`,
   'olmqr7h0t5': R`paparan benua`,
   '13ubpm66igi': R`lereng`,
   '15ftw66eoxg': R`dataran abisal`,

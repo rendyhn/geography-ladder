@@ -42,11 +42,6 @@ addT('id', {
   'dfy060kmi6': R`Antara 10 dan 20`,
   '85tqnu9bnj': R`Kurang dari 1`,
   '1cbqlouorit': R`Nilai 3–5 adalah normal; nilai yang jauh lebih tinggi menunjukkan pengaruh geologi yang kuat, seperti punggungan sejajar yang panjang.`,
-  'ew3ue94vdt': R`<p><b>Peta tematik</b> menunjukkan pola satu tema: kepadatan penduduk, curah hujan, perolehan suara, penyakit. Kartografer harus memilih cara mengubah angka menjadi simbol, dan pilihan itu mengubah apa yang dilihat pembaca.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1nvwzyg99wa': R`Variabel visual (Bertin)`,
   '1r81glgomik': R`Paling cocok untuk`,
   '1g1tzt8ckx9': R`letak suatu objek`,
@@ -93,12 +88,6 @@ addT('id', {
   'ghutt6k0bd': R`Mengganti proyeksi peta`,
   '1pso7wsu1lw': R`Mencetak peta berwarna`,
   'yeo02rcri3': R`Makin kecil skalanya, sungai dihaluskan, kota kecil dihilangkan dan jalan dipertebal agar tetap terlihat.`,
-  '14o0e5trjll': R`<p>Penelitian geografi mengikuti sebuah siklus: memilih <b>masalah</b>, menelaah apa yang sudah diketahui, merumuskan <b>pertanyaan atau hipotesis</b>, mengumpulkan dan menganalisis <b>data</b>, lalu menarik <b>kesimpulan</b>. Penelitian <b>kuantitatif</b> mengukur dan menguji dengan angka; penelitian <b>kualitatif</b> mencari makna dan pengalaman melalui wawancara dan pengamatan. Banyak penelitian memakai keduanya (<b>metode campuran</b>).</p>
-⟦0⟧
-<h3>Pengambilan sampel</h3>
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1z3udzc4a88': R`Data`,
   '1aq85zj3zgw': R`dikumpulkan sendiri oleh peneliti`,
   '1bf4a8wi5qo': R`kuesioner, wawancara, pengukuran lapangan, pengamatan, foto drone`,

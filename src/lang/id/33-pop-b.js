@@ -1,13 +1,5 @@
 /* Bahasa Indonesia — 33-pop-b */
 addT('id', {
-  '1vt5180cnam': R`
-<p><b>Migrasi</b> adalah perpindahan penduduk dari satu tempat ke tempat lain untuk menetap. Migrasi dapat bersifat <b>internasional</b> (emigrasi dan imigrasi) atau <b>internal</b>, di dalam satu negara. Perpindahan singkat dan berulang tanpa pindah tempat tinggal disebut <b>mobilitas sirkuler</b>: <b>ulang-alik</b> (<i>nglaju</i>, pergi bekerja dan pulang setiap hari) dan perpindahan <b>musiman</b> (<i>mondok</i>, tinggal di tempat lain selama beberapa minggu atau bulan).</p>
-⟦0⟧
-⟦1⟧
-<h3>Migrasi di Indonesia</h3>
-⟦2⟧
-⟦3⟧
-⟦4⟧`,
   '1rdth9k3f2q': R`Daerah asal`,
   '98fdpeq4m8': R`Daerah tujuan`,
   'e2gv14adjg': R`migrasi`,
@@ -82,12 +74,6 @@ addT('id', {
   '1tmyrx9t0d4': R`Desa mendapat pabrik baru`,
   'vk12xhmm4s': R`Angka kelahiran desa naik`,
   '1i6kcdegdyj': R`Orang dewasa muda yang pertama pergi, sehingga desa bisa hanya tersisa anak-anak dan orang tua.`,
-  'pi8a8ov0hi': R`
-<p><b>Model transisi demografi</b> menggambarkan perubahan angka kelahiran dan kematian ketika suatu negara berkembang, serta akibatnya bagi jumlah penduduk.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'bf6ghejsin': R`Tahap`,
   '1b2u13c6lk4': R`angka kelahiran`,
   '76v44jffbu': R`angka kematian`,

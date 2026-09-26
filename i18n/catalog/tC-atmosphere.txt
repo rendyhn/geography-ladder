@@ -183,7 +183,7 @@ Clouds absorb all the heat
 Sunlight warms the ground, and the ground warms the air above it; the further from the ground, the less heat reaches the air.
 
 ##### weather-elements
-@mq13pdkuzv  ; 0=Tbl([T`Element`, T`Instrument`, T`Unit`] | 1=Key(T`<p>$$T = 26.3 - 0.6 \times \frac{h | 2=FigW(mountainTempSvg({ peak: 3200, zones | 3=Tbl([T`Junghuhn zone`, T`Height`, T`Typi | 4=Key(T`<p>$$RH = \frac{\text{actual water | 5=Tip(T`<p>BMKG takes the <b>daily mean te
+@gs3st68dy  ; 0=Tbl([T`Element`, T`Instrument`, T`Unit`] | 1=Key(T`<p>$$T = 26.3 - 0.6 \times \frac{h | 2=FigW(mountainTempSvg({ peak: 3200, zones | 3=Tbl([T`Junghuhn zone`, T`Height`, T`Typi | 4=Fig(planeSvg({ W: 360, H: 230, x: [0, 42 | 5=Key(T`<p>$$RH = \frac{\text{actual water | 6=Tip(T`<p>BMKG takes the <b>daily mean te
 
 <p><b>Weather</b> is the state of the atmosphere at a place over a short time (hours or days). <b>Climate</b> is the average weather of a large area over a long time, at least 30 years. Both are described by the same elements, measured at weather stations (in Indonesia by BMKG).</p>
 ⟦0⟧
@@ -192,10 +192,11 @@ Sunlight warms the ground, and the ground warms the air above it; the further fr
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 <h3>Humidity</h3>
 <p><b>Absolute humidity</b> is the mass of water vapour in a cubic metre of air (g/m³). <b>Relative humidity</b> compares it with the most the air could hold at that temperature:</p>
-⟦4⟧
 ⟦5⟧
+⟦6⟧
 @1xj75jkwd2x
 Element
 @1n4tjiq7o59
@@ -276,6 +277,14 @@ Cold
 above 2 500 m
 @tyunrio504
 mosses, lichens, no crops
+@vb22m3z8cw
+saturated: 30.4
+@vjs9ryfxqv
+actual: 21.3 → RH 70%
+@2572n0rz2tn
+Maximum water vapour air can hold rising steeply with temperature; at 30 degrees air holding 21.3 grams per cubic metre has a relative humidity of 70 percent
+@21au4dexo0r
+Warm air can hold much more water vapour. At $30\,^\circ\mathrm{C}$ the maximum is about $30\,\mathrm{g/m^3}$, so air holding $21.3\,\mathrm{g/m^3}$ has $RH = 70\%$. Cool that air and $RH$ rises until dew forms.
 @i89nai92ej
 <p>$$RH = \frac{\text{actual water vapour}}{\text{maximum water vapour}} \times 100\%$$</p><p>At 100% the air is saturated and water condenses into dew, fog or cloud. Warm air can hold more vapour than cold air.</p>
 @i9slsz3j8p
@@ -462,8 +471,6 @@ Pressure
 Weather and winds
 @1ub06qa5648
 Equator (0°): the ITCZ or doldrums
-@1hb82wxfj00
-low
 @1d2oyz9ch9v
 rising air, heavy rain, calm winds
 @qauidl2f58
@@ -1097,8 +1104,6 @@ floods, landslides, forest and peat fires, failed harvests
 Warmer seas
 @17kp44rfsm
 coral bleaching and fewer fish
-@2c2usupv3kb
-Health
 @c9b0o81g2a
 more dengue fever as mosquitoes spread
 @htotic0jj5

@@ -1,10 +1,5 @@
 /* Bahasa Indonesia — 42-indo-a */
 addT('id', {
-  '1lzilh8npja': R`<p>Indonesia adalah negara kepulauan terbesar di dunia: sekitar 17.000 pulau yang tersebar lebih dari 5.000 km dari barat ke timur, dengan luas daratan sekitar 1,9 juta km² dan lautan yang jauh lebih luas.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '248ukhlaam3': R`Peta Indonesia dengan jaring garis lintang dan bujur serta titik-titik terluarnya: Sabang di barat, Merauke di timur, Miangas di utara dan Rote di selatan`,
   '1l78ftvtgy4': R`Titik-titik terluar Indonesia: sekitar 6° LU sampai 11° LS dan 95° BT sampai 141° BT.`,
   '2e6w9jlixlo': R`Letak`,
@@ -62,13 +57,6 @@ addT('id', {
   '2db3har2tkf': R`Indonesia memiliki tiga agama utama`,
   '2107ukckpz1': R`Indonesia dibelah oleh khatulistiwa`,
   '1ec0c02eal6': R`Setiap 15° bujur sama dengan satu jam; 46° sekitar 3 jam, sehingga digunakan WIB, WITA dan WIT.`,
-  'iyor426eqr': R`<p><b>Geopolitik</b> mempelajari bagaimana geografi (letak, luas, sumber daya, batas wilayah) membentuk politik dan keamanan suatu negara. Cara pandang geopolitik Indonesia adalah <b>Wawasan Nusantara</b>: pulau-pulau, laut di antaranya dan udara di atasnya merupakan satu kesatuan yang utuh, secara politik, ekonomi, sosial budaya dan pertahanan keamanan.</p>
-<h3>Dari Djuanda ke UNCLOS</h3>
-<p>Menurut hukum kolonial, setiap pulau hanya memiliki laut selebar 3 mil; perairan di antara pulau-pulau adalah perairan internasional. <b>Deklarasi Djuanda</b> (13 Desember 1957) menyatakan seluruh perairan di antara pulau-pulau Indonesia sebagai perairan nasional, diukur dari garis pangkal lurus yang menghubungkan pulau-pulau terluar. Hal ini akhirnya diakui oleh <b>Konvensi PBB tentang Hukum Laut (UNCLOS)</b> pada 1982, yang menerima Indonesia sebagai <b>negara kepulauan</b>. Tanggal 13 Desember kini diperingati sebagai Hari Nusantara.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   'v1vi6oacy4': R`perairan kepulauan`,
   '1dra3qe9lye': R`laut teritorial`,
   '1yg34av748y': R`zona tambahan`,

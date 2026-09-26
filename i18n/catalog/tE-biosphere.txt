@@ -411,17 +411,18 @@ Ice that floats on the sea
 Permafrost lies under the tundra; only the top layer thaws in summer, so trees cannot root.
 
 ##### conservation
-@k34v32vsys  ; 0=Fig(hbarSvg([{ label: T`Habitat loss`, v | 1=Tbl([T`Category`, T`Meaning`, T`Indonesi | 2=Key(T`<p><b>Measuring diversity.</b> Cou | 3=Tbl([T`Type`, T`Meaning`, T`Examples`],  | 4=Tip(T`<p>Ujung Kulon National Park is th
+@4h8qjnhvp5  ; 0=Fig(hbarSvg([{ label: T`Habitat loss`, v | 1=Fig(barsSvg([[T`land area`, 1.3, 'mf-s3' | 2=Tbl([T`Category`, T`Meaning`, T`Indonesi | 3=Key(T`<p><b>Measuring diversity.</b> Cou | 4=Tbl([T`Type`, T`Meaning`, T`Examples`],  | 5=Tip(T`<p>Ujung Kulon National Park is th
 
 <p><b>Biodiversity</b> is the variety of life. It exists at three levels: <b>genetic</b> diversity (differences within a species, such as the many varieties of rice), <b>species</b> diversity (the number of different species) and <b>ecosystem</b> diversity (the variety of habitats, from coral reefs to mountain forests).</p>
 <p>Indonesia is one of the world's <b>megadiverse</b> countries: it covers about 1.3% of the Earth's land yet holds around 10% of its flowering plants, 12% of its mammals and 17% of its birds. Its position between two continents, its thousands of islands and its tropical climate all add to this richness.</p>
 ⟦0⟧
-<h3>The IUCN Red List</h3>
 ⟦1⟧
+<h3>The IUCN Red List</h3>
 ⟦2⟧
-<h3>Conservation</h3>
 ⟦3⟧
+<h3>Conservation</h3>
 ⟦4⟧
+⟦5⟧
 @1l14ygskxz3
 Habitat loss
 @200gx5jte99
@@ -436,6 +437,20 @@ Climate change
 The main threats to biodiversity: habitat loss, overexploitation, invasive species, pollution and climate change
 @skwz9eiwcq
 The main threats to biodiversity. Habitat loss, such as clearing forest for plantations and mines, is by far the largest.
+@kznuusng6s
+land area
+@8sv1fmveeh
+flowering plants
+@waj1lxpe6m
+mammals
+@4akefam9wo
+birds
+@2f0fjbgecr9
+% of world total
+@3n4i17v3lr
+Indonesia's share of the world: 1.3 percent of the land, but about 10 percent of flowering plants, 12 percent of mammals and 17 percent of birds
+@c44r33ugqd
+Indonesia's share of the world: little land, but a very large share of its species — the mark of a megadiverse country.
 @19uo088tkr3
 Category
 @fijciughp4

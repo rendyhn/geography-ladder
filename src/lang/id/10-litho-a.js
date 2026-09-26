@@ -1,13 +1,5 @@
 /* Bahasa Indonesia — 10-litho-a */
 addT('id', {
-  'zzzcxsjjyo': R`
-<p>Belum ada yang pernah mengebor lebih dalam dari sekitar $12\,\mathrm{km}$, tetapi kita mengenal bagian dalam Bumi dengan baik. Gelombang gempa menjadi lebih cepat, lebih lambat, dan membelok ketika melewati lapisan-lapisan yang berbeda massa jenisnya, dan <b>gelombang S tidak dapat merambat melalui zat cair</b>, yang menunjukkan bahwa inti luar berupa cairan.</p>
-⟦0⟧
-⟦1⟧
-<p>Batas antarlapisan disebut <b>diskontinuitas</b>: <b>Mohorovičić</b> (Moho) antara kerak dan mantel, <b>Gutenberg</b> antara mantel dan inti, serta <b>Lehmann</b> antara inti luar dan inti dalam.</p>
-⟦2⟧
-<p>Suhu naik seiring kedalaman. Di kerak Bumi, <b>gradien geotermal</b> biasanya sekitar $25$–$30\,^\circ\mathrm{C}$ per kilometer; itulah sebabnya tambang yang dalam terasa panas dan energi panas bumi dapat dimanfaatkan.</p>
-⟦3⟧`,
   '1gdxarqvuzu': R`Kerak`,
   '2es7sswmry5': R`Mantel`,
   'jpxr03gkgo': R`Inti luar`,
@@ -153,12 +145,6 @@ addT('id', {
   'm4x5nh31f7': R`Panas dari dalam Bumi menggerakkan konveksi yang lambat di mantel; lempeng yang dingin dan rapat yang tenggelam di palung juga menarik bagian lempeng lainnya.`,
   '122jcovabre': R`Di batas jenis apakah kerak samudra baru terbentuk?`,
   '1njwt3rz3lo': R`Di punggungan tengah samudra, magma naik di antara lempeng yang saling menjauh lalu membeku menjadi kerak baru.`,
-  '1xkrarijuro': R`
-<p><b>Mineral</b> adalah zat padat alami dengan susunan kimia dan struktur kristal tertentu, seperti kuarsa atau feldspar. <b>Batuan</b> adalah campuran satu mineral atau lebih. Mineral dikenali dari warna, cerat, kilap, belahan, dan <b>kekerasannya</b>, yang diukur dengan skala Mohs dari 1 (talk) sampai 10 (intan): mineral yang lebih keras dapat menggores mineral yang lebih lunak.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-⟦3⟧`,
   '1cpmmpm9ypr': R`Jenis batuan`,
   '1yhdbf5ipkl': R`Cara terbentuk`,
   '281mw74j04l': R`Beku`,
@@ -255,14 +241,6 @@ addT('id', {
   '1zpab250qra': R`Apa saja yang digali dari dalam tanah`,
   '2f3x477yk3g': R`Batuan yang terbentuk dari cangkang`,
   '6urlzqbdk1': R`Mineral seperti kuarsa memiliki rumus kimia yang tetap dan struktur kristal yang teratur; batuan tersusun atas mineral-mineral.`,
-  '4k11rt9sl2': R`
-<p><b>Vulkanisme</b> mencakup semua peristiwa naiknya magma, batuan cair dari dalam Bumi. Magma yang membeku di bawah permukaan membentuk <b>intrusi</b>: <b>batolit</b> yang sangat besar, <b>lakolit</b> yang berbentuk lensa, <b>sill</b> yang mendatar di antara lapisan batuan, dan <b>gang</b> (dike) yang tegak memotong lapisan. Magma yang mencapai permukaan keluar sebagai <b>lava</b>.</p>
-⟦0⟧
-⟦1⟧
-⟦2⟧
-<h3>Bahaya dan manfaat</h3>
-<p>Bahayanya antara lain <b>awan panas</b> (aliran piroklastik, "wedhus gembel"), <b>lahar</b> (aliran lumpur vulkanik, sering setelah hujan lebat), hujan abu, aliran lava, gas beracun, dan tsunami. Manfaatnya antara lain tanah yang subur, energi panas bumi, pasir dan batu bangunan, bahan tambang, dan pariwisata.</p>
-⟦3⟧`,
   '2bxasx78q6n': R`Dapur magma`,
   '1wn04dhyacx': R`Diatrema (pipa kepundan)`,
   '1pd5obyd4ya': R`Kawah`,

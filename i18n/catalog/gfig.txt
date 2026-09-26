@@ -1,0 +1,103 @@
+##### core
+@vv2m2qmtti
+A graphic scale bar from 0 to 4 kilometres for a 1 to 50 000 map, where 2 centimetres represent 1 kilometre
+@1jpuf8hhwaq
+2 cm on the map
+@15ljy5iwmi0
+Contour lines close together make a steep profile; contour lines far apart make a gentle profile
+@32gvew7scy
+close together: steep
+@19f7o9e3ts2
+far apart: gentle
+@1xwas6wxrwz
+Where rocks form: lava cools at the surface into extrusive igneous rock, magma cools underground into intrusive rock, sediments settle in layers in the sea, and rock next to the hot magma is changed into metamorphic rock
+@115tiui7w2h
+lava: extrusive
+@1yqq3j2hnur
+intrusive (batholith)
+@1vp0w44xxnh
+sedimentary layers
+@27x91rsinyd
+metamorphic zone
+@2gfincn1mea
+Four kinds of mass movement: rockfall, landslide, mudflow and soil creep
+@28522cx3x23
+rockfall
+@qduovwweri
+landslide
+@1w9iokto80y
+mudflow
+@6yzymqosws
+creep
+@ucrwplcj3q
+expansive
+@18qnlpmx28m
+stationary
+@1f3fgc0h1co
+constrictive
+@10o0pxffkwx
+Three pyramid shapes: expansive with a wide base, stationary with straight sides, and constrictive with a narrow base
+@oqup2btnyx
+The Human Development Index combines three indices, for health, knowledge and standard of living, by a geometric mean
+@2c2usupv3kb
+Health
+@1oxk24hgji4
+life expectancy
+@1y8o9w3ehhe
+Knowledge
+@1pkbf0t8619
+years of schooling
+@zzxurywosv
+Standard of living
+@m9qqu6v93w
+income per person
+@r13bfk09bo
+HDI
+@13tyuptg6c
+factory
+@l23vkkd6tx
+Weight-losing industries locate near the raw material; weight-gaining industries locate near the market
+@6fwjef018g
+weight-losing (MI > 1)
+@kia6czy7ya
+e.g. sugar mill, cement: near the raw material
+@3nu3tscdwe
+weight-gaining (MI < 1)
+@1k02zwyzf7s
+e.g. bottled drinks, bread: near the market
+@1tg80qf5pt7
+Left: the range is larger than the threshold area, so the service survives. Right: the range is smaller than the threshold, so it fails
+@10z7bfqpbx
+range > threshold: viable
+@15gfz4if7ob
+range < threshold: fails
+@1jt8nnu95mj
+range
+@1vse033vxvl
+threshold
+@1he9o4kyr83
+A buffer of equal width along a river and circular buffers around two wells, used to find which houses lie close to them
+@yqt0iydhhe
+river buffer
+@2f5xlpgdaa4
+well buffer
+@2cxd3v3tdmw
+Proportional circles for values 1, 4 and 9: the areas are proportional to the values, so the radii are 1, 2 and 3
+@1mdffcjq3d
+Rice terraces cut into a hillside: flat flooded steps held by low walls, with water flowing from one step to the next
+@1h4l6ar0soc
+irrigation water
+@1hb82wxfj00
+low
+@16p3p6fnn0j
+lower-middle
+@1m5c8ngnamt
+upper-middle
+@1fdw3fz0oly
+high →
+@7f8880c2j
+World Bank income groups by GNI per person, with Indonesia at about 4 870 US dollars in the upper-middle group
+@1dghvnhjn0y
+Indonesia ≈ 4 870
+@2eh0mc91ez9
+GNI per person (US$)

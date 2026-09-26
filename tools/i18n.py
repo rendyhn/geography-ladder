@@ -17,7 +17,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'i18n'
-CONTENT_FILES = ['core.js', 'geo.js', 'tA-maps.js', 'tB-lithosphere.js', 'tC-atmosphere.js', 'tD-hydrosphere.js', 'tE-biosphere.js', 'tF-population.js', 'tG-regions.js', 'tH-environment.js', 'tI-indonesia.js', 'tJ-university.js', 'ladder.js']
+CONTENT_FILES = ['core.js', 'geo.js', 'fig.js', 'gfig.js', 'tA-maps.js', 'tB-lithosphere.js', 'tC-atmosphere.js', 'tD-hydrosphere.js', 'tE-biosphere.js', 'tF-population.js', 'tG-regions.js', 'tH-environment.js', 'tI-indonesia.js', 'tJ-university.js', 'ladder.js']
 LANGS = ['id']
 M32 = 0xFFFFFFFF
 

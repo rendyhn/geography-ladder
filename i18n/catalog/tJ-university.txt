@@ -1,12 +1,13 @@
 ##### spatial-analysis
-@8gqmniusum  ; 0=FigW(`<div class="g-row">${[['clustered' | 1=Key(T`<p><b>Nearest-neighbour analysis</ | 2=Tbl([T`Tool`, T`What it does`, T`Example | 3=Tip(T`<p><b>Tobler's first law of geogra
+@1pj7dr1h97a  ; 0=FigW(`<div class="g-row">${[['clustered' | 1=Key(T`<p><b>Nearest-neighbour analysis</ | 2=Fig(bufferSvg(), T`<b>Buffers</b> are zo | 3=Tbl([T`Tool`, T`What it does`, T`Example | 4=Tip(T`<p><b>Tobler's first law of geogra
 
 <p><b>Spatial analysis</b> uses the location of things, not only their attributes, to find patterns and explain them. Its first question is often whether points (shops, wells, earthquake epicentres, cases of a disease) are <b>clustered</b>, <b>random</b> or <b>regular</b>.</p>
 ⟦0⟧
 ⟦1⟧
-<h3>Other tools</h3>
 ⟦2⟧
+<h3>Other tools</h3>
 ⟦3⟧
+⟦4⟧
 @24zy1926bb5
 Clustered: R near 0
 @j7ci0kw21m
@@ -17,6 +18,8 @@ Regular: R up to 2.15
 Three point patterns and their nearest-neighbour index R.
 @ehp67ph7bh
 <p><b>Nearest-neighbour analysis</b> (Clark and Evans, 1954) compares the observed mean distance from each point to its nearest neighbour, $\bar d$, with the mean expected if the points were random:</p><p>$$R = \frac{\bar d}{\bar d_E}, \qquad \bar d_E = \frac{1}{2\sqrt{n / A}}$$</p><p>with $n$ points in an area $A$. $R = 0$ means all points at one place, $R \approx 1$ random, and $R = 2.15$ perfectly regular (a hexagonal lattice).</p>
+@2c2awlalg46
+<b>Buffers</b> are zones of equal distance around features: here 100 m along a river and around two wells. Overlaying them with the houses shows which homes are at risk of flooding or depend on each well.
 @16z6kst5ftv
 Mean centre
 @1mgc4b9elko
@@ -105,13 +108,14 @@ There are no data
 Positive spatial autocorrelation: high values sit near high values and low near low.
 
 ##### geomorphometry
-@2c8uwh68jpx  ; 0=FigW(slopeSvg(30, 200, { names: { run: T | 1=Key(T`<p>$$\text{slope (\%)} = \frac{\De | 2=Tbl([T`Slope (%)`, T`Class (Van Zuidam)` | 3=Tip(T`<p><b>Relative relief</b> is the d
+@1m99hbakvu1  ; 0=FigW(slopeSvg(30, 200, { names: { run: T | 1=Key(T`<p>$$\text{slope (\%)} = \frac{\De | 2=Tbl([T`Slope (%)`, T`Class (Van Zuidam)` | 3=Fig(planeSvg({ W: 340, H: 230, x: [0, 1. | 4=Tip(T`<p><b>Relative relief</b> is the d
 
 <p><b>Geomorphometry</b> measures the shape of the land surface so that landforms can be compared, mapped and used in planning (farming, roads, landslide risk). Its most basic measure is <b>slope</b>.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @ba63wg5jws
 horizontal distance
 @1mjafrhhqeb
@@ -158,6 +162,10 @@ over 140
 extremely steep
 @10z4vio8spm
 protected; cliffs
+@1vj8u46jwox
+Hypsometric curves: convex for a young landscape, straight for a mature one and concave for an old, worn-down one
+@16407tf58on
+Hypsometric curves (relative height against relative area above it). The area under each curve is the hypsometric integral: high for young, little-eroded land, low for old, worn-down land.
 @133yh52ncu4
 <p><b>Relative relief</b> is the difference between the highest and lowest points in an area. The <b>hypsometric integral</b>, $HI = \frac{\bar h - h_{\min}}{h_{\max} - h_{\min}}$, shows how much of a basin is still high ground: above about 0.6 a young, little-eroded landscape; below about 0.35 an old, worn-down one.</p>
 @74f5dw008x  ; 0=Q(d, 'm') | 1=Q(h, 'm') | 2=FigW(slopeSvg(h, d, { names: { run: T`ho
@@ -308,13 +316,14 @@ Less than 1
 Values of 3–5 are normal; much higher values suggest strong geological control, such as long parallel ridges.
 
 ##### cartography
-@ew3ue94vdt  ; 0=Tbl([T`Visual variable (Bertin)`, T`Best | 1=FigW(choroplethSvg([120, 340, 560, 80, 9 | 2=Key(T`<p><b>Choropleth maps</b> must sho | 3=Tip(T`<p><b>Proportional symbols</b> sho
+@1eqqicqn30j  ; 0=Tbl([T`Visual variable (Bertin)`, T`Best | 1=FigW(choroplethSvg([120, 340, 560, 80, 9 | 2=Key(T`<p><b>Choropleth maps</b> must sho | 3=Fig(propCirclesSvg(), T`Proportional cir | 4=Tip(T`<p><b>Proportional symbols</b> sho
 
 <p>A <b>thematic map</b> shows the pattern of one subject: population density, rainfall, votes, disease. The cartographer must choose how to turn numbers into symbols, and those choices change what readers see.</p>
 ⟦0⟧
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @1nvwzyg99wa
 Visual variable (Bertin)
 @1r81glgomik
@@ -343,6 +352,8 @@ A choropleth map of eleven districts shaded in four classes of population densit
 A choropleth map of population density (people per km²) in four classes.
 @2dpvnqlgj8w
 <p><b>Choropleth maps</b> must show <b>rates or densities</b>, not raw counts: a large district would look important just because it is large. Data are grouped into classes, often 4–7. The number of classes can be estimated with <b>Sturges' rule</b>, $k = 1 + 3.322 \log_{10} n$.</p><p><b>Equal interval</b>: each class has the same width, $w = \frac{\max - \min}{k}$. <b>Quantile</b>: each class holds the same number of areas. <b>Natural breaks</b> (Jenks): class limits placed at gaps in the data.</p>
+@1a4br1ahqbb
+Proportional circles: a value 9 times larger gets a circle with 9 times the area but only 3 times the radius.
 @19xkukmtzpt
 <p><b>Proportional symbols</b> show counts: the <i>area</i> of each circle is proportional to the value, so the radius grows with the square root, $r \propto \sqrt{v}$. A value four times larger needs a circle only twice as wide. <b>Generalisation</b> (selecting, simplifying, smoothing and exaggerating features) keeps a small-scale map readable.</p>
 @7fow1sthnw  ; 0=F(mn) | 1=F(mx) | 2=k
@@ -409,14 +420,15 @@ Printing a map in colour
 As scale gets smaller, rivers are smoothed, small towns dropped and roads widened to stay visible.
 
 ##### research-methods
-@14o0e5trjll  ; 0=Tbl([T`Data`, T`Source`, T`Examples`], [ | 1=FigW(`<div class="g-row">${[['random', T | 2=Key(T`<p>A <b>sample</b> is a part of th | 3=Tip(T`<p>Other designs: <b>cluster</b> s
+@713ttj8tcz  ; 0=Tbl([T`Data`, T`Source`, T`Examples`], [ | 1=FigW(cycleSvg([T`Problem`, T`Literature` | 2=FigW(`<div class="g-row">${[['random', T | 3=Key(T`<p>A <b>sample</b> is a part of th | 4=Tip(T`<p>Other designs: <b>cluster</b> s
 
 <p>Geographic research follows a cycle: choose a <b>problem</b>, review what is known, form <b>questions or hypotheses</b>, collect and analyse <b>data</b>, and draw <b>conclusions</b>. <b>Quantitative</b> research measures and tests with numbers; <b>qualitative</b> research seeks meanings and experiences through interviews and observation. Many studies use both (<b>mixed methods</b>).</p>
 ⟦0⟧
-<h3>Sampling</h3>
 ⟦1⟧
+<h3>Sampling</h3>
 ⟦2⟧
 ⟦3⟧
+⟦4⟧
 @1z3udzc4a88
 Data
 @1aq85zj3zgw
@@ -427,6 +439,22 @@ questionnaires, interviews, field measurements, observation, drone photos
 collected by others
 @a39d0yteu1
 census and BPS statistics, maps, satellite images, reports
+@1rfj6s0td7l
+Problem
+@2d275xbgxek
+Literature
+@se9hwu8nma
+Hypothesis
+@1n5s9f74vvp
+Analysis
+@1boy0ga8tbt
+Conclusion
+@224y93iq4io
+Research cycle
+@ea6xyakeua
+The research cycle: problem, literature review, hypothesis, data collection, analysis and conclusion, leading to new problems
+@1ulsd3t49pt
+Research is a cycle: conclusions raise new problems to study.
 @4si1kjm2o3
 Simple random
 @1ucgogjo6qs

@@ -26,6 +26,7 @@ ${Tbl([T`Concept`, T`Meaning`], [
   [T`Differentiation`, T`each area has its own mix of characteristics that sets it apart`],
   [T`Spatial linkage`, T`how phenomena in one area are related, e.g. deforestation and floods downstream`]])}
 ${Key(T`<p><b>Four principles.</b> <i>Distribution</i>: phenomena are spread unevenly over the Earth. <i>Interrelation</i>: phenomena influence each other. <i>Description</i>: the pattern and its causes are explained in words, maps, tables and graphs. <i>Chorology</i>: a phenomenon is studied together with everything around it in its region.</p><p><b>Three approaches.</b> The <i>spatial</i> approach looks at where things are and why. The <i>ecological</i> approach looks at the relationship between people and their environment. The <i>regional complex</i> approach combines both to compare whole regions.</p>`)}
+${Fig(vennSvg([T`Spatial`, T`Ecological`, T`Regional complex`], { center: T`Geography`, label: T`Three overlapping circles for the spatial, ecological and regional complex approaches` }), T`The three approaches of geography overlap: <i>spatial</i> (where and why there), <i>ecological</i> (people and environment) and <i>regional complex</i> (both together, for a whole region).`)}
 ${Tip(T`<p>To name the concept in a question, find the key idea: "clustered together" is agglomeration, "easy to reach" is accessibility, "one place supplies another" is interaction, "the shape of the land" is morphology.</p>`)}`,
   gens: [
     () => pick([
@@ -80,6 +81,7 @@ ${Tbl([T`Component`, T`Purpose`], [[T`Title`, T`says what the map shows, where a
 <p>A <b>numerical scale</b> such as $1 : 50\,000$ means 1 unit on the map equals 50 000 of the same units on the ground. A <b>verbal scale</b> says it in words ("1 cm represents 500 m"), and a <b>graphic scale</b> is a bar, which stays correct when the map is enlarged or reduced.</p>
 ${Fm(T`\text{real distance} = \text{map distance} \times \text{scale denominator}`)}
 ${Key(T`<p>Work in centimetres, then convert: $1\,\mathrm{km} = 100\,000\,\mathrm{cm}$. On a $1 : 50\,000$ map, $4\,\mathrm{cm}$ represents $200\,000\,\mathrm{cm} = 2\,\mathrm{km}$. Areas scale with the <b>square</b>: $1\,\mathrm{cm^2}$ on that map is $(0.5\,\mathrm{km})^2 = 0.25\,\mathrm{km^2}$.</p>`)}
+${Fig(graphicScaleSvg(), T`A graphic scale for $1 : 50\,000$: each 2 cm block on the map stands for 1 km. It stays correct even if the map is enlarged or shrunk.`)}
 <p>A <b>large-scale</b> map (e.g. $1 : 5\,000$) shows a small area in great detail; a <b>small-scale</b> map (e.g. $1 : 1\,000\,000$) shows a large area with little detail. The bigger the denominator, the smaller the scale.</p>
 ${Tip(T`<p>If a map is enlarged 2 times, everything on it is twice as long, so the scale denominator is halved: $1 : 50\,000$ becomes $1 : 25\,000$.</p>`)}`,
   gens: [
@@ -131,6 +133,7 @@ ${Fig(globeSvg({ lat: -6.9, lon: 107.6, name: 'Bandung', label: T`A globe with p
 ${Tbl([T``, T`Latitude`, T`Longitude`], [[T`Measures`, T`the angle north or south of the equator`, T`the angle east or west of the prime meridian (Greenwich)`], [T`Lines`, T`parallels: circles that run east–west`, T`meridians: half-circles that run from pole to pole`], [T`Range`, T`0° to 90° N or S`, T`0° to 180° E or W`], [T`Zero line`, T`the equator`, T`the prime meridian`]])}
 <p>Each degree is split into 60 minutes ($'$) and each minute into 60 seconds ($''$), so $6^\circ 30' = 6.5^\circ$. A location is written latitude first: Jakarta is about $6^\circ 12'\,\mathrm{S},\ 106^\circ 49'\,\mathrm{E}$.</p>
 ${Key(T`<p>Along a meridian, $1^\circ$ of latitude is always about $111\,\mathrm{km}$. Along a parallel, $1^\circ$ of longitude is $111\,\mathrm{km}$ at the equator but shrinks towards the poles:</p><p>$$1^\circ\ \text{of longitude} \approx 111 \cos\varphi\ \mathrm{km}$$</p><p>where $\varphi$ is the latitude. At $60^\circ$ it is only about $55.5\,\mathrm{km}$.</p>`)}
+${Fig(planeSvg({ W: 340, H: 210, x: [0, 92], y: [0, 125], step: [15, 25], tickX: 30, fmtX: v => v + '°', xl: T`latitude`, yl: 'km', fns: [{ f: p => 111.3 * Math.cos(p * Math.PI / 180), to: 90 }], pts: [[0, 111.3, '111 km', 'start', false, 8, -6], [30, 96.4, '96 km', 'start', false, 8, -6], [60, 55.7, '56 km', 'start', false, 8, -6], [90, 0]], label: T`Length of one degree of longitude falling from 111 kilometres at the equator to zero at the poles` }), T`One degree of longitude is $111\,\mathrm{km} \times \cos(\text{latitude})$: 111 km at the equator, about 56 km at $60^\circ$, and zero at the poles.`)}
 <p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
 ${Tip(T`<p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>`)}`,
   gens: [
@@ -265,6 +268,7 @@ ${Tip(T`<p>No projection is "the best": choose the one whose kept property matte
 <p>Topographic maps show the height of the land with <b>contour lines</b>: lines joining points of equal height above mean sea level. The height difference between neighbouring contours is the <b>contour interval</b>; every fifth line (the index contour) is usually drawn thicker.</p>
 ${FigW(contourSvg([[30, 26, 330, 11], [68, 34, 240, 9], [86, 12, 130, 7]], { interval: 50, A: [8, 30], B: [94, 30], label: T`A contour map of two hills with a line A–B and the cross-section along it` }), T`Two hills with a 50 m contour interval, and the cross-section (profile) along A–B.`)}
 ${Key(T`<p><b>Reading contours.</b> Lines close together mean a steep slope; far apart, a gentle slope. Closed rings with rising values are a hill; contours never cross or split. Where contours form a V, the V points <b>upstream</b> in a valley and <b>downhill</b> along a ridge.</p>`)}
+${FigW(contourSpacingSvg(), T`The spacing of contours shows the slope: the same 200 m climb over a short distance is steep, over a long distance gentle.`)}
 <p>A common rule for the contour interval of a map is</p>
 ${Fm(T`\text{CI} = \frac{\text{scale denominator}}{2000}\ \text{metres}`)}
 <p>so a $1 : 50\,000$ map has contours every $25\,\mathrm{m}$.</p>
