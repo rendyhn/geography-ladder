@@ -21,7 +21,7 @@ addT('id', {
 ⟦4⟧
 <p>Peta <b>skala besar</b> (misalnya $1 : 5\,000$) menampilkan wilayah sempit dengan sangat rinci; peta <b>skala kecil</b> (misalnya $1 : 1\,000\,000$) menampilkan wilayah luas dengan sedikit rincian. Makin besar penyebutnya, makin kecil skalanya.</p>
 ⟦5⟧`,
-  '29tjjz7ls0x': R`
+  '17qe76w64lu': R`
 <p>Setiap tempat di Bumi dapat ditentukan letaknya dengan dua sudut yang diukur dari pusat Bumi.</p>
 ⟦0⟧
 ⟦1⟧
@@ -29,7 +29,9 @@ addT('id', {
 ⟦2⟧
 ⟦3⟧
 <p>Khatulistiwa dan meridian-meridian adalah <b>lingkaran besar</b>: lingkaran yang pusatnya berimpit dengan pusat Bumi. Rute terpendek antara dua tempat mengikuti lingkaran besar; itulah sebabnya jalur penerbangan jauh tampak melengkung pada peta datar.</p>
-⟦4⟧`,
+⟦4⟧
+<h3>⟦5⟧</h3>⟦6⟧
+`,
   '10i8o0cvebf': R`
 <p>Peta topografi menampilkan ketinggian lahan dengan <b>garis kontur</b>: garis yang menghubungkan titik-titik yang sama tingginya dari permukaan laut rata-rata. Selisih tinggi antara dua kontur yang berdekatan disebut <b>interval kontur</b>; setiap garis kelima (kontur indeks) biasanya digambar lebih tebal.</p>
 ⟦0⟧

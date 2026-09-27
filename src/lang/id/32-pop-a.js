@@ -1,13 +1,15 @@
 /* Bahasa Indonesia — 32-pop-a */
 addT('id', {
-  '2g8v8vcrk72': R`
+  'o8vzthv7nk': R`
 <p>Data kependudukan berasal dari <b>sensus</b> (pencacahan seluruh penduduk, di Indonesia setiap sepuluh tahun; terakhir tahun 2020), <b>survei</b> seperti SUPAS dan SUSENAS, serta <b>registrasi</b> kelahiran, kematian dan perpindahan. Indonesia adalah negara berpenduduk terbanyak keempat di dunia.</p>
 ⟦0⟧
 <h3>Mengapa jumlah penduduk berubah</h3>
 <p>Jumlah penduduk bertambah karena <b>kelahiran</b> (B) dan <b>imigrasi</b> (I), serta berkurang karena <b>kematian</b> (D) dan <b>emigrasi</b> (E). Kelahiran dikurangi kematian disebut <b>pertumbuhan alami</b>; imigrasi dikurangi emigrasi disebut <b>migrasi neto</b>.</p>
 ⟦1⟧
 ⟦2⟧
-⟦3⟧`,
+⟦3⟧
+<h3>⟦4⟧</h3>⟦5⟧
+`,
   '271luwhf4un': R`Indonesia`,
   '1vvnln22yvc': R`juta`,
   'niovpq7959': R`Grafik garis jumlah penduduk Indonesia pada setiap sensus, dari 97 juta pada 1961 menjadi 270 juta pada 2020`,

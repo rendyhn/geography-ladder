@@ -135,7 +135,9 @@ ${Tbl([T``, T`Latitude`, T`Longitude`], [[T`Measures`, T`the angle north or sout
 ${Key(T`<p>Along a meridian, $1^\circ$ of latitude is always about $111\,\mathrm{km}$. Along a parallel, $1^\circ$ of longitude is $111\,\mathrm{km}$ at the equator but shrinks towards the poles:</p><p>$$1^\circ\ \text{of longitude} \approx 111 \cos\varphi\ \mathrm{km}$$</p><p>where $\varphi$ is the latitude. At $60^\circ$ it is only about $55.5\,\mathrm{km}$.</p>`)}
 ${Fig(planeSvg({ W: 340, H: 210, x: [0, 92], y: [0, 125], step: [15, 25], tickX: 30, fmtX: v => v + '°', xl: T`latitude`, yl: 'km', fns: [{ f: p => 111.3 * Math.cos(p * Math.PI / 180), to: 90 }], pts: [[0, 111.3, '111 km', 'start', false, 8, -6], [30, 96.4, '96 km', 'start', false, 8, -6], [60, 55.7, '56 km', 'start', false, 8, -6], [90, 0]], label: T`Length of one degree of longitude falling from 111 kilometres at the equator to zero at the poles` }), T`One degree of longitude is $111\,\mathrm{km} \times \cos(\text{latitude})$: 111 km at the equator, about 56 km at $60^\circ$, and zero at the poles.`)}
 <p>The equator and the meridians are <b>great circles</b>: circles whose centre is the centre of the Earth. The shortest route between two places follows a great circle, which is why long flights look curved on a flat map.</p>
-${Tip(T`<p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>`)}`,
+${Tip(T`<p>Important parallels: the Tropic of Cancer ($23.5^\circ$ N), the Tropic of Capricorn ($23.5^\circ$ S), and the Arctic and Antarctic Circles ($66.5^\circ$). The Sun can be directly overhead only between the two tropics.</p>`)}
+<h3>${T`Try it yourself`}</h3>${Ix('sunangle', T`Choose a latitude and a month to see how high the Sun climbs at noon and how long the day lasts. The start value is Jakarta, about 6° S.`)}
+`,
   gens: [
     () => {
       const a = ri(-8, 8), b = a + pick([-1, 1]) * ri(2, 12), d = Math.abs(a - b) * 111, lo = ri(95, 140), deg = d / 111;

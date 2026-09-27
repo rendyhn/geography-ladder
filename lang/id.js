@@ -30,6 +30,18 @@ addUI('id', {
   funFact: R`Fakta unik`,
   anotherFact: R`Fakta lain`,
   hint: R`Petunjuk`,
+  glossary: R`Glosarium`,
+  glossaryLede: R`⟦0⟧ istilah penting dalam bahasa Indonesia dan Inggris, masing-masing dengan definisi singkat dan tautan ke materinya.`,
+  glossarySearch: R`Cari istilah`,
+  glossaryNone: R`Tidak ada istilah yang cocok.`,
+  examStart: R`Mode ujian (⟦0⟧ menit)`,
+  examOn: R`Mode ujian`,
+  examLeft: R`Sisa waktu`,
+  examFinish: R`Selesai dan nilai`,
+  examNote: R`Petunjuk, pengecekan, dan kunci jawaban disembunyikan sampai kamu selesai. Lembar dinilai otomatis saat waktu habis.`,
+  examUp: R`Waktu habis: lembarmu sudah dinilai.`,
+  examDone: R`Lembarmu sudah dinilai.`,
+  examConfirm: R`Selesaikan ujian dan lihat nilaimu?`,
   hintHead: R`Konsep kunci dari materi`,
   openLesson: R`Buka materi`,
   pgLevel: R`⟦0⟧ dari ⟦1⟧ dikuasai`,
@@ -2696,14 +2708,16 @@ addT('id', {
 
 /* Bahasa Indonesia — 32-pop-a */
 addT('id', {
-  '2g8v8vcrk72': R`
+  'o8vzthv7nk': R`
 <p>Data kependudukan berasal dari <b>sensus</b> (pencacahan seluruh penduduk, di Indonesia setiap sepuluh tahun; terakhir tahun 2020), <b>survei</b> seperti SUPAS dan SUSENAS, serta <b>registrasi</b> kelahiran, kematian dan perpindahan. Indonesia adalah negara berpenduduk terbanyak keempat di dunia.</p>
 ⟦0⟧
 <h3>Mengapa jumlah penduduk berubah</h3>
 <p>Jumlah penduduk bertambah karena <b>kelahiran</b> (B) dan <b>imigrasi</b> (I), serta berkurang karena <b>kematian</b> (D) dan <b>emigrasi</b> (E). Kelahiran dikurangi kematian disebut <b>pertumbuhan alami</b>; imigrasi dikurangi emigrasi disebut <b>migrasi neto</b>.</p>
 ⟦1⟧
 ⟦2⟧
-⟦3⟧`,
+⟦3⟧
+<h3>⟦4⟧</h3>⟦5⟧
+`,
   '271luwhf4un': R`Indonesia`,
   '1vvnln22yvc': R`juta`,
   'niovpq7959': R`Grafik garis jumlah penduduk Indonesia pada setiap sensus, dari 97 juta pada 1961 menjadi 270 juta pada 2020`,
@@ -4690,7 +4704,7 @@ addT('id', {
 ⟦4⟧
 <p>Peta <b>skala besar</b> (misalnya $1 : 5\,000$) menampilkan wilayah sempit dengan sangat rinci; peta <b>skala kecil</b> (misalnya $1 : 1\,000\,000$) menampilkan wilayah luas dengan sedikit rincian. Makin besar penyebutnya, makin kecil skalanya.</p>
 ⟦5⟧`,
-  '29tjjz7ls0x': R`
+  '17qe76w64lu': R`
 <p>Setiap tempat di Bumi dapat ditentukan letaknya dengan dua sudut yang diukur dari pusat Bumi.</p>
 ⟦0⟧
 ⟦1⟧
@@ -4698,7 +4712,9 @@ addT('id', {
 ⟦2⟧
 ⟦3⟧
 <p>Khatulistiwa dan meridian-meridian adalah <b>lingkaran besar</b>: lingkaran yang pusatnya berimpit dengan pusat Bumi. Rute terpendek antara dua tempat mengikuti lingkaran besar; itulah sebabnya jalur penerbangan jauh tampak melengkung pada peta datar.</p>
-⟦4⟧`,
+⟦4⟧
+<h3>⟦5⟧</h3>⟦6⟧
+`,
   '10i8o0cvebf': R`
 <p>Peta topografi menampilkan ketinggian lahan dengan <b>garis kontur</b>: garis yang menghubungkan titik-titik yang sama tingginya dari permukaan laut rata-rata. Selisih tinggi antara dua kontur yang berdekatan disebut <b>interval kontur</b>; setiap garis kelima (kontur indeks) biasanya digambar lebih tebal.</p>
 ⟦0⟧
@@ -5032,3 +5048,38 @@ addFacts('id', [
   { t: `Mangrove melindungi pesisir`, b: `Hutan mangrove tumbuh di lumpur pasang surut yang asin di sepanjang pesisir tropis, dan Indonesia memiliki mangrove terluas di antara semua negara, sekitar seperlima dari total dunia. Akar-akarnya yang kusut memperlambat ombak dan gelombang badai, menjebak endapan, dan menjadi tempat berlindung bagi ikan-ikan muda. Mangrove juga menyimpan karbon per hektare beberapa kali lebih banyak daripada kebanyakan hutan tropis di darat.` },
   { t: `Sungai di langit`, b: `Pita uap air yang panjang dan sempit, disebut sungai atmosfer, membawa kelembapan dari daerah tropis ke lintang yang lebih tinggi. Sungai atmosfer rata-rata membawa air kira-kira sebanyak debit Sungai Mississippi ke laut, dan yang terkuat hingga 15 kali lipatnya; ketika menabrak pegunungan, sungai atmosfer dapat menurunkan hujan lebat selama berhari-hari. Fenomena ini memasok sebagian besar hujan dan salju di pantai barat Amerika Serikat.` }
 ]);
+
+/* Bahasa Indonesia — interactive figures */
+addT('id', {
+  '1gm7qgn4uvd': R`lintang (° LU positif, ° LS negatif)`,
+  '296egarrieu': R`bulan`,
+  '1uzeflqn7jx': R`Tinggi Matahari di atas cakrawala pada tengah hari untuk lintang dan bulan yang dipilih`,
+  'mv4qzrbjcl': R`Matahari tetap di bawah cakrawala (malam kutub)`,
+  '1fm0n0fbbgu': R`Deklinasi Matahari ⟦0⟧° · pada tengah hari Matahari berada ⟦1⟧ · panjang siang sekitar ⟦2⟧ jam. Di dekat khatulistiwa Matahari selalu tinggi dan panjang siang sekitar 12 jam sepanjang tahun.`,
+  '1n0ascvxnrt': R`⟦0⟧° di atas cakrawala ⟦1⟧`,
+  'vew0ota4tz': R`selatan`,
+  '1l64aebyknk': R`utara`,
+  '250j2bsh4pe': R`di bawah cakrawala`,
+  '26irj4rce3a': R`Januari`,
+  '2ayve3zc6nx': R`Februari`,
+  '1onv0idcmkw': R`Maret`,
+  '1s2pebu0xx5': R`April`,
+  '1qbhkmf2yf5': R`Mei`,
+  'l3soc5pe56': R`Juni`,
+  'c8i791yaqp': R`Juli`,
+  '1cux02rp5tm': R`Agustus`,
+  'pw02o9ckbi': R`September`,
+  '1dvp6ch7mk': R`Oktober`,
+  'grgrbo5kpl': R`November`,
+  'm5oi62sved': R`Desember`,
+  '26qahenzspo': R`laju pertumbuhan (% per tahun)`,
+  'nwsfb7vcor': R`jumlah penduduk awal (juta)`,
+  'od9lvxv1vp': R`menjadi dua kali lipat setelah ⟦0⟧ tahun`,
+  '2d3m70h4cht': R`Penduduk yang tumbuh dengan laju tetap selama 100 tahun`,
+  'gc5sjtxt4x': R`Dengan laju ⟦0⟧% per tahun, jumlah penduduk ⟦1⟧. Setelah 100 tahun: ⟦2⟧ juta.`,
+  '1hxacbhj8x7': R`menjadi dua kali lipat sekitar setiap ⟦0⟧ tahun (aturan 70: 70 ÷ ⟦1⟧ ≈ ⟦2⟧)`,
+  '1puepvx4yye': R`tetap`,
+  'qgl9kj4nky': R`Coba sendiri`,
+  '1v7qjryiz7z': R`Pilih lintang dan bulan untuk melihat setinggi apa Matahari naik pada tengah hari dan berapa lama siang berlangsung. Nilai awalnya Jakarta, sekitar 6° LS.`,
+  '2g8tjey4ryy': R`Ubah laju pertumbuhan tahunan dan jumlah penduduk awal. Nilai awalnya mendekati Indonesia saat ini.`,
+});

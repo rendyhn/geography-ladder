@@ -1,5 +1,5 @@
 ##### population-growth
-@2g8v8vcrk72  ; 0=FigW(lineChartSvg([{ pts: [[1961, 97.1], | 1=Key(T`<p><b>Crude rates</b> are per 1 00 | 2=Fig(hbarSvg([{ label: T`Java`, value: 11 | 3=Tip(T`<p><b>Arithmetic density</b> = pop
+@o8vzthv7nk  ; 0=FigW(lineChartSvg([{ pts: [[1961, 97.1], | 1=Key(T`<p><b>Crude rates</b> are per 1 00 | 2=Fig(hbarSvg([{ label: T`Java`, value: 11 | 3=Tip(T`<p><b>Arithmetic density</b> = pop | 4=T`Try it yourself` | 5=Ix('growth', T`Change the yearly growth 
 
 <p>Population data come from a <b>census</b> (a count of everyone, every ten years in Indonesia; the latest in 2020), <b>surveys</b> such as SUPAS and SUSENAS, and <b>registration</b> of births, deaths and moves. Indonesia is the world's fourth most populous country.</p>
 ⟦0⟧
@@ -8,10 +8,10 @@
 ⟦1⟧
 ⟦2⟧
 ⟦3⟧
+<h3>⟦4⟧</h3>⟦5⟧
+
 @271luwhf4un
 Indonesia
-@1vvnln22yvc
-millions
 @niovpq7959
 A line chart of Indonesia's population in each census from 97 million in 1961 to 270 million in 2020
 @16tbpimeu21
@@ -36,6 +36,8 @@ A bar chart of population density by island group: Java about 1 180 people per s
 Population density by island group (about 2020, people per km²). More than half of all Indonesians live on Java, which is only 7% of the land.
 @7tvuoy21jj
 <p><b>Arithmetic density</b> = population ÷ total area. <b>Physiological density</b> = population ÷ farmland area. <b>Agrarian density</b> = farmers ÷ farmland area: a high agrarian density means small farms and pressure on the land, as on Java.</p>
+@2g8tjey4ryy
+Change the yearly growth rate and the starting population. The start values are close to Indonesia today.
 @pr767xfy4x  ; 0=F(P) | 1=F(B)
 A province has ⟦0⟧ people and ⟦1⟧ babies are born in a year. What is its crude birth rate (per 1 000)?
 @hn0iioy0os  ; 0=M(B) | 1=M(P) | 2=M(cbr)

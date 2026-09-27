@@ -888,8 +888,6 @@ Bare farmland loses ⟦0⟧ of soil per hectare each year. The soil has a densit
 Volume $= \frac{⟦0⟧}{⟦1⟧} = ⟦2⟧\,\mathrm{m^3}$ spread over $10\,000\,\mathrm{m^2}$: depth $= ⟦3⟧\,\mathrm{m} = ⟦4⟧$.
 @27trxe9nfio  ; 0=Q(depth, 'cm') | 1=Q(rate, 'mm')
 A field has ⟦0⟧ of fertile topsoil and is losing ⟦1⟧ per year to erosion. About how many years until the topsoil is gone?
-@1dg7mtcy0c9
-years
 @27zp56baf71  ; 0=depth | 1=depth * 10 | 2=depth * 10 | 3=M(rate) | 4=M(yrs)
 $⟦0⟧\,\mathrm{cm} = ⟦1⟧\,\mathrm{mm}$, and $\frac{⟦2⟧}{⟦3⟧} = ⟦4⟧$ years.
 @qn2ywwq8gz

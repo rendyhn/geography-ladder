@@ -1,0 +1,65 @@
+##### lat
+@1gm7qgn4uvd
+latitude (° N positive, ° S negative)
+
+##### m
+@296egarrieu
+month
+@1uzeflqn7jx
+Height of the Sun above the horizon at noon for the chosen latitude and month
+@mv4qzrbjcl
+The Sun stays below the horizon (polar night)
+@1fm0n0fbbgu  ; 0=ixF(dec) | 1=el > 0 ? T`${ixF(el)}° above the ${lat - | 2=ixF(day)
+Sun's declination ⟦0⟧° · at noon the Sun is ⟦1⟧ · day length about ⟦2⟧ hours. Near the equator the Sun is always high and days last about 12 hours all year.
+@1n0ascvxnrt  ; 0=ixF(el) | 1=lat - dec >= 0 ? T`southern` : T`norther
+⟦0⟧° above the ⟦1⟧ horizon
+@vew0ota4tz
+southern
+@1l64aebyknk
+northern
+@250j2bsh4pe
+below the horizon
+@26irj4rce3a
+January
+@2ayve3zc6nx
+February
+@1onv0idcmkw
+March
+@1s2pebu0xx5
+April
+@1qbhkmf2yf5
+May
+@l3soc5pe56
+June
+@c8i791yaqp
+July
+@1cux02rp5tm
+August
+@pw02o9ckbi
+September
+@1dvp6ch7mk
+October
+@grgrbo5kpl
+November
+@m5oi62sved
+December
+
+##### r
+@26qahenzspo
+growth rate (% per year)
+@nwsfb7vcor
+starting population (millions)
+@od9lvxv1vp  ; 0=ixF(td, 0)
+doubled after ⟦0⟧ years
+@1dg7mtcy0c9
+years
+@1vvnln22yvc
+millions
+@2d3m70h4cht
+Population growing at a constant rate over 100 years
+@gc5sjtxt4x  ; 0=ixF(r, 1) | 1=r > 0 ? T`doubles about every ${ixF(td,  | 2=ixF(P(100), 0)
+At ⟦0⟧% a year the population ⟦1⟧. After 100 years: ⟦2⟧ million.
+@1hxacbhj8x7  ; 0=ixF(td, 0) | 1=ixF(r, 1) | 2=ixF(70 / r, 0)
+doubles about every ⟦0⟧ years (rule of 70: 70 ÷ ⟦1⟧ ≈ ⟦2⟧)
+@1puepvx4yye
+stays the same

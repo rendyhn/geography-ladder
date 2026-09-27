@@ -15,7 +15,9 @@ ${FigW(lineChartSvg([{ pts: [[1961, 97.1], [1971, 119.2], [1980, 147.5], [1990, 
 <p>A population grows by <b>births</b> (B) and <b>immigration</b> (I) and shrinks by <b>deaths</b> (D) and <b>emigration</b> (E). Births minus deaths is <b>natural increase</b>; immigration minus emigration is <b>net migration</b>.</p>
 ${Key(T`<p><b>Crude rates</b> are per 1 000 people per year:</p><p>$$\text{CBR} = \frac{B}{P} \times 1000, \qquad \text{CDR} = \frac{D}{P} \times 1000$$</p><p>The <b>growth rate</b> in percent is $r = \frac{(B - D) + (I - E)}{P} \times 100\%$. A population growing at $r$ percent a year follows the geometric formula</p><p>$$P_t = P_0\,(1 + r)^t$$</p><p>and doubles in about $\frac{70}{r}$ years (the rule of 70, with $r$ in percent).</p>`)}
 ${Fig(hbarSvg([{ label: T`Java`, value: 1180 }, { label: T`Bali and Nusa Tenggara`, value: 180 }, { label: T`Sumatra`, value: 125 }, { label: T`Sulawesi`, value: 105 }, { label: T`Kalimantan`, value: 30 }, { label: T`Maluku and Papua`, value: 14 }], { unit: T` /km²`, label: T`A bar chart of population density by island group: Java about 1 180 people per square kilometre, far above all others; Papua and Maluku about 14` }), T`Population density by island group (about 2020, people per km²). More than half of all Indonesians live on Java, which is only 7% of the land.`)}
-${Tip(T`<p><b>Arithmetic density</b> = population ÷ total area. <b>Physiological density</b> = population ÷ farmland area. <b>Agrarian density</b> = farmers ÷ farmland area: a high agrarian density means small farms and pressure on the land, as on Java.</p>`)}`,
+${Tip(T`<p><b>Arithmetic density</b> = population ÷ total area. <b>Physiological density</b> = population ÷ farmland area. <b>Agrarian density</b> = farmers ÷ farmland area: a high agrarian density means small farms and pressure on the land, as on Java.</p>`)}
+<h3>${T`Try it yourself`}</h3>${Ix('growth', T`Change the yearly growth rate and the starting population. The start values are close to Indonesia today.`)}
+`,
   gens: [
     () => {
       const P = pick([200000, 400000, 500000, 800000, 1000000]), cbr = pick([16, 18, 20, 22, 25]), B = P * cbr / 1000;
