@@ -123,6 +123,20 @@ mjx-container.mjx-wide { display: block; overflow-x: auto; overflow-y: hidden; m
 .hero h1 { font-size: clamp(2.1rem, 1.3rem + 3vw, 3.5rem); font-weight: 800; letter-spacing: -0.025em; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .hero-logo svg { width: 72px; height: 72px; display: block; margin-bottom: 18px; filter: drop-shadow(0 6px 14px rgba(20, 27, 43, 0.22)); }   /* the subject logo above the title */
+.hero { position: relative; isolation: isolate; }
+.hero-bg { position: absolute; inset: -32px -16px -24px; z-index: -1; pointer-events: none; overflow: hidden; color: var(--ink);
+  -webkit-mask-image: linear-gradient(to bottom, #000 86%, transparent); mask-image: linear-gradient(to bottom, #000 86%, transparent); }
+.hero-bg svg { width: 100%; height: 100%; display: block; }
+.hero-bg .hb-l { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.11; }
+.hero-bg .hb-t { fill: currentColor; opacity: 0.1; }
+.hero-bg .hb-f { fill: currentColor; stroke: none; opacity: 0.08; }
+.hero-bg .hb-d { stroke-dasharray: 5 7; }
+.hero-bg .hbc1 { color: var(--lv1); } .hero-bg .hbc2 { color: var(--lv2); } .hero-bg .hbc3 { color: var(--lv3); } .hero-bg .hbc4 { color: var(--lv4); }
+.hero-bg .hbc1, .hero-bg .hbc2, .hero-bg .hbc3, .hero-bg .hbc4 { opacity: 0.22; }
+@media (max-width: 900px) { .hero-bg svg { width: 170%; height: auto; margin-left: -35%; } }
+.hero-bg .hb-serif { font-family: 'Times New Roman', Georgia, serif; font-style: italic; }
+.hero-bg .hb-mono { font-family: var(--f-mono); }
+.hero-bg .hb-sans { font-family: var(--f-display); font-weight: 700; }
 .hero-side { display: grid; gap: 16px; min-width: 0; }
 .fact { background: var(--paper); border: 1px solid var(--rule); border-top: 3px solid var(--warn); border-radius: 10px; padding: 18px 22px; box-shadow: var(--shadow); }
 .fact-label { display: flex; align-items: center; gap: 6px; margin: 0 0 8px; font: 700 0.74rem var(--f-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--warn); }
@@ -5107,6 +5121,42 @@ const FACTS = [
   { t: `Rivers in the sky`, b: `Long, narrow bands of water vapour called atmospheric rivers carry moisture from the tropics toward higher latitudes. An average one carries about as much water as the Mississippi River pours into the sea, and the strongest carry up to 15 times as much; when one hits mountains it can release days of heavy rain. They supply much of the rain and snow on the west coast of the United States.` }
 ];
 
+/* Decorative background behind the home-page hero: faint, subject-themed doodles (aria-hidden, drawn in a 1200 × 640 box). */
+const HERO_ART = (() => {
+  const tf = (x, y, rot) => (rot ? ` transform="rotate(${rot} ${x} ${y})"` : '');
+  // text: t(x, y, content, size, { rot, cls, font, anchor })
+  const t = (x, y, s, size, { rot = 0, cls = '', font = 'serif', anchor = 'start' } = {}) => `<text x="${x}" y="${y}" font-size="${size}" text-anchor="${anchor}" class="hb-t hb-${font} ${cls}"${tf(x, y, rot)}>${s}</text>`;
+  const p = (d, cls = '') => `<path d="${d}" class="hb-l ${cls}"/>`;
+  const c = (x, y, r, cls = '') => `<circle cx="${x}" cy="${y}" r="${r}" class="hb-l ${cls}"/>`;
+  const dot = (x, y, r, cls = '') => `<circle cx="${x}" cy="${y}" r="${r}" class="hb-f ${cls}"/>`;
+  const e = (x, y, rx, ry, rot, cls = '') => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" class="hb-l ${cls}"${tf(x, y, rot)}/>`;
+  const wave = (x0, y0, len, amp, per) => { let d = `M${x0} ${y0}`; for (let x = 0; x <= len; x += 4) d += `L${(x0 + x).toFixed(1)} ${(y0 - amp * Math.sin(2 * Math.PI * x / per)).toFixed(1)}`; return d; };
+  const poly = (cx, cy, r, n, a0 = -Math.PI / 2) => 'M' + [...Array(n)].map((_, k) => { const a = a0 + 2 * Math.PI * k / n; return `${(cx + r * Math.cos(a)).toFixed(1)} ${(cy + r * Math.sin(a)).toFixed(1)}`; }).join('L') + 'Z';
+  const parts = [];
+  const blob = (cx, cy, r, k) => { let d = ''; for (let a = 0; a <= 360; a += 10) { const rad = a * Math.PI / 180, rr = r * (1 + 0.16 * Math.sin(3 * rad + k) + 0.08 * Math.cos(5 * rad + k)); d += (a ? 'L' : 'M') + (cx + rr * Math.cos(rad)).toFixed(1) + ' ' + (cy + 0.7 * rr * Math.sin(rad)).toFixed(1); } return d + 'Z'; };
+  // top strip
+  parts.push(c(270, 50, 38) + e(270, 50, 16, 38, 0) + e(270, 50, 30, 38, 0) + p('M232 50H308M270 12V88'));
+  parts.push(t(340, 66, '6°S  106°E', 28, { font: 'mono', rot: -2 }));
+  parts.push(t(610, 30, 'Equator 0°   Tropic of Cancer 23.4°N', 18, { font: 'mono' }));
+  // gap column
+  parts.push(c(612, 200, 24) + p('M612 172L618 200L612 228L606 200Z') + t(612, 166, 'N', 14, { font: 'sans', anchor: 'middle', cls: 'hbc1' }));
+  parts.push(t(628, 440, 'Ring of Fire     Wallace Line', 18, { rot: -90, font: 'mono' }));
+  parts.push(p('M612 520c-14-18-14-34 0-40c14 6 14 22 0 40z', 'hbc1') + c(612, 497, 5));
+  // behind the text: faint line drawings only
+  [24, 46, 68].forEach(r => parts.push(p(blob(500, 300, r, 0.6))));
+  parts.push(p('M150 560C220 500 300 560 360 510S470 470 540 500', 'hb-d'));
+  parts.push(p('M430 470L480 400L510 440L540 390L590 470'));
+  // bottom strip
+  [16, 32, 48].forEach((r, i) => parts.push(p(blob(190, 620, r, 2.1), i ? '' : 'hbc2')));
+  parts.push(t(270, 628, 'Sumatra · Jawa · Kalimantan · Sulawesi · Papua', 18, { font: 'mono' }));
+  parts.push(p(wave(740, 606, 330, 8, 60), 'hbc3') + p(wave(740, 628, 330, 8, 60)));
+  parts.push(p('M880 590h120M880 584v12M940 587v6M1000 584v12'));
+  parts.push(t(1070, 638, 'Puncak Jaya 4,884 m', 18, { anchor: 'end', font: 'mono' }));
+  // outer edges
+  parts.push(c(70, 250, 44) + e(70, 250, 18, 44, 0) + e(70, 250, 34, 44, 0) + p('M26 250H114') + t(30, 480, '8,849 m', 22, { rot: -90, font: 'mono' }) + t(1130, 200, 'W', 40, { font: 'sans', cls: 'hbc4' }) + [30, 50, 70].map(r => p(blob(1120, 430, r, 1.3))).join(''));
+  return '<svg viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+})();
+
 /* ==========================================================================
    App: routing, lessons, worksheet generation, checking, answer key, print,
    language switching
@@ -5525,6 +5575,7 @@ function renderHome() {
   const first = LEVELS[0].topics[0];
   main.innerHTML = `
   <section class="hero">
+    ${typeof HERO_ART === 'string' ? `<div class="hero-bg" aria-hidden="true">${HERO_ART}</div>` : ''}
     <div class="hero-copy">
       <div class="hero-logo" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x='1' y='1' width='62' height='62' rx='14' fill='#141B2B' stroke='#FFFFFF' stroke-opacity='0.14' stroke-width='2'/><defs><clipPath id='gl-x'><circle cx='32' cy='32' r='21'/></clipPath></defs><circle cx='32' cy='32' r='21' fill='#2C6DB0'/><g clip-path='url(#gl-x)'><path d='M13 17C18 13 25 13 27 17C29 21 24 24 25 29C26 34 22 38 18 36C14 34 16 28 12 25Z' fill='#6CC070'/><path d='M36 22C40 19 47 20 50 25C53 30 50 34 46 33C42 32 43 37 45 41C47 46 42 50 38 47C34 44 37 38 35 34C33 30 33 25 36 22Z' fill='#6CC070'/><g stroke-width='2' stroke-linecap='round'><path d='M8 18.5H56' stroke='#F58BB0'/><path d='M8 27.5H56' stroke='#A9B2FF'/><path d='M8 36.5H56' stroke='#34CDB8'/><path d='M8 45.5H56' stroke='#FB8B52'/></g><ellipse cx='32' cy='32' rx='9.5' ry='21' fill='none' stroke='#FFFFFF' stroke-opacity='0.7' stroke-width='1.6'/></g><circle cx='32' cy='32' r='21' fill='none' stroke='#FFFFFF' stroke-width='3'/></svg></div>
       <p class="eyebrow">${esc(ui('heroEyebrow'))}</p>
