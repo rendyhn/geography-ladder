@@ -1,0 +1,28 @@
+{
+  "name": "Geography Ladder",
+  "short_name": "Geography Ladder",
+  "description": "Geography lessons topic by topic for senior high school and university, from maps and the solid Earth to population, regions and global issues, with illustrated lessons, randomly generated practice worksheets, worked solutions and print-ready pages.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F5F8",
+  "theme_color": "#2340B8",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
